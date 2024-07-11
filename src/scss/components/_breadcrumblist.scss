@@ -1,0 +1,18 @@
+.breadcrumblist {
+    &__container {
+        ol{
+            display: flex;
+            align-items:center;
+            li{
+
+            }
+        }
+    }
+
+    &__line{
+        width: 10px;
+        height: 1px;
+        background-color: var(--dark-40);
+        display: block;
+    }
+}

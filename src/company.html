@@ -8,7 +8,28 @@
     <div class="site-container visible">
         @include('partials/header.html')
         <main class="main">
-            <section class="appeal pd pd-t">
+            <article class="breadcrumblist pd-t">
+                <div class="breadcrumblist__container container">
+                    <ol class="list-reset" itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                          <a itemprop="item" href="./main.html">
+                          <span itemprop="name">Главная</span></a>
+                          <meta itemprop="position" content="1" />
+                        </li>
+                        <li>
+                            <span class="breadcrumblist__line"></span>
+                        </li>
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                          <a itemprop="item" href="#">
+                          <span itemprop="name">О компании</span></a>
+                          <meta itemprop="position" content="2" />
+                        </li>
+                    </ol>
+                </div>
+            </article>
+            <section class="appeal pd">
                 <div class="appeal__container container">
                     <div class="appeal__body">
                         <div class="appeal__info">
