@@ -53,11 +53,8 @@
 .mgt-32{
     margin-top: 32px;
 }
-// .pb-16{
-//     padding: 0px 0px 16px 0px;
-// }
 .pd-t{
-    padding-top: #{fluid(130px, 240px, 320px, 1920px)};
+    padding-top: #{fluid(80px, 200px, 320px, 1920px)};
 }
 
 .container-big{
