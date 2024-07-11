@@ -1,0 +1,138 @@
+.review {
+    padding: #{fluid(64px, 150px, 320px, 1920px)} 0;
+    position: relative;
+    &__bg{
+        position: absolute;
+        top: 60px;
+        right: 0;
+        @include tablet{
+            display: none;
+        }
+    }
+
+    &__container {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__title {
+        margin-bottom: #{fluid(32px, 68px, 320px, 1920px)};
+    }
+
+    &__swiper {
+
+    }
+
+    &__columns {
+        display: flex;
+        //column-gap: 16px;
+        margin: 0px 0px 32px 0px;
+        @include small-tablet{
+            margin: 0px 0px 16px 0px;
+         } 
+    }
+
+    &__column {
+       // flex: 0 1 33.333%;
+       width: calc(33.3333% - 16px);
+        height: unset;
+        .video__wrapper{
+            height: 100%;
+        }
+        @include big-desktop{
+            width: calc(40% - 16px);
+        }
+        @include tablet{
+            width: calc(50% - 16px);
+        }
+        @include small-tablet{
+            width: calc(75% - 8px);
+        }
+        @include mobile{
+            width: calc(100% - 8px);
+        }
+    }
+
+    &__item{
+        background-color: var(--white);
+        border-radius: 22px;
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+    }
+
+    &__grade {
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        margin: 0px 0px 32px 0px;
+        @include mobile{
+            flex-direction: column-reverse;
+            align-items: flex-start;
+            margin: 0px 0px 16px 0px;
+        }
+    }
+
+    &__name {
+        font-weight: 600;
+    }
+
+    &__rating {
+        padding: 0px 0px 8px 0px;
+        svg{
+            fill: var(--red-light);
+            use{
+                stroke: none;
+            }
+        }
+    }
+
+    &__text {
+        flex: 1 1 auto;
+    }
+
+    &__button {
+        font-weight: 500;
+        color: var(--red-light);
+    }
+
+    &__controls {
+        display: flex;
+        justify-content: space-between;
+        @include tablet{
+            justify-content: center;
+        }
+    }
+
+    &__navigation {
+        display: flex;
+        gap: 24px;
+        .swiper-button{
+            background-color: var(--white);
+        }
+    }
+
+    &__button-prev {
+    }
+
+    &__pagination {
+        bottom: 0 !important;
+    }
+
+    &__button-next {
+    }
+
+    &__link {
+        &-mobile{
+            display: none;
+            margin: 0px 0px 16px 0px;
+            @include tablet{
+                display: flex;
+             } 
+        }
+        @include tablet{
+            display: none;
+         } 
+    }
+    
+}

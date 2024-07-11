@@ -1,0 +1,137 @@
+<header class="header">
+  <div class="header__container container">
+    <div class="header__top container-grid">
+      <div class="header__top-info d-flex f-ac">
+        <div class="header__cities">
+          <button class="header__city btn-reset d-flex f-c">
+            <svg width="20" height="20">
+              <use xlink:href="./img/sprite.svg#map"></use>
+            </svg>Москва</button>
+          <div class="header__city-list"></div>
+        </div>
+        <nav class="header__menu">
+          <ul class="header__list-info list-reset">
+            <li class="header__item-info"><a href="#" class="header__link-info">О компании</a></li>
+            <li class="header__item-info"><a href="#" class="header__link-info">Вакансии</a></li>
+            <li class="header__item-info"><a href="#" class="header__link-info">Сотрудничество</a></li>
+            <li class="header__item-info"><a href="#" class="header__link-info">Блог</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__contact d-flex f-ac">
+        <a href="#" class="header__phone d-flex f-c">
+          <svg width="16" height="16">
+            <use xlink:href="./img/sprite.svg#phone" stroke="black"></use>
+          </svg>8 800 000-00-00</a>
+        <a href="#" class="header__social">
+          <svg width="16" height="16">
+            <use xlink:href="./img/sprite.svg#tg"></use>
+          </svg>
+        </a>
+        <a href="#" class="header__social">
+          <svg width="16" height="16">
+            <use xlink:href="./img/sprite.svg#tg "></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <a href="#" class="header__logo">
+        <img src="img/logo.webp" alt="логотип ">
+      </a>
+      <div class="header__wrapper">
+        <a href="#" class="header__phone header__phone-mobile">8 800 000-00-00</a>
+        <button type="button" class="menu__icon icon-menu btn-reset"><span></span></button>
+      </div>
+      <nav class="header__menu header__menu-desktop">
+        <ul class="header__list list-reset">
+          <li class="header__item drop-list">
+            <a href="#" class="header__link drop-link">Ипотека</a>
+            <svg width="8" height="8">
+              <use xlink:href="./img/sprite.svg#arrow"></use>
+            </svg>
+            <ul class="header__sub-menu list-reset">
+              <li class="header__sub-item"><a href="#" class="header__sub-link">Пункт 1</a></li>
+              <li class="header__sub-item"><a href="#" class="header__sub-link">Пункт 2</a></li>
+              <li class="header__sub-item"><a href="#" class="header__sub-link">Пункт 3</a></li>
+              <li class="header__sub-item"><a href="#" class="header__sub-link">Пункт 4</a></li>
+              <li class="header__sub-item"><a href="#" class="header__sub-link">Пункт 5</a></li>
+            </ul>
+          </li>
+          <li class="header__item"><a href="#" class="header__link">Подбор новостроек</a></li>
+          <li class="header__item"><a href="#" class="header__link">Рефинансирование</a></li>
+          <li class="header__item"><a href="#" class="header__link">Кредиты</a></li>
+          <li class="header__item"><a href="#" class="header__link">Инвестиции</a></li>
+          <li class="header__item"><a href="#" class="header__link">Кейсы и отзывы</a></li>
+          <li class="header__item"><a href="#" class="header__link">Контакты</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="header__button">Бесплатная консультация</a>
+    </div>
+    <div class="header__mobile">
+      <div class="header__cities header__cities-mobile">
+        <button class="header__city btn-reset d-flex f-c">
+          <svg width="20" height="20">
+            <use xlink:href="./img/sprite.svg#map"></use>
+          </svg>Москва</button>
+        <div class="header__city-list"></div>
+      </div>
+      <nav class="header__menu-mobile">
+        <ul class="header__list-mobile list-reset" id="main-menu">
+          <li class="header__item-mobile"><a href="#" class="header__link-mobile" data-target="menu-ipoteka">Ипотека
+            <svg width="16" height="24">
+            <use xlink:href="./img/sprite.svg#arrow"></use>
+          </svg></a></li>
+          <li class="header__item-mobile"><a href="#" class="header__link-mobile">Подбор новостроек</a></li>
+          <li class="header__item-mobile"><a href="#" class="header__link-mobile">Рефинансирование</a></li>
+          <li class="header__item-mobile"><a href="#" class="header__link-mobile">Кредиты</a></li>
+          <li class="header__item-mobile"><a href="#" class="header__link-mobile">Инвестиции</a></li>
+          <li class="header__item-mobile"><a href="#" class="header__link-mobile">Кейсы и отзывы</a></li>
+          <li class="header__item-mobile"><a href="#" class="header__link-mobile">Контакты</a></li>
+          <li class="header__item-mobile"><a href="#" class="header__link-mobile" data-target="menu-about">О компании
+            <svg width="16" height="24">
+            <use xlink:href="./img/sprite.svg#arrow"></use>
+          </svg></a></li>
+        </ul>
+
+        <ul class="submenu list-reset" id="menu-ipoteka">
+          <li class="submenu-item menu-back">
+            <svg width="16" height="24">
+              <use xlink:href="./img/sprite.svg#arrow"></use>
+            </svg>
+              <a href="#" class="menu-back-link" data-target="main-menu">Ипотека</a>
+          </li>
+          <li class="submenu-item"><a href="#" class="submenu-link">Помощь в одобрении ипотеки</a></li>
+          <li class="submenu-item"><a href="#" class="submenu-link">Сопровождение сделок</a></li>
+        </ul>
+
+        <ul class="submenu list-reset" id="menu-about">
+        <li class="submenu-item menu-back">
+          <svg width="16" height="24">
+            <use xlink:href="./img/sprite.svg#arrow"></use>
+          </svg>
+            <a href="#" class="menu-back-link" data-target="main-menu">О компании</a>
+        </li>
+        <li class="submenu-item"><a href="#" class="submenu-link">О компании</a></li>
+        <li class="submenu-item"><a href="#" class="submenu-link">Вакансии</a></li>
+        <li class="submenu-item"><a href="#" class="submenu-link">Сотрудничество</a></li>
+        <li class="submenu-item"><a href="#" class="submenu-link">Блог</a></li>
+        </ul>
+      </nav>
+      <div class="header__socials-mobile">
+        <a href="#" class="btn header__consultant-mobile">Бесплатная консультация</a>
+
+        <a href="#" class="header__social-mobile">
+          <svg width="20" height="20">
+            <use xlink:href="./img/sprite.svg#tg "></use>
+          </svg>
+        </a>
+        <a href="#" class="header__social-mobile">
+          <svg width="20" height="20">
+            <use xlink:href="./img/sprite.svg#tg"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>

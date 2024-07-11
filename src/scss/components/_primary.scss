@@ -1,0 +1,125 @@
+.primary {
+    padding-top:#{fluid(40px,120px, 320px, 1920px)} ;
+    &__wrapper{
+        padding-top: 96px;
+        padding-bottom: 64px;
+        @include small-tablet{
+            padding: 64px 0;
+        }
+    }
+
+    &__container {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+    }
+
+    &__body {
+        position: relative;
+        z-index: 2;
+        padding: 0px 0px 264px 0px;
+        @include small-tablet{
+           padding-bottom: 32px;
+        }
+    }
+
+    &__title {
+    }
+
+    &__sub-title {
+        max-width: 610px;
+        margin-bottom: #{fluid(24px,64px, 320px, 1920px)};
+    }
+
+    &__makes {
+        max-width: 550px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0px 0px 64px 0px;
+        @include small-tablet{
+            margin: 0px 0px 48px 0px;
+        }
+    }
+
+    &__make {
+        flex: 0 1 50%;
+        font-weight: 500;
+        margin: 0px 0px 12px 0px;
+        display: flex;
+        align-items:center;
+        svg{
+            margin: 0px 6px 0px 0px;
+        }
+        @include mobile{
+            flex: 0 1 100%;
+        }
+    }
+
+    &__button {
+        background-color: var(--dark);
+        max-width: 361px;
+        font-weight: 500;
+        font-size: #{fluid(18px,22px, 320px, 1920px)};
+        min-height: 69px;
+        @include small-tablet{
+            background-color: var(--red);
+            min-height: 63px;
+        }
+    }
+    &__bg-girl{
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        bottom: -70px; 
+        @include tablet{
+            bottom: -200px;
+        }
+        @include small-tablet{
+            position: relative;
+            top: 0;
+        }
+    }
+    &__bg-city{
+        position: absolute;
+        bottom: -70px;
+        right: -50px;
+        @include small-tablet{
+            top: 450px;
+            right: -20px;
+        }
+    }
+    &__columns {
+        display: grid;
+        position: relative;
+        z-index: 1;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        gap: #{fluid(9px, 16px, 320px, 1920px)};
+        @include small-tablet{
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            margin-top: -150px;
+        }
+    }
+
+    &__column {
+        height: #{fluid(256px,329px, 320px, 1920px)};
+        background-color: var(--white);
+        border-radius: 22px;
+    }
+
+    &__item {
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+    }
+
+    &__number {
+        color: var(--red-light);
+        font-size: #{fluid(24px,36px, 320px, 1920px)};
+        font-weight: 700;
+        flex: 1 1 auto;
+    }
+
+    &__text {
+    }
+}

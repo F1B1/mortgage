@@ -1,0 +1,63 @@
+.partners {
+    padding-top: #{fluid(64px, 150px, 320px, 1920px)};
+
+    &__container {
+    }
+
+    &__title {
+        max-width: 800px;
+        padding-bottom: #{fluid(48px, 96px, 320px, 1920px)};
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        gap: 16px;
+    }
+
+    &__list {
+        display: flex;
+        width: fit-content;
+        gap: 16px;
+        &:not(:last-child) {margin-bottom: #{fluid(32px, 80px, 320px, 1920px)}};
+    }
+
+    &__list-1 {
+        animation: partnersAnime 40s linear infinite;
+    }
+
+    &__copy {
+        display: flex;
+        align-items:center;
+        gap: 16px;
+    }
+
+    &__item {
+        width: 246px;
+    }
+
+    &__list-2 {
+        animation: partnersAnimeRight 40s linear infinite;
+    }
+}
+
+
+@keyframes partnersAnime {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+@keyframes partnersAnimeRight {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}

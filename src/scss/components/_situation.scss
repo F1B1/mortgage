@@ -1,0 +1,177 @@
+.situation {
+
+    &__container {
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    &__texts {
+        max-width: 610px;
+        flex: 0 1 50%;
+        @include big-desktop{
+            flex: 0 1 100%;
+            padding: 0px 0px 32px 0px;
+        }
+    }
+
+    &__title {
+        margin: 0px 0px 32px 0px;
+    }
+
+    &__sub-title {
+        font-weight: 400;
+        span{
+            color: var(--red-light);
+        }
+    }
+
+    &__swiper {
+        position: static;
+        margin: 0;
+        flex: 0 1 50%;
+        @include big-desktop{
+            flex: 0 1 100%;
+            padding: 0px 0px 84px 0px;
+        }
+    }
+
+    &__columns {
+        display: flex;
+    }
+
+    &__column {
+        display: flex;
+        @include small-tablet{
+            flex-wrap: wrap;
+        }
+    }
+
+    &__left {
+        flex: 0 1 50%;
+        background-color: var(--gray-light);
+        border-radius:  12px 0 0 12px;
+        min-height: 100%;
+        @include small-tablet{
+            flex: 0 1 100%;
+            min-height: unset;
+            border-radius: 12px 12px 0 0;
+            padding: 32px 16px;
+            padding-bottom: 0;
+        }
+    }
+
+    &__person {
+        display: inline-grid;
+        grid-template: auto auto / 64px 1fr;
+        column-gap: 16px;
+        align-items:center;
+        padding: 0px 0px 16px 0px;
+    }
+
+    &__avatar {
+        text-align: center;
+        align-self: center;
+        grid-row: span 2;
+    }
+
+    &__name {
+        font-weight: 700;
+        padding-top: 10px;
+    }
+
+    &__job {
+        color: var(--dark-60);
+        padding-bottom: 10px;
+    }
+
+    &__point {
+        font-weight: 600;
+        padding-bottom:#{fluid(16px, 32px, 320px, 1920px)} ;
+        max-width: 350px;
+    }
+
+    &__describe {
+    }
+
+    &__text {
+        font-weight: 600;
+    }
+
+    &__list {
+        max-width: 400px;
+        padding-left: 22px;
+        li{
+            &:not(:last-child) {margin-bottom: 8px;};
+        }
+    }
+
+    &__right {
+        flex: 0 1 50%;
+        background-color: var(--red);
+        color: var(--white);
+        border-radius: 0 12px 12px 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        .situation__text{
+            font-weight: 600;
+            padding: 0px 0px 16px 0px;
+        }
+        @include small-tablet{
+            flex: 0 1 100%;
+            min-height: unset;
+            border-radius:0 0 12px 12px;
+            padding: 32px 16px;
+        }
+    }
+
+    &__result {
+        max-width: 250px;
+        padding-bottom:#{fluid(16px, 32px, 320px, 1920px)} ;
+    }
+
+    &__list-result {
+        flex: 1 1 auto;
+       li{
+            font-weight: 600;
+            &:not(:last-child) {margin-bottom: 14px;};
+       }
+    }
+
+    &__link {
+        font-weight: 500;
+        display: flex;
+        align-items:center;
+        svg{
+            fill: var(--white);
+            transform: rotate(315deg);
+            margin: 0px 0px 0px 8px;
+            use{
+                stroke: none;
+            }
+        }
+    }
+
+    &__navigation{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        align-items:center;
+        gap: 32px;
+        @include big-desktop{
+            position: relative;
+            margin-top: 20px;
+            justify-content: center;
+        }
+    }
+    &__button{
+       
+    }
+    
+}

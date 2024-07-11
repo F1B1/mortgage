@@ -1,0 +1,30 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+@import "ui";
+
+
+@import "./components/burger";
+@import "./components/video";
+@import "./components/modalVideo";
+
+@import "./components/header";
+@import "./components/primary";
+@import "./components/services";
+@import "./components/situation";
+@import "./components/appeal";
+@import "./components/review";
+@import "./components/partners";
+@import "./components/help";
+@import "./components/news";
+@import "./components/footer";
+@import "./components/team";
+// тестовые стили, удалите их
+// .page__body {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   height: var(--vh);
+// }

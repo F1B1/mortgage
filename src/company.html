@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body" style="--scroll-width: 0px">
+    <h1 class="visually-hidden">Ипотека Просто</h1>
+    <div class="site-container visible">
+        @include('partials/header.html')
+        <main class="main">
+            <section class="appeal pd pd-t">
+                <div class="appeal__container container">
+                    <div class="appeal__body">
+                        <div class="appeal__info">
+                            <h2 class="appeal__title title-section sticky">Руководитель компании «Ипотека Просто» Карина Минибаева</h2>
+                        </div>
+                        <div class="appeal__column">
+                            <p class="pb-16 appeal__sub-title">Миссия и задача нашей компании и всей команды Сделать сложное — простым.</p>
+                            <div class="appeal__wrapper">
+                                <div class="appeal__inner pd-24">
+                                    <p class="appeal__number">10 лет</p>
+                                    <p class="appeal__sub-text">Успешной работы в сфере ипотечного кредитования</p>
+                                </div>
+                                <div class="appeal__inner pd-24">
+                                    <p class="appeal__number">1000+</p>
+                                    <p class="appeal__sub-text">Проведённых сделок с недвижимостью</p>
+                                </div>
+                                <div class="appeal__inner pd-24">
+                                    <p class="appeal__number">2000+</p>
+                                    <p class="appeal__sub-text">Одобрений кредитов для клиентов получено мной за все годы работы</p>
+                                </div>
+                            </div>
+                            <div class="appeal__block">
+                                <p class="appeal__help fz-24">Мы помогаем нашим клиентам:</p>
+                                <ul class="appeal__list">
+                                    <li>Получить ипотеку на самых выгодных условиях</li>
+                                    <li>Гарантированно одобрить кредит по минимальной процентной ставке</li>
+                                    <li>Снизить стоимость страхования при оформлении ипотеки</li>
+                                    <li>Рефинансировать кредиты и уменьшить финансовую нагрузку</li>
+                                    <li>Подобрать новостройку, подходящую вам по всем параметрам, уложившись в бюджет</li>
+                                    <li>Выйти на сделку и провести её с полным юридическим сопровождением наших специалистов</li>
+                                </ul>
+                            </div>
+                           @include('partials/video.html', {
+                            'imageSrc': 'img/videoPoster.webp',
+                            'videoSrc': 'https://www.youtube.com/embed/HOfdboHvshg?autoplay=1',
+                           })
+                           <div class="appeal__comment appeal__comment-image mgt-24">Я лично курирую каждую сделку всех наших клиентов</div>
+                        </div>
+                    </div>
+                    <div class="appeal__mobile">
+                        <h2 class="appeal__title title-section">Руководитель компании «Ипотека Просто» Карина Минибаева</h2>
+                        @include('partials/video.html', {
+                            'imageSrc': 'img/videoPoster.webp',
+                            'videoSrc': 'https://www.youtube.com/embed/HOfdboHvshg?autoplay=1',
+                           })
+                        <div class="appeal__comment appeal__comment-image">Я лично курирую каждую сделку всех наших клиентов</div>
+                        <p class="pb-16 appeal__sub-title">Миссия и задача нашей компании и всей команды Сделать сложное — простым.</p>
+                        <p class="pb-32 appeal__text">У каждого из нас бывают непростые финансовые ситуации, связанные с недвижимостью или кредитованием и требующие максимально быстро их решения. Чаще всего в эти моменты мы погружаемся в круговорот сбора документов, написания и подачи заявлений, необходимости вникать в условия банков и пытаемся просчитать реальные условия получения финансирования. А иногда, уже после прохождения всех шагов — получаем отказ.</p>
+                        <div class="appeal__wrapper">
+                            <div class="appeal__inner pd-24">
+                                <p class="appeal__number">10 лет</p>
+                                <p class="appeal__sub-text">Успешной работы в сфере ипотечного кредитования</p>
+                            </div>
+                            <div class="appeal__inner pd-24">
+                                <p class="appeal__number">1000+</p>
+                                <p class="appeal__sub-text">Проведённых сделок с недвижимостью</p>
+                            </div>
+                            <div class="appeal__inner pd-24">
+                                <p class="appeal__number">2000+</p>
+                                <p class="appeal__sub-text">Одобрений кредитов для клиентов получено мной за все годы работы</p>
+                            </div>
+                        </div>
+                        <div class="appeal__block">
+                            <p class="appeal__help fz-24">Мы помогаем нашим клиентам:</p>
+                            <ul class="appeal__list">
+                                <li>Получить ипотеку на самых выгодных условиях</li>
+                                <li>Гарантированно одобрить кредит по минимальной процентной ставке</li>
+                                <li>Снизить стоимость страхования при оформлении ипотеки</li>
+                                <li>Рефинансировать кредиты и уменьшить финансовую нагрузку</li>
+                                <li>Подобрать новостройку, подходящую вам по всем параметрам, уложившись в бюджет</li>
+                                <li>Выйти на сделку и провести её с полным юридическим сопровождением наших специалистов</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="help help-gray pd">
+                <div class="help__wrapper container-big">
+                    <div class="help__container container">
+                        <div class="help__body">
+                            <div class="help__block">
+                                <h2 class="help__title title-section">Получите бесплатную персональную консультацию Карины Минибаевой</h2>
+                                <p class="help__text">Я как и моя компания, всегда открыта к диалогу. Опишите ситуацию и стоящие перед вами задачи. Я детально изучу все данные, задам уточняющие вопросы и подскажу оптимальный путь решения на максимально выгодных для вас условиях.</p>
+                            </div>
+                            <div class="help__column">
+                                <form action="#" id="helpform" class="help__form">
+                                    <div class="help__inputs">
+                                        <div class="help__input">
+                                            <label for="name">Имя <span>*</span></label>
+                                            <input name="name" id="name" type="text" placeholder="Ваше имя" class="input-help help__name" required>
+                                        </div>
+                                        <div class="help__input">
+                                            <label for="phone">Номер телефона <span>*</span></label>
+                                            <input name="phone" id="phone" type="tel" placeholder="999 123 45 67" class="input-help help__phone" required>
+                                        </div>
+                                    </div>
+                                    <div class="help__textarea">
+                                        <label for="comment">Комментарий <span>*</span></label>
+                                        <textarea name="comment" id="comment" placeholder="Опишите вашу ситуацию" class="help__comment input-help"></textarea>
+                                    </div>
+                                    <div class="help__check">
+                                        <label for="agreement">
+                                            <input type="checkbox" id="agreement" name="agreement" class="help__checkbox" required>Даю своё согласие на обработку персональных данных
+                                        </label>
+                                    </div>
+                                    <div class="help__confirm">
+                                        <button type="submit" class="help__button btn">Бесплатная консультация</button>
+                                        <div class="help__socials">
+                                            <a href="#" class="appeal__social">
+                                                <svg width="24" height="24">
+                                                    <use xlink:href="./img/sprite.svg#tg"></use>
+                                                </svg>
+                                            </a>
+                                            <a href="#" class="appeal__social">
+                                                <svg width="24" height="24">
+                                                    <use xlink:href="./img/sprite.svg#tg"></use>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="team pd">
+                <div class="team__container container">
+                    <h2 class="team__title title-section">Наша команда</h2>
+                    <div class="team__controls">
+                        <p class="team__text">Сплочённый коллектив профессионалов, имеющих за спиной 10+ летний опыт кредитования и проведения сделок с недвижимостью</p>
+                        <div class="team__navigation">
+                            <div class="swiper-button team__button-prev swiper-button-prev">
+                                <svg width="20" height="24">
+                                    <use xlink:href="./img/sprite.svg#arrow-line"></use>
+                                </svg>
+                            </div>
+                            <div class="swiper-button team__button-next swiper-button-next">
+                                <svg width="20" height="24">
+                                    <use xlink:href="./img/sprite.svg#arrow-line"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team__swiper swiper">
+                        <div class="team__columns swiper-wrapper">
+                            <div class="team__column swiper-slide">
+                                <div class="team__image">
+                                    <img src="img/team1.png" alt="team">
+                                </div>
+                                <div class="team__content">
+                                    <p class="team__job">Руководитель компании</p>
+                                    <p class="team__name">Карина Минибаева</p>
+                                </div>
+                            </div>
+                            <div class="team__column swiper-slide">
+                                <div class="team__image">
+                                    <img src="img/team2.png" alt="team">
+                                </div>
+                                <div class="team__content">
+                                    <p class="team__job">РГенеральный директор</p>
+                                    <p class="team__name">Имя Фамилия</p>
+                                </div>
+                            </div>
+                            <div class="team__column swiper-slide">
+                                <div class="team__image">
+                                    <img src="img/team3.png" alt="team">
+                                </div>
+                                <div class="team__content">
+                                    <p class="team__job">Основатель компании</p>
+                                    <p class="team__name">Имя Фамилия</p>
+                                </div>
+                            </div>
+                            <div class="team__column swiper-slide">
+                                <div class="team__image">
+                                    <img src="img/team4.png" alt="team">
+                                </div>
+                                <div class="team__content">
+                                    <p class="team__job">Генеральный директор</p>
+                                    <p class="team__name">Иван Петрушин</p>
+                                </div>
+                            </div>
+                            <div class="team__column swiper-slide">
+                                <div class="team__image">
+                                    <img src="img/team1.png" alt="team">
+                                </div>
+                                <div class="team__content">
+                                    <p class="team__job">Руководитель компании</p>
+                                    <p class="team__name">Карина Минибаева</p>
+                                </div>
+                            </div>
+                            <div class="team__column swiper-slide">
+                                <div class="team__image">
+                                    <img src="img/team2.png" alt="team">
+                                </div>
+                                <div class="team__content">
+                                    <p class="team__job">РГенеральный директор</p>
+                                    <p class="team__name">Имя Фамилия</p>
+                                </div>
+                            </div>
+                            <div class="team__column swiper-slide">
+                                <div class="team__image">
+                                    <img src="img/team3.png" alt="team">
+                                </div>
+                                <div class="team__content">
+                                    <p class="team__job">Основатель компании</p>
+                                    <p class="team__name">Имя Фамилия</p>
+                                </div>
+                            </div>
+                            <div class="team__column swiper-slide">
+                                <div class="team__image">
+                                    <img src="img/team4.png" alt="team">
+                                </div>
+                                <div class="team__content">
+                                    <p class="team__job">Генеральный директор</p>
+                                    <p class="team__name">Иван Петрушин</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team__pagination pagination swiper-pagination"></div>
+                    </div>
+
+
+                </div>
+            </section>
+            @include('partials/situation.html')
+            @include('partials/review.html')
+            @include('partials/help.html')
+        </main>
+        @include('partials/footer.html')
+        @include('partials/modalVideos.html')
+        <!-- @include('partials/modals.html')
+        @include('partials/modal.html') -->
+    </div>
+
+    <!-- @include('partials/scripts.html') -->
+</body>
+
+</html>
