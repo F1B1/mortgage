@@ -428,7 +428,7 @@ label {
 }
 
 .pd-t {
-  padding-top: clamp(8.125rem, 6.875vw + 6.75rem, 15rem);
+  padding-top: clamp(5rem, 7.5vw + 3.5rem, 12.5rem);
 }
 
 .container-big {
@@ -712,6 +712,15 @@ svg use {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+.breadcrumblist__container ol li {
+  font-size: 14px;
+}
+.breadcrumblist__container ol li:not(:last-child) {
+  margin-right: 8px;
+}
+.breadcrumblist__container ol li a.active {
+  color: var(--dark-60);
 }
 .breadcrumblist__line {
   width: 10px;
