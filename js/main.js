@@ -8335,6 +8335,325 @@ function modalVideo() {
 
 /***/ }),
 
+/***/ "./src/js/functions/paginationWidget.js":
+/*!**********************************************!*\
+  !*** ./src/js/functions/paginationWidget.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   paginationWidget: () => (/* binding */ paginationWidget)
+/* harmony export */ });
+function paginationWidget() {
+  const content = [{
+    date: '24',
+    month: 'ФЕВРАЛЬ',
+    year: '2024',
+    title: 'Выгодные кредиты на образование',
+    text: 'Обеспечьте себе доступное образование с нашим подробным гидом по кредитам. Мы расскажем, как получить выгодные условия, минимизировать расходы и сделать образование доступным для каждого.',
+    image: 'img/blog1.webp',
+    isBig: true
+  }, {
+    date: '26',
+    month: 'МАЙ',
+    year: '2024',
+    title: 'Управляйте долгами эффективно',
+    text: 'От экономии времени и ресурсов до возможности переноса и долговечности — узнайте, почему мод...',
+    image: 'img/blog1.webp',
+    isBig: false
+  }, {
+    date: '22',
+    month: 'МАЙ',
+    year: '2024',
+    title: 'Рефинансирование с низкой ставкой',
+    text: 'Узнайте о нашей новой программе рефинансирования. Программа предоставляющая клиентам возможность снизить процен...',
+    image: 'img/blog1.webp',
+    isBig: false
+  }, {
+    date: '19',
+    month: 'МАЙ',
+    year: '2024',
+    title: 'Управляйте долгами эффективно',
+    text: 'От экономии времени и ресурсов до возможности переноса и долговечности — узнайте, почему мод...',
+    image: 'img/blog1.webp',
+    isBig: false
+  }, {
+    date: '17',
+    month: 'МАЙ',
+    year: '2024',
+    title: 'Управляйте долгами эффективно',
+    text: 'От экономии времени и ресурсов до возможности переноса и долговечности — узнайте, почему мод...',
+    image: 'img/blog1.webp',
+    isBig: false
+  }, {
+    date: '16',
+    month: 'МАЙ',
+    year: '2024',
+    title: 'Управляйте долгами эффективно',
+    text: 'От экономии времени и ресурсов до возможности переноса и долговечности — узнайте, почему мод...',
+    image: 'img/blog1.webp',
+    isBig: false
+  }, {
+    date: '13',
+    month: 'МАЙ',
+    year: '2024',
+    title: 'Выгодные кредиты на образование',
+    text: 'Обеспечьте себе доступное образование с нашим подробным гидом по кредитам. Мы расскажем, как получить выгодные условия, минимизировать расходы и сделать образование доступным для каждого.',
+    image: 'img/blog2.webp',
+    isBig: false
+  }, {
+    date: '11',
+    month: 'ФЕВРАЛЬ',
+    year: '2024',
+    title: 'Выгодные кредиты на образование',
+    text: 'Обеспечьте себе доступное образование с нашим подробным гидом по кредитам. Мы расскажем, как получить выгодные условия, минимизировать расходы и сделать образование доступным для каждого.',
+    image: 'img/blog1.webp',
+    isBig: false
+  }, {
+    date: '10',
+    month: 'МАЙ',
+    year: '2024',
+    title: 'Управляйте долгами эффективно',
+    text: 'От экономии времени и ресурсов до возможности переноса и долговечности — узнайте, почему мод...',
+    image: 'img/blog1.webp',
+    isBig: false
+  }, {
+    date: '9',
+    month: 'МАЙ',
+    year: '2024',
+    title: 'Рефинансирование с низкой ставкой',
+    text: 'Узнайте о нашей новой программе рефинансирования. Программа предоставляющая клиентам возможность снизить процен...',
+    image: 'img/blog1.webp',
+    isBig: false
+  }, {
+    date: '8',
+    month: 'МАЙ',
+    year: '2024',
+    title: 'Управляйте долгами эффективно',
+    text: 'От экономии времени и ресурсов до возможности переноса и долговечности — узнайте, почему мод...',
+    image: 'img/blog1.webp',
+    isBig: false
+  }, {
+    date: '7',
+    month: 'МАЙ',
+    year: '2024',
+    title: 'Управляйте долгами эффективно',
+    text: 'От экономии времени и ресурсов до возможности переноса и долговечности — узнайте, почему мод...',
+    image: 'img/blog1.webp',
+    isBig: false
+  }, {
+    date: '6',
+    month: 'МАЙ',
+    year: '2024',
+    title: 'Управляйте долгами эффективно',
+    text: 'От экономии времени и ресурсов до возможности переноса и долговечности — узнайте, почему мод...',
+    image: 'img/blog1.webp',
+    isBig: false
+  }, {
+    date: '5',
+    month: 'МАЙ',
+    year: '2024',
+    title: 'Выгодные кредиты на образование',
+    text: 'Обеспечьте себе доступное образование с нашим подробным гидом по кредитам. Мы расскажем, как получить выгодные условия, минимизировать расходы и сделать образование доступным для каждого.',
+    image: 'img/blog2.webp',
+    isBig: false
+  }, {
+    date: '11',
+    month: 'ФЕВРАЛЬ',
+    year: '2024',
+    title: 'Выгодные кредиты на образование',
+    text: 'Обеспечьте себе доступное образование с нашим подробным гидом по кредитам. Мы расскажем, как получить выгодные условия, минимизировать расходы и сделать образование доступным для каждого.',
+    image: 'img/blog1.webp',
+    isBig: false
+  }, {
+    date: '10',
+    month: 'МАЙ',
+    year: '2024',
+    title: 'Управляйте долгами эффективно',
+    text: 'От экономии времени и ресурсов до возможности переноса и долговечности — узнайте, почему мод...',
+    image: 'img/blog1.webp',
+    isBig: false
+  }, {
+    date: '9',
+    month: 'МАЙ',
+    year: '2024',
+    title: 'Рефинансирование с низкой ставкой',
+    text: 'Узнайте о нашей новой программе рефинансирования. Программа предоставляющая клиентам возможность снизить процен...',
+    image: 'img/blog1.webp',
+    isBig: false
+  }, {
+    date: '8',
+    month: 'МАЙ',
+    year: '2024',
+    title: 'Управляйте долгами эффективно',
+    text: 'От экономии времени и ресурсов до возможности переноса и долговечности — узнайте, почему мод...',
+    image: 'img/blog1.webp',
+    isBig: false
+  }, {
+    date: '7',
+    month: 'МАЙ',
+    year: '2024',
+    title: 'Управляйте долгами эффективно',
+    text: 'От экономии времени и ресурсов до возможности переноса и долговечности — узнайте, почему мод...',
+    image: 'img/blog1.webp',
+    isBig: false
+  }, {
+    date: '6',
+    month: 'МАЙ',
+    year: '2024',
+    title: 'Управляйте долгами эффективно',
+    text: 'От экономии времени и ресурсов до возможности переноса и долговечности — узнайте, почему мод...',
+    image: 'img/blog1.webp',
+    isBig: false
+  }, {
+    date: '5',
+    month: 'МАЙ',
+    year: '2024',
+    title: 'Выгодные кредиты на образование',
+    text: 'Обеспечьте себе доступное образование с нашим подробным гидом по кредитам. Мы расскажем, как получить выгодные условия, минимизировать расходы и сделать образование доступным для каждого.',
+    image: 'img/blog2.webp',
+    isBig: false
+  }];
+  const contentDiv = document.getElementById('content');
+  const pageNumbersDiv = document.getElementById('pageNumbers');
+  const showMoreButton = document.getElementById('showMore');
+  let currentPage = 1;
+  let itemsPerPage = calculateItemsPerPage(currentPage);
+  let totalPages = calculateTotalPages();
+  function calculateItemsPerPage(page) {
+    const maxColumns = 8;
+    const bigItemColumns = 2;
+    const smallItemColumns = 1;
+    let columns = maxColumns;
+    let startIndex = (page - 1) * maxColumns;
+    let endIndex = startIndex + maxColumns;
+    let pageItems = content.slice(startIndex, endIndex);
+    pageItems.forEach(item => {
+      if (item.isBig) {
+        columns -= bigItemColumns - smallItemColumns;
+      }
+    });
+    if (columns < 4) columns = 4;
+    if (window.innerWidth <= 767) {
+      columns = 5;
+    }
+    return columns;
+  }
+  function calculateTotalPages() {
+    let totalColumns = 0;
+    content.forEach(item => {
+      if (item.isBig) {
+        totalColumns += 2;
+      } else {
+        totalColumns += 1;
+      }
+    });
+    return Math.ceil(totalColumns / 8);
+  }
+  function renderContent(page) {
+    let append = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+    if (!append) contentDiv.innerHTML = '';
+    const start = (page - 1) * itemsPerPage;
+    let end = start + itemsPerPage;
+    const pageContent = content.slice(start, end);
+    pageContent.forEach(item => {
+      const itemDiv = document.createElement('div');
+      itemDiv.className = 'blog__column pd-32';
+      if (item.isBig && window.innerWidth > 767) {
+        itemDiv.classList.add('big');
+      }
+      itemDiv.innerHTML = `
+                <div class="blog__times">
+                    <time class="blog__date">${item.date}</time>
+                    <time class="blog__time">
+                        ${item.month}<br>${item.year}
+                    </time>
+                </div>
+                <div class="blog__content">
+                    <p class="blog__sub-title">${item.title}</p>
+                    <p class="blog__text">${item.text}</p>
+                    <div class="blog__bg">
+                        <img src="${item.image}" alt="blog">
+                    </div>
+                </div>`;
+      contentDiv.appendChild(itemDiv);
+    });
+
+    // Hide the "Show More" button if on the last page
+    if (currentPage >= totalPages) {
+      showMoreButton.style.display = 'none';
+    } else {
+      showMoreButton.style.display = 'block';
+    }
+  }
+  function renderPageNumbers() {
+    pageNumbersDiv.innerHTML = '';
+    const maxPagesToShow = 3;
+    let startPage = Math.max(1, currentPage - 1);
+    let endPage = Math.min(totalPages, currentPage + 1);
+    if (endPage - startPage < maxPagesToShow - 1) {
+      if (currentPage === 1) {
+        endPage = Math.min(totalPages, endPage + (maxPagesToShow - (endPage - startPage) - 1));
+      } else if (currentPage === totalPages) {
+        startPage = Math.max(1, startPage - (maxPagesToShow - (endPage - startPage) - 1));
+      }
+    }
+    for (let i = startPage; i <= endPage; i++) {
+      const pageDiv = document.createElement('div');
+      pageDiv.textContent = i;
+      if (i === currentPage) {
+        pageDiv.classList.add('active');
+      }
+      pageDiv.addEventListener('click', () => {
+        currentPage = i;
+        itemsPerPage = calculateItemsPerPage(currentPage);
+        renderContent(currentPage);
+        renderPageNumbers();
+      });
+      pageNumbersDiv.appendChild(pageDiv);
+    }
+  }
+  document.getElementById('prevPage').addEventListener('click', () => {
+    if (currentPage > 1) {
+      currentPage--;
+      itemsPerPage = calculateItemsPerPage(currentPage);
+      renderContent(currentPage);
+      renderPageNumbers();
+    }
+  });
+  document.getElementById('nextPage').addEventListener('click', () => {
+    if (currentPage < totalPages) {
+      currentPage++;
+      itemsPerPage = calculateItemsPerPage(currentPage);
+      renderContent(currentPage);
+      renderPageNumbers();
+    }
+  });
+  showMoreButton.addEventListener('click', () => {
+    if (currentPage < totalPages) {
+      currentPage++;
+      itemsPerPage = calculateItemsPerPage(currentPage);
+      renderContent(currentPage, true);
+      renderPageNumbers();
+    }
+  });
+  renderContent(currentPage);
+  renderPageNumbers();
+  window.addEventListener('resize', () => {
+    itemsPerPage = calculateItemsPerPage(currentPage);
+    totalPages = calculateTotalPages();
+    if (currentPage > totalPages) {
+      currentPage = totalPages;
+    }
+    renderContent(currentPage);
+    renderPageNumbers();
+  });
+}
+
+/***/ }),
+
 /***/ "./src/js/functions/scroll.js":
 /*!************************************!*\
   !*** ./src/js/functions/scroll.js ***!
@@ -8397,7 +8716,15 @@ function swiperAll() {
       el: '.situation__pagination',
       clickable: true
     },
-    spaceBetween: 16
+    spaceBetween: 16,
+    breakpoints: {
+      320: {
+        spaceBetween: 8
+      },
+      767: {
+        spaceBetween: 16
+      }
+    }
   });
   const review = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.review__swiper', {
     modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
@@ -8410,13 +8737,13 @@ function swiperAll() {
       el: '.review__pagination',
       clickable: true
     },
-    spaceBetween: 16,
+    spaceBetween: 18,
     breakpoints: {
       320: {
         spaceBetween: 8
       },
       767: {
-        spaceBetween: 16
+        spaceBetween: 18
       }
     }
   });
@@ -8462,6 +8789,23 @@ function swiperAll() {
       }
     }
   });
+  const blogNews = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.blog-news__swiper', {
+    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
+    slidesPerView: 'auto',
+    pagination: {
+      el: '.blog-news__pagination',
+      clickable: true
+    },
+    spaceBetween: 16,
+    breakpoints: {
+      320: {
+        spaceBetween: 8
+      },
+      767: {
+        spaceBetween: 16
+      }
+    }
+  });
 }
 
 /***/ }),
@@ -8479,7 +8823,98 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var just_validate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! just-validate */ "./node_modules/just-validate/dist/just-validate.es.js");
 /* harmony import */ var _node_modules_inputmask_dist_inputmask_es6_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/inputmask/dist/inputmask.es6.js */ "./node_modules/inputmask/dist/inputmask.es6.js");
-/* harmony import */ var intl_tel_input__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! intl-tel-input */ "./node_modules/intl-tel-input/build/js/intlTelInput.js");
+// import JustValidate from 'just-validate';
+// import Inputmask from "../../../node_modules/inputmask/dist/inputmask.es6.js";
+// import intlTelInput from 'intl-tel-input';
+
+// export const validateForms = (selector, rules, checkboxes = [], afterSend) => {
+
+//   const form = document?.querySelector(selector);
+//   const telSelector = form?.querySelector('input[type="tel"]');
+
+//   if (!form) {
+//     console.error('Нет такого селектора!');
+//     return false;
+//   }
+
+//   if (!rules) {
+//     console.error('Вы не передали правила валидации!');
+//     return false;
+//   }
+
+//   if (telSelector) {
+//     const iti = intlTelInput(telSelector, {
+//       initialCountry: 'auto',
+//       geoIpLookup: function(callback) {
+//         fetch('https://ipinfo.io/json')
+//           .then(response => response.json())
+//           .then(data => {
+//             callback(data.country);
+//           })
+//           .catch(() => {
+//             callback('us');
+//           });
+//       },
+//       utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js'
+//     });
+
+//     telSelector.addEventListener('countrychange', function() {
+//       Inputmask.remove(telSelector);
+//       Inputmask(iti.getSelectedCountryData().dialCode + " (999) 999-9999").mask(telSelector);
+//     });
+
+//     for (let item of rules) {
+//       if (item.tel) {
+//         item.rules.push({
+//           rule: 'function',
+//           validator: function() {
+//             const phone = telSelector.value.replace(/[^0-9]/g, '');
+//             return iti.isValidNumber();
+//           },
+//           errorMessage: item.telError
+//         });
+//       }
+//     }
+//   }
+
+//   const validation = new JustValidate(selector);
+
+//   for (let item of rules) {
+//     validation.addField(item.ruleSelector, item.rules);
+//   }
+
+//   if (checkboxes.length) {
+//     for (let item of checkboxes) {
+//       validation.addRequiredGroup(
+//         `${item.selector}`,
+//         `${item.errorMessage}`
+//       )
+//     }
+//   }
+
+//   validation.onSuccess((ev) => {
+//     let formData = new FormData(ev.target);
+
+//     let xhr = new XMLHttpRequest();
+
+//     xhr.onreadystatechange = function () {
+//       if (xhr.readyState === 4) {
+//         if (xhr.status === 200) {
+//           if (afterSend) {
+//             afterSend();
+//           }
+//           console.log('Отправлено');
+//         }
+//       }
+//     }
+
+//     xhr.open('POST', 'mail.php', true);
+//     xhr.send(formData);
+
+//     ev.target.reset();
+//   });
+
+// };
 
 
 
@@ -8497,28 +8932,15 @@ const validateForms = function (selector, rules) {
     return false;
   }
   if (telSelector) {
-    const iti = intl_tel_input__WEBPACK_IMPORTED_MODULE_2__(telSelector, {
-      initialCountry: 'auto',
-      geoIpLookup: function (callback) {
-        fetch('https://ipinfo.io/json').then(response => response.json()).then(data => {
-          callback(data.country);
-        }).catch(() => {
-          callback('us');
-        });
-      },
-      utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js'
-    });
-    telSelector.addEventListener('countrychange', function () {
-      _node_modules_inputmask_dist_inputmask_es6_js__WEBPACK_IMPORTED_MODULE_1__["default"].remove(telSelector);
-      (0,_node_modules_inputmask_dist_inputmask_es6_js__WEBPACK_IMPORTED_MODULE_1__["default"])(iti.getSelectedCountryData().dialCode + " (999) 999-9999").mask(telSelector);
-    });
+    const inputMask = new _node_modules_inputmask_dist_inputmask_es6_js__WEBPACK_IMPORTED_MODULE_1__["default"]('+7 (999) 999-99-99');
+    inputMask.mask(telSelector);
     for (let item of rules) {
       if (item.tel) {
         item.rules.push({
           rule: 'function',
           validator: function () {
-            const phone = telSelector.value.replace(/[^0-9]/g, '');
-            return iti.isValidNumber();
+            const phone = telSelector.inputmask.unmaskedvalue();
+            return phone.length === 10;
           },
           errorMessage: item.telError
         });
@@ -19052,6 +19474,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _functions_swiperAll_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./functions/swiperAll.js */ "./src/js/functions/swiperAll.js");
 /* harmony import */ var _functions_modalVideo_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./functions/modalVideo.js */ "./src/js/functions/modalVideo.js");
 /* harmony import */ var _functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./functions/validate-forms.js */ "./src/js/functions/validate-forms.js");
+/* harmony import */ var _functions_paginationWidget_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./functions/paginationWidget.js */ "./src/js/functions/paginationWidget.js");
+
 
 
 
@@ -19061,17 +19485,27 @@ __webpack_require__.r(__webpack_exports__);
 
 
 window.addEventListener('DOMContentLoaded', e => {
-  const phoneInputField = document.querySelector("#phone");
-  const iti = intl_tel_input__WEBPACK_IMPORTED_MODULE_0__(phoneInputField, {
-    initialCountry: "ru",
-    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/utils.js"
-  });
-  (0,_functions_scroll_js__WEBPACK_IMPORTED_MODULE_4__.scroll)();
-  (0,_functions_dropdown_js__WEBPACK_IMPORTED_MODULE_1__.dropdown)();
-  (0,_functions_burger_js__WEBPACK_IMPORTED_MODULE_2__.burger)();
-  (0,_functions_mobile_dropdown_js__WEBPACK_IMPORTED_MODULE_3__.mobileDropdown)();
-  (0,_functions_swiperAll_js__WEBPACK_IMPORTED_MODULE_5__.swiperAll)();
-  (0,_functions_modalVideo_js__WEBPACK_IMPORTED_MODULE_6__.modalVideo)();
+  const functionsMap = {
+    // "#phone": () => {
+    //     const phoneInputField = document.querySelector("#phone");
+    //     if (phoneInputField) {
+    //         intlTelInput(phoneInputField, {
+    //             initialCountry: "ru",
+    //             utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/utils.js"
+    //         });
+    //     }
+    // },
+    ".header": _functions_scroll_js__WEBPACK_IMPORTED_MODULE_4__.scroll,
+    ".drop-list": _functions_dropdown_js__WEBPACK_IMPORTED_MODULE_1__.dropdown,
+    ".icon-menu": _functions_burger_js__WEBPACK_IMPORTED_MODULE_2__.burger,
+    ".header__link-mobile[data-target]": _functions_mobile_dropdown_js__WEBPACK_IMPORTED_MODULE_3__.mobileDropdown,
+    ".swiper": _functions_swiperAll_js__WEBPACK_IMPORTED_MODULE_5__.swiperAll,
+    ".video": _functions_modalVideo_js__WEBPACK_IMPORTED_MODULE_6__.modalVideo,
+    "#helpform1": () => (0,_functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_7__.validateForms)('#helpform1', rules, checkboxes, () => {
+      console.log('Форма успешно отправлена');
+    }),
+    ".pagination-widget": _functions_paginationWidget_js__WEBPACK_IMPORTED_MODULE_8__.paginationWidget
+  };
   const rules = [{
     ruleSelector: '.help__name',
     rules: [{
@@ -19091,18 +19525,20 @@ window.addEventListener('DOMContentLoaded', e => {
     tel: true,
     telError: 'Введите корректный номер телефона!'
   }, {
-    ruleSelector: '.help__comment',
+    ruleSelector: '.help__checkbox',
     rules: [{
       rule: 'required',
-      errorMessage: 'Введите комментарий!'
+      errorMessage: 'Подтвердите обработку персональный данных'
     }]
   }];
   const checkboxes = [{
     selector: '.help__checkbox',
     errorMessage: 'Необходимо согласие на обработку данных!'
   }];
-  (0,_functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_7__.validateForms)('#helpform', rules, checkboxes, () => {
-    console.log('Форма успешно отправлена!');
+  Object.keys(functionsMap).forEach(selector => {
+    if (document.querySelector(selector)) {
+      functionsMap[selector]();
+    }
   });
 });
 })();

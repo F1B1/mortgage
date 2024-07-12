@@ -9,7 +9,7 @@
   <meta name="theme-color" content="#111111">
   <title>Ипотека Просто</title>
   <!-- <link rel="preload" href="fonts/Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin> -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.3.0/build/css/intlTelInput.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.3.0/build/css/intlTelInput.css"> -->
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
   <script defer src="js/main.js"></script>
@@ -20,7 +20,7 @@
     <div class="site-container visible">
         <header class="header">
   <div class="header__container container">
-    <div class="header__top container-grid">
+    <div class="header__top ">
       <div class="header__top-info d-flex f-ac">
         <div class="header__cities">
           <button class="header__city btn-reset d-flex f-c">
@@ -43,12 +43,12 @@
           <svg width="16" height="16">
             <use xlink:href="./img/sprite.svg#phone" stroke="black"></use>
           </svg>8 800 000-00-00</a>
-        <a href="#" class="header__social">
+        <a href="#" class="header__social social">
           <svg width="16" height="16">
             <use xlink:href="./img/sprite.svg#tg"></use>
           </svg>
         </a>
-        <a href="#" class="header__social">
+        <a href="#" class="header__social social">
           <svg width="16" height="16">
             <use xlink:href="./img/sprite.svg#tg "></use>
           </svg>
@@ -141,12 +141,12 @@
       <div class="header__socials-mobile">
         <a href="#" class="btn header__consultant-mobile">Бесплатная консультация</a>
 
-        <a href="#" class="header__social-mobile">
+        <a href="#" class="header__social-mobile social">
           <svg width="20" height="20">
             <use xlink:href="./img/sprite.svg#tg "></use>
           </svg>
         </a>
-        <a href="#" class="header__social-mobile">
+        <a href="#" class="header__social-mobile social">
           <svg width="20" height="20">
             <use xlink:href="./img/sprite.svg#tg"></use>
           </svg>
@@ -181,7 +181,7 @@
                             <use xlink:href="./img/sprite.svg#check"></use>
                         </svg>Ипотека под низкие ставки</div>
                 </div>
-                <a href="#" class="primary__button btn">Получить консультацию</a>
+                <a href="#" class="primary__button btn btn-black">Получить консультацию</a>
             </div>
             <div class="primary__bg-girl">
                 <img src="img/women1.webp" alt="photo">
@@ -284,7 +284,7 @@
     <div class="situation__container container">
         <div class="situation__body">
             <div class="situation__texts">
-                <h2 class="situation__title title-section">Помогаем даже в самых сложных ситуациях</h2>
+                <h2 class="situation__title title-section mb-32a">Помогаем даже в самых сложных ситуациях</h2>
                 <p class="situation__sub-title fz-24"><span>98%</span> наших клиентов получили одобрение</p>
             </div>
             <div class="situation__swiper swiper">
@@ -319,7 +319,7 @@
                                 <li>Ставка: <span>10,5%</span></li>
                                 <li>Сумма кредита:<span></span>2 300 000 ₽</li>
                             </ul>
-                            <a href="#" class="situation__link">Больше кейсов
+                            <a href="#" class="situation__link arr-rt">Больше кейсов
                                 <svg width="20" height="24">
                                     <use xlink:href="./img/sprite.svg#arrow-line"></use>
                                 </svg>
@@ -356,7 +356,7 @@
                                 <li>Ставка: <span>10,5%</span></li>
                                 <li>Сумма кредита:<span></span>2 300 000 ₽</li>
                             </ul>
-                            <a href="#" class="situation__link">Больше кейсов
+                            <a href="#" class="situation__link arr-rt">Больше кейсов
                                 <svg width="20" height="24">
                                     <use xlink:href="./img/sprite.svg#arrow-line"></use>
                                 </svg>
@@ -393,7 +393,7 @@
                                 <li>Ставка: <span>10,5%</span></li>
                                 <li>Сумма кредита:<span></span>2 300 000 ₽</li>
                             </ul>
-                            <a href="#" class="situation__link">Больше кейсов
+                            <a href="#" class="situation__link arr-rt">Больше кейсов
                                 <svg width="20" height="24">
                                     <use xlink:href="./img/sprite.svg#arrow-line"></use>
                                 </svg>
@@ -424,12 +424,12 @@
                         <div class="appeal__info">
                             <h2 class="appeal__title title-section sticky mgb-80">Видеообращение руководителя компании «Ипотека просто» Карины Минибаевой</h2>
                             <div class="appeal__socials">
-                                <a href="#" class="appeal__social">
+                                <a href="#" class="appeal__social social">
                                     <svg width="24" height="24">
                                         <use xlink:href="./img/sprite.svg#tg"></use>
                                     </svg>
                                 </a>
-                                <a href="#" class="appeal__social">
+                                <a href="#" class="appeal__social social">
                                     <svg width="24" height="24">
                                         <use xlink:href="./img/sprite.svg#tg"></use>
                                     </svg>
@@ -440,7 +440,7 @@
                         <div class="appeal__column">
                             <p class="appeal__sub-title">Компания «ИпотекаПросто» — ваш надёжный проводник в мире финансов и недвижимости.С 10-летним опытом, мы являемся официальными партнёрами банков, предлагая клиентам индивидуальный подход, экспертный анализ и успешные решения в сфере кредитования и инвестирования.</p>
                             <p class="appeal__comment mb-32">Мы команда профессионалов с опытом работы более 10 лет в сфере ипотечного кредитования. Мы видим вас ровно также, как вас видят банки. И именно поэтому мы всегда знаем, как получить одобрение даже в самых сложных ситуацих</p>
-                            <a href="#" class="appeal__link link-refer">Подробнее о компании
+                            <a href="#" class="appeal__link link-refer arr-rt">Подробнее о компании
                                 <svg width="20" height="24">
                                     <use xlink:href="./img/sprite.svg#arrow-line"></use>
                                 </svg>
@@ -601,7 +601,7 @@
                         </svg>
                     </div>
                 </div>
-                <a href="#" class="review__link link-refer">Смотреть все отзывы
+                <a href="#" class="review__link link-refer arr-rt">Смотреть все отзывы
                     <svg width="20" height="24">
                         <use xlink:href="./img/sprite.svg#arrow-line"></use>
                     </svg>
@@ -885,9 +885,9 @@
         <div class="help__body">
             <h2 class="help__title title-section">У вас нестандартная ситуация?</h2>
             <div class="help__column">
-                <p class="help__sub-title">Получен отказ в кредите, нет первоначального взноса на ипотеку или денежные средства нужны в кротчайшие сроки?</p>
+                <p class="help__sub-title mb-32a">Получен отказ в кредите, нет первоначального взноса на ипотеку или денежные средства нужны в кротчайшие сроки?</p>
                 <p class="help__text">Проанализируем вашу ситуацию и предложим несколько вариантов решения проблемы. Подберём оптимальные условия кредитования. согласуем минимальную процентную ставку и одобрим кредит на самых выгодных для вас условиях.</p>
-                <form action="#" id="helpform" class="help__form">
+                <form method="post" action="#" id="helpform1" class="help__form">
                     <div class="help__inputs">
                         <div class="help__input">
                             <label for="name">Имя <span>*</span></label>
@@ -908,14 +908,14 @@
                         </label>
                     </div>
                     <div class="help__confirm">
-                        <button type="submit" class="help__button btn">Бесплатная консультация</button>
+                        <button type="submit" class="help__button btn btn-black">Бесплатная консультация</button>
                         <div class="help__socials">
-                            <a href="#" class="appeal__social">
+                            <a href="#" class="appeal__social social">
                                 <svg width="24" height="24">
                                     <use xlink:href="./img/sprite.svg#tg"></use>
                                 </svg>
                             </a>
-                            <a href="#" class="appeal__social">
+                            <a href="#" class="appeal__social social">
                                 <svg width="24" height="24">
                                     <use xlink:href="./img/sprite.svg#tg"></use>
                                 </svg>
@@ -1136,7 +1136,7 @@
     <a href="#" class="footer__terms or-1" target="_blank">Политика конфиденциальности</a>
     <div class="footer__block d-flex f-ac f-jsb or-3">
         <a href="#" class="footer__business d-flex f-ac">
-          <img src="./img/business-up.png" alt="Изображение" loading="lazy">
+          <img src="./img/business-up.webp" alt="Изображение" loading="lazy">
           <div class="footer__line"></div>
           <span>Разработка <br>
             и продвижение с любовью</span>
