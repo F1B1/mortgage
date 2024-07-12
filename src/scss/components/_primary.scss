@@ -56,13 +56,11 @@
     }
 
     &__button {
-        background-color: var(--dark);
         max-width: 361px;
         font-weight: 500;
         font-size: #{fluid(18px,22px, 320px, 1920px)};
         min-height: 69px;
         @include small-tablet{
-            background-color: var(--red);
             min-height: 63px;
         }
     }
@@ -121,5 +119,6 @@
     }
 
     &__text {
+        font-weight: 500;
     }
 }

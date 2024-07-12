@@ -25,9 +25,8 @@
         opacity: 1;
         visibility: visible;
         transition: all var(--trans-second) 0s;
-        @include tablet{
-            grid-template-columns: 137px 1fr;
-        }
+        display: flex;
+        justify-content: space-between;
         @include small-tablet{
             display: none;
         }
@@ -118,6 +117,7 @@
         justify-content: space-between;
         position: relative;
         z-index: 2;
+        background-color: var(--white);
         @include small-tablet{
             min-height: 42px;
         }
@@ -140,14 +140,9 @@
         transition: all 0.3s ease 0s;
         cursor: pointer;
         padding: 10px 0;
-        //   &:hover {
-        //     .header__sub-menu{
-        //         visibility: visible;
-        //         opacity: 1;
-        //         transform: translateY(0rem);
-        //         pointer-events: auto;
-        //     }
-        //   }
+        &:hover{
+            color: var(--red);
+        }
         svg{
             transition: all 0.3s ease 0s;
             transform: rotate(0);
@@ -215,6 +210,10 @@
     }
     &__sub-item{
         &:not(:last-child) {margin-bottom: 14px;};
+        transition: all 0.3s ease 0s;
+        &:hover{
+            color: var(--red);
+        }
     }
     &__sub-link{
         font-size: 16px;

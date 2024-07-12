@@ -1,0 +1,58 @@
+.actual {
+
+    &__wrapper {
+        @include tablet{
+            background-color: unset;
+        }
+    }
+
+    &__container {
+    }
+
+    &__body{
+        padding: 48px 0;
+        display: flex;
+        @include tablet{
+            flex-direction: column;
+            padding: 0;
+        }
+    }
+
+    &__form {
+
+    }
+
+    &__title {
+        max-width: 565px;
+        margin: 0px 0px #{fluid(16px, 32px, 320px, 1920px)} 0px;
+    }
+
+    &__text {
+        @include tablet{
+            margin: 0px 0px 32px 0px;
+        }
+    }
+
+    &__input {
+        display: flex;
+        flex-direction: column;
+        margin: 0px 0px 32px 0px;
+    }
+
+    &__email {
+        padding: 13px;
+        background-color: var(--white);
+        border-color: var(--dark-10);
+        border-radius: 6px;
+    }
+
+    &__button {
+        width: 100%;
+        border: none;
+        margin: 0px 0px 16px 0px;
+    }
+
+    &__sub-text {
+    }
+}
+

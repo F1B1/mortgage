@@ -20,12 +20,7 @@
     }
 
     &__title {
-        &.sticky{
-            position: sticky;
-            top: 80px;
-            z-index: 1; 
-            background-color: white;
-        }
+
   
     }
 
@@ -63,6 +58,7 @@
 
     &__ask {
         max-width: 150px;
+        padding: 0px 0px 0px 8px;
     }
 
     &__column {

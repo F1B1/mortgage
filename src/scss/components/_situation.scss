@@ -1,5 +1,9 @@
 .situation {
 
+    @include tablet{
+        padding-bottom: 0;
+    }
+
     &__container {
     }
 
@@ -20,7 +24,7 @@
     }
 
     &__title {
-        margin: 0px 0px 32px 0px;
+        
     }
 
     &__sub-title {
@@ -37,6 +41,9 @@
         @include big-desktop{
             flex: 0 1 100%;
             padding: 0px 0px 84px 0px;
+        }
+        @include tablet{
+            padding: 0px 0px 64px 0px;
         }
     }
 
@@ -149,7 +156,7 @@
         align-items:center;
         svg{
             fill: var(--white);
-            transform: rotate(315deg);
+            transform: rotate(-45deg);
             margin: 0px 0px 0px 8px;
             use{
                 stroke: none;

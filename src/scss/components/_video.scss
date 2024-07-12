@@ -23,10 +23,18 @@
         align-items: center;
         border-radius: 50%;
         cursor: pointer;
+        transition: all 0.3s ease 0s;
         svg{
             fill: var(--red-light);
+            transition: all 0.3s ease 0s;
             use{
                 stroke: none;
+            }
+        }
+        &:hover{
+            background-color: var(--red-light);
+            svg{
+                fill: var(--white);
             }
         }
     }

@@ -8,23 +8,38 @@ import { scroll } from "./functions/scroll.js";
 import { swiperAll } from "./functions/swiperAll.js";
 import { modalVideo } from "./functions/modalVideo.js";
 import { validateForms } from "./functions/validate-forms.js";
+import { paginationWidget } from './functions/paginationWidget.js';
 
 
 window.addEventListener('DOMContentLoaded',(e)=>{
     
-   const phoneInputField = document.querySelector("#phone");
-   const iti = intlTelInput(phoneInputField, {
-      initialCountry: "ru",
-      utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/utils.js"
-   });
 
-   scroll()
-   dropdown()
-   burger()
-   mobileDropdown()
-   swiperAll()
-   modalVideo()
-    const rules = [
+ 
+
+  
+    const functionsMap = {
+      // "#phone": () => {
+      //     const phoneInputField = document.querySelector("#phone");
+      //     if (phoneInputField) {
+      //         intlTelInput(phoneInputField, {
+      //             initialCountry: "ru",
+      //             utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/utils.js"
+      //         });
+      //     }
+      // },
+      ".header": scroll,
+      ".drop-list": dropdown,
+      ".icon-menu": burger,
+      ".header__link-mobile[data-target]": mobileDropdown,
+      ".swiper": swiperAll,
+      ".video": modalVideo,
+      "#helpform1": () => validateForms('#helpform1', rules, checkboxes, () => {
+          console.log('Форма успешно отправлена');
+      }),
+      ".pagination-widget": paginationWidget
+  };
+
+  const rules = [
     {
       ruleSelector: '.help__name',
       rules: [
@@ -51,16 +66,16 @@ window.addEventListener('DOMContentLoaded',(e)=>{
       telError: 'Введите корректный номер телефона!',
     },
     {
-      ruleSelector: '.help__comment',
+      ruleSelector: '.help__checkbox',
       rules: [
         {
           rule: 'required',
-          errorMessage: 'Введите комментарий!',
+          errorMessage: 'Подтвердите обработку персональный данных',
         },
       ],
     },
   ];
-
+ 
   const checkboxes = [
     {
       selector: '.help__checkbox',
@@ -68,9 +83,14 @@ window.addEventListener('DOMContentLoaded',(e)=>{
     },
   ];
 
-  validateForms('#helpform', rules, checkboxes, () => {
-    console.log('Форма успешно отправлена!');
+
+  Object.keys(functionsMap).forEach(selector => {
+      if (document.querySelector(selector)) {
+          functionsMap[selector]();
+      }
   });
+
+
 
 
 })

@@ -8,7 +8,24 @@
     font-weight: 500;
     min-height: 63px;
     border-radius: 500px;
+    transition: all 0.3s ease 0s;
+    &:hover{
+        background-color: var(--red-dark);
+    }
 }
+
+.btn-black{
+    background-color: var(--dark);
+    @media (any-hover: hover){
+        &:hover{
+            background-color: var(--red);
+        }
+    }
+    @media (hover: none){
+        background-color: var(--red);
+    }
+}
+
 .title {
     font-size: #{fluid(40px, 96px, 320px, 1920px)};
     font-weight: 700;
@@ -23,11 +40,53 @@
     font-size: #{fluid(20px, 36px, 320px, 1920px)};
     font-weight: 500; 
 }
-.pd{
-    padding:  #{fluid(32px, 75px, 320px, 1920px)} 0;
+
+.social{
+    transition: all 0.3s ease 0s;
+    &:hover{
+        border: none;
+        background-color: var(--red-light);
+        svg{
+            transition: all 0.3s ease 0s;
+            fill: var(--white);
+        }
+    }
 }
+.socials-big{
+    @include small-tablet{
+        justify-content: center;
+        .social{
+            width: 63px;
+            height: 63px;
+            svg{
+                width: 28px;
+                height: 28px;
+            }
+        }
+    }
+}
+
+.arr-rt{
+    svg{
+        transition: all 0.3s ease 0s;
+    }
+    &:hover{
+        svg{
+            transform: rotate(0);
+        }
+    }
+}
+
+
 .fz-24{
     font-size: #{fluid(20px, 24px, 320px, 1920px)};
+}
+.fz-16{
+    font-size: #{fluid(14px, 16px, 320px, 1920px)};
+}
+
+.pd{
+    padding:  #{fluid(32px, 75px, 320px, 1920px)} 0;
 }
 .pd-32{
     padding: 32px;
@@ -46,6 +105,9 @@
 }
 .mb-32{
     margin-bottom: 32px;
+}
+.mb-32a{
+    margin-bottom: #{fluid(16px, 32px, 320px, 1920px)};
 }
 .mbg-75{
     margin-bottom: 75px;
@@ -80,7 +142,7 @@ svg{
     
     svg{
         fill: var(--red-light);
-        transform: rotate(315deg);
+        transform: rotate(-45deg);
         margin: 0px 0px 0px 8px;
         use{
             stroke:none;
@@ -88,6 +150,12 @@ svg{
     }
 }
 
+.sticky{
+    position: sticky;
+    top: 80px;
+    z-index: 1; 
+    background-color: white;
+}
 
 
 .pagination{
@@ -115,6 +183,7 @@ svg{
     height: 63px;
     background-color: var(--gray-light);
     border-radius: 50%;
+    transition: all 0.3s ease 0s;
     &::after, &::before{
         content:none;
     }
@@ -129,8 +198,23 @@ svg{
     &-prev{
         transform: rotate(180deg);
     }
+    &:hover{
+        background-color: var(--red-light);
+        svg{
+            transition: all 0.3s ease 0s;
+            fill: var(--white);
+        }
+    }
     @include tablet{
         display: none;
+    }
+}
+
+label{
+    font-size: 14px;
+    margin: 0px 0px 8px 0px;
+    span{
+        color: var(--red-light);
     }
 }
 

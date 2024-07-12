@@ -1,0 +1,75 @@
+
+.actual-big {
+      // @include tablet{
+      //       margin-bottom: 32px;
+      //   }
+		&__wrapper {
+            position: relative;
+            @include small-tablet{
+                background-color: inherit;
+            }
+		}
+
+		&__container {
+		}
+
+		&__bg {
+            position: absolute;
+            right: 0;
+            bottom: -10px;
+            @include small-tablet{
+                display: none;
+            }
+		}
+
+		&__form {
+            position: relative;
+            z-index: 1;
+            background-color: var(--white);
+            border-radius: 22px;
+            margin: 48px 0;
+            padding: 48px;
+            max-width: 780px;
+            min-height: #{fluid(430px, 700px, 320px, 1920px)};
+            display: flex;
+            flex-direction: column;
+            @include small-tablet{
+                margin: 0;
+                padding: 0;
+            }
+		}
+
+        &__input{
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 auto;
+        }
+
+		&__title {
+            max-width: 600px;
+            margin: 0px 0px 32px 0px;
+            @include small-tablet{
+                margin: 0px 0px 16px 0px;
+            }
+		}
+
+		&__text {
+            margin: 0px 0px 32px 0px;
+		}
+
+		&__email {
+            padding: 13px;
+            background-color: inherit;
+            border-color: var(--dark-10);
+            border-radius: 6px;
+		}
+
+		&__button {
+            border: none;
+            width: 100%;
+            margin: 0px 0px 16px 0px;
+		}
+
+		&__sub-text {
+		}
+}

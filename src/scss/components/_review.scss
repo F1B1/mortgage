@@ -109,6 +109,14 @@
         gap: 24px;
         .swiper-button{
             background-color: var(--white);
+            
+            &:hover{
+                background-color: var(--red-light);
+                svg{
+                    transition: all 0.3s ease 0s;
+                    fill: var(--white);
+                }
+            }
         }
     }
 

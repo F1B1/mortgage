@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body" style="--scroll-width: 0px">
+    <h1 class="visually-hidden">Ипотека Просто</h1>
+    <div class="site-container visible">
+        @include('partials/header.html')
+        <main class="main">
+            <article class="breadcrumblist">
+                <div class="breadcrumblist__container container">
+                    <ol class="list-reset" itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                          <a itemprop="item" href="./main.html">
+                          <span itemprop="name">Главная</span></a>
+                          <meta itemprop="position" content="1" />
+                        </li>
+                        <li>
+                            <span class="breadcrumblist__line"></span>
+                        </li>
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                          <a class="active" itemprop="item" href="#">
+                          <span itemprop="name">Блог</span></a>
+                          <meta itemprop="position" content="2" />
+                        </li>
+                    </ol>
+                </div>
+            </article>
+            <section class="blog pd">
+                <div class="blog__container container">
+                    <h2 class="blog__title title-section">Блог</h2>
+                    <div class="blog__body">
+                        <div id="content" class="blog__columns pagination-widget">
+                        </div>
+                        <div class="blog__controls">
+                            <div class="blog__navigation">
+                                <div id="prevPage" class="blog__arrow blog__prev">
+                                    <svg width="16" height="24">
+                                        <use xlink:href="./img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </div>
+                                <div id="pageNumbers" class="blog__numbers">
+                                    <div class="blog__number">1</div>
+                                    <div class="blog__number">2</div>
+                                    <div class="blog__number">3</div>
+                                </div>
+                                <div id="nextPage" class="blog__arrow blog__next">
+                                    <svg width="16" height="24">
+                                        <use xlink:href="./img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <button id="showMore" class="blog__show btn">Показать ещё</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="actual actual-big pd">
+                <div class="actual-big__wrapper container-big">
+                    <div class="actual-big__container container">
+                        <div class="actual-big__bg">
+                            <img src="img/city-actual.webp" alt="city">
+                        </div>
+                        <form action="#" class="actual-big__form">
+                            <h2 class="actual-big__title title-section">Будьте в курсе актуальных новостей</h2>
+                            <p class="actual-big__text">Мы гарантируем, что ваша электронная почта не будет засорена нежелательными сообщениями.</p>
+                            <div class="actual-big__input">
+                                <label for="email">Введите email <span>*</span></label>
+                                <input name="email" type="email" class="input actual-big__email" placeholder="example@domain.com" required>
+                            </div>
+                            <button type="submit" class="actual-big__button btn">Подписаться на рассылку</button>
+                            <p class="actual-big__sub-text fz-16">Нажимая кнопку «Подписаться на рассылку», вы подтверждаете своё согласие на получение рекламных рассылок.</p>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @include('partials/footer.html')
+        @include('partials/modalVideos.html')
+        <!-- @include('partials/modals.html')
+        @include('partials/modal.html') -->
+    </div>
+
+    <!-- @include('partials/scripts.html') -->
+</body>
+
+</html>

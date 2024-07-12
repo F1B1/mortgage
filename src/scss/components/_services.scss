@@ -74,6 +74,15 @@
                 stroke: none;
             }
         }
+        &:hover{
+            background-color: var(--dark);
+            color: var(--white);
+            svg{
+                transition: all 0.3s ease 0s;
+                transform: rotate(-45deg);
+                fill: var(--white);
+            }
+        }
         @include small-tablet{
             width: 60px;
             border-radius: 50%;
@@ -82,7 +91,7 @@
             }
             svg{
                 margin: 0px;
-                transform: rotate(315deg);
+                transform: rotate(-45deg);
             }
         }
     }

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body" style="--scroll-width: 0px">
+    <h1 class="visually-hidden">Ипотека Просто</h1>
+    <div class="site-container visible">
+        @include('partials/header.html')
+        <main class="main">
+            <article class="breadcrumblist">
+                <div class="breadcrumblist__container container">
+                    <ol class="list-reset" itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                          <a itemprop="item" href="./main.html">
+                          <span itemprop="name">Главная</span></a>
+                          <meta itemprop="position" content="1" />
+                        </li>
+                        <li>
+                            <span class="breadcrumblist__line"></span>
+                        </li>
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                          <a itemprop="item" href="./blog.html">
+                          <span itemprop="name">Блог</span></a>
+                          <meta itemprop="position" content="2" />
+                        </li>
+                        <li>
+                            <span class="breadcrumblist__line"></span>
+                        </li>
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                          <a class="active" itemprop="item" href="#">
+                          <span itemprop="name">Выгодные кредиты на образование</span></a>
+                          <meta itemprop="position" content="3" />
+                        </li>
+                    </ol>
+                </div>
+            </article>
+            <section class="blog-news pd">
+                <div class="blog-news__container container">
+                    <a href="./blog.html" class="blog-news__back">
+                        <svg width="24" height="24">
+                            <use xlink:href="./img/sprite.svg#arrow-long"></use>
+                        </svg>Назад</a>
+                    <div class="blog-news__wrapper">
+                        <div class="appeal__info">
+                            <h2 class="blog-news__title title-section sticky">Выгодные кредиты на образование
+                                <span>
+                                    <time class="blog-news__date">ФЕВРАЛЬ 2024</time>
+                                </span>
+                            </h2>
+                        </div>
+                        <div class="blog-news__body">
+                            <div class="blog-news__swiper swiper">
+                                <div class="blog-news__columns swiper-wrapper">
+                                    <div class="blog-news__column swiper-slide">
+                                        <img src="img/blog1.webp" alt="news">
+                                    </div>
+                                    <div class="blog-news__column swiper-slide">
+                                        <img src="img/blog1.webp" alt="news">
+                                    </div>
+                                    <div class="blog-news__column swiper-slide">
+                                        <img src="img/blog1.webp" alt="news">
+                                    </div>
+                                    <div class="blog-news__column swiper-slide">
+                                        <img src="img/blog1.webp" alt="news">
+                                    </div>
+                                </div>
+                                <div class="blog-news__pagination"></div>
+                            </div>
+                            <p class="blog-news__sub-title">Обеспечьте себе доступное образование с нашим подробным гидом по кредитам. Мы расскажем, как получить выгодные условия, минимизировать расходы и сделать образование доступным для каждого.</p>
+                            <p class="blog-news__text">В современном мире образование играет ключевую роль в карьерном и личностном росте. Однако не всегда средства на оплату обучения доступны сразу. Кредиты на образование становятся отличным решением для тех, кто стремится получить качественное образование, не перегружая свой бюджет.</p>
+                            <p class="blog-news__comment">«Важно помнить, что правильно организованный кредит на образование — это не только финансовая поддержка, но и инвестиция в своё будущее»</p>
+                            <div class="blog-news__block">
+                                <p class="blog-news__title-list fz-24">Почему выбирают кредиты на образование:</p>
+                                <ul class="blog-news__list">
+                                    <li>Низкие процентные ставки. Многие банки предлагают специальные условия для студентов и аспирантов, снижая процентные ставки по сравнению с обычными потребительскими кредитами.</li>
+                                    <li>Гибкие условия погашения. Выплаты по кредиту можно начать после завершения обучения или даже позднее, когда студент уже начал работать и получать доход.</li>
+                                    <li>Отсрочка платежей. Некоторые программы предоставляют возможность отсрочки платежей в случае временных финансовых трудностей.</li>
+                                </ul>
+                            </div>
+                            <p class="blog-news__text">Используя наш гид, вы сможете сделать осознанный выбор и найти оптимальное предложение для финансирования вашего образования. Не откладывайте своё будущее на потом — начните воплощать свои учебные планы уже сегодня!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="news pd">
+                <div class="news__container container">
+                    <div class="news__controls">
+                        <h2 class="news__title title-section">Вам может быть интересно</h2>
+                        <div class="news__navigation">
+                            <div class="swiper-button news__button-prev swiper-button-prev">
+                                <svg width="20" height="24">
+                                    <use xlink:href="./img/sprite.svg#arrow-line"></use>
+                                </svg>
+                            </div>
+                            <div class="swiper-button news__button-next swiper-button-next">
+                                <svg width="20" height="24">
+                                    <use xlink:href="./img/sprite.svg#arrow-line"></use>
+                                </svg>
+                            </div>
+                        </div>   
+                    </div>
+                    <div class="news__swiper swiper">
+                        <div class="news__columns swiper-wrapper">
+                            <div class="news__column pd-32 swiper-slide">
+                                <div class="news__times">
+                                    <time class="news__date">26</time>
+                                    <time class="news__time">
+                                        Май
+                                        <br>
+                                        2024
+                                    </time>
+                                </div>
+                                <div class="news__content">
+                                    <p class="news__sub-title">Управляйте долгами эффективно</p>
+                                    <p class="news__text">От экономии времени и ресурсов до возможности переноса и долговечности — узнайте, почему модульные дома становятся предпочтительным выбором для многих семей.</p>
+                                    <div class="news__bg">
+                                        <img src="img/blog2.webp" alt="news">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="news__column pd-32 swiper-slide">
+                                <div class="news__times">
+                                    <time class="news__date">24</time>
+                                    <time class="news__time">
+                                        Май
+                                        <br>
+                                        2024
+                                    </time>
+                                </div>
+                                <div class="news__content">
+                                    <p class="news__sub-title">Выгодные кредиты на образование</p>
+                                    <p class="news__text">Обеспечьте себе доступное образование с нашим подробным гидом по кредитам. Мы расскажем, как получить выгодные условия, минимизировать расходы и сделать образование доступным для каждого.</p>
+                                    <div class="news__bg">
+                                        <img src="img/blog2.webp" alt="news">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="news__column pd-32 swiper-slide">
+                                <div class="news__times">
+                                    <time class="news__date">22</time>
+                                    <time class="news__time">
+                                        Май
+                                        <br>
+                                        2024
+                                    </time>
+                                </div>
+                                <div class="news__content">
+                                    <p class="news__sub-title">Рефинансирования с низкой ставкой</p>
+                                    <p class="news__text">Узнайте о нашей новой программе рефинансирования, предоставляющей клиентам возможность снизить процентные ставки и сэкономить на выплатах. Сделайте свои финансы более устойчивыми и эффективными с 'ИпотекаПросто'</p>
+                                    <div class="news__bg">
+                                        <img src="img/blog2.webp" alt="news">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="news__column pd-32 swiper-slide">
+                                <div class="news__times">
+                                    <time class="news__date">19</time>
+                                    <time class="news__time">
+                                        Май
+                                        <br>
+                                        2024
+                                    </time>
+                                </div>
+                                <div class="news__content">
+                                    <p class="news__sub-title">Управляйте долгами эффективно</p>
+                                    <p class="news__text">От экономии времени и ресурсов до возможности переноса и долговечности — узнайте, почему модульные дома становятся предпочтительным выбором для многих семей.</p>
+                                    <div class="news__bg">
+                                        <img src="img/blog2.webp" alt="news">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="news__column pd-32 swiper-slide">
+                                <div class="news__times">
+                                    <time class="news__date">26</time>
+                                    <time class="news__time">
+                                        Май
+                                        <br>
+                                        2024
+                                    </time>
+                                </div>
+                                <div class="news__content">
+                                    <p class="news__sub-title">Управляйте долгами эффективно</p>
+                                    <p class="news__text">От экономии времени и ресурсов до возможности переноса и долговечности — узнайте, почему модульные дома становятся предпочтительным выбором для многих семей.</p>
+                                    <div class="news__bg">
+                                        <img src="img/blog2.webp" alt="news">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="news__column pd-32 swiper-slide">
+                                <div class="news__times">
+                                    <time class="news__date">24</time>
+                                    <time class="news__time">
+                                        Май
+                                        <br>
+                                        2024
+                                    </time>
+                                </div>
+                                <div class="news__content">
+                                    <p class="news__sub-title">Выгодные кредиты на образование</p>
+                                    <p class="news__text">Выгодные кредиты на образование
+                                        Обеспечьте себе доступное образование с нашим подробным гидом по кредитам. Мы расскажем, как получить выгодные условия, минимизировать расходы и сделать образование доступным для каждого.</p>
+                                    <div class="news__bg">
+                                        <img src="img/blog2.webp" alt="news">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="news__column pd-32 swiper-slide">
+                                <div class="news__times">
+                                    <time class="news__date">22</time>
+                                    <time class="news__time">
+                                        Май
+                                        <br>
+                                        2024
+                                    </time>
+                                </div>
+                                <div class="news__content">
+                                    <p class="news__sub-title">Рефинансирования с низкой ставкой</p>
+                                    <p class="news__text">Узнайте о нашей новой программе рефинансирования, предоставляющей клиентам возможность снизить процентные ставки и сэкономить на выплатах. Сделайте свои финансы более устойчивыми и эффективными с 'ИпотекаПросто'</p>
+                                    <div class="news__bg">
+                                        <img src="img/blog2.webp" alt="news">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="news__column pd-32 swiper-slide">
+                                <div class="news__times">
+                                    <time class="news__date">19</time>
+                                    <time class="news__time">
+                                        Май
+                                        <br>
+                                        2024
+                                    </time>
+                                </div>
+                                <div class="news__content">
+                                    <p class="news__sub-title">Управляйте долгами эффективно</p>
+                                    <p class="news__text">От экономии времени и ресурсов до возможности переноса и долговечности — узнайте, почему модульные дома становятся предпочтительным выбором для многих семей.</p>
+                                    <div class="news__bg">
+                                        <img src="img/blog2.webp" alt="news">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news__pagination pagination swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="actual pd">
+                <div class="actual__wrapper container-big">
+                    <div class="actual__container container">
+                        <div class="actual__body">
+                            <div class="actual__info">
+                                <h2 class="actual__title title-section">Будьте в курсе актуальных новостей</h2>
+                                <p class="actual__text">Мы гарантируем, что ваша электронная почта не будет засорена нежелательными сообщениями.</p>
+                            </div>
+                            <form action="#" class="actual__form">
+                                <div class="actual__input">
+                                    <label for="email">Введите email <span>*</span></label>
+                                    <input name="email" type="email" class="input actual__email" placeholder="example@domain.com" required>
+                                </div>
+                                <button type="submit" class="actual__button btn">Подписаться на рассылку</button>
+                                <p class="actual__sub-text fz-16">Нажимая кнопку «Подписаться на рассылку», вы подтверждаете своё согласие на получение рекламных рассылок.</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+        @include('partials/footer.html')
+        @include('partials/modalVideos.html')
+        <!-- @include('partials/modals.html')
+        @include('partials/modal.html') -->
+    </div>
+
+    <!-- @include('partials/scripts.html') -->
+</body>
+
+</html>

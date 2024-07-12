@@ -1,10 +1,16 @@
 .breadcrumblist {
+    padding: 150px 0px 0px 0px;
+    @include small-tablet{
+        padding: 64px 0px 0px 0px;
+    }
     &__container {
         ol{
             display: flex;
             align-items:center;
+            flex-wrap: wrap;
             li{
                 &:not(:last-child) {margin-right: 8px;}
+                margin: 0px 0px 8px 0px;
                 font-size: 14px;
                 a{
                     &.active{

@@ -30,12 +30,12 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        max-width: 740px;
-        .help__title{
-            max-width: 800px;
-        }
+        max-width: 700px;
         .help__text{
             margin: 0;
+            @include big-desktop{
+                margin: 0px 0px 32px 0px;
+            }
         }
     }
 
@@ -45,7 +45,6 @@
 
     &__sub-title {
         font-size: #{fluid(24px, 36px, 320px, 1920px)};
-        margin: 0px 0px 32px 0px;
     }
 
     &__text {
@@ -68,26 +67,12 @@
         flex: 0 1 50%;
         display: flex;
         flex-direction: column;
-        label{
-            font-size: 14px;
-            margin: 0px 0px 8px 0px;
-            span{
-                color: var(--red-light);
-            }
-        }
     }
 
     &__textarea {
         display: flex;
         flex-direction: column;
         margin: 0px 0px 8px 0px;
-        label{
-            font-size: 14px;
-            margin: 0px 0px 8px 0px;
-            span{
-                color: var(--red-light);
-            }
-        }
     }
 
     &__comment {
@@ -105,8 +90,8 @@
     &__checkbox {
         margin: 0px 8px 0px 0px;
         position: relative;
-        max-width: 24px;
-        height: 24px;
+        max-width: 20px;
+        height: 20px;
         background: transparent;
         border: 1px solid var(--dark-40);
         transition: all 0.15s ease-out 0s;
@@ -118,20 +103,22 @@
     //         height: 18px;    
     //   }
         &:hover{
-            background: inherit;
+            border-color: var(--red-light);
         }
         &:checked{
+            background-color: var(--red-light);
+            border-color: var(--red-light);
             &::before{
-                border-color: var(--red-light);
+                border-color: var(--white);
             }
         }
         &::before{
             content: '';
             position: absolute;
             top: 2px;
-            left: 8px;
-            width: 8px;
-            height: 13px;
+            left: 7px;
+            width: 6px;
+            height: 11px;
             border: 2px solid transparent;
             border-left: none;
             border-top: none;
@@ -155,17 +142,16 @@
 
     &__button {
         border: none;
-        background-color: var(--dark);
         font-weight: 500;
         width: 325px;
         @include small-tablet{
             width: 100%;
-            background-color: var(--red);
         }
     }
 
     &__socials {
         gap: 8px;
         display: flex;
+        align-items:center;
     }
 }

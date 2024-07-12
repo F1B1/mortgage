@@ -14,6 +14,14 @@ export function swiperAll(){
             clickable: true
           },
         spaceBetween: 16,
+        breakpoints:{
+          320:{
+            spaceBetween: 8,
+          },
+          767:{
+            spaceBetween: 16  ,
+          }
+        }
     })
 
     const review = new Swiper('.review__swiper', {
@@ -27,13 +35,13 @@ export function swiperAll(){
           el: '.review__pagination',
           clickable: true
         },
-      spaceBetween: 16,
+      spaceBetween: 18,
       breakpoints:{
         320:{
           spaceBetween: 8,
         },
         767:{
-          spaceBetween: 16,
+          spaceBetween: 18,
         }
       }
     })
@@ -81,4 +89,22 @@ export function swiperAll(){
         }
       }
     })
+
+    const blogNews = new Swiper('.blog-news__swiper', {
+      modules:[ Pagination],
+      slidesPerView: 'auto',
+        pagination: {
+          el: '.blog-news__pagination',
+          clickable: true
+        },
+      spaceBetween: 16,
+      breakpoints:{
+        320:{
+          spaceBetween: 8,
+        },
+        767:{
+          spaceBetween: 16  ,
+        }
+      }
+  })
 }
