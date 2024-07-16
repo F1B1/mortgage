@@ -8200,51 +8200,6 @@ function burger() {
 
 /***/ }),
 
-/***/ "./src/js/functions/dropdown.js":
-/*!**************************************!*\
-  !*** ./src/js/functions/dropdown.js ***!
-  \**************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   dropdown: () => (/* binding */ dropdown)
-/* harmony export */ });
-function dropdown() {
-  const dropdownBtn = document.querySelector(".drop-list");
-  const dropdownLink = document.querySelector(".drop-link");
-  const dropdownMenu = document.querySelector(".header__sub-menu");
-  const toggleArrow = dropdownBtn.querySelector("svg");
-  dropdownBtn.addEventListener('click', e => {
-    e.preventDefault();
-    dropdownMenu.classList.toggle('show');
-    toggleArrow.classList.toggle('show');
-    dropdownLink.classList.toggle('show');
-  });
-
-  // Отменяем закрытие меню при клике внутри подменю
-  dropdownMenu.addEventListener('click', e => {
-    e.stopPropagation();
-    if (e.target.classList.contains('header__sub-link')) {
-      dropdownMenu.classList.remove('show');
-      toggleArrow.classList.remove('show');
-      dropdownLink.classList.remove('show');
-    }
-  });
-
-  // Закрываем меню при клике вне его
-  document.addEventListener('click', e => {
-    if (!dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
-      dropdownMenu.classList.remove('show');
-      toggleArrow.classList.remove('show');
-      dropdownLink.classList.remove('show');
-    }
-  });
-}
-
-/***/ }),
-
 /***/ "./src/js/functions/mobile-dropdown.js":
 /*!*********************************************!*\
   !*** ./src/js/functions/mobile-dropdown.js ***!
@@ -8347,309 +8302,143 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   paginationWidget: () => (/* binding */ paginationWidget)
 /* harmony export */ });
 function paginationWidget() {
-  const content = [{
-    date: '24',
-    month: 'ФЕВРАЛЬ',
-    year: '2024',
-    title: 'Выгодные кредиты на образование',
-    text: 'Обеспечьте себе доступное образование с нашим подробным гидом по кредитам. Мы расскажем, как получить выгодные условия, минимизировать расходы и сделать образование доступным для каждого.',
-    image: 'img/blog1.webp',
-    isBig: true
-  }, {
-    date: '26',
-    month: 'МАЙ',
-    year: '2024',
-    title: 'Управляйте долгами эффективно',
-    text: 'От экономии времени и ресурсов до возможности переноса и долговечности — узнайте, почему мод...',
-    image: 'img/blog1.webp',
-    isBig: false
-  }, {
-    date: '22',
-    month: 'МАЙ',
-    year: '2024',
-    title: 'Рефинансирование с низкой ставкой',
-    text: 'Узнайте о нашей новой программе рефинансирования. Программа предоставляющая клиентам возможность снизить процен...',
-    image: 'img/blog1.webp',
-    isBig: false
-  }, {
-    date: '19',
-    month: 'МАЙ',
-    year: '2024',
-    title: 'Управляйте долгами эффективно',
-    text: 'От экономии времени и ресурсов до возможности переноса и долговечности — узнайте, почему мод...',
-    image: 'img/blog1.webp',
-    isBig: false
-  }, {
-    date: '17',
-    month: 'МАЙ',
-    year: '2024',
-    title: 'Управляйте долгами эффективно',
-    text: 'От экономии времени и ресурсов до возможности переноса и долговечности — узнайте, почему мод...',
-    image: 'img/blog1.webp',
-    isBig: false
-  }, {
-    date: '16',
-    month: 'МАЙ',
-    year: '2024',
-    title: 'Управляйте долгами эффективно',
-    text: 'От экономии времени и ресурсов до возможности переноса и долговечности — узнайте, почему мод...',
-    image: 'img/blog1.webp',
-    isBig: false
-  }, {
-    date: '13',
-    month: 'МАЙ',
-    year: '2024',
-    title: 'Выгодные кредиты на образование',
-    text: 'Обеспечьте себе доступное образование с нашим подробным гидом по кредитам. Мы расскажем, как получить выгодные условия, минимизировать расходы и сделать образование доступным для каждого.',
-    image: 'img/blog2.webp',
-    isBig: false
-  }, {
-    date: '11',
-    month: 'ФЕВРАЛЬ',
-    year: '2024',
-    title: 'Выгодные кредиты на образование',
-    text: 'Обеспечьте себе доступное образование с нашим подробным гидом по кредитам. Мы расскажем, как получить выгодные условия, минимизировать расходы и сделать образование доступным для каждого.',
-    image: 'img/blog1.webp',
-    isBig: false
-  }, {
-    date: '10',
-    month: 'МАЙ',
-    year: '2024',
-    title: 'Управляйте долгами эффективно',
-    text: 'От экономии времени и ресурсов до возможности переноса и долговечности — узнайте, почему мод...',
-    image: 'img/blog1.webp',
-    isBig: false
-  }, {
-    date: '9',
-    month: 'МАЙ',
-    year: '2024',
-    title: 'Рефинансирование с низкой ставкой',
-    text: 'Узнайте о нашей новой программе рефинансирования. Программа предоставляющая клиентам возможность снизить процен...',
-    image: 'img/blog1.webp',
-    isBig: false
-  }, {
-    date: '8',
-    month: 'МАЙ',
-    year: '2024',
-    title: 'Управляйте долгами эффективно',
-    text: 'От экономии времени и ресурсов до возможности переноса и долговечности — узнайте, почему мод...',
-    image: 'img/blog1.webp',
-    isBig: false
-  }, {
-    date: '7',
-    month: 'МАЙ',
-    year: '2024',
-    title: 'Управляйте долгами эффективно',
-    text: 'От экономии времени и ресурсов до возможности переноса и долговечности — узнайте, почему мод...',
-    image: 'img/blog1.webp',
-    isBig: false
-  }, {
-    date: '6',
-    month: 'МАЙ',
-    year: '2024',
-    title: 'Управляйте долгами эффективно',
-    text: 'От экономии времени и ресурсов до возможности переноса и долговечности — узнайте, почему мод...',
-    image: 'img/blog1.webp',
-    isBig: false
-  }, {
-    date: '5',
-    month: 'МАЙ',
-    year: '2024',
-    title: 'Выгодные кредиты на образование',
-    text: 'Обеспечьте себе доступное образование с нашим подробным гидом по кредитам. Мы расскажем, как получить выгодные условия, минимизировать расходы и сделать образование доступным для каждого.',
-    image: 'img/blog2.webp',
-    isBig: false
-  }, {
-    date: '11',
-    month: 'ФЕВРАЛЬ',
-    year: '2024',
-    title: 'Выгодные кредиты на образование',
-    text: 'Обеспечьте себе доступное образование с нашим подробным гидом по кредитам. Мы расскажем, как получить выгодные условия, минимизировать расходы и сделать образование доступным для каждого.',
-    image: 'img/blog1.webp',
-    isBig: false
-  }, {
-    date: '10',
-    month: 'МАЙ',
-    year: '2024',
-    title: 'Управляйте долгами эффективно',
-    text: 'От экономии времени и ресурсов до возможности переноса и долговечности — узнайте, почему мод...',
-    image: 'img/blog1.webp',
-    isBig: false
-  }, {
-    date: '9',
-    month: 'МАЙ',
-    year: '2024',
-    title: 'Рефинансирование с низкой ставкой',
-    text: 'Узнайте о нашей новой программе рефинансирования. Программа предоставляющая клиентам возможность снизить процен...',
-    image: 'img/blog1.webp',
-    isBig: false
-  }, {
-    date: '8',
-    month: 'МАЙ',
-    year: '2024',
-    title: 'Управляйте долгами эффективно',
-    text: 'От экономии времени и ресурсов до возможности переноса и долговечности — узнайте, почему мод...',
-    image: 'img/blog1.webp',
-    isBig: false
-  }, {
-    date: '7',
-    month: 'МАЙ',
-    year: '2024',
-    title: 'Управляйте долгами эффективно',
-    text: 'От экономии времени и ресурсов до возможности переноса и долговечности — узнайте, почему мод...',
-    image: 'img/blog1.webp',
-    isBig: false
-  }, {
-    date: '6',
-    month: 'МАЙ',
-    year: '2024',
-    title: 'Управляйте долгами эффективно',
-    text: 'От экономии времени и ресурсов до возможности переноса и долговечности — узнайте, почему мод...',
-    image: 'img/blog1.webp',
-    isBig: false
-  }, {
-    date: '5',
-    month: 'МАЙ',
-    year: '2024',
-    title: 'Выгодные кредиты на образование',
-    text: 'Обеспечьте себе доступное образование с нашим подробным гидом по кредитам. Мы расскажем, как получить выгодные условия, минимизировать расходы и сделать образование доступным для каждого.',
-    image: 'img/blog2.webp',
-    isBig: false
-  }];
-  const contentDiv = document.getElementById('content');
-  const pageNumbersDiv = document.getElementById('pageNumbers');
-  const showMoreButton = document.getElementById('showMore');
-  let currentPage = 1;
-  let itemsPerPage = calculateItemsPerPage(currentPage);
-  let totalPages = calculateTotalPages();
-  function calculateItemsPerPage(page) {
-    const maxColumns = 8;
-    const bigItemColumns = 2;
-    const smallItemColumns = 1;
-    let columns = maxColumns;
-    let startIndex = (page - 1) * maxColumns;
-    let endIndex = startIndex + maxColumns;
-    let pageItems = content.slice(startIndex, endIndex);
-    pageItems.forEach(item => {
-      if (item.isBig) {
-        columns -= bigItemColumns - smallItemColumns;
+  fetch('../../data.json').then(respone => respone.json()).then(content => {
+    const contentDiv = document.getElementById('content');
+    const pageNumbersDiv = document.getElementById('pageNumbers');
+    const showMoreButton = document.getElementById('showMore');
+    let currentPage = 1;
+    let itemsPerPage = calculateItemsPerPage(currentPage);
+    let totalPages = calculateTotalPages();
+    function calculateItemsPerPage(page) {
+      const maxColumns = 8;
+      const bigItemColumns = 2;
+      const smallItemColumns = 1;
+      let columns = maxColumns;
+      let startIndex = (page - 1) * maxColumns;
+      let endIndex = startIndex + maxColumns;
+      let pageItems = content.slice(startIndex, endIndex);
+      pageItems.forEach(item => {
+        if (item.isBig) {
+          columns -= bigItemColumns - smallItemColumns;
+        }
+      });
+      if (columns < 4) columns = 4;
+      if (window.innerWidth <= 767) {
+        columns = 5;
       }
-    });
-    if (columns < 4) columns = 4;
-    if (window.innerWidth <= 767) {
-      columns = 5;
+      return columns;
     }
-    return columns;
-  }
-  function calculateTotalPages() {
-    let totalColumns = 0;
-    content.forEach(item => {
-      if (item.isBig) {
-        totalColumns += 2;
-      } else {
-        totalColumns += 1;
-      }
-    });
-    return Math.ceil(totalColumns / 8);
-  }
-  function renderContent(page) {
-    let append = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-    if (!append) contentDiv.innerHTML = '';
-    const start = (page - 1) * itemsPerPage;
-    let end = start + itemsPerPage;
-    const pageContent = content.slice(start, end);
-    pageContent.forEach(item => {
-      const itemDiv = document.createElement('div');
-      itemDiv.className = 'blog__column pd-32';
-      if (item.isBig && window.innerWidth > 767) {
-        itemDiv.classList.add('big');
-      }
-      itemDiv.innerHTML = `
-                <div class="blog__times">
-                    <time class="blog__date">${item.date}</time>
-                    <time class="blog__time">
-                        ${item.month}<br>${item.year}
-                    </time>
-                </div>
-                <div class="blog__content">
-                    <p class="blog__sub-title">${item.title}</p>
-                    <p class="blog__text">${item.text}</p>
-                    <div class="blog__bg">
-                        <img src="${item.image}" alt="blog">
+    function calculateTotalPages() {
+      let totalColumns = 0;
+      content.forEach(item => {
+        if (item.isBig) {
+          totalColumns += 2;
+        } else {
+          totalColumns += 1;
+        }
+      });
+      return Math.ceil(totalColumns / 8);
+    }
+    function renderContent(page) {
+      let append = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+      if (!append) contentDiv.innerHTML = '';
+      const start = (page - 1) * itemsPerPage;
+      let end = start + itemsPerPage;
+      const pageContent = content.slice(start, end);
+      pageContent.forEach(item => {
+        const itemDiv = document.createElement('div');
+        itemDiv.className = 'blog__column pd-32';
+        if (item.isActive) {
+          itemDiv.classList.add('active');
+        }
+        if (item.isBig && window.innerWidth > 767) {
+          itemDiv.classList.add('big');
+        }
+        itemDiv.innerHTML = `
+                    <div class="blog__times">
+                        <time class="blog__date">${item.date}</time>
+                        <time class="blog__time">
+                            ${item.month}<br>${item.year}
+                        </time>
                     </div>
-                </div>`;
-      contentDiv.appendChild(itemDiv);
-    });
-
-    // Hide the "Show More" button if on the last page
-    if (currentPage >= totalPages) {
-      showMoreButton.style.display = 'none';
-    } else {
-      showMoreButton.style.display = 'block';
-    }
-  }
-  function renderPageNumbers() {
-    pageNumbersDiv.innerHTML = '';
-    const maxPagesToShow = 3;
-    let startPage = Math.max(1, currentPage - 1);
-    let endPage = Math.min(totalPages, currentPage + 1);
-    if (endPage - startPage < maxPagesToShow - 1) {
-      if (currentPage === 1) {
-        endPage = Math.min(totalPages, endPage + (maxPagesToShow - (endPage - startPage) - 1));
-      } else if (currentPage === totalPages) {
-        startPage = Math.max(1, startPage - (maxPagesToShow - (endPage - startPage) - 1));
+                    <div class="blog__content">
+                        <p class="blog__sub-title">${item.title}</p>
+                        <p class="blog__text">${item.text}</p>
+                        <div class="blog__bg">
+                            <img src="${item.image}" alt="blog">
+                        </div>
+                    </div>`;
+        contentDiv.appendChild(itemDiv);
+      });
+      if (currentPage >= totalPages) {
+        showMoreButton.style.display = 'none';
+      } else {
+        showMoreButton.style.display = 'block';
       }
     }
-    for (let i = startPage; i <= endPage; i++) {
-      const pageDiv = document.createElement('div');
-      pageDiv.textContent = i;
-      if (i === currentPage) {
-        pageDiv.classList.add('active');
+    function renderPageNumbers() {
+      pageNumbersDiv.innerHTML = '';
+      const maxPagesToShow = 3;
+      let startPage = Math.max(1, currentPage - 1);
+      let endPage = Math.min(totalPages, currentPage + 1);
+      if (endPage - startPage < maxPagesToShow - 1) {
+        if (currentPage === 1) {
+          endPage = Math.min(totalPages, endPage + (maxPagesToShow - (endPage - startPage) - 1));
+        } else if (currentPage === totalPages) {
+          startPage = Math.max(1, startPage - (maxPagesToShow - (endPage - startPage) - 1));
+        }
       }
-      pageDiv.addEventListener('click', () => {
-        currentPage = i;
+      for (let i = startPage; i <= endPage; i++) {
+        const pageDiv = document.createElement('div');
+        pageDiv.textContent = i;
+        if (i === currentPage) {
+          pageDiv.classList.add('active');
+        }
+        pageDiv.addEventListener('click', () => {
+          currentPage = i;
+          itemsPerPage = calculateItemsPerPage(currentPage);
+          renderContent(currentPage);
+          renderPageNumbers();
+        });
+        pageNumbersDiv.appendChild(pageDiv);
+      }
+    }
+    document.getElementById('prevPage').addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage--;
         itemsPerPage = calculateItemsPerPage(currentPage);
         renderContent(currentPage);
         renderPageNumbers();
-      });
-      pageNumbersDiv.appendChild(pageDiv);
-    }
-  }
-  document.getElementById('prevPage').addEventListener('click', () => {
-    if (currentPage > 1) {
-      currentPage--;
-      itemsPerPage = calculateItemsPerPage(currentPage);
-      renderContent(currentPage);
-      renderPageNumbers();
-    }
-  });
-  document.getElementById('nextPage').addEventListener('click', () => {
-    if (currentPage < totalPages) {
-      currentPage++;
-      itemsPerPage = calculateItemsPerPage(currentPage);
-      renderContent(currentPage);
-      renderPageNumbers();
-    }
-  });
-  showMoreButton.addEventListener('click', () => {
-    if (currentPage < totalPages) {
-      currentPage++;
-      itemsPerPage = calculateItemsPerPage(currentPage);
-      renderContent(currentPage, true);
-      renderPageNumbers();
-    }
-  });
-  renderContent(currentPage);
-  renderPageNumbers();
-  window.addEventListener('resize', () => {
-    itemsPerPage = calculateItemsPerPage(currentPage);
-    totalPages = calculateTotalPages();
-    if (currentPage > totalPages) {
-      currentPage = totalPages;
-    }
+      }
+    });
+    document.getElementById('nextPage').addEventListener('click', () => {
+      if (currentPage < totalPages) {
+        currentPage++;
+        itemsPerPage = calculateItemsPerPage(currentPage);
+        renderContent(currentPage);
+        renderPageNumbers();
+      }
+    });
+    showMoreButton.addEventListener('click', () => {
+      if (currentPage < totalPages) {
+        currentPage++;
+        itemsPerPage = calculateItemsPerPage(currentPage);
+        renderContent(currentPage, true);
+        renderPageNumbers();
+      }
+    });
     renderContent(currentPage);
     renderPageNumbers();
-  });
+    window.addEventListener('resize', () => {
+      itemsPerPage = calculateItemsPerPage(currentPage);
+      totalPages = calculateTotalPages();
+      if (currentPage > totalPages) {
+        currentPage = totalPages;
+      }
+      renderContent(currentPage);
+      renderPageNumbers();
+    });
+  }).catch(error => console.error('Error fetching JSON:', error));
 }
 
 /***/ }),
@@ -8708,6 +8497,7 @@ function swiperAll() {
   const situtation = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.situation__swiper', {
     modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
     slidesPerView: 'auto',
+    speed: 500,
     navigation: {
       nextEl: '.situation__button-next',
       prevEl: '.situation__button-prev'
@@ -19467,15 +19257,13 @@ var __webpack_exports__ = {};
   \************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var intl_tel_input__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! intl-tel-input */ "./node_modules/intl-tel-input/build/js/intlTelInput.js");
-/* harmony import */ var _functions_dropdown_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functions/dropdown.js */ "./src/js/functions/dropdown.js");
-/* harmony import */ var _functions_burger_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./functions/burger.js */ "./src/js/functions/burger.js");
-/* harmony import */ var _functions_mobile_dropdown_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./functions/mobile-dropdown.js */ "./src/js/functions/mobile-dropdown.js");
-/* harmony import */ var _functions_scroll_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./functions/scroll.js */ "./src/js/functions/scroll.js");
-/* harmony import */ var _functions_swiperAll_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./functions/swiperAll.js */ "./src/js/functions/swiperAll.js");
-/* harmony import */ var _functions_modalVideo_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./functions/modalVideo.js */ "./src/js/functions/modalVideo.js");
-/* harmony import */ var _functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./functions/validate-forms.js */ "./src/js/functions/validate-forms.js");
-/* harmony import */ var _functions_paginationWidget_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./functions/paginationWidget.js */ "./src/js/functions/paginationWidget.js");
-
+/* harmony import */ var _functions_burger_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functions/burger.js */ "./src/js/functions/burger.js");
+/* harmony import */ var _functions_mobile_dropdown_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./functions/mobile-dropdown.js */ "./src/js/functions/mobile-dropdown.js");
+/* harmony import */ var _functions_scroll_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./functions/scroll.js */ "./src/js/functions/scroll.js");
+/* harmony import */ var _functions_swiperAll_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./functions/swiperAll.js */ "./src/js/functions/swiperAll.js");
+/* harmony import */ var _functions_modalVideo_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./functions/modalVideo.js */ "./src/js/functions/modalVideo.js");
+/* harmony import */ var _functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./functions/validate-forms.js */ "./src/js/functions/validate-forms.js");
+/* harmony import */ var _functions_paginationWidget_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./functions/paginationWidget.js */ "./src/js/functions/paginationWidget.js");
 
 
 
@@ -19495,16 +19283,15 @@ window.addEventListener('DOMContentLoaded', e => {
     //         });
     //     }
     // },
-    ".header": _functions_scroll_js__WEBPACK_IMPORTED_MODULE_4__.scroll,
-    ".drop-list": _functions_dropdown_js__WEBPACK_IMPORTED_MODULE_1__.dropdown,
-    ".icon-menu": _functions_burger_js__WEBPACK_IMPORTED_MODULE_2__.burger,
-    ".header__link-mobile[data-target]": _functions_mobile_dropdown_js__WEBPACK_IMPORTED_MODULE_3__.mobileDropdown,
-    ".swiper": _functions_swiperAll_js__WEBPACK_IMPORTED_MODULE_5__.swiperAll,
-    ".video": _functions_modalVideo_js__WEBPACK_IMPORTED_MODULE_6__.modalVideo,
-    "#helpform1": () => (0,_functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_7__.validateForms)('#helpform1', rules, checkboxes, () => {
+    ".header": _functions_scroll_js__WEBPACK_IMPORTED_MODULE_3__.scroll,
+    ".icon-menu": _functions_burger_js__WEBPACK_IMPORTED_MODULE_1__.burger,
+    ".header__link-mobile[data-target]": _functions_mobile_dropdown_js__WEBPACK_IMPORTED_MODULE_2__.mobileDropdown,
+    ".swiper": _functions_swiperAll_js__WEBPACK_IMPORTED_MODULE_4__.swiperAll,
+    ".video": _functions_modalVideo_js__WEBPACK_IMPORTED_MODULE_5__.modalVideo,
+    "#helpform1": () => (0,_functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_6__.validateForms)('#helpform1', rules, checkboxes, () => {
       console.log('Форма успешно отправлена');
     }),
-    ".pagination-widget": _functions_paginationWidget_js__WEBPACK_IMPORTED_MODULE_8__.paginationWidget
+    ".pagination-widget": _functions_paginationWidget_js__WEBPACK_IMPORTED_MODULE_7__.paginationWidget
   };
   const rules = [{
     ruleSelector: '.help__name',
