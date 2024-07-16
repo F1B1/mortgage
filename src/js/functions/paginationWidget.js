@@ -1,6 +1,6 @@
 export function paginationWidget(){
 
-    fetch('../../data.json')
+    fetch('data.json')
     .then(respone => respone.json())
     .then(content => {
         const contentDiv = document.getElementById('content');
