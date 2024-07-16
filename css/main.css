@@ -480,7 +480,7 @@ svg use {
 
 .sticky {
   position: sticky;
-  top: 80px;
+  top: 128px;
   z-index: 1;
   background-color: white;
 }
@@ -791,6 +791,10 @@ label span {
 .header__link-info {
   font-size: 14px;
   color: var(--dark-60);
+  transition: all 0.3s ease 0s;
+}
+.header__link-info:hover {
+  color: var(--red);
 }
 .header__contact {
   justify-content: flex-end;
@@ -798,9 +802,19 @@ label span {
 .header__phone {
   font-size: 14px;
   margin: 0px 32px 0px 0px;
+  transition: all 0.3s ease 0s;
 }
 .header__phone svg {
   margin: 0px 6px 0px 0px;
+}
+.header__phone svg use {
+  transition: all 0.3s ease 0s;
+}
+.header__phone:hover {
+  color: var(--red);
+}
+.header__phone:hover svg use {
+  stroke: var(--red);
 }
 .header__social {
   border: 1px solid var(--dark);
@@ -855,14 +869,8 @@ label span {
   transform: rotate(0);
   margin: 2px 0 0 6px;
 }
-.header__item svg.show {
-  transform: rotate(180deg);
-}
 .header__link {
   font-size: 16px;
-}
-.header__link.show {
-  color: var(--red);
 }
 .header__link:hover {
   color: var(--red);
@@ -879,6 +887,19 @@ label span {
   background-color: var(--gray-light);
   border-radius: 500px;
   min-height: 47px;
+  transition: all 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .header__button:hover {
+    background-color: var(--red);
+    color: #fff;
+  }
+}
+@media (hover: none) {
+  .header__button {
+    background-color: var(--red);
+    color: #fff;
+  }
 }
 @media (max-width: 1440px) {
   .header__button {
@@ -913,12 +934,6 @@ label span {
   pointer-events: none;
   transform: translateY(2rem);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.5, 1);
-}
-.header__sub-menu.show {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0rem);
-  pointer-events: auto;
 }
 .header__sub-item:not(:last-child) {
   margin-bottom: 14px;
@@ -1024,6 +1039,16 @@ label span {
   color: var(--red);
   font-size: 16px;
   font-weight: 600;
+}
+
+.drop-list:hover .header__sub-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.drop-list:hover svg {
+  transform: rotate(180deg);
 }
 
 .primary {
@@ -1374,6 +1399,7 @@ label span {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  box-shadow: 100px -100px 100px 100px rgba(236, 151, 73, 0.2) inset;
 }
 .situation__right .situation__text {
   font-weight: 600;
@@ -2104,10 +2130,20 @@ label span {
 .footer__item:not(:last-child) {
   margin-bottom: 12px;
 }
+.footer__link {
+  transition: all 0.3s ease 0s;
+}
+.footer__link:hover {
+  color: var(--red);
+}
 .footer__number {
   display: flex;
   font-weight: 600;
   margin: 0px 0px 4px 0px;
+  transition: all 0.3s ease 0s;
+}
+.footer__number:hover {
+  color: var(--red);
 }
 .footer__time {
   margin: 0px 0px 24px 0px;
@@ -2116,6 +2152,12 @@ label span {
   font-size: clamp(0.875rem, 0.125vw + 0.85rem, 1rem);
   color: var(--dark-60);
   margin: 0px 0px 4px 0px;
+}
+.footer__email {
+  transition: all 0.3s ease 0s;
+}
+.footer__email:hover {
+  color: var(--red);
 }
 .footer__footer {
   background-color: unset;
@@ -2147,6 +2189,10 @@ label span {
 .footer__terms {
   font-size: clamp(0.875rem, 0.125vw + 0.85rem, 1rem);
   color: var(--dark-40);
+  transition: all 0.3s ease 0s;
+}
+.footer__terms:hover {
+  color: var(--red);
 }
 .footer__block {
   gap: 24px;
@@ -2167,11 +2213,22 @@ label span {
   border: 1px solid var(--dark-20);
   border-radius: 6px;
   justify-content: space-between;
+  transition: all 0.3s ease 0s;
+}
+.footer__business:hover {
+  border-color: var(--red);
+}
+.footer__business:hover .footer__line {
+  background-color: var(--red);
+}
+.footer__business:hover span {
+  color: var(--red);
 }
 .footer__business span {
   width: 70px;
   font-size: 8px;
   padding: 0px 0px 0px 10px;
+  transition: all 0.3s ease 0s;
 }
 .footer__business img {
   width: 70px;
@@ -2199,6 +2256,7 @@ label span {
   width: 1px;
   height: 28px;
   background-color: rgba(60, 60, 60, 0.2);
+  transition: all 0.3s ease 0s;
 }
 
 .team__controls {
@@ -2238,6 +2296,23 @@ label span {
 }
 .team__image {
   margin: 0px 0px 8px 0px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  height: 523px;
+  cursor: pointer;
+}
+.team__image:hover img {
+  transform: scale(1.1);
+}
+.team__image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  transition: all 0.3s ease 0s;
 }
 .team__job {
   font-size: clamp(0.875rem, 0.125vw + 0.85rem, 1rem);
@@ -2391,6 +2466,21 @@ label span {
   .blog__column.big {
     grid-column: 1;
   }
+}
+.blog__column.active {
+  color: var(--white);
+}
+.blog__column.active::after {
+  opacity: 1;
+}
+.blog__column.active .blog__bg img {
+  opacity: 1;
+}
+.blog__column.active .blog__date {
+  color: var(--white);
+}
+.blog__column.active .blog__content {
+  border-color: var(--white);
 }
 .blog__times {
   display: flex;

@@ -58,12 +58,20 @@
     }
 
     &__link {
+        transition: all 0.3s ease 0s;
+        &:hover{
+            color: var(--red);
+        }
     }
 
     &__number {
         display: flex;
         font-weight: 600;
         margin: 0px 0px 4px 0px;
+        transition: all 0.3s ease 0s;
+        &:hover{
+            color: var(--red);
+        }
     }
 
     &__time {
@@ -77,6 +85,10 @@
     }
 
     &__email {
+        transition: all 0.3s ease 0s;
+        &:hover{
+            color: var(--red);
+        }
     }
 
     &__footer{
@@ -108,6 +120,10 @@
     &__terms{
         font-size: #{fluid(14px, 16px, 320px, 1920px)};
         color: var(--dark-40);
+        transition: all 0.3s ease 0s;
+        &:hover{
+            color: var(--red);
+        }
     }
 
     &__block{
@@ -129,10 +145,21 @@
         border: 1px solid var(--dark-20);
         border-radius: 6px;
         justify-content: space-between;
+        transition: all 0.3s ease 0s;
+        &:hover{
+            border-color: var(--red);
+            .footer__line{
+                background-color: var(--red);
+            } 
+            span{
+                color: var(--red);
+            }
+        }
         span{
             width: 70px;
             font-size: 8px;
             padding: 0px 0px 0px 10px;
+            transition: all 0.3s ease 0s;
         }
         img{
             width: 70px;
@@ -158,5 +185,6 @@
         width: 1px;
         height: 28px;
         background-color:rgba($color: #3C3C3C33, $alpha: .2);
+        transition: all 0.3s ease 0s;
     }
 }

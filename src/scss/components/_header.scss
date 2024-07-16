@@ -80,6 +80,10 @@
     &__link-info {
         font-size: 14px;
         color: var(--dark-60);
+        transition: all 0.3s ease 0s;
+        &:hover{
+            color: var(--red);
+        }
     }
 
     &__contact {
@@ -89,8 +93,20 @@
     &__phone {
         font-size: 14px;
         margin: 0px 32px 0px 0px;
+        transition: all 0.3s ease 0s;
         svg{
             margin: 0px 6px 0px 0px;
+            use{
+                transition: all 0.3s ease 0s;
+            }
+        }
+        &:hover{
+            color: var(--red);
+            svg{
+                use{
+                    stroke: var(--red);
+                }
+            }
         }
     }
 
@@ -144,17 +160,12 @@
             transition: all 0.3s ease 0s;
             transform: rotate(0);
             margin: 2px 0 0 6px;
-            &.show{
-                transform: rotate(180deg);
-            }
+           
         }
     }
 
     &__link {
         font-size: 16px;
-        &.show{
-            color: var(--red);
-        }
         &:hover{
             color: var(--red);
         }
@@ -172,6 +183,19 @@
         background-color: var(--gray-light);
         border-radius: 500px;
         min-height: 47px;
+        transition: all 0.3s ease 0s;
+
+        @media (any-hover: hover){
+            &:hover{
+                background-color: var(--red);
+                color: #fff;
+            }
+        }
+        @media (hover: none){
+            background-color: var(--red);
+            color: #fff;
+        }
+
         @include big-desktop{
             max-width: 240px;
         }
@@ -201,12 +225,7 @@
         pointer-events: none;
         transform: translateY(2rem);
         transition: all 0.3s cubic-bezier(0.16, 1, 0.5, 1);
-        &.show{
-            visibility: visible;
-            opacity: 1;
-            transform: translateY(0rem);
-            pointer-events: auto;
-        }
+
     }
     &__sub-item{
         &:not(:last-child) {margin-bottom: 14px;};
@@ -328,4 +347,18 @@
     color: var(--red);
     font-size: 16px;
     font-weight: 600;
+}
+
+.drop-list{
+    &:hover{
+        .header__sub-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        svg{
+            transform: rotate(180deg);
+        }
+    }
 }

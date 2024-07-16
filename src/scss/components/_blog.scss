@@ -83,6 +83,23 @@
                 grid-column: 1;
             }
         }
+        &.active{
+            color: var(--white);
+            &::after{
+                opacity: 1;
+            }
+            .blog__bg{
+                img{
+                    opacity: 1;
+                }
+            }
+            .blog__date{
+                color: var(--white);
+            }
+            .blog__content{
+                border-color: var(--white);
+            }
+        }
         @include big-desktop{
            // width: calc(33.3333% - 16px);
         }

@@ -1,7 +1,6 @@
 import intlTelInput from 'intl-tel-input';
 
 
-import { dropdown } from "./functions/dropdown.js";
 import { burger } from "./functions/burger.js";
 import { mobileDropdown } from "./functions/mobile-dropdown.js";
 import { scroll } from "./functions/scroll.js";
@@ -28,7 +27,6 @@ window.addEventListener('DOMContentLoaded',(e)=>{
       //     }
       // },
       ".header": scroll,
-      ".drop-list": dropdown,
       ".icon-menu": burger,
       ".header__link-mobile[data-target]": mobileDropdown,
       ".swiper": swiperAll,

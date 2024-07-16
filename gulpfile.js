@@ -16,11 +16,17 @@ import { cacheTask } from './gulp/tasks/cache.js';
 import { rewrite } from './gulp/tasks/rewrite.js';
 import { htmlMinify } from './gulp/tasks/html-minify.js';
 import { zipFiles } from './gulp/tasks/zip.js';
+import fs from 'fs';
 
 global.app = {
   gulp,
   isProd: process.argv.includes('--build'),
   paths,
+}
+
+function copyJsonFile(cb) {
+  fs.copyFileSync(`${paths.base.src}/data.json`, `${paths.base.build}/data.json`);
+  cb();
 }
 
 const watcher = () => {
@@ -42,9 +48,11 @@ const watcher = () => {
   gulp.watch(app.paths.srcSvg, svgSprites);
 }
 
-const dev = gulp.series(clean, htmlInclude, scripts, styles, resources, images, webpImages, svgSprites, watcher);
-const backend = gulp.series(clean, htmlInclude, scriptsBackend, stylesBackend, resources, images, webpImages, svgSprites);
-const build = gulp.series(clean, htmlInclude, scripts, styles, resources, images, webpImages, svgSprites, htmlMinify);
+export { copyJsonFile };
+
+const dev = gulp.series(clean, htmlInclude, scripts, styles, resources, images, webpImages, svgSprites, copyJsonFile, watcher);
+const backend = gulp.series(clean, htmlInclude, scriptsBackend, stylesBackend, resources, images, webpImages, svgSprites, copyJsonFile);
+const build = gulp.series(clean, htmlInclude, scripts, styles, resources, images, webpImages, svgSprites, htmlMinify, copyJsonFile);
 const cache = gulp.series(cacheTask, rewrite);
 const zip = zipFiles;
 

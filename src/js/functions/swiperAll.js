@@ -5,6 +5,7 @@ export function swiperAll(){
     const situtation = new Swiper('.situation__swiper', {
         modules:[Navigation, Pagination],
         slidesPerView: 'auto',
+        speed: 500,
         navigation: {
             nextEl: '.situation__button-next',
             prevEl: '.situation__button-prev',
