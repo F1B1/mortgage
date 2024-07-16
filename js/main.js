@@ -8302,7 +8302,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   paginationWidget: () => (/* binding */ paginationWidget)
 /* harmony export */ });
 function paginationWidget() {
-  fetch('../../data.json').then(respone => respone.json()).then(content => {
+  fetch('data.json').then(respone => respone.json()).then(content => {
     const contentDiv = document.getElementById('content');
     const pageNumbersDiv = document.getElementById('pageNumbers');
     const showMoreButton = document.getElementById('showMore');
