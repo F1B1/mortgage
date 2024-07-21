@@ -23,6 +23,7 @@
         }
     }
 
+
     &__title {
     }
 
@@ -64,14 +65,11 @@
             min-height: 63px;
         }
     }
-    &__bg-girl{
+    &__bg-primary{
         position: absolute;
         z-index: 1;
         right: 0;
-        bottom: -70px; 
-        @include tablet{
-            bottom: -200px;
-        }
+        bottom: -70px;
         @include small-tablet{
             position: relative;
             top: 0;
@@ -86,6 +84,25 @@
             right: -20px;
         }
     }
+    &__bg-primary-2{
+        @include big-desktop{
+            bottom: -150px;
+        }
+    }
+    &__bg-primary-3{
+        @include big-desktop{
+            bottom: -100px;
+        }
+    }
+    &__bg-city-2{
+        @include small-tablet{
+            top: 250px;
+        }
+    }
+    &__bg-build{
+        right: -50px;
+    }
+
     &__columns {
         display: grid;
         position: relative;
@@ -120,5 +137,6 @@
 
     &__text {
         font-weight: 500;
+        max-width: 313px;
     }
 }

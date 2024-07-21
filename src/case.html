@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body" style="--scroll-width: 0px">
+    <h1 class="visually-hidden">Ипотека Просто</h1>
+    <div class="site-container visible">
+        @include('partials/header.html')
+        <main class="main">
+            <article class="breadcrumblist">
+                <div class="breadcrumblist__container container">
+                    <ol class="list-reset" itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                          <a itemprop="item" href="./main.html">
+                          <span itemprop="name">Главная</span></a>
+                          <meta itemprop="position" content="1" />
+                        </li>
+                        <li>
+                            <span class="breadcrumblist__line"></span>
+                        </li>
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                          <a class="active" itemprop="item" href="#">
+                          <span itemprop="name">Кейсы и отзывы</span></a>
+                          <meta itemprop="position" content="2" />
+                        </li>
+                    </ol>
+                </div>
+            </article>
+            <section class="case pd">
+                <div class="case__container container">
+                    <div class="case__controls">
+                        <h2 class="case__title title-section">Кейсы и отзывы</h2>
+                        <div class="case__tabs">
+                            <button class="case__tab tab active" data-tab="case">Кейсы</button>
+                            <button class="case__tab tab" data-tab="reviews">Отзывы</button>
+                        </div>
+                    </div>
+                    <div class="case__body" data-content="case">
+                        <div id="content-case" class="case__columns pagination-widget-case">
+                        </div>
+                        <div class="blog__controls">
+                            <div class="blog__navigation">
+                                <div id="prevPage-case" class="blog__arrow blog__prev">
+                                    <svg width="16" height="24">
+                                        <use xlink:href="./img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </div>
+                                <div id="pageNumbers-case" class="blog__numbers">
+                                    <div class="blog__number">1</div>
+                                    <div class="blog__number">2</div>
+                                    <div class="blog__number">3</div>
+                                </div>
+                                <div id="nextPage-case" class="blog__arrow blog__next">
+                                    <svg width="16" height="24">
+                                        <use xlink:href="./img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <button id="showMore-case" class="blog__show btn">Показать ещё</button>
+                        </div>
+                    </div>
+                    <div class="case__body is-hidden" data-content="reviews">
+                        <div id="content-review" class="case__columns pagination-widget-review">
+                        </div>
+                        <div class="blog__controls">
+                            <div class="blog__navigation">
+                                <div id="prevPage-review" class="blog__arrow blog__prev">
+                                    <svg width="16" height="24">
+                                        <use xlink:href="./img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </div>
+                                <div id="pageNumbers-review" class="blog__numbers">
+                                    <div class="blog__number">1</div>
+                                    <div class="blog__number">2</div>
+                                    <div class="blog__number">3</div>
+                                </div>
+                                <div id="nextPage-review" class="blog__arrow blog__next">
+                                    <svg width="16" height="24">
+                                        <use xlink:href="./img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <button id="showMore-review" class="blog__show btn">Показать ещё</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            @include('partials/help.html')
+        </main>
+        
+        @include('partials/footer.html')
+        @include('partials/modalVideos.html')
+        <!-- @include('partials/modals.html')
+        @include('partials/modal.html') -->
+    </div>
+
+    <!-- @include('partials/scripts.html') -->
+</body>
+
+</html>

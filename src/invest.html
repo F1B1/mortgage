@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body" style="--scroll-width: 0px">
+    <h1 class="visually-hidden">Ипотека Просто</h1>
+    <div class="site-container visible">
+        @include('partials/header.html')
+        <main class="main">
+            <article class="breadcrumblist">
+                <div class="breadcrumblist__container container">
+                    <ol class="list-reset" itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                          <a itemprop="item" href="./main.html">
+                          <span itemprop="name">Главная</span></a>
+                          <meta itemprop="position" content="1" />
+                        </li>
+                        <li>
+                            <span class="breadcrumblist__line"></span>
+                        </li>
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                          <a class="active" itemprop="item" href="#">
+                          <span itemprop="name">Инвестиции в недвижимость</span></a>
+                          <meta itemprop="position" content="2" />
+                        </li>
+                    </ol>
+                </div>
+            </article>
+            <section class="primary-three pd">
+                <div class="primary__wrapper container-big">
+                    <div class="primary__container container">
+                        <div class="primary__body primary__body-key">
+                            <h2 class="primary-second__title title">Инвестиции в недвижимость</h2>
+                            <p class="primary-second__sub-title sub-title">Вкладывайте денежные средства так. чтобы они гарантированно приносили стабильную прибыль</p>
+                        </div>
+                        <div class="primary__bg-primary primary__bg-primary-4 primary__bg-build">
+                            <img src="img/bg6.webp" alt="photo">
+                        </div>
+                        <picture class="primary__bg-city primary__bg-city-2">
+                            <source media="(max-width: 767px)"  srcset="img/city.webp">
+                            <img src="img/city-small.webp" alt="photo">
+                        </picture>
+                    </div>
+                </div>
+            </section>
+            <section class="guarantee pd">
+                <div class="guarantee__container container">
+                    <div class="guarantee__body">
+                        <div class="guarantee__column">
+                            <h2 class="guarantee__title title-section pb-32">Получите гарантированный доход от вложения средств в покупку недвижимости</h2>
+                            <div class="guarantee__block">
+                                <p class="guarantee__title-list fz-24">Какие бы цели перед вами не стояли — поможем подобрать новостройку исходя из вашей ситуации и задачи:</p>
+                                <ul class="guarantee__list">
+                                    <li><span>Выгодная сдача в аренду на длительный срок</span></li>
+                                    <li><span>Краткосрочная сдача в аренду или посуточная аренда (мини-гостиница)</span></li>
+                                    <li><span>Сдача в аренду двушки, как двух раздельных однокомнатных квартир</span></li>
+                                    <li><span>Продажа недвижимости после заселения дома и полного благоустройства района</span></li>
+                                    <li><span>Сдача в аренду для получения дополнительного дохода с последующим собственным заселением</span></li>
+                                    <li><span>Любые иные цели и варианты</span></li>
+                                </ul>
+                            </div>
+                            <div class="guarantee__contact">
+                                <a href="#" class="guarantee__button btn btn-black">Получить консультацию</a>
+                                <div class="guarantee__socials">
+                                    <a href="#" class="appeal__social social">
+                                        <svg width="24" height="24">
+                                            <use xlink:href="./img/sprite.svg#tg"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="appeal__social social social-whatsapp">
+                                        <svg width="32" height="32">
+                                            <use xlink:href="./img/sprite.svg#whatsapp"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="guarantee__image">
+                            <h2 class="guarantee__title guarantee__title-mobile title-section pb-32">Получите гарантированный доход от вложения средств в покупку недвижимости</h2>
+                            <img src="img/guarantee3.webp" alt="women">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="benefit pd">
+                <div class="benefit__container container">
+                    <h2 class="benefit__title title-section mb-32">Наши возможности:</h2>
+                    <div class="benefit__columns">
+                        <div class="benefit__column">
+                            <div class="benefit__item pd-32">
+                                <h3 class="benefit__sub-title">Подбор недвижимости</h3>
+                                <p class="benefit__text">Подбор недвижимости
+                                    Подберём недвижимость для вложения средств исходя из ваших задач по инвестированию. Предложим несколько вариантов и расскажем о всех возможностях оптимального и выгодного использования любого вида жилья для получения дополнительногодохода.</p>
+                            </div>
+                        </div>
+                        <div class="benefit__column">
+                            <div class="benefit__item pd-32">
+                                <h3 class="benefit__sub-title">Проверка объекта недвижимости</h3>
+                                <p class="benefit__text">Проверим недвижимость по более чем 15 пунктам. Дадим экспертное заключение по новостройке Застройщика. Объективно оценим все плюсы и минусы покупаемого объекта жилья и оптимальных вариантов его использования.</p>
+                            </div>
+                        </div>
+                        <div class="benefit__column">
+                            <div class="benefit__item pd-32">
+                                <h3 class="benefit__sub-title">Бесплатное сопровождение</h3>
+                                <p class="benefit__text">Подготовим полный пакет документов для выхода на сделку. Проверим всю документацию. Учтём все нюансы и особенности. Вам останется просто подписать Договор Купли-Продажи.</p>
+                            </div>
+                        </div>
+                        <div class="benefit__column">
+                            <div class="benefit__item pd-32">
+                                <h3 class="benefit__sub-title">Ипотека по сниженной % ставке</h3>
+                                <p class="benefit__text">При необходимости подберём оптимальные условия по ипотечной программе. Одобрим кредит по по сниженным процентным ставкам. Снизим до 30% стоимость оплаты обязательного страхования.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="benefit__button btn">Получить консультацию</a>
+                </div>
+            </section>
+            <section class="appeal pd mbg-75px">
+                <div class="appeal__container container">
+                    <div class="appeal__body">
+                        <div class="appeal__info">
+                            <h2 class="appeal__title title-section sticky mgb-80">Видеообращение руководителя компании «Ипотека просто» Карины Минибаевой</h2>
+                            <div class="appeal__socials">
+                                <a href="#" class="appeal__social social social-whatsapp">
+                                    <svg width="24" height="24">
+                                        <use xlink:href="./img/sprite.svg#tg"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="appeal__social social social-whatsapp">
+                                    <svg width="32" height="32">
+                                        <use xlink:href="./img/sprite.svg#whatsapp"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="appeal__column">
+                            <p class="appeal__sub-title">Компания «ИпотекаПросто» – ваш надёжный проводник в мире финансов и недвижимости.С 10-летним опытом, мы являемся официальными партнёрами банков, предлагая клиентам индивидуальный подход, экспертный анализ и успешные решения в сфере кредитования и инвестирования.</p>
+                            <p class="appeal__comment mb-32">Мы команда профессионалов с опытом работы более 10 лет в сфере ипотечного кредитования. Мы видим вас ровно также, как вас видят банки. И именно поэтому мы всегда знаем, как получить одобрение даже в самых сложных ситуацих</p>
+                            <a href="#" class="appeal__link link-refer arr-rt">Подробнее о компании
+                                <svg width="24" height="24">
+                                    <use xlink:href="./img/sprite.svg#arrow-line"></use>
+                                </svg>
+                            </a>
+                           @include('partials/video.html', {
+                            'imageSrc': 'img/videoPoster.webp',
+                            'videoSrc': 'https://www.youtube.com/embed/HOfdboHvshg?autoplay=1',
+                           })
+                        </div>
+                    </div>
+                    <div class="appeal__mobile">
+                        <h2 class="appeal__title title-section">Видеообращение руководителя компании «Ипотека просто» Карины Минибаевой</h2>
+                        @include('partials/video.html', {
+                            'imageSrc': 'img/videoPoster.webp',
+                            'videoSrc': 'https://www.youtube.com/embed/HOfdboHvshg?autoplay=1',
+                           })
+                        <p class="appeal__comment mb-32">Мы команда профессионалов с опытом работы более 10 лет в сфере ипотечного кредитования. Мы видим вас ровно также, как вас видят банки. И именно поэтому мы всегда знаем, как получить одобрение даже в самых сложных ситуацих</p>
+                        <p class="appeal__sub-title">Компания «ИпотекаПросто» – ваш надёжный проводник в мире финансов и недвижимости.С 10-летним опытом, мы являемся официальными партнёрами банков, предлагая клиентам индивидуальный подход, экспертный анализ и успешные решения в сфере кредитования и инвестирования.</p>
+                        <a href="#" class="appeal__button btn">Подробнее о компании</a>
+                        <div class="appeal__socials">
+                            <a href="#" class="appeal__social social-whatsapp">
+                                <svg width="24" height="24">
+                                    <use xlink:href="./img/sprite.svg#tg"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="appeal__social social social-whatsapp">
+                                <svg width="32" height="32">
+                                    <use xlink:href="./img/sprite.svg#whatsapp"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            @include('partials/situation.html')
+            @include('partials/partners.html')
+        </main>
+        @include('partials/footer.html')
+        @include('partials/modalVideos.html')
+        <!-- @include('partials/modals.html')
+        @include('partials/modal.html') -->
+    </div>
+
+    <!-- @include('partials/scripts.html') -->
+</body>
+
+</html>

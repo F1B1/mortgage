@@ -26,6 +26,23 @@
     }
 }
 
+.tab{
+    border: none;
+    min-height: 46px;
+    padding: 0 24px;
+    border: 1px solid var(--dark-10);
+    border-radius: 500px;
+    transition: all 0.3s ease 0s;
+    &:hover{
+        background-color: var(--red);
+        color: #fff;
+    }
+    &.active{
+        background-color: var(--red);
+        color: #fff;
+    }
+}
+
 .title {
     font-size: #{fluid(40px, 96px, 320px, 1920px)};
     font-weight: 700;
@@ -62,6 +79,15 @@
                 width: 28px;
                 height: 28px;
             }
+        }
+    }
+}
+
+.social-whatsapp{
+    svg{
+        @include small-tablet{
+            width: 24px !important;
+            height: 24px !important;
         }
     }
 }

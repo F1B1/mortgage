@@ -11,7 +11,6 @@ export function dropdown(){
     dropdownLink.classList.toggle('show');
   });
 
-  // Отменяем закрытие меню при клике внутри подменю
   dropdownMenu.addEventListener('click', (e) => {
     e.stopPropagation();
     if (e.target.classList.contains('header__sub-link')) {
@@ -21,7 +20,6 @@ export function dropdown(){
     }
   });
 
-  // Закрываем меню при клике вне его
   document.addEventListener('click', (e) => {
     if (!dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
       dropdownMenu.classList.remove('show');

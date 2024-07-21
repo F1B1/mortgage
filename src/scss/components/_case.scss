@@ -1,0 +1,103 @@
+.case{
+    
+
+    &__controls{
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        margin-bottom: #{fluid(32px, 64px, 320px, 1920px)};
+        @include mobile{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__title{
+        @include mobile{
+            margin: 0px 0px 24px 0px;
+        }
+    }
+
+    &__tabs{
+        gap: 8px;
+        display: flex;
+    }
+
+    &__tab{}
+
+    &__body{
+    }
+
+    &__columns{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -8px;
+        margin-bottom: 16px;
+    }
+    
+    &__column{
+        background-color: transparent;
+        flex: 0 1 33.3333%;
+        height: 500px;
+        perspective: 1000px;
+        padding: 0 8px;
+        margin-bottom: 16px;
+        overflow: scroll;
+        scrollbar-width: none;
+        &:hover{
+            .case__inner{
+                transform: rotateY(180deg);
+            }
+        }
+        @include tablet{
+            flex: 0 1 50%;
+        }
+        @include small-tablet{
+            flex: 0 1 100%;
+        }
+    }
+    &__inner{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 1s;
+        transform-style: preserve-3d;
+    }
+
+    &__front,
+    &__back{
+        position: absolute;
+        width: 100%;
+        min-height: 100%;
+        -webkit-backface-visibility: hidden; 
+        backface-visibility: hidden;
+        border-radius: 22px;
+        cursor: pointer;
+    }
+
+    &__front{
+        background-color: var(--gray-light);
+    }
+
+    &__back{
+        display: flex;
+        flex-direction: column;
+        background-color: var(--red);
+        box-shadow: 100px -100px 100px 100px rgba(236, 151, 73, 0.2) inset;
+        color: white;
+        transform: rotateY(180deg);
+    }
+
+    .situation__text{
+        margin: 0px 0px 16px 0px;
+    }
+
+    .situation__list{
+        max-width: 100%;
+    }
+
+    .situation__point{
+        max-width: 100%;
+    }
+
+}

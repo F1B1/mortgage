@@ -1,0 +1,99 @@
+.question {
+
+    &__container {
+    }
+
+    &__title {
+        margin-bottom: #{fluid(32px, 64px, 320px, 1920px)};
+        max-width: 670px;
+    }
+
+    &__columns {
+    }
+
+    &__column {
+        background-color: var(--gray-light);
+        border-radius: 22px;
+        padding: 0 32px;
+        &:not(:last-child) {margin-bottom: 16px;};
+        transition: all 0.3s ease 0s;
+        &.active{
+            padding-bottom: 24px;
+            .question__indicator{
+                &::before{
+                    transform: translateY(-50%) rotate(0deg);
+                }
+            }
+            .question__text{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    &__btn {
+        padding: 24px 0;
+        display: flex;
+        align-items:center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__indicator{
+        background-color: var(--white);
+        min-width: 63px;
+        min-height: 63px;
+        border-radius: 50%;
+        position: relative;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        &::after, &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 23px;
+            height: 3px;
+            border-radius: 1px;
+            background-color: var(--red);
+            transition: all 0.3s ease 0s;
+            @include small-tablet{
+                width: 16px;
+                height: 2px;
+            }
+        }
+        &::before{
+            transform: translateY(-50%) rotate(90deg);
+        }
+        &.active{
+            &::before{
+                transform: translateY(-50%) rotate(0deg);
+            }
+        }
+        @include small-tablet{
+            min-width: 48px;
+            min-height: 48px;
+        }
+    }
+
+    &__caption {
+        font-size: #{fluid(22px, 32px, 320px, 1920px)};
+        font-weight: 600;
+        max-width: 752px;
+        text-align: left;
+        margin: 0px 8px 0px 0px;
+       
+        &-red{
+            color: var(--red);
+        }
+    }
+
+    &__text {
+        max-width: 752px;
+        overflow: hidden;
+        max-height: 0;
+        visibility: hidden;
+        transition: all 0.3s ease 0s;
+    }
+}

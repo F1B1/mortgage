@@ -8,7 +8,67 @@
     <div class="site-container visible">
         @include('partials/header.html')
         <main class="main">
-            @include('partials/primary.html')
+            <section class="primary pd">
+                <div class="primary__wrapper container-big">
+                    <div class="primary__container container">
+                        <div class="primary__body">
+                            <h2 class="primary__title title">Ипотека Просто</h2>
+                            <p class="primary__sub-title sub-title">Эксперт в области кредитования и инвестирования</p>
+                            <div class="primary__makes">
+                                <div class="primary__make">
+                                    <svg width="22" height="22">
+                                        <use xlink:href="./img/sprite.svg#check"></use>
+                                    </svg>Кредитование бизнеса</div>
+                                <div class="primary__make">
+                                    <svg width="22" height="22">
+                                        <use xlink:href="./img/sprite.svg#check"></use>
+                                    </svg>Рефинансирование</div>
+                                <div class="primary__make">
+                                    <svg width="22" height="22">
+                                        <use xlink:href="./img/sprite.svg#check"></use>
+                                    </svg>Подбор новостроек</div>
+                                <div class="primary__make">
+                                    <svg width="22" height="22">
+                                        <use xlink:href="./img/sprite.svg#check"></use>
+                                    </svg>Ипотека под низкие ставки</div>
+                            </div>
+                            <a href="#" class="primary__button btn btn-black">Получить консультацию</a>
+                        </div>
+                        <div class="primary__bg-primary">
+                            <img src="img/bg1.webp" alt="photo">
+                        </div>
+                        <div class="primary__bg-city">
+                            <img src="img/city.webp" alt="photo">
+                        </div>
+                        <div class="primary__columns">
+                            <div class="primary__column">
+                                <div class="primary__item">
+                                    <h3 class="primary__number">1-3 дня</h3>
+                                    <p class="primary__text">Одобрим ипотеку или подберём новостройку по вашим пожеланиям.</p>
+                                </div>
+                            </div>
+                            <div class="primary__column">
+                                <div class="primary__item">
+                                    <h3 class="primary__number">98% одобрения кредита</h3>
+                                    <p class="primary__text">Наших клиентов получили положительное решение  по кредитованию.</p>
+                                </div>
+                            </div>
+                            <div class="primary__column">
+                                <div class="primary__item">
+                                    <h3 class="primary__number">Без аванса и переплат</h3>
+                                    <p class="primary__text">Оплата после одобрения. Сопровождение сделок при покупке недвижимости бесплатно.</p>
+                                </div>
+                            </div>
+                            <div class="primary__column">
+                                <div class="primary__item">
+                                    <h3 class="primary__number">1000 + <br> клиентов</h3>
+                                    <p class="primary__text">Получили кредит и оформили ипотеку по минимальным ставкам с нашей помощью.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section class="services pd">
                 <div class="services__container container container-big">
                     <div class="services__columns">
@@ -85,12 +145,12 @@
                         <div class="appeal__info">
                             <h2 class="appeal__title title-section sticky mgb-80">Видеообращение руководителя компании «Ипотека просто» Карины Минибаевой</h2>
                             <div class="appeal__socials">
-                                <a href="#" class="appeal__social social">
+                                <a href="#" class="appeal__social social social-whatsapp">
                                     <svg width="24" height="24">
                                         <use xlink:href="./img/sprite.svg#tg"></use>
                                     </svg>
                                 </a>
-                                <a href="#" class="appeal__social social">
+                                <a href="#" class="appeal__social social social-whatsapp">
                                     <svg width="32" height="32">
                                         <use xlink:href="./img/sprite.svg#whatsapp"></use>
                                     </svg>
@@ -101,7 +161,7 @@
                             <p class="appeal__sub-title">Компания «ИпотекаПросто» – ваш надёжный проводник в мире финансов и недвижимости.С 10-летним опытом, мы являемся официальными партнёрами банков, предлагая клиентам индивидуальный подход, экспертный анализ и успешные решения в сфере кредитования и инвестирования.</p>
                             <p class="appeal__comment mb-32">Мы команда профессионалов с опытом работы более 10 лет в сфере ипотечного кредитования. Мы видим вас ровно также, как вас видят банки. И именно поэтому мы всегда знаем, как получить одобрение даже в самых сложных ситуацих</p>
                             <a href="#" class="appeal__link link-refer arr-rt">Подробнее о компании
-                                <svg width="20" height="24">
+                                <svg width="24" height="24">
                                     <use xlink:href="./img/sprite.svg#arrow-line"></use>
                                 </svg>
                             </a>
@@ -121,14 +181,14 @@
                         <p class="appeal__sub-title">Компания «ИпотекаПросто» – ваш надёжный проводник в мире финансов и недвижимости.С 10-летним опытом, мы являемся официальными партнёрами банков, предлагая клиентам индивидуальный подход, экспертный анализ и успешные решения в сфере кредитования и инвестирования.</p>
                         <a href="#" class="appeal__button btn">Подробнее о компании</a>
                         <div class="appeal__socials">
-                            <a href="#" class="appeal__social">
+                            <a href="#" class="appeal__social social-whatsapp">
                                 <svg width="24" height="24">
                                     <use xlink:href="./img/sprite.svg#tg"></use>
                                 </svg>
                             </a>
-                            <a href="#" class="appeal__social">
-                                <svg width="24" height="24">
-                                    <use xlink:href="./img/sprite.svg#tg"></use>
+                            <a href="#" class="appeal__social social social-whatsapp">
+                                <svg width="32" height="32">
+                                    <use xlink:href="./img/sprite.svg#whatsapp"></use>
                                 </svg>
                             </a>
                         </div>

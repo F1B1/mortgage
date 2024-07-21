@@ -1,0 +1,57 @@
+.invite {
+
+    &__container {
+    }
+
+    &__body {
+        display: flex;
+        @include tablet{
+            flex-direction: column;
+        }
+    }
+
+    &__column {
+        flex: 0 1 50%;
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        margin-right: 20px;
+        @include tablet{
+            margin-right: 0;
+        }
+    }
+
+    &__title {
+        margin: 0px 0px 24px 0px;
+    }
+
+    &__text {
+        max-width: 610px;
+        flex: 1 1 auto;
+        margin-bottom: 16px;
+        font-size: 24px;
+    }
+
+    &__contact {
+    }
+
+    &__button {
+    }
+
+    &__socials {
+    }
+
+    &__video {
+        flex: 0 1 50%;
+        @include tablet{
+            display: none;
+        }
+        &-mobile{
+            display: none;
+            margin: 0px 0px 32px 0px;
+            @include tablet{
+                display: block;
+            }
+        }
+    }
+}

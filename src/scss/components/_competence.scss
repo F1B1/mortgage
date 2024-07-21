@@ -1,0 +1,41 @@
+.competence {
+
+    &__container {
+    }
+
+    &__title {
+        margin-bottom: #{fluid(32px, 64px, 320px, 1920px)};
+    }
+
+    &__columns {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        @include big-desktop{
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+        }
+        @include small-tablet{
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+    }
+
+    &__column {
+        background-color: var(--gray-light);
+        border-radius: 22px;
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        height: #{fluid(340px, 456px, 320px, 1920px)};
+    }
+
+    &__number {
+        flex: 1 1 auto;
+        color: var(--red);
+        font-weight: 600;
+        font-size: #{fluid(36px, 56px, 320px, 1920px)};
+    }
+
+    &__text {
+        max-width: 313px;
+    }
+}

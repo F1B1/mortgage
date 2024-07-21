@@ -6,26 +6,43 @@
 @import "ui";
 
 
-@import "./components/burger";
-@import "./components/video";
-@import "./components/modalVideo";
 @import "./components/breadcrumblist";
+@import "./components/burger";
+@import "./components/modalVideo";
+@import "./components/video";
 
-@import "./components/header";
-@import "./components/primary";
-@import "./components/services";
-@import "./components/situation";
-@import "./components/appeal";
-@import "./components/review";
-@import "./components/partners";
-@import "./components/help";
-@import "./components/news";
-@import "./components/footer";
-@import "./components/team";
+
+@import "./components/actual";
 @import "./components/actual-big";
+@import "./components/additionally";
+@import "./components/appeal";
+@import "./components/banner";
+@import "./components/benefit";
 @import "./components/blog";
 @import "./components/blog-news";
-@import "./components/actual";
+@import "./components/case";
+@import "./components/choose";
+@import "./components/competence";
+@import "./components/contact";
+@import "./components/footer";
+@import "./components/guarantee";
+@import "./components/header";
+@import "./components/help";
+@import "./components/invite";
+@import "./components/news";
+@import "./components/partners";
+@import "./components/primary";
+@import "./components/primary-second";
+@import "./components/primary-three";
+@import "./components/question";
+@import "./components/review";
+@import "./components/services";
+@import "./components/situation";
+@import "./components/team";
+@import "./components/vacanci-page";
+@import "./components/vacation";
+
+
 // тестовые стили, удалите их
 // .page__body {
 //   display: flex;

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body" style="--scroll-width: 0px">
+    <h1 class="visually-hidden">Ипотека Просто</h1>
+    <div class="site-container visible">
+        @include('partials/header.html')
+        <main class="main">
+            <article class="breadcrumblist">
+                <div class="breadcrumblist__container container">
+                    <ol class="list-reset" itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                          <a itemprop="item" href="./main.html">
+                          <span itemprop="name">Главная</span></a>
+                          <meta itemprop="position" content="1" />
+                        </li>
+                        <li>
+                            <span class="breadcrumblist__line"></span>
+                        </li>
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                          <a class="active" itemprop="item" href="#">
+                          <span itemprop="name">Контакты</span></a>
+                          <meta itemprop="position" content="2" />
+                        </li>
+                    </ol>
+                </div>
+            </article>
+            <section class="contact pd">
+                <div class="contact__container container">
+                    <h2 class="contact__title title-section">Контакты</h2>
+                    <div class="contact__wrapper">
+                        <div class="contact__tabs">
+                            <button class="contact__button active tab" data-tab="moscow">Головной офис в Москве</button>
+                            <button class="contact__button tab" data-tab="piter">Санкт-Петербург</button>
+                            <button class="contact__button tab" data-tab="perm">Пермь</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact__body container-big">
+                    <div data-content="moscow" class="contact__column">
+                        <div class="contact__map">
+                            <iframe src="https://yandex.ru/map-widget/v1/?ll=37.515750%2C55.756890&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNjY3MTc4MzAyEkPQoNC-0YHRgdC40Y8sINCc0L7RgdC60LLQsCwg0JHQtdGA0LXQs9C-0LLQvtC5INC_0YDQvtC10LfQtCwgNdCQ0LoyIgoNeAkWQhWgBV9C&z=15.46" width="560" height="400" frameborder="0" allowfullscreen="true"></iframe>
+                        </div>
+                        <div class="contact__content pd-24">
+                            <p class="contact__head">Адрес:</p>
+                            <div class="contact__block">
+                                <p class="contact__name fz-24">Москва</p>
+                                <p class="contact__text">ул. Береговой проезд, д. 5А, офис 6, этаж 10</p>
+                            </div>
+                            <p class="contact__head">Номер телефона:</p>
+                            <div class="contact__block">
+                                <a href="tel:+78000000000" class="contact__name fz-24">+7 922 343-87-90</a>
+                                <p class="contact__text">Пн-Пт: с 9:30 до 19:00; Сб: с 10:00 до 15:00</p>
+                            </div>
+                            <p class="contact__head">Электронная почта:</p>
+                            <div class="contact__block">
+                                <a href="mailto:info@domen.ru" class="contact__name fz-24">ipoteka-prosto77@mail.ru</a>
+                                <p class="contact__text">Ждём ваших сообщений</p>
+                            </div>
+                            <p class="contact__head">Мессенджеры</p>
+                            <div class="contact__block help__socials">
+                                <a href="#" class="appeal__social contact__social social">
+                                    <svg width="24" height="24">
+                                        <use xlink:href="./img/sprite.svg#tg"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="appeal__social contact__social social contact-whatsapp">
+                                    <svg width="32" height="32">
+                                        <use xlink:href="./img/sprite.svg#whatsapp"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="contact__head">Оставьте заявку на сайте</p>
+                            <a href="#" class="contact__link btn">Получить консультацию</a>
+                        </div>
+                    </div>
+                    <div data-content="piter" class="contact__column is-hidden">
+                        <div class="contact__map">
+                            <iframe src="https://yandex.ru/map-widget/v1/?ll=37.515750%2C55.756890&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNjY3MTc4MzAyEkPQoNC-0YHRgdC40Y8sINCc0L7RgdC60LLQsCwg0JHQtdGA0LXQs9C-0LLQvtC5INC_0YDQvtC10LfQtCwgNdCQ0LoyIgoNeAkWQhWgBV9C&z=15.46" width="560" height="400" frameborder="0" allowfullscreen="true"></iframe>
+                        </div>
+                        <div class="contact__content pd-24">
+                            <p class="contact__head">Адрес:</p>
+                            <div class="contact__block">
+                                <p class="contact__name fz-24">Питер</p>
+                                <p class="contact__text">ул. Береговой проезд, д. 5А, офис 6, этаж 10</p>
+                            </div>
+                            <p class="contact__head">Номер телефона:</p>
+                            <div class="contact__block">
+                                <a href="tel:+78000000000" class="contact__name fz-24">+7 922 343-87-90</a>
+                                <p class="contact__text">Пн-Пт: с 9:30 до 19:00; Сб: с 10:00 до 15:00</p>
+                            </div>
+                            <p class="contact__head">Электронная почта:</p>
+                            <div class="contact__block">
+                                <a href="mailto:info@domen.ru" class="contact__name fz-24">ipoteka-prosto77@mail.ru</a>
+                                <p class="contact__text">Ждём ваших сообщений</p>
+                            </div>
+                            <p class="contact__head">Мессенджеры</p>
+                            <div class="contact__block help__socials">
+                                <a href="#" class="appeal__social contact__social social">
+                                    <svg width="24" height="24">
+                                        <use xlink:href="./img/sprite.svg#tg"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="appeal__social contact__social social contact-whatsapp">
+                                    <svg width="32" height="32">
+                                        <use xlink:href="./img/sprite.svg#whatsapp"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="contact__head">Оставьте заявку на сайте</p>
+                            <a href="#" class="contact__link btn">Получить консультацию</a>
+                        </div>
+                    </div>
+                    <div data-content="perm" class="contact__column is-hidden">
+                        <div class="contact__map">
+                            <iframe src="https://yandex.ru/map-widget/v1/?ll=37.515750%2C55.756890&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNjY3MTc4MzAyEkPQoNC-0YHRgdC40Y8sINCc0L7RgdC60LLQsCwg0JHQtdGA0LXQs9C-0LLQvtC5INC_0YDQvtC10LfQtCwgNdCQ0LoyIgoNeAkWQhWgBV9C&z=15.46" width="560" height="400" frameborder="0" allowfullscreen="true"></iframe>
+                        </div>
+                        <div class="contact__content pd-24">
+                            <p class="contact__head">Адрес:</p>
+                            <div class="contact__block">
+                                <p class="contact__name fz-24">Пермь</p>
+                                <p class="contact__text">ул. Береговой проезд, д. 5А, офис 6, этаж 10</p>
+                            </div>
+                            <p class="contact__head">Номер телефона:</p>
+                            <div class="contact__block">
+                                <a href="tel:+78000000000" class="contact__name fz-24">+7 922 343-87-90</a>
+                                <p class="contact__text">Пн-Пт: с 9:30 до 19:00; Сб: с 10:00 до 15:00</p>
+                            </div>
+                            <p class="contact__head">Электронная почта:</p>
+                            <div class="contact__block">
+                                <a href="mailto:info@domen.ru" class="contact__name fz-24">ipoteka-prosto77@mail.ru</a>
+                                <p class="contact__text">Ждём ваших сообщений</p>
+                            </div>
+                            <p class="contact__head">Мессенджеры</p>
+                            <div class="contact__block help__socials">
+                                <a href="#" class="appeal__social contact__social social">
+                                    <svg width="24" height="24">
+                                        <use xlink:href="./img/sprite.svg#tg"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="appeal__social contact__social social contact-whatsapp">
+                                    <svg width="32" height="32">
+                                        <use xlink:href="./img/sprite.svg#whatsapp"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="contact__head">Оставьте заявку на сайте</p>
+                            <a href="#" class="contact__link btn">Получить консультацию</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        @include('partials/footer.html')
+        <!-- @include('partials/modals.html')
+        @include('partials/modal.html') -->
+    </div>
+
+    <!-- @include('partials/scripts.html') -->
+</body>
+
+</html>

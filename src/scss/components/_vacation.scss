@@ -1,0 +1,83 @@
+.vacation {
+
+    &__container {
+    }
+
+    &__controls {
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        margin: 0px 0px #{fluid(32px, 64px, 320px, 1920px)} 0px;
+        @include small-tablet{
+           display: block;
+        }
+    }
+
+    &__title {
+        margin: 0px 0px 24px 0px;
+    }
+
+    &__wrapper {
+        overflow: auto;
+        scrollbar-width: none;
+    }
+
+    &__tabs {
+        @include small-tablet{
+            width: 430px;
+        }
+    }
+
+    &__tab {
+    }
+
+    &__body {
+    }
+
+    &__column {
+        flex: 0 1 50%;
+        padding: 0 8px;
+        margin: 0px 0px 16px 0px;
+        @include small-tablet{
+            flex: 0 1 100%;
+        }
+    }
+
+    &__item {
+        background-color: var(--gray-light);
+        border-radius: 22px;
+        @include small-tablet{
+            padding: 28px;
+        }
+    }
+
+    &__sub-title {
+        color: var(--red);
+        margin: 0px 0px 4px 0px;
+        font-weight: 600;
+    }
+
+    &__salary {
+        font-size: #{fluid(18px, 22px, 320px, 1920px)};
+        font-weight: 600;
+        margin: 0px 0px 16px 0px;
+    }
+
+    &__text {
+        margin: 0px 0px 42px 0px;
+        @include small-tablet{
+            -webkit-line-clamp: 2;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-wrap: balance
+        }
+        @include mobile{
+            -webkit-line-clamp:4;
+        }
+    }
+
+    &__link {
+
+    }
+}

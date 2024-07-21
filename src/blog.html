@@ -33,27 +33,27 @@
                 <div class="blog__container container">
                     <h2 class="blog__title title-section">Блог</h2>
                     <div class="blog__body">
-                        <div id="content" class="blog__columns pagination-widget">
+                        <div id="content-blog" class="blog__columns pagination-widget-blog">
                         </div>
                         <div class="blog__controls">
                             <div class="blog__navigation">
-                                <div id="prevPage" class="blog__arrow blog__prev">
+                                <div id="prevPage-blog" class="blog__arrow blog__prev">
                                     <svg width="16" height="24">
                                         <use xlink:href="./img/sprite.svg#arrow"></use>
                                     </svg>
                                 </div>
-                                <div id="pageNumbers" class="blog__numbers">
+                                <div id="pageNumbers-blog" class="blog__numbers">
                                     <div class="blog__number">1</div>
                                     <div class="blog__number">2</div>
                                     <div class="blog__number">3</div>
                                 </div>
-                                <div id="nextPage" class="blog__arrow blog__next">
+                                <div id="nextPage-blog" class="blog__arrow blog__next">
                                     <svg width="16" height="24">
                                         <use xlink:href="./img/sprite.svg#arrow"></use>
                                     </svg>
                                 </div>
                             </div>
-                            <button id="showMore" class="blog__show btn">Показать ещё</button>
+                            <button id="showMore-blog" class="blog__show btn">Показать ещё</button>
                         </div>
                     </div>
                 </div>
@@ -79,7 +79,6 @@
             </section>
         </main>
         @include('partials/footer.html')
-        @include('partials/modalVideos.html')
         <!-- @include('partials/modals.html')
         @include('partials/modal.html') -->
     </div>

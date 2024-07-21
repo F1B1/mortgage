@@ -57,6 +57,7 @@
         overflow: hidden;
         height: 523px;
         cursor: pointer;
+        border-radius: 22px;
         &:hover{
             img{
                 transform: scale(1.1);
@@ -70,6 +71,7 @@
             left: 0;
             object-fit: cover;
             transition: all 0.3s ease 0s;
+            border-radius: 22px;
         }
     }
 

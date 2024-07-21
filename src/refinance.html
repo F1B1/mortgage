@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body" style="--scroll-width: 0px">
+    <h1 class="visually-hidden">Ипотека Просто</h1>
+    <div class="site-container visible">
+        @include('partials/header.html')
+        <main class="main">
+            <article class="breadcrumblist">
+                <div class="breadcrumblist__container container">
+                    <ol class="list-reset" itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                          <a itemprop="item" href="./main.html">
+                          <span itemprop="name">Главная</span></a>
+                          <meta itemprop="position" content="1" />
+                        </li>
+                        <li>
+                            <span class="breadcrumblist__line"></span>
+                        </li>
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                          <a class="active" itemprop="item" href="#">
+                          <span itemprop="name">Рефинансирование</span></a>
+                          <meta itemprop="position" content="2" />
+                        </li>
+                    </ol>
+                </div>
+            </article>
+            <section class="primary-three pd">
+                <div class="primary__wrapper container-big">
+                    <div class="primary__container container">
+                        <div class="primary__body primary__body-pb">
+                            <h2 class="primary-second__title primary-second__title-break title">Рефинансирование ипотеки</h2>
+                            <p class="primary-second__sub-title sub-title">Уменьшите ежемесячный платёж и объедините все кредиты в одном банке</p>
+                        </div>
+                        <div class="primary__bg-primary primary__bg-primary-4 primary__bg-build">
+                            <img src="img/bg5.webp" alt="photo">
+                        </div>
+                        <picture class="primary__bg-city primary__bg-city-2">
+                            <source media="(max-width: 767px)"  srcset="img/city.webp">
+                            <img src="img/city-small.webp" alt="photo">
+                        </picture>
+                    </div>
+                </div>
+            </section>
+            <section class="benefit pd">
+                <div class="benefit__container container">
+                    <h2 class="benefit__title title-section mb-32">Рефинансируйте ипотеку и платите каждый месяц меньше, чем платите сейчас</h2>
+                    <div class="benefit__columns">
+                        <div class="benefit__column benefit__column-big">
+                            <div class="benefit__item pd-32">
+                                <h3 class="benefit__sub-title">Индивидуальная % ставка</h3>
+                                <p class="benefit__text">Процентная ставка по рефинансированию ипотеки зависит от текущей банковской ситуации и от личной финансовой нагрузки и кредитной истории. Мы полностью погрузимся в Вашу ситуацию. Проанализируем все варианты получения денежных средств с максимальной выгодой для вас и предложим несколько вариантов кредитования.</p>
+                            </div>
+                        </div>
+                        <div class="benefit__column">
+                            <div class="benefit__item pd-32">
+                                <h3 class="benefit__sub-title">Объединим все кредиты в один</h3>
+                                <p class="benefit__text">Один общий кредит в одном банке и один ежемесячный платёж: Ипотека, потребительские кредиты. авто-кредиты и кредитные карты. Сумма ежемесячного платежа будет ниже той, что вы платите сейчас.</p>
+                            </div>
+                        </div>
+                        <div class="benefit__column">
+                            <div class="benefit__item pd-32">
+                                <h3 class="benefit__sub-title">Наличные на любые цели</h3>
+                                <p class="benefit__text">Рефинансируем ипотеку с возможностью получения доп. средств на любые цели. Будь то погашение кредитов и долгов или свободные наличные на ремонт, покупку мебели и техники или реализацию любых других потребностей и желаний.</p>
+                            </div>
+                        </div>
+                        <div class="benefit__column">
+                            <div class="benefit__item pd-32">
+                                <h3 class="benefit__sub-title">Гарантия одобрения 98%</h3>
+                                <p class="benefit__text">Для нас нет сложных случаев. Получим одобрение без справок о доходах, сс любой кредитной историей, после отказа банков, с открытыми просрочками платежей и даже после процедуры банкротства.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="benefit__button btn">Получить консультацию</a>
+                </div>
+            </section>
+            @include('partials/situation.html')
+            @include('partials/review.html')
+            <section class="question pd">
+                <div class="question__container container">
+                    <h2 class="question__title title-section">Ответы на часто задаваемые вопросы</h2>
+                    <div class="question__columns">
+                        <div class="question__column">
+                            <button type="button" class="question__btn btn-reset">
+                                <span class="question__caption question__caption-red">Как я могу подать заявку на ипотеку?</span>
+                                <div class="question__indicator"></div>
+                            </button>
+                            <p class="question__text">Подать заявку можно на нашем сайте</p>
+                        </div>
+                        <div class="question__column">
+                            <button type="button" class="question__btn btn-reset">
+                                <span class="question__caption">Какой минимальный первоначальный взнос возможен по ипотеке?</span>
+                                <div class="question__indicator"></div>
+                            </button>
+                            <p class="question__text">Подать заявку можно на нашем сайте</p>
+                        </div>
+                        <div class="question__column">
+                            <button type="button" class="question__btn btn-reset">
+                                <span class="question__caption question__caption-red">А если у меня нет первоначального взноса для ипотеки?</span>
+                                <div class="question__indicator"></div>
+                            </button>
+                            <p class="question__text">Подать заявку можно на нашем сайте</p>
+                        </div>
+                        <div class="question__column">
+                            <button type="button" class="question__btn btn-reset">
+                                <span class="question__caption">Какие документы нужны для ипотеки?</span>
+                                <div class="question__indicator"></div>
+                            </button>
+                            <p class="question__text">Подать заявку можно на нашем сайте</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @include('partials/footer.html')
+        @include('partials/modalVideos.html')
+        <!-- @include('partials/modals.html')
+        @include('partials/modal.html') -->
+    </div>
+
+    <!-- @include('partials/scripts.html') -->
+</body>
+
+</html>

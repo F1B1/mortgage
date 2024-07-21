@@ -92,25 +92,14 @@
         position: relative;
         max-width: 20px;
         height: 20px;
-        background: transparent;
+        background: var(--white);
         border: 1px solid var(--dark-40);
         transition: all 0.15s ease-out 0s;
         border-radius: 4px;
         appearance: none;
         cursor: pointer;
-    //   @media (max-width:$mobile){
-    //         width: 18px;
-    //         height: 18px;    
-    //   }
         &:hover{
             border-color: var(--red-light);
-        }
-        &:checked{
-            background-color: var(--red-light);
-            border-color: var(--red-light);
-            &::before{
-                border-color: var(--white);
-            }
         }
         &::before{
             content: '';
@@ -123,13 +112,16 @@
             border-left: none;
             border-top: none;
             transform: rotate(45deg) scale(1);
-            // @media (max-width:$mobile){
-            //       top: 3px; 
-            //       left: 8px;
-            //       width: 4px;
-            //       height: 11px;
-            // }
         }
+        &:checked{
+            background-color: var(--red-light);
+            border-color: var(--red-light);
+            &::before{
+                border-color: var(--white);
+            }
+        }
+
+        
     }
 
     &__confirm {
@@ -153,5 +145,15 @@
         gap: 8px;
         display: flex;
         align-items:center;
+        justify-content: center;
+    }
+
+    .social-whatsapp{
+        @include small-tablet{
+            svg{
+                width: 24px;
+                height: 24px;
+            }
+        }
     }
 }

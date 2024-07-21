@@ -18,7 +18,6 @@
     }
 
     &__column {
-       // width: calc(25% - 16px);
         background-color: var(--gray-light);
         border-radius: 22px;
         height: #{fluid(343px, 520px, 320px, 1920px)};
@@ -99,9 +98,6 @@
             .blog__content{
                 border-color: var(--white);
             }
-        }
-        @include big-desktop{
-           // width: calc(33.3333% - 16px);
         }
     }
 

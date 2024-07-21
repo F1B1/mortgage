@@ -1,0 +1,88 @@
+.guarantee {
+
+    &__container {
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        @include tablet{
+            flex-direction: column-reverse;
+        }
+
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        margin: 0px 20px 0px 0px;
+        max-width: 710px;
+    }
+
+    &__title {
+        @include tablet{
+            display: none;
+        }
+        &-mobile{
+            display: none;
+            @include tablet{
+                display: block;
+            }
+        }
+    }
+
+    &__block {
+        flex: 1 1 auto;
+    }
+
+    &__title-list {
+        margin-bottom: #{fluid(16px, 24px, 320px, 1920px)};
+    }
+
+    &__list {
+        padding: 0px 0px 0px 24px;
+        li{
+            color: var(--red);
+            &:not(:last-child) {margin-bottom: 8px;};
+            span{
+                color: var(--dark);
+            }
+        }
+    }
+
+    &__contact {
+        display: flex;
+        align-items:center;
+        flex-wrap: wrap;
+        @include small-tablet{
+            justify-content: center;
+        }
+    }
+
+    &__button {
+        flex: 0 1 309px;
+        margin: 0px 16px 0px 0px;
+        @include small-tablet{
+            flex: 0 1 100%;
+            margin: 0 0 16px 0;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__image {
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 22px;
+        }
+        @include tablet{
+           margin-bottom: 16px;
+        }
+    }
+}
+

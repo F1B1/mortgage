@@ -6,14 +6,6 @@
     z-index: 11;
     background-color: var(--white);
     transition: all var(--trans-second) 0s;
-    // &.scroll{
-    //     .header__top{
-    //         opacity: 0;
-    //         visibility: hidden;
-    //         min-height: 0;
-    //         height: 0;
-    //     }
-    // }
     &__container {
         max-width: 1880px;
     }

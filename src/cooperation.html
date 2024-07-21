@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body" style="--scroll-width: 0px">
+    <h1 class="visually-hidden">Ипотека Просто</h1>
+    <div class="site-container visible">
+        @include('partials/header.html')
+        <main class="main">
+            <article class="breadcrumblist">
+                <div class="breadcrumblist__container container">
+                    <ol class="list-reset" itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                          <a itemprop="item" href="./main.html">
+                          <span itemprop="name">Главная</span></a>
+                          <meta itemprop="position" content="1" />
+                        </li>
+                        <li>
+                            <span class="breadcrumblist__line"></span>
+                        </li>
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                          <a class="active" itemprop="item" href="#">
+                          <span itemprop="name">Сотрудничество</span></a>
+                          <meta itemprop="position" content="2" />
+                        </li>
+                    </ol>
+                </div>
+            </article>
+            <section class="primary-three primary-three-people pd">
+                <div class="primary__wrapper container-big">
+                    <div class="primary__container container">
+                        <div class="primary__body primary__body-key">
+                            <h2 class="primary-second__title title">Сотрудничество</h2>
+                            <p class="primary-second__sub-title sub-title">Увеличьте продажи за счёт гарантированного одобрения ипотечных кредитов для ваших клиентов</p>
+                        </div>
+                        <div class="primary__bg-primary primary__bg-primary-4 primary__bg-build">
+                            <img src="img/bg7.webp" alt="photo">
+                        </div>
+                        <picture class="primary__bg-city primary__bg-city-2">
+                            <source media="(max-width: 767px)"  srcset="img/city.webp">
+                            <img src="img/city-small.webp" alt="photo">
+                        </picture>
+                    </div>
+                </div>
+            </section>
+            <section class="invite">
+                <div class="invite__container container">
+                    <div class="invite__body">
+                        <div class="invite__column">
+                            <h2 class="invite__title title-section">Приглашаем к сотрудничеству застройщиков, риэлторов и агентства недвижимости</h2>
+                            <div class="invite__video invite__video-mobile">
+                                @include('partials/video.html', {
+                                    'imageSrc': 'img/videoPoster2.webp',
+                                    'videoSrc': 'https://www.youtube.com/embed/HOfdboHvshg?autoplay=1',
+                                   })
+                            </div>
+                            <p class="invite__text">Увеличьте продажи за счёт гарантированного одобрения ипотечных кредитов для ваших клиентов</p>
+                            <div class="invite__contact guarantee__contact">
+                                <a href="#" class="invite__button guarantee__button btn btn-black">Получить консультацию</a>
+                                <div class="invite__socials guarantee__socials">
+                                    <a href="#" class="appeal__social social">
+                                        <svg width="24" height="24">
+                                            <use xlink:href="./img/sprite.svg#tg"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="appeal__social social social-whatsapp">
+                                        <svg width="32" height="32">
+                                            <use xlink:href="./img/sprite.svg#whatsapp"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="invite__video">
+                            @include('partials/video.html', {
+                                'imageSrc': 'img/videoPoster2.webp',
+                                'videoSrc': 'https://www.youtube.com/embed/HOfdboHvshg?autoplay=1',
+                               })
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="competence pd">
+                <div class="competence__container container">
+                    <h2 class="competence__title title-section">Наши компетенции:</h2>
+                    <div class="competence__columns">
+                        <div class="competence__column pd-32">
+                            <h3 class="competence__number">10 лет</h3>
+                            <p class="competence__text">Работаем на рынке ипотечного кредитования. 98% наших клиентов получают одобрение ипотеки.</p>
+                        </div>
+                        <div class="competence__column pd-32">
+                            <h3 class="competence__number">40+</h3>
+                            <p class="competence__text">Банков с которыми налажены постоянные партнёрские взаимоотношения.</p>
+                        </div>
+                        <div class="competence__column pd-32">
+                            <h3 class="competence__number">Досконально</h3>
+                            <p class="competence__text">Знаем все варианты ипотечных программ. Разбираемся во всех требованиях к заёмщикам каждого из банков.</p>
+                        </div>
+                        <div class="competence__column pd-32">
+                            <h3 class="competence__number">Всегда <br> в тренде</h3>
+                            <p class="competence__text">Держим руку на пульсе и узнаем о любых изменениях в ипотечных программах и требованиях банков в тот же день.</p>
+                        </div>
+                        <div class="competence__column pd-32">
+                            <h3 class="competence__number">Выгодно клиентам</h3>
+                            <p class="competence__text">Умеем снижать процентные ставки по ипотеке. Подбираем оптимальные кредитные программы. Уменьшаем до 30% стоимость страхования.</p>
+                        </div>
+                        <div class="competence__column pd-32">
+                            <h3 class="competence__number">Нет сложных случаев</h3>
+                            <p class="competence__text">Одобряем кредиты даже в самых сложных случаях. После отказа, с открытыми просрочками, без справок о доходах и даже после процедуры банкротства.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="choose pd">
+                <div class="choose__container container">
+                    <h2 class="choose__title title-section">Выберите ваш вариант сотрудничества</h2>
+                    <div class="choose__body">
+                        <div class="choose__column">
+                            <div class="choose__wrapper">
+                                <div class="choose__tabs">
+                                    <button class="choose__tab tab active" data-tab="request">По запросу</button>
+                                    <button class="choose__tab tab" data-tab="broker">Ипотечный брокер на аутсорсе</button>
+                                </div>
+                            </div>
+                            <div class="choose__item" data-content="request">
+                                <h3 class="choose__sub-title">Взаимодействие по конкретным ситуациям</h3>
+                                <p class="choose__text fz-24 ">Удобно в случаях, когда к вам приходит клиент со сложной историей, полученными отказами и другими нюансами.</p>
+                                <div class="choose__block">
+                                    <p class="choose__title-list fz-24">Берём на себя:</p>
+                                    <ul class="guarantee__list">
+                                        <li><span>Детально анализируем кредитную историю и собираем полную финансовую картину по Клиенту</span></li>
+                                        <li><span>Разрабатываем стратегию гарантированного получения одобрения ипотеки</span></li>
+                                        <li><span>Подбираем оптимальную для Клиента банковскую программу</span></li>
+                                        <li><span>Готовим все необходимые документы и подаём их в банк</span></li>
+                                        <li><span>Получаем одобрение необходимой суммы для приобретения недвижимости</span></li>
+                                    </ul>
+                                </div>
+                                <p class="choose__title-list fz-24">Вам остаётся:</p>
+                                <p class="choose__result">Выйти на сделку и подписать Договор Купли-Продажи недвижимости.</p>
+                            </div>
+                            <div class="choose__item is-hidden" data-content="broker">
+                                <h3 class="choose__sub-title">Взаимодействие по конкретным ситуациям</h3>
+                                <p class="choose__text fz-24 ">Удобно в случаях, когда к вам приходит клиент со сложной историей, полученными отказами и другими нюансами.</p>
+                                <div class="choose__block">
+                                    <p class="choose__title-list fz-24">Берём на себя:</p>
+                                    <ul class="guarantee__list">
+                                        <li><span>Все те же самые процессы, что и про единовременном обращении.</span></li>
+                                        <li><span>При этом вы получаете ещё больше преимуществ и существенно экономите на временных и финансовых затратах.</span></li>
+                                    </ul>
+                                </div>
+                                <div class="choose__block">
+                                    <p class="choose__title-list fz-24">Берём на себя:</p>
+                                    <ul class="guarantee__list">
+                                        <li><span>Увеличение продаж - за счет гарантированного одобрения кредитов.</span></li>
+                                        <li><span>Экономия времени на бумажную работу по оформлению документов для получения ипотеки. Сотрудники занимаются продажами не отвлекаясь на сторонние процессы..</span></li>
+                                        <li><span>Экономия средств - Вам не нужно держать специалиста по ипотечному кредитования в штате.</span></li>
+                                        <li><span>Сокращение времени выхода на сделку.  Одобряем ипотеку за 1-3 дня. </span></li>
+                                    </ul>
+                                </div>
+                                <p class="choose__comment">Увеличивайте продажи за счет привлечения кредитных средств для ваших клиентов. Обо всем остальном позаботимся мы сами</p>
+                            </div>
+                            <div class="choose__contact guarantee__contact">
+                                <a href="#" class="choose__button guarantee__button btn btn-black">Получить консультацию</a>
+                                <div class="choose__socials guarantee__socials">
+                                    <a href="#" class="appeal__social choose__social social">
+                                        <svg width="24" height="24">
+                                            <use xlink:href="./img/sprite.svg#tg"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="appeal__social choose__social social choose-whatsapp">
+                                        <svg width="32" height="32">
+                                            <use xlink:href="./img/sprite.svg#whatsapp"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choose__image" data-content="request">
+                            <img src="img/invite1.webp" alt="invite">
+                        </div>
+                        <div class="choose__image is-hidden" data-content="broker">
+                            <img src="img/invite2.webp" alt="invite">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            @include('partials/review.html')
+            @include('partials/partners.html')
+        </main>
+        @include('partials/footer.html')
+        @include('partials/modalVideos.html')
+        <!-- @include('partials/modals.html')
+        @include('partials/modal.html') -->
+    </div>
+
+    <!-- @include('partials/scripts.html') -->
+</body>
+
+</html>

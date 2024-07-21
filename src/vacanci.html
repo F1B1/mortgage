@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body" style="--scroll-width: 0px">
+    <h1 class="visually-hidden">Ипотека Просто</h1>
+    <div class="site-container visible">
+        @include('partials/header.html')
+        <main class="main">
+            <article class="breadcrumblist">
+                <div class="breadcrumblist__container container">
+                    <ol class="list-reset" itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                          <a itemprop="item" href="./main.html">
+                          <span itemprop="name">Главная</span></a>
+                          <meta itemprop="position" content="1" />
+                        </li>
+                        <li>
+                            <span class="breadcrumblist__line"></span>
+                        </li>
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                          <a class="active" itemprop="item" href="#">
+                          <span itemprop="name">Вакансии</span></a>
+                          <meta itemprop="position" content="2" />
+                        </li>
+                    </ol>
+                </div>
+            </article>
+            <section class="vacation pd">
+                <div class="vacation__container container">
+                    <div class="vacation__controls">
+                        <h2 class="vacation__title title-section">Наши вакансии</h2>
+                        <div class="vacation__wrapper">
+                            <div class="vacation__tabs">
+                                <button class="vacation__button tab active" data-tab="vac-moscow">Москва</button>
+                                <button class="vacation__button tab" data-tab="vac-piter">Санкт-Петербург</button>
+                                <button class="vacation__button tab" data-tab="vac-perm">Пермь</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vacation__body" data-content="vac-moscow">
+                        <div id="content-moscow" class="case__columns pagination-widget-moscow">
+                            
+                        </div>
+                        <div class="blog__controls">
+                            <div class="blog__navigation">
+                                <div id="prevPage-moscow" class="blog__arrow blog__prev">
+                                    <svg width="16" height="24">
+                                        <use xlink:href="./img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </div>
+                                <div id="pageNumbers-moscow" class="blog__numbers">
+                                    <div class="blog__number">1</div>
+                                    <div class="blog__number">2</div>
+                                    <div class="blog__number">3</div>
+                                </div>
+                                <div id="nextPage-moscow" class="blog__arrow blog__next">
+                                    <svg width="16" height="24">
+                                        <use xlink:href="./img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <button id="showMore-moscow" class="blog__show btn">Показать ещё</button>
+                        </div>
+                    </div>
+                    <div class="vacation__body is-hidden" data-content="vac-piter">
+                        <div id="content-piter" class="case__columns pagination-widget-piter">
+                        </div>
+                        <div class="blog__controls">
+                            <div class="blog__navigation">
+                                <div id="prevPage-piter" class="blog__arrow blog__prev">
+                                    <svg width="16" height="24">
+                                        <use xlink:href="./img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </div>
+                                <div id="pageNumbers-piter" class="blog__numbers">
+                                    <div class="blog__number">1</div>
+                                    <div class="blog__number">2</div>
+                                    <div class="blog__number">3</div>
+                                </div>
+                                <div id="nextPage-piter" class="blog__arrow blog__next">
+                                    <svg width="16" height="24">
+                                        <use xlink:href="./img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <button id="showMore-piter" class="blog__show btn">Показать ещё</button>
+                        </div>
+                    </div>
+                    <div class="vacation__body is-hidden" data-content="vac-perm">
+                        <div id="content-perm" class="case__columns pagination-widget-perm">
+                        </div>
+                        <div class="blog__controls">
+                            <div class="blog__navigation">
+                                <div id="prevPage-perm" class="blog__arrow blog__prev">
+                                    <svg width="16" height="24">
+                                        <use xlink:href="./img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </div>
+                                <div id="pageNumbers-perm" class="blog__numbers">
+                                    <div class="blog__number">1</div>
+                                    <div class="blog__number">2</div>
+                                    <div class="blog__number">3</div>
+                                </div>
+                                <div id="nextPage-perm" class="blog__arrow blog__next">
+                                    <svg width="16" height="24">
+                                        <use xlink:href="./img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <button id="showMore-perm" class="blog__show btn">Показать ещё</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        @include('partials/footer.html')
+        <!-- @include('partials/modals.html')
+        @include('partials/modal.html') -->
+    </div>
+
+    <!-- @include('partials/scripts.html') -->
+</body>
+
+</html>

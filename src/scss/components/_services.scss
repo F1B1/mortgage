@@ -5,7 +5,6 @@
 
     &__columns {
         display: grid;
-        //grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         gap: 16px;
         grid-template-areas: 
         "item1 item2 item3 item4"
@@ -25,13 +24,6 @@
             "item6 item7"
             "item4 item4";
         }
-        // @include small-tablet{
-        //     gap: 8px;
-        //     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        // }
-        // @include mobile{
-        //     grid-template-columns: repeat(2, 1fr);
-        // }
     }
 
     &__column {
@@ -52,9 +44,6 @@
                 transform: scale(1.1); 
             }
         }
-        // background-repeat: no-repeat;
-        // background-size: cover;
-        // background-position: center;
         img{
             position: absolute;
             width: 100%;
@@ -126,4 +115,9 @@
     background-color: var(--red-column);
     background-size: contain;
     background-position: bottom;
+    @include small-tablet{
+        img{
+            top: 70px;
+        }
+    }
 }

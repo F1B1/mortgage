@@ -1,0 +1,106 @@
+.contact {
+
+    &__container {
+    }
+
+    &__title {
+        margin-bottom: 32px;
+    }
+
+    &__wrapper{
+        overflow: auto;
+        scrollbar-width: none;
+    }
+
+    &__tabs {
+        width: 610px;
+        margin: 0px 0px 32px 0px;
+        @include small-tablet{
+            margin: 0px 0px 24px 0px;
+        }
+        @include mobile{
+            width: 560px;
+        }
+    }
+
+    &__button {
+    }
+
+    &__body {
+    }
+
+    &__column {
+        position: relative;
+        display: flex;
+        @include tablet{
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__map {
+        width: 100%;
+        height: #{fluid(600px, 760px, 320px, 1920px)};
+        position: relative;
+        iframe{
+            border-radius: 22px;
+            width: 100%;
+            height: 100%;   
+        }
+    }
+
+    &__content {
+        position: absolute;
+        top: 32px;
+        left: 64px;
+        background-color: var(--white);
+        border-radius: 22px;
+        @include tablet{
+            position: relative;
+            top: 0;
+            left: 0;
+            border-radius: 0;
+        }
+    }
+
+    &__head {
+        color: var(--dark-60);
+        padding: 0px 0px 16px 0px;
+    }
+
+    &__block {
+        margin: 0px 0px 32px 0px;
+        
+    }
+
+    &__name {
+        font-weight: 600;
+        display: flex;
+        margin: 0px 0px 4px 0px;
+    }
+
+    &__text {
+    }
+
+    &__link {
+    }
+    
+    &__social{
+        width: 63px;
+        height: 63px;
+        svg{
+            width: 24px;
+            height: 24px;
+        }
+    }
+    &-whatsapp{
+        svg{
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    .help__socials{
+        justify-content: flex-start;
+    }
+}
+

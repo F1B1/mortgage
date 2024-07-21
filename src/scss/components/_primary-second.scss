@@ -1,0 +1,33 @@
+.primary-second {
+
+    &__title {
+        max-width: 930px;
+        font-size: #{fluid(40px, 72px, 320px, 1920px)};
+        font-weight: 600;
+        &-break{
+            word-break: break-word;
+            hyphens: auto;
+        }
+    }
+
+    &__sub-title {
+        max-width: 700px;
+        font-size: #{fluid(20px, 32px, 320px, 1920px)};
+    }
+
+    .primary__body{
+        padding: 0px 0px 392px 0px;
+        @include small-tablet{
+            padding: 0px;
+        }
+    }
+
+    .primary__body-build{
+        @include tablet{
+            padding-bottom: 200px;
+        }
+        @include small-tablet{
+            padding-bottom: 0;
+        }
+    }
+}

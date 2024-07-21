@@ -31,6 +31,9 @@
         position: absolute;
         bottom: 0;
         left: 0;
+        @include small-tablet{
+           justify-content: center;
+        }
     }
 
     &__social {
@@ -113,6 +116,7 @@
         margin: 0px 0px 24px 0px;
         @include small-tablet{
             max-width: 100%;
+            margin: 0px 0px 16px 0px;
         }
     }
 
@@ -157,6 +161,15 @@
         }
         li{
             &:not(:last-child) {margin-bottom: 8px;};
+        }
+    }
+
+    .social-whatsapp{
+        @include small-tablet{
+            svg{
+                width: 24px;
+                height: 24px;
+            }
         }
     }
 }

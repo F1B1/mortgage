@@ -1,0 +1,128 @@
+.choose {
+
+    &__container {
+    }
+
+    &__title {
+        margin-bottom: #{fluid(32px, 64px, 320px, 1920px)};
+        max-width: 790px;
+    }
+
+    &__body{
+        display: flex;
+        @include tablet{
+            flex-direction: column;
+        }
+    }
+
+    &__column {
+        flex: 0 1 50%;
+        background-color: var(--gray-light);
+        &:not(:last-child) {margin-right: 16px;};
+        padding: #{fluid(16px, 48px, 320px, 1920px)};
+        border-radius: 22px;
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        @include big-desktop{
+            flex: 0 1 100%;
+        }
+        @include tablet{
+            margin: 0px 0px 24px 0px;
+            &:not(:last-child) {margin-right: 0px;};
+        }
+        
+    }
+
+    &__wrapper {
+        overflow: auto;
+        scrollbar-width: none;
+        margin-bottom: #{fluid(24px, 32px, 320px, 1920px)};
+    }
+
+    &__tabs {
+        @include mobile{
+            width: 500px;
+        }
+    }
+
+    &__tab {
+    }
+
+    &__body {
+        
+    }
+
+    &__item {
+        flex: 1 1 auto ;
+        margin: 0px 0px 24px 0px;
+    }
+
+    &__sub-title {
+        font-size: #{fluid(24px, 32px, 320px, 1920px)};
+        margin-bottom: 8px;
+    }
+
+    &__text {
+        margin: 0px 0px 32px 0px;
+    }
+
+    &__block {
+        margin-bottom: #{fluid(24px, 32px, 320px, 1920px)};
+    }
+
+    &__title-list {
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+
+    &__result {
+    }
+
+    &__comment{
+        border-left: 5px solid var(--red);
+        padding: 0px 0px 0px 32px;
+        font-weight: 600;
+    }
+
+    &__contact {
+    }
+
+    &__button {
+    }
+
+    &__socials {
+        .appeal__social{
+            background-color: var(--white);
+        }
+    }
+
+    &__image {
+        @include tablet{
+            display: none;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 22px;
+        }
+    }
+
+    &__social{
+        width: 63px;
+        height: 63px;
+        &:hover{
+            background-color: var(--red);
+        }
+        svg{
+            width: 24px;
+            height: 24px;
+        }
+    }
+    &-whatsapp{
+        svg{
+            width: 32px;
+            height: 32px;
+        }
+    }
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body" style="--scroll-width: 0px">
+    <h1 class="visually-hidden">Ипотека Просто</h1>
+    <div class="site-container visible">
+        @include('partials/header.html')
+        <main class="main">
+            <article class="breadcrumblist">
+                <div class="breadcrumblist__container container">
+                    <ol class="list-reset" itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                          <a itemprop="item" href="./main.html">
+                          <span itemprop="name">Главная</span></a>
+                          <meta itemprop="position" content="1" />
+                        </li>
+                        <li>
+                            <span class="breadcrumblist__line"></span>
+                        </li>
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                          <a class="active" itemprop="item" href="#">
+                          <span itemprop="name">Подбор новостроек</span></a>
+                          <meta itemprop="position" content="2" />
+                        </li>
+                    </ol>
+                </div>
+            </article>
+            <section class="primary-second pd">
+                <div class="primary__wrapper container-big">
+                    <div class="primary__container container">
+                        <div class="primary__body primary__body-build">
+                            <h2 class="primary-second__title title">Бесплатный подбор новостроек по вашим параметрам</h2>
+                            <p class="primary-second__sub-title sub-title">Поможем сэкономить до 300&nbsp;000 ₽</p>
+                        </div>
+                        <picture class="primary__bg-primary primary__bg-build">
+                            <source media="(max-width: 440px)"  srcset="img/bg3-mobile.webp">
+                            <img src="img/bg3.webp" alt="photo">
+                        </picture>
+                        <div class="primary__columns">
+                            <div class="primary__column">
+                                <div class="primary__item">
+                                    <h3 class="primary__number">10+ <br> лет</h3>
+                                    <p class="primary__text">Успешно работаем в сфере недвижимости и ипотечного кредитования.</p>
+                                </div>
+                            </div>
+                            <div class="primary__column">
+                                <div class="primary__item">
+                                    <h3 class="primary__number">578+</h3>
+                                    <p class="primary__text">Сделок было проведено за 2023 год</p>
+                                </div>
+                            </div>
+                            <div class="primary__column">
+                                <div class="primary__item">
+                                    <h3 class="primary__number">155+ <br> млн ₽</h3>
+                                    <p class="primary__text">Сэкономили своим клиентам за счёт снижения ставки по ипотеке</p>
+                                </div>
+                            </div>
+                            <div class="primary__column">
+                                <div class="primary__item">
+                                    <h3 class="primary__number">на 57+ <br> млн ₽</h3>
+                                    <p class="primary__text">Снизили стоимость страховки за 2023 год при оформлении ипотечных кредитов</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="benefit pd">
+                <div class="benefit__container container">
+                    <h2 class="benefit__title title-section mb-32">Услуга бесплатна</h2>
+                    <div class="benefit__sub-text">Мы являемся официальным партнёром и удалённым отделом продаж застройщиков и нашу работу оплачивают они сами</div>
+                    <div class="benefit__columns">
+                        <div class="benefit__column">
+                            <div class="benefit__item pd-32">
+                                <h3 class="benefit__sub-title">Быстро <br> за 1 день</h3>
+                                <p class="benefit__text">Подберём по Вашим параметрам и бюджет 5 вариантов новостроек за 24 часа. после обращения.</p>
+                            </div>
+                        </div>
+                        <div class="benefit__column">
+                            <div class="benefit__item pd-32">
+                                <h3 class="benefit__sub-title">Проверенные застройщики</h3>
+                                <p class="benefit__text">Досконально знаем преимущества и детали любых новостроек города. Не имеем приоритетных застройщиков. поэтому поможем подобрать квартиру, которая будет полностью соответствовать всем Вашим пожеланиям.</p>
+                            </div>
+                        </div>
+                        <div class="benefit__column">
+                            <div class="benefit__item pd-32">
+                                <h3 class="benefit__sub-title">Экономия до 300&nbsp;000 ₽</h3>
+                                <p class="benefit__text">Знаем все действующие акции застройщиков и поможем купить квартиру по сниженной стоимости.</p>
+                            </div>
+                        </div>
+                        <div class="benefit__column">
+                            <div class="benefit__item pd-32">
+                                <h3 class="benefit__sub-title">Бесплатное сопровождение</h3>
+                                <p class="benefit__text">Поможем заключить выгодную безопасную сделку и сэкономить время и деньги.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="benefit__button btn">Получить консультацию</a>
+                </div>
+            </section>
+            <section class="guarantee pd">
+                <div class="guarantee__container container">
+                    <div class="guarantee__body">
+                        <div class="guarantee__column">
+                            <h2 class="guarantee__title title-section pb-32">Индивидуальные <br> ипотечные программы</h2>
+                            <div class="guarantee__block">
+                                <p class="guarantee__title-list fz-24">Гарантия одобрения 98%</p>
+                                <ul class="guarantee__list">
+                                    <li><span>С любой кредитной историей</span></li>
+                                    <li><span>С низким официальным доходом</span></li>
+                                    <li><span>Без прописки</span></li>
+                                    <li><span>После отказов банков</span></li>
+                                    <li><span>Находящемся в декрете</span></li>
+                                    <li><span>После процедуры банкротства</span></li>
+                                    <li><span>Если ранее банк одобрил меньшую сумму, чем необходимо</span></li>
+                                    <li><span>Владельцам бизнеса и самозанятым</span></li>
+                                </ul>
+                            </div>
+                            <div class="guarantee__contact">
+                                <a href="#" class="guarantee__button btn btn-black">Получить консультацию</a>
+                                <div class="guarantee__socials">
+                                    <a href="#" class="appeal__social social">
+                                        <svg width="24" height="24">
+                                            <use xlink:href="./img/sprite.svg#tg"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="appeal__social social social-whatsapp">
+                                        <svg width="32" height="32">
+                                            <use xlink:href="./img/sprite.svg#whatsapp"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="guarantee__image">
+                            <h2 class="guarantee__title guarantee__title-mobile title-section pb-32">Индивидуальные ипотечные программы</h2>
+                            <img src="img/guarantee2.webp" alt="women">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            @include('partials/situation.html')
+            @include('partials/review.html')
+            @include('partials/partners.html')
+            @include('partials/help.html')
+            <section class="question pd">
+                <div class="question__container container">
+                    <h2 class="question__title title-section">Ответы на часто задаваемые вопросы</h2>
+                    <div class="question__columns">
+                        <div class="question__column">
+                            <button type="button" class="question__btn btn-reset">
+                                <span class="question__caption question__caption-red">Как я могу подать заявку на ипотеку?</span>
+                                <div class="question__indicator"></div>
+                            </button>
+                            <p class="question__text">Подать заявку можно на нашем сайте</p>
+                        </div>
+                        <div class="question__column">
+                            <button type="button" class="question__btn btn-reset">
+                                <span class="question__caption">Какой минимальный первоначальный взнос возможен по ипотеке?</span>
+                                <div class="question__indicator"></div>
+                            </button>
+                            <p class="question__text">Подать заявку можно на нашем сайте</p>
+                        </div>
+                        <div class="question__column">
+                            <button type="button" class="question__btn btn-reset">
+                                <span class="question__caption question__caption-red">А если у меня нет первоначального взноса для ипотеки?</span>
+                                <div class="question__indicator"></div>
+                            </button>
+                            <p class="question__text">Подать заявку можно на нашем сайте</p>
+                        </div>
+                        <div class="question__column">
+                            <button type="button" class="question__btn btn-reset">
+                                <span class="question__caption">Какие документы нужны для ипотеки?</span>
+                                <div class="question__indicator"></div>
+                            </button>
+                            <p class="question__text">Подать заявку можно на нашем сайте</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @include('partials/footer.html')
+        @include('partials/modalVideos.html')
+        <!-- @include('partials/modals.html')
+        @include('partials/modal.html') -->
+    </div>
+
+    <!-- @include('partials/scripts.html') -->
+</body>
+
+</html>
