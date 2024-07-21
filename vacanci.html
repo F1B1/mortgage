@@ -172,61 +172,101 @@
                         <li itemprop="itemListElement" itemscope
                             itemtype="https://schema.org/ListItem">
                           <a class="active" itemprop="item" href="#">
-                          <span itemprop="name">Блог</span></a>
+                          <span itemprop="name">Вакансии</span></a>
                           <meta itemprop="position" content="2" />
                         </li>
                     </ol>
                 </div>
             </article>
-            <section class="blog pd">
-                <div class="blog__container container">
-                    <h2 class="blog__title title-section">Блог</h2>
-                    <div class="blog__body">
-                        <div id="content-blog" class="blog__columns pagination-widget-blog">
+            <section class="vacation pd">
+                <div class="vacation__container container">
+                    <div class="vacation__controls">
+                        <h2 class="vacation__title title-section">Наши вакансии</h2>
+                        <div class="vacation__wrapper">
+                            <div class="vacation__tabs">
+                                <button class="vacation__button tab active" data-tab="vac-moscow">Москва</button>
+                                <button class="vacation__button tab" data-tab="vac-piter">Санкт-Петербург</button>
+                                <button class="vacation__button tab" data-tab="vac-perm">Пермь</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vacation__body" data-content="vac-moscow">
+                        <div id="content-moscow" class="case__columns pagination-widget-moscow">
+
                         </div>
                         <div class="blog__controls">
                             <div class="blog__navigation">
-                                <div id="prevPage-blog" class="blog__arrow blog__prev">
+                                <div id="prevPage-moscow" class="blog__arrow blog__prev">
                                     <svg width="16" height="24">
                                         <use xlink:href="./img/sprite.svg#arrow"></use>
                                     </svg>
                                 </div>
-                                <div id="pageNumbers-blog" class="blog__numbers">
+                                <div id="pageNumbers-moscow" class="blog__numbers">
                                     <div class="blog__number">1</div>
                                     <div class="blog__number">2</div>
                                     <div class="blog__number">3</div>
                                 </div>
-                                <div id="nextPage-blog" class="blog__arrow blog__next">
+                                <div id="nextPage-moscow" class="blog__arrow blog__next">
                                     <svg width="16" height="24">
                                         <use xlink:href="./img/sprite.svg#arrow"></use>
                                     </svg>
                                 </div>
                             </div>
-                            <button id="showMore-blog" class="blog__show btn">Показать ещё</button>
+                            <button id="showMore-moscow" class="blog__show btn">Показать ещё</button>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section class="actual actual-big pd">
-                <div class="actual-big__wrapper container-big">
-                    <div class="actual-big__container container">
-                        <div class="actual-big__bg">
-                            <img src="img/city-actual.webp" alt="city">
+                    <div class="vacation__body is-hidden" data-content="vac-piter">
+                        <div id="content-piter" class="case__columns pagination-widget-piter">
                         </div>
-                        <form action="#" class="actual-big__form">
-                            <h2 class="actual-big__title title-section">Будьте в курсе актуальных новостей</h2>
-                            <p class="actual-big__text">Мы гарантируем, что ваша электронная почта не будет засорена нежелательными сообщениями.</p>
-                            <div class="actual-big__input">
-                                <label for="email">Введите email <span>*</span></label>
-                                <input name="email" type="email" class="input actual-big__email" placeholder="example@domain.com" required>
+                        <div class="blog__controls">
+                            <div class="blog__navigation">
+                                <div id="prevPage-piter" class="blog__arrow blog__prev">
+                                    <svg width="16" height="24">
+                                        <use xlink:href="./img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </div>
+                                <div id="pageNumbers-piter" class="blog__numbers">
+                                    <div class="blog__number">1</div>
+                                    <div class="blog__number">2</div>
+                                    <div class="blog__number">3</div>
+                                </div>
+                                <div id="nextPage-piter" class="blog__arrow blog__next">
+                                    <svg width="16" height="24">
+                                        <use xlink:href="./img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </div>
                             </div>
-                            <button type="submit" class="actual-big__button btn">Подписаться на рассылку</button>
-                            <p class="actual-big__sub-text fz-16">Нажимая кнопку «Подписаться на рассылку», вы подтверждаете своё согласие на получение рекламных рассылок.</p>
-                        </form>
+                            <button id="showMore-piter" class="blog__show btn">Показать ещё</button>
+                        </div>
+                    </div>
+                    <div class="vacation__body is-hidden" data-content="vac-perm">
+                        <div id="content-perm" class="case__columns pagination-widget-perm">
+                        </div>
+                        <div class="blog__controls">
+                            <div class="blog__navigation">
+                                <div id="prevPage-perm" class="blog__arrow blog__prev">
+                                    <svg width="16" height="24">
+                                        <use xlink:href="./img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </div>
+                                <div id="pageNumbers-perm" class="blog__numbers">
+                                    <div class="blog__number">1</div>
+                                    <div class="blog__number">2</div>
+                                    <div class="blog__number">3</div>
+                                </div>
+                                <div id="nextPage-perm" class="blog__arrow blog__next">
+                                    <svg width="16" height="24">
+                                        <use xlink:href="./img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <button id="showMore-perm" class="blog__show btn">Показать ещё</button>
+                        </div>
                     </div>
                 </div>
             </section>
         </main>
+
         <footer class="footer pd">
   <div class="footer__wrapper container-big">
     <div class="footer__container container">

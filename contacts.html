@@ -172,61 +172,139 @@
                         <li itemprop="itemListElement" itemscope
                             itemtype="https://schema.org/ListItem">
                           <a class="active" itemprop="item" href="#">
-                          <span itemprop="name">Блог</span></a>
+                          <span itemprop="name">Контакты</span></a>
                           <meta itemprop="position" content="2" />
                         </li>
                     </ol>
                 </div>
             </article>
-            <section class="blog pd">
-                <div class="blog__container container">
-                    <h2 class="blog__title title-section">Блог</h2>
-                    <div class="blog__body">
-                        <div id="content-blog" class="blog__columns pagination-widget-blog">
-                        </div>
-                        <div class="blog__controls">
-                            <div class="blog__navigation">
-                                <div id="prevPage-blog" class="blog__arrow blog__prev">
-                                    <svg width="16" height="24">
-                                        <use xlink:href="./img/sprite.svg#arrow"></use>
-                                    </svg>
-                                </div>
-                                <div id="pageNumbers-blog" class="blog__numbers">
-                                    <div class="blog__number">1</div>
-                                    <div class="blog__number">2</div>
-                                    <div class="blog__number">3</div>
-                                </div>
-                                <div id="nextPage-blog" class="blog__arrow blog__next">
-                                    <svg width="16" height="24">
-                                        <use xlink:href="./img/sprite.svg#arrow"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                            <button id="showMore-blog" class="blog__show btn">Показать ещё</button>
+            <section class="contact pd">
+                <div class="contact__container container">
+                    <h2 class="contact__title title-section">Контакты</h2>
+                    <div class="contact__wrapper">
+                        <div class="contact__tabs">
+                            <button class="contact__button active tab" data-tab="moscow">Головной офис в Москве</button>
+                            <button class="contact__button tab" data-tab="piter">Санкт-Петербург</button>
+                            <button class="contact__button tab" data-tab="perm">Пермь</button>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="actual actual-big pd">
-                <div class="actual-big__wrapper container-big">
-                    <div class="actual-big__container container">
-                        <div class="actual-big__bg">
-                            <img src="img/city-actual.webp" alt="city">
+                <div class="contact__body container-big">
+                    <div data-content="moscow" class="contact__column">
+                        <div class="contact__map">
+                            <iframe src="https://yandex.ru/map-widget/v1/?ll=37.515750%2C55.756890&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNjY3MTc4MzAyEkPQoNC-0YHRgdC40Y8sINCc0L7RgdC60LLQsCwg0JHQtdGA0LXQs9C-0LLQvtC5INC_0YDQvtC10LfQtCwgNdCQ0LoyIgoNeAkWQhWgBV9C&z=15.46" width="560" height="400" frameborder="0" allowfullscreen="true"></iframe>
                         </div>
-                        <form action="#" class="actual-big__form">
-                            <h2 class="actual-big__title title-section">Будьте в курсе актуальных новостей</h2>
-                            <p class="actual-big__text">Мы гарантируем, что ваша электронная почта не будет засорена нежелательными сообщениями.</p>
-                            <div class="actual-big__input">
-                                <label for="email">Введите email <span>*</span></label>
-                                <input name="email" type="email" class="input actual-big__email" placeholder="example@domain.com" required>
+                        <div class="contact__content pd-24">
+                            <p class="contact__head">Адрес:</p>
+                            <div class="contact__block">
+                                <p class="contact__name fz-24">Москва</p>
+                                <p class="contact__text">ул. Береговой проезд, д. 5А, офис 6, этаж 10</p>
                             </div>
-                            <button type="submit" class="actual-big__button btn">Подписаться на рассылку</button>
-                            <p class="actual-big__sub-text fz-16">Нажимая кнопку «Подписаться на рассылку», вы подтверждаете своё согласие на получение рекламных рассылок.</p>
-                        </form>
+                            <p class="contact__head">Номер телефона:</p>
+                            <div class="contact__block">
+                                <a href="tel:+78000000000" class="contact__name fz-24">+7 922 343-87-90</a>
+                                <p class="contact__text">Пн-Пт: с 9:30 до 19:00; Сб: с 10:00 до 15:00</p>
+                            </div>
+                            <p class="contact__head">Электронная почта:</p>
+                            <div class="contact__block">
+                                <a href="mailto:info@domen.ru" class="contact__name fz-24">ipoteka-prosto77@mail.ru</a>
+                                <p class="contact__text">Ждём ваших сообщений</p>
+                            </div>
+                            <p class="contact__head">Мессенджеры</p>
+                            <div class="contact__block help__socials">
+                                <a href="#" class="appeal__social contact__social social">
+                                    <svg width="24" height="24">
+                                        <use xlink:href="./img/sprite.svg#tg"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="appeal__social contact__social social contact-whatsapp">
+                                    <svg width="32" height="32">
+                                        <use xlink:href="./img/sprite.svg#whatsapp"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="contact__head">Оставьте заявку на сайте</p>
+                            <a href="#" class="contact__link btn">Получить консультацию</a>
+                        </div>
+                    </div>
+                    <div data-content="piter" class="contact__column is-hidden">
+                        <div class="contact__map">
+                            <iframe src="https://yandex.ru/map-widget/v1/?ll=37.515750%2C55.756890&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNjY3MTc4MzAyEkPQoNC-0YHRgdC40Y8sINCc0L7RgdC60LLQsCwg0JHQtdGA0LXQs9C-0LLQvtC5INC_0YDQvtC10LfQtCwgNdCQ0LoyIgoNeAkWQhWgBV9C&z=15.46" width="560" height="400" frameborder="0" allowfullscreen="true"></iframe>
+                        </div>
+                        <div class="contact__content pd-24">
+                            <p class="contact__head">Адрес:</p>
+                            <div class="contact__block">
+                                <p class="contact__name fz-24">Питер</p>
+                                <p class="contact__text">ул. Береговой проезд, д. 5А, офис 6, этаж 10</p>
+                            </div>
+                            <p class="contact__head">Номер телефона:</p>
+                            <div class="contact__block">
+                                <a href="tel:+78000000000" class="contact__name fz-24">+7 922 343-87-90</a>
+                                <p class="contact__text">Пн-Пт: с 9:30 до 19:00; Сб: с 10:00 до 15:00</p>
+                            </div>
+                            <p class="contact__head">Электронная почта:</p>
+                            <div class="contact__block">
+                                <a href="mailto:info@domen.ru" class="contact__name fz-24">ipoteka-prosto77@mail.ru</a>
+                                <p class="contact__text">Ждём ваших сообщений</p>
+                            </div>
+                            <p class="contact__head">Мессенджеры</p>
+                            <div class="contact__block help__socials">
+                                <a href="#" class="appeal__social contact__social social">
+                                    <svg width="24" height="24">
+                                        <use xlink:href="./img/sprite.svg#tg"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="appeal__social contact__social social contact-whatsapp">
+                                    <svg width="32" height="32">
+                                        <use xlink:href="./img/sprite.svg#whatsapp"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="contact__head">Оставьте заявку на сайте</p>
+                            <a href="#" class="contact__link btn">Получить консультацию</a>
+                        </div>
+                    </div>
+                    <div data-content="perm" class="contact__column is-hidden">
+                        <div class="contact__map">
+                            <iframe src="https://yandex.ru/map-widget/v1/?ll=37.515750%2C55.756890&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNjY3MTc4MzAyEkPQoNC-0YHRgdC40Y8sINCc0L7RgdC60LLQsCwg0JHQtdGA0LXQs9C-0LLQvtC5INC_0YDQvtC10LfQtCwgNdCQ0LoyIgoNeAkWQhWgBV9C&z=15.46" width="560" height="400" frameborder="0" allowfullscreen="true"></iframe>
+                        </div>
+                        <div class="contact__content pd-24">
+                            <p class="contact__head">Адрес:</p>
+                            <div class="contact__block">
+                                <p class="contact__name fz-24">Пермь</p>
+                                <p class="contact__text">ул. Береговой проезд, д. 5А, офис 6, этаж 10</p>
+                            </div>
+                            <p class="contact__head">Номер телефона:</p>
+                            <div class="contact__block">
+                                <a href="tel:+78000000000" class="contact__name fz-24">+7 922 343-87-90</a>
+                                <p class="contact__text">Пн-Пт: с 9:30 до 19:00; Сб: с 10:00 до 15:00</p>
+                            </div>
+                            <p class="contact__head">Электронная почта:</p>
+                            <div class="contact__block">
+                                <a href="mailto:info@domen.ru" class="contact__name fz-24">ipoteka-prosto77@mail.ru</a>
+                                <p class="contact__text">Ждём ваших сообщений</p>
+                            </div>
+                            <p class="contact__head">Мессенджеры</p>
+                            <div class="contact__block help__socials">
+                                <a href="#" class="appeal__social contact__social social">
+                                    <svg width="24" height="24">
+                                        <use xlink:href="./img/sprite.svg#tg"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="appeal__social contact__social social contact-whatsapp">
+                                    <svg width="32" height="32">
+                                        <use xlink:href="./img/sprite.svg#whatsapp"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="contact__head">Оставьте заявку на сайте</p>
+                            <a href="#" class="contact__link btn">Получить консультацию</a>
+                        </div>
                     </div>
                 </div>
             </section>
         </main>
+
         <footer class="footer pd">
   <div class="footer__wrapper container-big">
     <div class="footer__container container">

@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>Ипотека Просто</title>
+  <!-- <link rel="preload" href="fonts/Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin> -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.3.0/build/css/intlTelInput.css"> -->
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body" style="--scroll-width: 0px">
+    <h1 class="visually-hidden">Ипотека Просто</h1>
+    <div class="site-container visible">
+        <header class="header">
+  <div class="header__container container">
+    <div class="header__top ">
+      <div class="header__top-info d-flex f-ac">
+        <div class="header__cities">
+          <button class="header__city btn-reset d-flex f-c">
+            <svg width="20" height="20">
+              <use xlink:href="./img/sprite.svg#map"></use>
+            </svg>Москва</button>
+          <div class="header__city-list"></div>
+        </div>
+        <nav class="header__menu">
+          <ul class="header__list-info list-reset">
+            <li class="header__item-info"><a href="#" class="header__link-info">О компании</a></li>
+            <li class="header__item-info"><a href="#" class="header__link-info">Вакансии</a></li>
+            <li class="header__item-info"><a href="#" class="header__link-info">Сотрудничество</a></li>
+            <li class="header__item-info"><a href="#" class="header__link-info">Блог</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__contact d-flex f-ac">
+        <a href="#" class="header__phone d-flex f-c">
+          <svg width="16" height="16">
+            <use xlink:href="./img/sprite.svg#phone" stroke="black"></use>
+          </svg>8 800 000-00-00</a>
+        <a href="#" class="header__social social">
+          <svg width="16" height="16">
+            <use xlink:href="./img/sprite.svg#tg"></use>
+          </svg>
+        </a>
+        <a href="#" class="header__social social social-whatsapp">
+          <svg width="20" height="20">
+            <use xlink:href="./img/sprite.svg#whatsapp"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <a href="#" class="header__logo">
+        <img src="img/logo.webp" alt="логотип ">
+      </a>
+      <div class="header__wrapper">
+        <a href="#" class="header__phone header__phone-mobile">8 800 000-00-00</a>
+        <button type="button" class="menu__icon icon-menu btn-reset"><span></span></button>
+      </div>
+      <nav class="header__menu header__menu-desktop">
+        <ul class="header__list list-reset">
+          <li class="header__item drop-list">
+            <a href="#" class="header__link drop-link">Ипотека</a>
+            <svg width="8" height="8">
+              <use xlink:href="./img/sprite.svg#arrow"></use>
+            </svg>
+            <ul class="header__sub-menu list-reset">
+              <li class="header__sub-item"><a href="#" class="header__sub-link">Пункт 1</a></li>
+              <li class="header__sub-item"><a href="#" class="header__sub-link">Пункт 2</a></li>
+              <li class="header__sub-item"><a href="#" class="header__sub-link">Пункт 3</a></li>
+              <li class="header__sub-item"><a href="#" class="header__sub-link">Пункт 4</a></li>
+              <li class="header__sub-item"><a href="#" class="header__sub-link">Пункт 5</a></li>
+            </ul>
+          </li>
+          <li class="header__item"><a href="#" class="header__link">Подбор новостроек</a></li>
+          <li class="header__item"><a href="#" class="header__link">Рефинансирование</a></li>
+          <li class="header__item"><a href="#" class="header__link">Кредиты</a></li>
+          <li class="header__item"><a href="#" class="header__link">Инвестиции</a></li>
+          <li class="header__item"><a href="#" class="header__link">Кейсы и отзывы</a></li>
+          <li class="header__item"><a href="#" class="header__link">Контакты</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="header__button">Бесплатная консультация</a>
+    </div>
+    <div class="header__mobile">
+      <div class="header__cities header__cities-mobile">
+        <button class="header__city btn-reset d-flex f-c">
+          <svg width="20" height="20">
+            <use xlink:href="./img/sprite.svg#map"></use>
+          </svg>Москва</button>
+        <div class="header__city-list"></div>
+      </div>
+      <nav class="header__menu-mobile">
+        <ul class="header__list-mobile list-reset" id="main-menu">
+          <li class="header__item-mobile"><a href="#" class="header__link-mobile" data-target="menu-ipoteka">Ипотека
+            <svg width="16" height="24">
+            <use xlink:href="./img/sprite.svg#arrow"></use>
+          </svg></a></li>
+          <li class="header__item-mobile"><a href="#" class="header__link-mobile">Подбор новостроек</a></li>
+          <li class="header__item-mobile"><a href="#" class="header__link-mobile">Рефинансирование</a></li>
+          <li class="header__item-mobile"><a href="#" class="header__link-mobile">Кредиты</a></li>
+          <li class="header__item-mobile"><a href="#" class="header__link-mobile">Инвестиции</a></li>
+          <li class="header__item-mobile"><a href="#" class="header__link-mobile">Кейсы и отзывы</a></li>
+          <li class="header__item-mobile"><a href="#" class="header__link-mobile">Контакты</a></li>
+          <li class="header__item-mobile"><a href="#" class="header__link-mobile" data-target="menu-about">О компании
+            <svg width="16" height="24">
+            <use xlink:href="./img/sprite.svg#arrow"></use>
+          </svg></a></li>
+        </ul>
+
+        <ul class="submenu list-reset" id="menu-ipoteka">
+          <li class="submenu-item menu-back">
+            <svg width="16" height="24">
+              <use xlink:href="./img/sprite.svg#arrow"></use>
+            </svg>
+              <a href="#" class="menu-back-link" data-target="main-menu">Ипотека</a>
+          </li>
+          <li class="submenu-item"><a href="#" class="submenu-link">Помощь в одобрении ипотеки</a></li>
+          <li class="submenu-item"><a href="#" class="submenu-link">Сопровождение сделок</a></li>
+        </ul>
+
+        <ul class="submenu list-reset" id="menu-about">
+        <li class="submenu-item menu-back">
+          <svg width="16" height="24">
+            <use xlink:href="./img/sprite.svg#arrow"></use>
+          </svg>
+            <a href="#" class="menu-back-link" data-target="main-menu">О компании</a>
+        </li>
+        <li class="submenu-item"><a href="#" class="submenu-link">О компании</a></li>
+        <li class="submenu-item"><a href="#" class="submenu-link">Вакансии</a></li>
+        <li class="submenu-item"><a href="#" class="submenu-link">Сотрудничество</a></li>
+        <li class="submenu-item"><a href="#" class="submenu-link">Блог</a></li>
+        </ul>
+      </nav>
+      <div class="header__socials-mobile">
+        <a href="#" class="btn header__consultant-mobile">Бесплатная консультация</a>
+
+        <a href="#" class="header__social-mobile social">
+          <svg width="20" height="20">
+            <use xlink:href="./img/sprite.svg#tg "></use>
+          </svg>
+        </a>
+        <a href="#" class="header__social-mobile social social-whatsapp">
+          <svg width="24" height="24">
+            <use xlink:href="./img/sprite.svg#whatsapp"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+        <main class="main">
+            <article class="breadcrumblist">
+                <div class="breadcrumblist__container container">
+                    <ol class="list-reset" itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                          <a itemprop="item" href="./main.html">
+                          <span itemprop="name">Главная</span></a>
+                          <meta itemprop="position" content="1" />
+                        </li>
+                        <li>
+                            <span class="breadcrumblist__line"></span>
+                        </li>
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                          <a class="active" itemprop="item" href="#">
+                          <span itemprop="name">Сотрудничество</span></a>
+                          <meta itemprop="position" content="2" />
+                        </li>
+                    </ol>
+                </div>
+            </article>
+            <section class="primary-three primary-three-people pd">
+                <div class="primary__wrapper container-big">
+                    <div class="primary__container container">
+                        <div class="primary__body primary__body-key">
+                            <h2 class="primary-second__title title">Сотрудничество</h2>
+                            <p class="primary-second__sub-title sub-title">Увеличьте продажи за счёт гарантированного одобрения ипотечных кредитов для ваших клиентов</p>
+                        </div>
+                        <div class="primary__bg-primary primary__bg-primary-4 primary__bg-build">
+                            <img src="img/bg7.webp" alt="photo">
+                        </div>
+                        <picture class="primary__bg-city primary__bg-city-2">
+                            <source media="(max-width: 767px)"  srcset="img/city.webp">
+                            <img src="img/city-small.webp" alt="photo">
+                        </picture>
+                    </div>
+                </div>
+            </section>
+            <section class="invite">
+                <div class="invite__container container">
+                    <div class="invite__body">
+                        <div class="invite__column">
+                            <h2 class="invite__title title-section">Приглашаем к сотрудничеству застройщиков, риэлторов и агентства недвижимости</h2>
+                            <div class="invite__video invite__video-mobile">
+                                <div class="video__wrapper" data-src="https://www.youtube.com/embed/HOfdboHvshg?autoplay=1">
+    <span class="video__icon">
+        <svg width="32" height="32">
+            <use xlink:href="./img/sprite.svg#player"></use>
+        </svg>
+    </span>
+    <img src="img/videoPoster2.webp" alt="poster" class="video__poster">
+</div>
+                            </div>
+                            <p class="invite__text">Увеличьте продажи за счёт гарантированного одобрения ипотечных кредитов для ваших клиентов</p>
+                            <div class="invite__contact guarantee__contact">
+                                <a href="#" class="invite__button guarantee__button btn btn-black">Получить консультацию</a>
+                                <div class="invite__socials guarantee__socials">
+                                    <a href="#" class="appeal__social social">
+                                        <svg width="24" height="24">
+                                            <use xlink:href="./img/sprite.svg#tg"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="appeal__social social social-whatsapp">
+                                        <svg width="32" height="32">
+                                            <use xlink:href="./img/sprite.svg#whatsapp"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="invite__video">
+                            <div class="video__wrapper" data-src="https://www.youtube.com/embed/HOfdboHvshg?autoplay=1">
+    <span class="video__icon">
+        <svg width="32" height="32">
+            <use xlink:href="./img/sprite.svg#player"></use>
+        </svg>
+    </span>
+    <img src="img/videoPoster2.webp" alt="poster" class="video__poster">
+</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="competence pd">
+                <div class="competence__container container">
+                    <h2 class="competence__title title-section">Наши компетенции:</h2>
+                    <div class="competence__columns">
+                        <div class="competence__column pd-32">
+                            <h3 class="competence__number">10 лет</h3>
+                            <p class="competence__text">Работаем на рынке ипотечного кредитования. 98% наших клиентов получают одобрение ипотеки.</p>
+                        </div>
+                        <div class="competence__column pd-32">
+                            <h3 class="competence__number">40+</h3>
+                            <p class="competence__text">Банков с которыми налажены постоянные партнёрские взаимоотношения.</p>
+                        </div>
+                        <div class="competence__column pd-32">
+                            <h3 class="competence__number">Досконально</h3>
+                            <p class="competence__text">Знаем все варианты ипотечных программ. Разбираемся во всех требованиях к заёмщикам каждого из банков.</p>
+                        </div>
+                        <div class="competence__column pd-32">
+                            <h3 class="competence__number">Всегда <br> в тренде</h3>
+                            <p class="competence__text">Держим руку на пульсе и узнаем о любых изменениях в ипотечных программах и требованиях банков в тот же день.</p>
+                        </div>
+                        <div class="competence__column pd-32">
+                            <h3 class="competence__number">Выгодно клиентам</h3>
+                            <p class="competence__text">Умеем снижать процентные ставки по ипотеке. Подбираем оптимальные кредитные программы. Уменьшаем до 30% стоимость страхования.</p>
+                        </div>
+                        <div class="competence__column pd-32">
+                            <h3 class="competence__number">Нет сложных случаев</h3>
+                            <p class="competence__text">Одобряем кредиты даже в самых сложных случаях. После отказа, с открытыми просрочками, без справок о доходах и даже после процедуры банкротства.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="choose pd">
+                <div class="choose__container container">
+                    <h2 class="choose__title title-section">Выберите ваш вариант сотрудничества</h2>
+                    <div class="choose__body">
+                        <div class="choose__column">
+                            <div class="choose__wrapper">
+                                <div class="choose__tabs">
+                                    <button class="choose__tab tab active" data-tab="request">По запросу</button>
+                                    <button class="choose__tab tab" data-tab="broker">Ипотечный брокер на аутсорсе</button>
+                                </div>
+                            </div>
+                            <div class="choose__item" data-content="request">
+                                <h3 class="choose__sub-title">Взаимодействие по конкретным ситуациям</h3>
+                                <p class="choose__text fz-24 ">Удобно в случаях, когда к вам приходит клиент со сложной историей, полученными отказами и другими нюансами.</p>
+                                <div class="choose__block">
+                                    <p class="choose__title-list fz-24">Берём на себя:</p>
+                                    <ul class="guarantee__list">
+                                        <li><span>Детально анализируем кредитную историю и собираем полную финансовую картину по Клиенту</span></li>
+                                        <li><span>Разрабатываем стратегию гарантированного получения одобрения ипотеки</span></li>
+                                        <li><span>Подбираем оптимальную для Клиента банковскую программу</span></li>
+                                        <li><span>Готовим все необходимые документы и подаём их в банк</span></li>
+                                        <li><span>Получаем одобрение необходимой суммы для приобретения недвижимости</span></li>
+                                    </ul>
+                                </div>
+                                <p class="choose__title-list fz-24">Вам остаётся:</p>
+                                <p class="choose__result">Выйти на сделку и подписать Договор Купли-Продажи недвижимости.</p>
+                            </div>
+                            <div class="choose__item is-hidden" data-content="broker">
+                                <h3 class="choose__sub-title">Взаимодействие по конкретным ситуациям</h3>
+                                <p class="choose__text fz-24 ">Удобно в случаях, когда к вам приходит клиент со сложной историей, полученными отказами и другими нюансами.</p>
+                                <div class="choose__block">
+                                    <p class="choose__title-list fz-24">Берём на себя:</p>
+                                    <ul class="guarantee__list">
+                                        <li><span>Все те же самые процессы, что и про единовременном обращении.</span></li>
+                                        <li><span>При этом вы получаете ещё больше преимуществ и существенно экономите на временных и финансовых затратах.</span></li>
+                                    </ul>
+                                </div>
+                                <div class="choose__block">
+                                    <p class="choose__title-list fz-24">Берём на себя:</p>
+                                    <ul class="guarantee__list">
+                                        <li><span>Увеличение продаж — за счет гарантированного одобрения кредитов.</span></li>
+                                        <li><span>Экономия времени на бумажную работу по оформлению документов для получения ипотеки. Сотрудники занимаются продажами не отвлекаясь на сторонние процессы.</span></li>
+                                        <li><span>Экономия средств — Вам не нужно держать специалиста по ипотечному кредитования в штате.</span></li>
+                                        <li><span>Сокращение времени выхода на сделку. Одобряем ипотеку за 1-3 дня. </span></li>
+                                    </ul>
+                                </div>
+                                <p class="choose__comment">Увеличивайте продажи за счет привлечения кредитных средств для ваших клиентов. Обо всем остальном позаботимся мы сами</p>
+                            </div>
+                            <div class="choose__contact guarantee__contact">
+                                <a href="#" class="choose__button guarantee__button btn btn-black">Получить консультацию</a>
+                                <div class="choose__socials guarantee__socials">
+                                    <a href="#" class="appeal__social choose__social social">
+                                        <svg width="24" height="24">
+                                            <use xlink:href="./img/sprite.svg#tg"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="appeal__social choose__social social choose-whatsapp">
+                                        <svg width="32" height="32">
+                                            <use xlink:href="./img/sprite.svg#whatsapp"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choose__image" data-content="request">
+                            <img src="img/invite1.webp" alt="invite">
+                        </div>
+                        <div class="choose__image is-hidden" data-content="broker">
+                            <img src="img/invite2.webp" alt="invite">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="review pd container-big">
+    <div class="review__container container">
+        <h2 class="review__title title-section">1000+ довольных клиентов</h2>
+        <a href="#" class="review__link-mobile link-refer">Смотреть все отзывы
+            <svg width="20" height="24">
+                <use xlink:href="./img/sprite.svg#arrow-line"></use>
+            </svg>
+        </a>
+        <div class="review__swiper swiper">
+            <div class="review__columns swiper-wrapper">
+                <div class="review__column swiper-slide">
+                    <div class="video__wrapper" data-src="https://www.youtube.com/embed/HOfdboHvshg?autoplay=1">
+    <span class="video__icon">
+        <svg width="32" height="32">
+            <use xlink:href="./img/sprite.svg#player"></use>
+        </svg>
+    </span>
+    <img src="img/review1.webp" alt="poster" class="video__poster">
+</div>
+                </div>
+                <div class="review__column swiper-slide">
+                    <div class="review__item pd-32">
+                        <div class="review__grade">
+                            <p class="review__name fz-24">Елена Семёнова</p>
+                            <div class="review__rating">
+                                <svg width="20" height="20">
+                                    <use xlink:href="./img/sprite.svg#Star"></use>
+                                </svg>
+                                <svg width="20" height="20">
+                                    <use xlink:href="./img/sprite.svg#Star"></use>
+                                </svg>
+                                <svg width="20" height="20">
+                                    <use xlink:href="./img/sprite.svg#Star"></use>
+                                </svg>
+                                <svg width="20" height="20">
+                                    <use xlink:href="./img/sprite.svg#Star"></use>
+                                </svg>
+                                <svg width="20" height="20">
+                                    <use xlink:href="./img/sprite.svg#Star"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="review__text">Спасибо огромное Карине и Анне! Обратились по поводу ипотеки, нам все доступно объяснили, что сначала необходимо снизить кредитную нагрузку и оформить рефинансирование, причём ещё <span class="review__more-text">была сложность в наличии у нас незакрытой кредитки, оперативно все решили, грамотно, чётко, всегда были на связи! Первый этап на пути к нашей мечте пройден! Теперь будем двигаться дальше!</span></div>
+                        <a href="#" class="review__button">Оригинал отзыва</a>
+                    </div>
+                </div>
+                <div class="review__column swiper-slide">
+                    <div class="video__wrapper" data-src="https://www.youtube.com/embed/7LdRiXy4mvg?autoplay=1">
+    <span class="video__icon">
+        <svg width="32" height="32">
+            <use xlink:href="./img/sprite.svg#player"></use>
+        </svg>
+    </span>
+    <img src="img/review2.webp" alt="poster" class="video__poster">
+</div>
+                </div>
+                <div class="review__column swiper-slide">
+                    <div class="video__wrapper" data-src="https://www.youtube.com/embed/HOfdboHvshg?autoplay=1">
+    <span class="video__icon">
+        <svg width="32" height="32">
+            <use xlink:href="./img/sprite.svg#player"></use>
+        </svg>
+    </span>
+    <img src="img/review1.webp" alt="poster" class="video__poster">
+</div>
+                </div>
+                <div class="review__column swiper-slide">
+                    <div class="review__item pd-32">
+                        <div class="review__grade">
+                            <p class="review__name fz-24">Елена Семёнова</p>
+                            <div class="review__rating">
+                                <svg width="20" height="20">
+                                    <use xlink:href="./img/sprite.svg#Star"></use>
+                                </svg>
+                                <svg width="20" height="20">
+                                    <use xlink:href="./img/sprite.svg#Star"></use>
+                                </svg>
+                                <svg width="20" height="20">
+                                    <use xlink:href="./img/sprite.svg#Star"></use>
+                                </svg>
+                                <svg width="20" height="20">
+                                    <use xlink:href="./img/sprite.svg#Star"></use>
+                                </svg>
+                                <svg width="20" height="20">
+                                    <use xlink:href="./img/sprite.svg#Star"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="review__text">Спасибо огромное Карине и Анне! Обратились по поводу ипотеки, нам все доступно объяснили, что сначала необходимо снизить кредитную нагрузку и оформить рефинансирование, причём ещё <span class="review__more-text">была сложность в наличии у нас незакрытой кредитки, оперативно все решили, грамотно, чётко, всегда были на связи! Первый этап на пути к нашей мечте пройден! Теперь будем двигаться дальше!</span></div>
+                        <a href="#" class="review__button">Оригинал отзыва</a>
+                    </div>
+                </div>
+                <div class="review__column swiper-slide">
+                    <div class="video__wrapper" data-src="https://www.youtube.com/embed/HOfdboHvshg?autoplay=1">
+    <span class="video__icon">
+        <svg width="32" height="32">
+            <use xlink:href="./img/sprite.svg#player"></use>
+        </svg>
+    </span>
+    <img src="img/review2.webp" alt="poster" class="video__poster">
+</div>
+                </div>
+            </div>
+            <div class="review__controls">
+                <div class="review__navigation">
+                    <div class="swiper-button review__button-prev swiper-button-prev">
+                        <svg width="20" height="24">
+                            <use xlink:href="./img/sprite.svg#arrow-line"></use>
+                        </svg>
+                    </div>
+                    <div class="review__pagination pagination swiper-pagination"></div>
+                    <div class="swiper-button review__button-next swiper-button-next">
+                        <svg width="20" height="24">
+                            <use xlink:href="./img/sprite.svg#arrow-line"></use>
+                        </svg>
+                    </div>
+                </div>
+                <a href="#" class="review__link link-refer arr-rt">Смотреть все отзывы
+                    <svg width="20" height="24">
+                        <use xlink:href="./img/sprite.svg#arrow-line"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="review__bg">
+        <img src="img/city-small.webp" alt="city">
+    </div>
+</section>
+            <section class="partners pd">
+    <div class="partners__container container">
+        <h2 class="partners__title title-section">Наши партнёры: банки и застройщики</h2>
+    </div>
+    <div class="partners__body">
+        <div class="partners__list partners__list-1">
+            <div class="partners__copy">
+                <div class="partners__item">
+                    <img src="img/partners1.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners2.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners3.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners4.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners5.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners1.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners2.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners3.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners4.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners5.webp" alt="partners">
+                </div>
+            </div>
+            <div class="partners__copy">
+                <div class="partners__item">
+                    <img src="img/partners1.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners2.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners3.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners4.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners5.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners1.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners2.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners3.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners4.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners5.webp" alt="partners">
+                </div>
+            </div>
+            <div class="partners__copy">
+                <div class="partners__item">
+                    <img src="img/partners1.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners2.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners3.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners4.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners5.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners1.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners2.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners3.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners4.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners5.webp" alt="partners">
+                </div>
+            </div>
+            <div class="partners__copy">
+                <div class="partners__item">
+                    <img src="img/partners1.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners2.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners3.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners4.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners5.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners1.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners2.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners3.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners4.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners5.webp" alt="partners">
+                </div>
+            </div>
+        </div>
+        <div class="partners__list partners__list-2">
+            <div class="partners__copy">
+                <div class="partners__item">
+                    <img src="img/partners1.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners2.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners3.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners4.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners5.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners1.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners2.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners3.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners4.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners5.webp" alt="partners">
+                </div>
+            </div>
+            <div class="partners__copy">
+                <div class="partners__item">
+                    <img src="img/partners1.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners2.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners3.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners4.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners5.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners1.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners2.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners3.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners4.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners5.webp" alt="partners">
+                </div>
+            </div>
+            <div class="partners__copy">
+                <div class="partners__item">
+                    <img src="img/partners1.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners2.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners3.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners4.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners5.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners1.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners2.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners3.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners4.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners5.webp" alt="partners">
+                </div>
+            </div>
+            <div class="partners__copy">
+                <div class="partners__item">
+                    <img src="img/partners1.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners2.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners3.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners4.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners5.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners1.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners2.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners3.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners4.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners5.webp" alt="partners">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        </main>
+        <footer class="footer pd">
+  <div class="footer__wrapper container-big">
+    <div class="footer__container container">
+      <div class="footer__body">
+        <a href="#" class="footer__column footer__logo">
+          <img src="img/logo.webp" alt="logo">
+        </a>
+        <div class="footer__column or-2">
+          <p class="footer__sub-title">Услуги</p>
+          <ul class="footer__list list-reset">
+            <li class="footer__item"><a href="#" class="footer__link">Помощь в одобрении ипотеки</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Сопровождение сделок</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Подбор новостроек</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Рефинансирование</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Кредиты бизнесу</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Инвестиции в недвижимость</a></li>
+          </ul>
+        </div>
+        <div class="footer__column or-3">
+          <p class="footer__sub-title">О компании</p>
+          <ul class="footer__list list-reset">
+            <li class="footer__item"><a href="#" class="footer__link">О нас</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Вакансии</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Блог</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Блог</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Кейсы и отзывы</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__column or-1">
+          <p class="footer__sub-title">Контакты</p>
+          <a href="tel:+78000000000" class="footer__number fz-24">8 800 000-00-00</a>
+          <p class="footer__time">Ежедневно с 09–00 до 21–00</p>
+          <p class="footer__text">Электронная почта</p>
+          <a href="mailto:info@domen.ru" class="footer__email fz-24">info@domen.ru</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__footer container container-big d-flex f-ac f-jsb">
+    <span class="footer__rights or-2">@ 2013 — 2023  ООО «Ипотека просто» | Все права защищены</span>
+    <a href="#" class="footer__terms or-1" target="_blank">Политика конфиденциальности</a>
+    <div class="footer__block d-flex f-ac f-jsb or-3">
+        <a href="#" class="footer__business d-flex f-ac">
+          <img src="./img/business-up.webp" alt="Изображение" loading="lazy">
+          <div class="footer__line"></div>
+          <span>Разработка <br>
+            и продвижение с любовью</span>
+        </a>
+    </div>
+</div>
+</footer>
+
+        <div class="video-modal">
+    <div class="video-content">
+        <span data-close id="close-btn" class="video-close">×</span>
+        <div class="video"></div>
+    </div>
+</div>
+
+    </div>
+
+</body>
+
+</html>

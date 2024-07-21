@@ -8250,7 +8250,6 @@ __webpack_require__.r(__webpack_exports__);
 function modalVideo() {
   const modal = document.querySelector('.video-modal');
   const videoContainer = modal.querySelector('.video');
-  const videoWrappers = document.querySelectorAll('.video__wrapper');
   const closeButton = document.getElementById('close-btn');
   function stopVideo() {
     const iframe = videoContainer.querySelector('iframe');
@@ -8260,8 +8259,6 @@ function modalVideo() {
       document.body.classList.remove('no-scrolling');
     }
   }
-
-  // Event listener to close the modal
   modal.addEventListener('click', e => {
     if (e.target === modal || e.target.getAttribute('data-close') !== null) {
       modal.classList.remove('show');
@@ -8272,20 +8269,198 @@ function modalVideo() {
     modal.classList.remove('show');
     stopVideo();
   });
-
-  // Event listeners for video previews
-  videoWrappers.forEach(wrapper => {
-    wrapper.addEventListener('click', function () {
+  document.addEventListener('click', e => {
+    const wrapper = e.target.closest('.video__wrapper');
+    if (wrapper) {
       if (videoContainer.classList.contains('ready')) {
         return;
       }
-      const src = this.getAttribute('data-src');
+      const src = wrapper.getAttribute('data-src');
       videoContainer.classList.add('ready');
       document.body.classList.add('no-scrolling');
       modal.classList.add('show');
       videoContainer.innerHTML = '<iframe src="' + src + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
-    });
+    }
   });
+}
+
+/***/ }),
+
+/***/ "./src/js/functions/paginationPage1.js":
+/*!*********************************************!*\
+  !*** ./src/js/functions/paginationPage1.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   createCardPage1: () => (/* binding */ createCardPage1)
+/* harmony export */ });
+function createCardPage1(item) {
+  const itemDiv = document.createElement('div');
+  itemDiv.className = 'blog__column pd-32';
+  if (item.isActive) {
+    itemDiv.classList.add('active');
+  }
+  if (item.isBig && window.innerWidth > 767) {
+    itemDiv.classList.add('big');
+  }
+  itemDiv.innerHTML = `
+        <div class="blog__times">
+            <time class="blog__date">${item.date}</time>
+            <time class="blog__time">
+                ${item.month}<br>${item.year}
+            </time>
+        </div>
+        <div class="blog__content">
+            <p class="blog__sub-title">${item.title}</p>
+            <p class="blog__text">${item.text}</p>
+            <div class="blog__bg">
+                <img src="${item.image}" alt="blog">
+            </div>
+        </div>`;
+  return itemDiv;
+}
+
+/***/ }),
+
+/***/ "./src/js/functions/paginationPage2.js":
+/*!*********************************************!*\
+  !*** ./src/js/functions/paginationPage2.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   createCardPage2: () => (/* binding */ createCardPage2)
+/* harmony export */ });
+function createCardPage2(item) {
+  const itemDiv = document.createElement('div');
+  itemDiv.className = 'case__column';
+  const situationList = item.situation.map(point => `<li>${point}</li>`).join('');
+  itemDiv.innerHTML = `
+        <div class="case__inner">
+            <div class="case__front pd-32">
+                <div class="situation__person">
+                    <div class="situation__avatar">
+                        <img src="${item.avatar}" alt="avatar">
+                    </div>
+                    <p class="situation__name">${item.name}</p>
+                <p class="situation__job">${item.job}</p>
+                </div>
+            <div class="situation__point fz-24"><span>${item.goal}</span></div>
+            <div class="situation__describe">
+                <p class="situation__text">Жизненная ситуация:</p>
+                <ul class="situation__list">${situationList}</ul>
+            </div>
+            </div>
+            <div class="case__back pd-32">
+            <p class="situation__text fz-24"><span>Результат</span></p>
+            <p class="situation__result">Одобрена ипотека без первоначального взноса</p>
+            <ul class="situation__list-result list-reset">
+                <li>Срок: <span>2 дня</span></li>
+                <li>Ставка: <span>10,5%</span></li>
+                <li>Сумма кредита:<span></span>2 300 000&nbsp;₽</li>
+            </ul>
+            <a href="#" class="situation__link arr-rt">Читать отзывы
+                <svg width="20" height="24">
+                    <use xlink:href="./img/sprite.svg#arrow-line"></use>
+                </svg>
+            </a>
+            </div>
+        </div>`;
+  return itemDiv;
+}
+
+/***/ }),
+
+/***/ "./src/js/functions/paginationPage3.js":
+/*!*********************************************!*\
+  !*** ./src/js/functions/paginationPage3.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   createCardPage3: () => (/* binding */ createCardPage3)
+/* harmony export */ });
+function createCardPage3(item) {
+  const itemDiv = document.createElement('div');
+  itemDiv.className = 'review__column review-margin';
+  if (item.type === 'video') {
+    itemDiv.innerHTML = `
+            <div class="video__wrapper" data-src="${item.videoUrl}">
+                <span class="video__icon">
+                    <svg width="32" height="32">
+                        <use xlink:href="./img/sprite.svg#player"></use>
+                    </svg>
+                </span>
+                <img src="${item.thumbnail}" alt="poster" class="video__poster">
+            </div>
+        `;
+  } else if (item.type === 'text') {
+    itemDiv.innerHTML = `
+            <div class="review__item pd-32 review-gray">
+                <div class="review__grade">
+                    <p class="review__name fz-24">${item.name}</p>
+                    <div class="review__rating">
+                        <svg width="20" height="20">
+                            <use xlink:href="./img/sprite.svg#Star"></use>
+                        </svg> 
+                        <svg width="20" height="20">
+                            <use xlink:href="./img/sprite.svg#Star"></use>
+                        </svg> 
+                        <svg width="20" height="20">
+                            <use xlink:href="./img/sprite.svg#Star"></use>
+                        </svg> 
+                        <svg width="20" height="20">
+                            <use xlink:href="./img/sprite.svg#Star"></use>
+                        </svg> 
+                        <svg width="20" height="20">
+                            <use xlink:href="./img/sprite.svg#Star"></use>
+                        </svg> 
+                    </div>
+                </div>
+                <div class="review__text">${item.reviewFirst}<span class="review__more-text">${item.reviewSecond}</span></div>
+                <div class="review__button">Оригинал отзыва</div>
+            </div>
+        `;
+  }
+  return itemDiv;
+}
+
+/***/ }),
+
+/***/ "./src/js/functions/paginationPage4.js":
+/*!*********************************************!*\
+  !*** ./src/js/functions/paginationPage4.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   createCardPage4: () => (/* binding */ createCardPage4)
+/* harmony export */ });
+function createCardPage4(item) {
+  const itemDiv = document.createElement('div');
+  itemDiv.className = 'vacation__column';
+  itemDiv.innerHTML = `
+        <div class="vacation__item pd-32">
+            <p class="vacation__sub-title fz-24">${item.title}</p>
+            <p class="vacation__salary">${item.salary}</p>
+            <p class="vacation__text">${item.description}</p>
+            <a href="${item.link}" class="vacation__link link-refer arr-rt">Информация о вакансии
+                <svg width="20" height="24">
+                    <use xlink:href="./img/sprite.svg#arrow-line"></use>
+                </svg>
+            </a>
+        </div>
+    `;
+  return itemDiv;
 }
 
 /***/ }),
@@ -8301,43 +8476,63 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   paginationWidget: () => (/* binding */ paginationWidget)
 /* harmony export */ });
-function paginationWidget() {
-  fetch('data.json').then(respone => respone.json()).then(content => {
-    const contentDiv = document.getElementById('content');
-    const pageNumbersDiv = document.getElementById('pageNumbers');
-    const showMoreButton = document.getElementById('showMore');
+function paginationWidget(_ref) {
+  let {
+    jsonFile,
+    itemsPerPageDesktop,
+    itemsPerPageMobile,
+    createCard,
+    contentId,
+    pageNumber,
+    showMore,
+    nextBtn,
+    prevBtn,
+    isPage1 = false
+  } = _ref;
+  fetch(jsonFile).then(response => response.json()).then(content => {
+    const contentDiv = document.getElementById(contentId);
+    const pageNumbersDiv = document.getElementById(pageNumber);
+    const showMoreButton = document.getElementById(showMore);
     let currentPage = 1;
     let itemsPerPage = calculateItemsPerPage(currentPage);
     let totalPages = calculateTotalPages();
     function calculateItemsPerPage(page) {
-      const maxColumns = 8;
-      const bigItemColumns = 2;
-      const smallItemColumns = 1;
-      let columns = maxColumns;
-      let startIndex = (page - 1) * maxColumns;
-      let endIndex = startIndex + maxColumns;
-      let pageItems = content.slice(startIndex, endIndex);
-      pageItems.forEach(item => {
-        if (item.isBig) {
-          columns -= bigItemColumns - smallItemColumns;
+      if (isPage1) {
+        const maxColumns = 8;
+        const bigItemColumns = 2;
+        const smallItemColumns = 1;
+        let columns = maxColumns;
+        let startIndex = (page - 1) * maxColumns;
+        let endIndex = startIndex + maxColumns;
+        let pageItems = content.slice(startIndex, endIndex);
+        pageItems.forEach(item => {
+          if (item.isBig) {
+            columns -= bigItemColumns - smallItemColumns;
+          }
+        });
+        if (columns < 4) columns = 4;
+        if (window.innerWidth <= 767) {
+          columns = 5;
         }
-      });
-      if (columns < 4) columns = 4;
-      if (window.innerWidth <= 767) {
-        columns = 5;
+        return columns;
+      } else {
+        return window.innerWidth <= 767 ? itemsPerPageMobile : itemsPerPageDesktop;
       }
-      return columns;
     }
     function calculateTotalPages() {
-      let totalColumns = 0;
-      content.forEach(item => {
-        if (item.isBig) {
-          totalColumns += 2;
-        } else {
-          totalColumns += 1;
-        }
-      });
-      return Math.ceil(totalColumns / 8);
+      if (isPage1) {
+        let totalColumns = 0;
+        content.forEach(item => {
+          if (item.isBig) {
+            totalColumns += 2;
+          } else {
+            totalColumns += 1;
+          }
+        });
+        return Math.ceil(totalColumns / 8);
+      } else {
+        return Math.ceil(content.length / itemsPerPageDesktop);
+      }
     }
     function renderContent(page) {
       let append = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
@@ -8346,28 +8541,7 @@ function paginationWidget() {
       let end = start + itemsPerPage;
       const pageContent = content.slice(start, end);
       pageContent.forEach(item => {
-        const itemDiv = document.createElement('div');
-        itemDiv.className = 'blog__column pd-32';
-        if (item.isActive) {
-          itemDiv.classList.add('active');
-        }
-        if (item.isBig && window.innerWidth > 767) {
-          itemDiv.classList.add('big');
-        }
-        itemDiv.innerHTML = `
-                    <div class="blog__times">
-                        <time class="blog__date">${item.date}</time>
-                        <time class="blog__time">
-                            ${item.month}<br>${item.year}
-                        </time>
-                    </div>
-                    <div class="blog__content">
-                        <p class="blog__sub-title">${item.title}</p>
-                        <p class="blog__text">${item.text}</p>
-                        <div class="blog__bg">
-                            <img src="${item.image}" alt="blog">
-                        </div>
-                    </div>`;
+        const itemDiv = createCard(item);
         contentDiv.appendChild(itemDiv);
       });
       if (currentPage >= totalPages) {
@@ -8403,7 +8577,7 @@ function paginationWidget() {
         pageNumbersDiv.appendChild(pageDiv);
       }
     }
-    document.getElementById('prevPage').addEventListener('click', () => {
+    document.getElementById(prevBtn).addEventListener('click', () => {
       if (currentPage > 1) {
         currentPage--;
         itemsPerPage = calculateItemsPerPage(currentPage);
@@ -8411,7 +8585,7 @@ function paginationWidget() {
         renderPageNumbers();
       }
     });
-    document.getElementById('nextPage').addEventListener('click', () => {
+    document.getElementById(nextBtn).addEventListener('click', () => {
       if (currentPage < totalPages) {
         currentPage++;
         itemsPerPage = calculateItemsPerPage(currentPage);
@@ -8439,6 +8613,35 @@ function paginationWidget() {
       renderPageNumbers();
     });
   }).catch(error => console.error('Error fetching JSON:', error));
+}
+
+/***/ }),
+
+/***/ "./src/js/functions/question.js":
+/*!**************************************!*\
+  !*** ./src/js/functions/question.js ***!
+  \**************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   question: () => (/* binding */ question)
+/* harmony export */ });
+function question() {
+  document.querySelectorAll('.question__btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const column = button.parentElement;
+      const textElement = button.nextElementSibling;
+      if (column.classList.contains('active')) {
+        textElement.style.maxHeight = null;
+        column.classList.remove('active');
+      } else {
+        textElement.style.maxHeight = textElement.scrollHeight + 'px';
+        column.classList.add('active');
+      }
+    });
+  });
 }
 
 /***/ }),
@@ -8474,6 +8677,31 @@ function scroll() {
     threshold: [0]
   });
   headerObserver.observe(sentinel);
+}
+
+/***/ }),
+
+/***/ "./src/js/functions/spoiler.js":
+/*!*************************************!*\
+  !*** ./src/js/functions/spoiler.js ***!
+  \*************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   spoiler: () => (/* binding */ spoiler)
+/* harmony export */ });
+function spoiler(event) {
+  event.preventDefault();
+  if (event.target.classList.contains('review__button') && innerWidth < 577) {
+    document.querySelector('.review__button').innerHTML = 'Показать полностью';
+    const reviewContent = event.target.closest('.review__item');
+    if (!reviewContent) return;
+    reviewContent.classList.toggle('show-full');
+    const isExpanded = reviewContent.classList.contains('show-full');
+    event.target.textContent = isExpanded ? 'Скрыть' : 'Показать полностью';
+  }
 }
 
 /***/ }),
@@ -8595,6 +8823,33 @@ function swiperAll() {
         spaceBetween: 16
       }
     }
+  });
+}
+
+/***/ }),
+
+/***/ "./src/js/functions/switchTab.js":
+/*!***************************************!*\
+  !*** ./src/js/functions/switchTab.js ***!
+  \***************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   switchTab: () => (/* binding */ switchTab)
+/* harmony export */ });
+function switchTab(contentSelector, tabSelector) {
+  const tabs = document.querySelectorAll(tabSelector);
+  const contents = document.querySelectorAll(contentSelector);
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      contents.forEach(c => c.classList.add('is-hidden'));
+      tab.classList.add('active');
+      const contentToShow = document.querySelectorAll(`[data-content="${tab.dataset.tab}"]`);
+      contentToShow.forEach(content => content.classList.remove('is-hidden'));
+    });
   });
 }
 
@@ -19264,6 +19519,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _functions_modalVideo_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./functions/modalVideo.js */ "./src/js/functions/modalVideo.js");
 /* harmony import */ var _functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./functions/validate-forms.js */ "./src/js/functions/validate-forms.js");
 /* harmony import */ var _functions_paginationWidget_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./functions/paginationWidget.js */ "./src/js/functions/paginationWidget.js");
+/* harmony import */ var _functions_switchTab_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./functions/switchTab.js */ "./src/js/functions/switchTab.js");
+/* harmony import */ var _functions_paginationPage1_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./functions/paginationPage1.js */ "./src/js/functions/paginationPage1.js");
+/* harmony import */ var _functions_paginationPage2_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./functions/paginationPage2.js */ "./src/js/functions/paginationPage2.js");
+/* harmony import */ var _functions_paginationPage3_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./functions/paginationPage3.js */ "./src/js/functions/paginationPage3.js");
+/* harmony import */ var _functions_paginationPage4_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./functions/paginationPage4.js */ "./src/js/functions/paginationPage4.js");
+/* harmony import */ var _functions_spoiler_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./functions/spoiler.js */ "./src/js/functions/spoiler.js");
+/* harmony import */ var _functions_question_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./functions/question.js */ "./src/js/functions/question.js");
+
+
+
+
+
+
+
 
 
 
@@ -19273,16 +19542,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 window.addEventListener('DOMContentLoaded', e => {
+  document.addEventListener('click', function (event) {
+    if (event.target.closest('.review__column')) {
+      (0,_functions_spoiler_js__WEBPACK_IMPORTED_MODULE_13__.spoiler)(event);
+    }
+  });
   const functionsMap = {
-    // "#phone": () => {
-    //     const phoneInputField = document.querySelector("#phone");
-    //     if (phoneInputField) {
-    //         intlTelInput(phoneInputField, {
-    //             initialCountry: "ru",
-    //             utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/utils.js"
-    //         });
-    //     }
-    // },
     ".header": _functions_scroll_js__WEBPACK_IMPORTED_MODULE_3__.scroll,
     ".icon-menu": _functions_burger_js__WEBPACK_IMPORTED_MODULE_1__.burger,
     ".header__link-mobile[data-target]": _functions_mobile_dropdown_js__WEBPACK_IMPORTED_MODULE_2__.mobileDropdown,
@@ -19291,7 +19556,81 @@ window.addEventListener('DOMContentLoaded', e => {
     "#helpform1": () => (0,_functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_6__.validateForms)('#helpform1', rules, checkboxes, () => {
       console.log('Форма успешно отправлена');
     }),
-    ".pagination-widget": _functions_paginationWidget_js__WEBPACK_IMPORTED_MODULE_7__.paginationWidget
+    "#helpform2": () => (0,_functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_6__.validateForms)('#helpform2', rules, checkboxes, () => {
+      console.log('Форма успешно отправлена');
+    }),
+    ".case__body": () => (0,_functions_switchTab_js__WEBPACK_IMPORTED_MODULE_8__.switchTab)('[data-content]', '.case__tab'),
+    ".contact__body": () => (0,_functions_switchTab_js__WEBPACK_IMPORTED_MODULE_8__.switchTab)('[data-content]', '.contact__button'),
+    ".vacation__body": () => (0,_functions_switchTab_js__WEBPACK_IMPORTED_MODULE_8__.switchTab)('[data-content]', '.vacation__button'),
+    ".choose__body": () => (0,_functions_switchTab_js__WEBPACK_IMPORTED_MODULE_8__.switchTab)('[data-content]', '.choose__tab'),
+    ".pagination-widget-blog": () => (0,_functions_paginationWidget_js__WEBPACK_IMPORTED_MODULE_7__.paginationWidget)({
+      jsonFile: 'json/blog.json',
+      itemsPerPageDesktop: 8,
+      itemsPerPageMobile: 5,
+      createCard: _functions_paginationPage1_js__WEBPACK_IMPORTED_MODULE_9__.createCardPage1,
+      contentId: 'content-blog',
+      pageNumber: 'pageNumbers-blog',
+      showMore: 'showMore-blog',
+      nextBtn: 'nextPage-blog',
+      prevBtn: 'prevPage-blog',
+      isPage1: true
+    }),
+    ".pagination-widget-case": () => (0,_functions_paginationWidget_js__WEBPACK_IMPORTED_MODULE_7__.paginationWidget)({
+      jsonFile: 'json/case.json',
+      itemsPerPageDesktop: 6,
+      itemsPerPageMobile: 3,
+      contentId: 'content-case',
+      pageNumber: 'pageNumbers-case',
+      showMore: 'showMore-case',
+      nextBtn: 'nextPage-case',
+      prevBtn: 'prevPage-case',
+      createCard: _functions_paginationPage2_js__WEBPACK_IMPORTED_MODULE_10__.createCardPage2
+    }),
+    ".pagination-widget-review": () => (0,_functions_paginationWidget_js__WEBPACK_IMPORTED_MODULE_7__.paginationWidget)({
+      jsonFile: 'json/review.json',
+      itemsPerPageDesktop: 9,
+      itemsPerPageMobile: 4,
+      contentId: 'content-review',
+      pageNumber: 'pageNumbers-review',
+      showMore: 'showMore-review',
+      nextBtn: 'nextPage-review',
+      prevBtn: 'prevPage-review',
+      createCard: _functions_paginationPage3_js__WEBPACK_IMPORTED_MODULE_11__.createCardPage3
+    }),
+    ".pagination-widget-moscow": () => (0,_functions_paginationWidget_js__WEBPACK_IMPORTED_MODULE_7__.paginationWidget)({
+      jsonFile: 'json/vacanci.json',
+      itemsPerPageDesktop: 4,
+      itemsPerPageMobile: 4,
+      contentId: 'content-moscow',
+      pageNumber: 'pageNumbers-moscow',
+      showMore: 'showMore-moscow',
+      nextBtn: 'nextPage-moscow',
+      prevBtn: 'prevPage-moscow',
+      createCard: _functions_paginationPage4_js__WEBPACK_IMPORTED_MODULE_12__.createCardPage4
+    }),
+    ".pagination-widget-piter": () => (0,_functions_paginationWidget_js__WEBPACK_IMPORTED_MODULE_7__.paginationWidget)({
+      jsonFile: 'json/vacanci.json',
+      itemsPerPageDesktop: 4,
+      itemsPerPageMobile: 4,
+      contentId: 'content-piter',
+      pageNumber: 'pageNumbers-piter',
+      showMore: 'showMore-piter',
+      nextBtn: 'nextPage-piter',
+      prevBtn: 'prevPage-piter',
+      createCard: _functions_paginationPage4_js__WEBPACK_IMPORTED_MODULE_12__.createCardPage4
+    }),
+    ".pagination-widget-perm": () => (0,_functions_paginationWidget_js__WEBPACK_IMPORTED_MODULE_7__.paginationWidget)({
+      jsonFile: 'json/vacanci.json',
+      itemsPerPageDesktop: 4,
+      itemsPerPageMobile: 4,
+      contentId: 'content-perm',
+      pageNumber: 'pageNumbers-perm',
+      showMore: 'showMore-perm',
+      nextBtn: 'nextPage-perm',
+      prevBtn: 'prevPage-perm',
+      createCard: _functions_paginationPage4_js__WEBPACK_IMPORTED_MODULE_12__.createCardPage4
+    }),
+    ".question__btn": _functions_question_js__WEBPACK_IMPORTED_MODULE_14__.question
   };
   const rules = [{
     ruleSelector: '.help__name',
