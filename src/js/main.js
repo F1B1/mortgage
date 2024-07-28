@@ -1,6 +1,3 @@
-import intlTelInput from 'intl-tel-input';
-
-
 import { burger } from "./functions/burger.js";
 import { mobileDropdown } from "./functions/mobile-dropdown.js";
 import { scroll } from "./functions/scroll.js";
@@ -16,6 +13,20 @@ import { createCardPage4 } from './functions/paginationPage4.js';
 import { spoiler } from './functions/spoiler.js';
 import { question } from './functions/question.js';
 
+import { 
+  animatePrimary,
+  animateHeader, 
+  animateColumns, 
+  animateSituation, 
+  animateAppeal, 
+  animateReviewTitle, 
+  animatePartnersTitle, 
+  animateHelpBody, 
+  animateNewsTitle,
+  animateTeam,
+  animateBlog,
+  animateInviteSection
+} from './functions/gsap-anim.js';
 
 
 
@@ -166,6 +177,49 @@ window.addEventListener('DOMContentLoaded',(e)=>{
       }
   });
 
+  const laptopScreen = window.matchMedia('(min-width: 992px)')
+
+  if(laptopScreen.matches){
+    const animations = [
+      { selector: '.header', action: animateHeader },
+      { selector: '.primary', action: ()=>animatePrimary('.primary__bg-primary', '.primary__title', '.primary__sub-title', '.primary__makes', '.primary__button') },
+      { selector: '.primary-second', action: ()=>animatePrimary('.primary__bg-primary', '.primary-second__title', '.primary-second__sub-title') },
+      { selector: '.primary-three', action: ()=>animatePrimary('.primary__bg-primary', '.primary-second__title', '.primary-second__sub-title') },
+      { selector: '.invite__body', action: animateInviteSection },
+      { selector: '.blog', action: animateBlog },
+      { selector: '.blog-news__wrapper', action: ()=>animateAppeal('.blog-news__wrapper') },
+      { selector: '.actual-big__wrapper', action: ()=> animateHelpBody('.actual-big__wrapper') },
+      { selector: '.case__body', action: ()=> animateAppeal('.case__body') },
+      { selector: '.vacation__body', action: ()=>animateAppeal('.vacation__body') },
+      { selector: '.benefit__columns', action: () => animateColumns('.benefit__columns', '.benefit__column') },
+      { selector: '.primary__columns', action: () => animateColumns('.primary__columns', '.primary__column') },
+      { selector: '.services__columns', action: () => animateColumns('.services__columns', '.services__column') },
+      { selector: '.competence__columns', action: () => animateColumns('.competence__columns', '.competence__column') },
+      { selector: '.invite__body', action: ()=>animateInviteSection('.invite__body', '.invite__column', '.invite__video') },
+      { selector: '.invite__body', action: ()=>animateInviteSection('.choose__body', '.choose__column', '.choose__image') },
+      { selector: '.situation__body', action: ()=>animateSituation('.situation__body') },
+      { selector: '.guarantee__body', action: ()=>animateSituation('.guarantee__body') },
+      { selector: '.appeal__body', action: ()=>animateAppeal('.appeal__body') },
+      { selector: '.banner__body', action: ()=>animateAppeal('.banner__body') },
+      { selector: '.team__title', action: animateTeam },
+      { selector: '.review__title', action: animateReviewTitle },
+      { selector: '.review__title', action: ()=>animateReviewTitle('.review__title') },
+      { selector: '.review__columns', action: () => animateColumns('.team__columns', '.team__column') },
+      { selector: '.review__columns', action: () => animateColumns('.review__columns', '.review__column') },
+      { selector: '.additionally__columns', action: ()=> animateHelpBody('.additionally__columns') },
+      { selector: '.partners__title', action: ()=>animatePartnersTitle('.partners__title') },
+      { selector: '.additionally__title', action: ()=>animatePartnersTitle('.additionally__title') },
+      { selector: '.help__body', action:()=> animateHelpBody('.help__body') },
+      { selector: '.news__title', action: animateNewsTitle },
+      { selector: '.news__columns', action: () => animateColumns('.news__columns', '.news__column') },
+      { selector: '.actual__body', action:()=> animateHelpBody('.actual__body') }
+    ];
   
+    animations.forEach(({ selector, action }) => {
+      if (document.querySelector(selector)) {
+        action();
+      }
+    });
+  }
 
 })

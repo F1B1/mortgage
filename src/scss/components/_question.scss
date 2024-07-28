@@ -29,6 +29,11 @@
                 visibility: visible;
             }
         }
+        &:hover{
+            .question__caption{
+                color: var(--red);
+            }
+        }
     }
 
     &__btn {
@@ -83,10 +88,7 @@
         max-width: 752px;
         text-align: left;
         margin: 0px 8px 0px 0px;
-       
-        &-red{
-            color: var(--red);
-        }
+        transition: all 0.3s ease 0s;
     }
 
     &__text {
