@@ -27,7 +27,7 @@ function animatePrimary(bg, title, subTitle, list, button) {
     const tl = gsap.timeline();
     tl.fromTo('.header', 
         { opacity: 0 },
-        { opacity: 1, }, 2
+        { opacity: 1, }, 1
       );
   }
   
