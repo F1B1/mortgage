@@ -37,12 +37,21 @@
         display: flex;
         flex-direction: column;
         height: 100%;
-        min-height: #{fluid(240px,486px, 320px, 1920px)};
+        min-height: #{fluid(240px,486px, 375px, 1920px)};
         position: relative;
         z-index: 1;
+        cursor: pointer;
         &:hover{
             img{
                 transform: scale(1.1); 
+            }
+            .services__button{
+                background-color: var(--dark);
+                color: var(--white);
+                svg{
+                    transform: rotate(-45deg);
+                    fill: var(--white);
+                }
             }
         }
         img{
@@ -60,7 +69,7 @@
     }
 
     &__title {
-        font-size: #{fluid(18px,36px, 320px, 1920px)};
+        font-size: #{fluid(20px,36px, 375px, 1920px)};
         font-weight: 700;
         color: var(--white);
         flex: 1 1 auto;
@@ -76,17 +85,9 @@
         svg{
             margin: 0px 0px 0px 14px;
             fill: var(--dark);
+            transition: all 0.3s ease 0s;
             use{
                 stroke: none;
-            }
-        }
-        &:hover{
-            background-color: var(--dark);
-            color: var(--white);
-            svg{
-                transition: all 0.3s ease 0s;
-                transform: rotate(-45deg);
-                fill: var(--white);
             }
         }
         @include small-tablet{

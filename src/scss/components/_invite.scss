@@ -46,6 +46,11 @@
         flex: 0 1 50%;
         @include tablet{
             display: none;
+            img{
+                width: unset;
+                height: 100%;
+                min-height: 480px;
+            }
         }
         &-mobile{
             display: none;

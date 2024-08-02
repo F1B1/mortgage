@@ -1,11 +1,5 @@
 .help {
 
-    &-gray{
-        input, textarea{
-            background-color: var(--white);
-        }
-    }
-
     &__container {
     }
 
@@ -16,7 +10,7 @@
     &__body {
         display: flex;
         justify-content: space-between;
-        @include big-desktop{
+        @include small-desktop{
             flex-direction: column;   
         }
     }
@@ -37,14 +31,24 @@
                 margin: 0px 0px 32px 0px;
             }
         }
+        @include big-desktop{
+            flex: 0 1 40%;
+            margin-right: 20px;
+        }
+        @include small-tablet{
+            margin-right: 0;
+        }
     }
 
     &__column {
         flex: 0 1 50%;
+        @include big-desktop{
+            flex: 0 1 60%;
+        }
     }
 
     &__sub-title {
-        font-size: #{fluid(24px, 36px, 320px, 1920px)};
+        font-size: #{fluid(24px, 36px, 375px, 1920px)};
     }
 
     &__text {
@@ -82,8 +86,12 @@
     &__check {
         margin: 0px 0px 32px 0px;
        label{
-        display: flex;
-        align-items:center;
+            display: flex;
+            align-items:center;
+            font-size: 18px;
+            @include small-tablet{
+                font-size: 16px;
+            }
        }
     }
 
@@ -154,6 +162,18 @@
                 width: 24px;
                 height: 24px;
             }
+        }
+    }
+}
+
+.help-gray{
+    input, textarea{
+        background-color: var(--white);
+    }
+
+    .help__title{
+        @include small-desktop{
+            margin-bottom: 16px;
         }
     }
 }

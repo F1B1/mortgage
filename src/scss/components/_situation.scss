@@ -11,14 +11,21 @@
         display: flex;
         justify-content: space-between;
         position: relative;
-        flex-wrap: wrap;
+        @include small-desktop{
+            flex-wrap: wrap;
+        }
     }
 
     &__texts {
         max-width: 610px;
         flex: 0 1 50%;
         @include big-desktop{
+            flex: 0 1 40%;
+            margin: 0px 20px 0px 0px;
+        }
+        @include small-desktop{
             flex: 0 1 100%;
+            margin: 0;
             padding: 0px 0px 32px 0px;
         }
     }
@@ -39,6 +46,9 @@
         margin: 0;
         flex: 0 1 50%;
         @include big-desktop{
+            flex: 0 1 60%;
+        }
+        @include small-desktop{
             flex: 0 1 100%;
             padding: 0px 0px 84px 0px;
         }
@@ -54,19 +64,21 @@
     &__column {
         display: flex;
         @include small-tablet{
-            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-between;
         }
     }
 
     &__left {
         flex: 0 1 50%;
         background-color: var(--gray-light);
-        border-radius:  12px 0 0 12px;
+        border-radius:  22px 0 0 22px;
         min-height: 100%;
         @include small-tablet{
-            flex: 0 1 100%;
+            flex: unset;
             min-height: unset;
-            border-radius: 12px 12px 0 0;
+            height: 100%;
+            border-radius: 22px 22px 0 0;
             padding: 32px 16px;
             padding-bottom: 0;
         }
@@ -98,7 +110,7 @@
 
     &__point {
         font-weight: 600;
-        padding-bottom:#{fluid(16px, 32px, 320px, 1920px)} ;
+        padding-bottom:#{fluid(16px, 32px, 375px, 1920px)} ;
         max-width: 350px;
     }
 
@@ -111,7 +123,7 @@
 
     &__list {
         max-width: 400px;
-        padding-left: 22px;
+        padding-left: 20px;
         li{
             &:not(:last-child) {margin-bottom: 8px;};
         }
@@ -121,7 +133,7 @@
         flex: 0 1 50%;
         background-color: var(--red);
         color: var(--white);
-        border-radius: 0 12px 12px 0;
+        border-radius: 0 22px 22px 0;
         display: flex;
         flex-direction: column;
         min-height: 100%;
@@ -131,20 +143,21 @@
             padding: 0px 0px 16px 0px;
         }
         @include small-tablet{
-            flex: 0 1 100%;
+            flex: unset;
             min-height: unset;
-            border-radius:0 0 12px 12px;
+            border-radius:0 0 22px 22px;
             padding: 32px 16px;
         }
     }
 
     &__result {
         max-width: 250px;
-        padding-bottom:#{fluid(16px, 32px, 320px, 1920px)} ;
+        padding-bottom:#{fluid(16px, 32px, 375px, 1920px)} ;
     }
 
     &__list-result {
         flex: 1 1 auto;
+        margin-bottom: 32px;
        li{
             font-weight: 600;
             &:not(:last-child) {margin-bottom: 14px;};
@@ -172,11 +185,12 @@
         display: flex;
         align-items:center;
         gap: 32px;
-        @include big-desktop{
+        @include small-desktop{
             position: relative;
             margin-top: 20px;
             justify-content: center;
         }
+
     }
     &__button{
        

@@ -12,19 +12,15 @@ import { createCardPage3 } from './functions/paginationPage3.js';
 import { createCardPage4 } from './functions/paginationPage4.js';
 import { spoiler } from './functions/spoiler.js';
 import { question } from './functions/question.js';
+import { modal } from "./functions/modal.js";
 
 import { 
   animatePrimary,
   animateHeader, 
   animateColumns, 
-  animateSituation, 
-  animateAppeal, 
   animateReviewTitle, 
   animatePartnersTitle, 
   animateHelpBody, 
-  animateNewsTitle,
-  animateTeam,
-  animateBlog,
   animateInviteSection
 } from './functions/gsap-anim.js';
 
@@ -47,10 +43,72 @@ window.addEventListener('DOMContentLoaded',(e)=>{
       ".header__link-mobile[data-target]": mobileDropdown,
       ".swiper": swiperAll,
       ".video": modalVideo,
-      "#helpform1": () => validateForms('#helpform1', rules, checkboxes, () => {
+      "#helpform1": () => validateForms('#helpform1', [
+        {
+          ruleSelector: '.help__name',
+          rules: [
+            {
+              rule: 'required',
+              errorMessage: 'Введите ваше имя!',
+            },
+            {
+              rule: 'minLength',
+              value: 3,
+              errorMessage: 'Имя должно содержать минимум 3 символа!',
+            },
+          ],
+        },
+        {
+          ruleSelector: '.help__phone',
+          rules: [
+            {
+              rule: 'required',
+              errorMessage: 'Введите ваш номер телефона!',
+            },
+          ],
+          tel: true,
+          telError: 'Введите корректный номер телефона!',
+        }
+      ], [
+        {
+          selector: '.help__checkbox',
+          errorMessage: 'Необходимо согласие на обработку данных!',
+        },
+      ], () => {
           console.log('Форма успешно отправлена');
       }),
-      "#helpform2": () => validateForms('#helpform2', rules, checkboxes, () => {
+      "#helpform-company": () => validateForms('#helpform-company', [
+        {
+          ruleSelector: '#name-company',
+          rules: [
+            {
+              rule: 'required',
+              errorMessage: 'Введите ваше имя!',
+            },
+            {
+              rule: 'minLength',
+              value: 3,
+              errorMessage: 'Имя должно содержать минимум 3 символа!',
+            },
+          ],
+        },
+        {
+          ruleSelector: '#phone-company',
+          rules: [
+            {
+              rule: 'required',
+              errorMessage: 'Введите ваш номер телефона!',
+            },
+          ],
+          tel: true,
+          telError: 'Введите корректный номер телефона!',
+        }
+      ], [
+        {
+          selector: '#agreement-company',
+          errorMessage: 'Необходимо согласие на обработку данных!',
+        },
+      ], () => {
           console.log('Форма успешно отправлена');
       }),
       ".case__body":()=>switchTab('[data-content]','.case__tab'),
@@ -125,51 +183,8 @@ window.addEventListener('DOMContentLoaded',(e)=>{
         createCard: createCardPage4,
       }),
       ".question__btn": question,
+      ".footer__terms": ()=>modal('.privacy-btn', '.modal-privacy', '.modal__close'),
   };
- 
-  const rules = [
-    {
-      ruleSelector: '.help__name',
-      rules: [
-        {
-          rule: 'required',
-          errorMessage: 'Введите ваше имя!',
-        },
-        {
-          rule: 'minLength',
-          value: 3,
-          errorMessage: 'Имя должно содержать минимум 3 символа!',
-        },
-      ],
-    },
-    {
-      ruleSelector: '.help__phone',
-      rules: [
-        {
-          rule: 'required',
-          errorMessage: 'Введите ваш номер телефона!',
-        },
-      ],
-      tel: true,
-      telError: 'Введите корректный номер телефона!',
-    },
-    {
-      ruleSelector: '.help__checkbox',
-      rules: [
-        {
-          rule: 'required',
-          errorMessage: 'Подтвердите обработку персональный данных',
-        },
-      ],
-    },
-  ];
- 
-  const checkboxes = [
-    {
-      selector: '.help__checkbox',
-      errorMessage: 'Необходимо согласие на обработку данных!',
-    },
-  ]; 
 
   Object.keys(functionsMap).forEach(selector => {
       if (document.querySelector(selector)) {
@@ -186,32 +201,15 @@ window.addEventListener('DOMContentLoaded',(e)=>{
       { selector: '.primary-second', action: ()=>animatePrimary('.primary__bg-primary', '.primary-second__title', '.primary-second__sub-title') },
       { selector: '.primary-three', action: ()=>animatePrimary('.primary__bg-primary', '.primary-second__title', '.primary-second__sub-title') },
       { selector: '.invite__body', action: animateInviteSection },
-      { selector: '.blog', action: animateBlog },
-      { selector: '.blog-news__wrapper', action: ()=>animateAppeal('.blog-news__wrapper') },
       { selector: '.actual-big__wrapper', action: ()=> animateHelpBody('.actual-big__wrapper') },
-      { selector: '.case__body', action: ()=> animateAppeal('.case__body') },
-      { selector: '.vacation__body', action: ()=>animateAppeal('.vacation__body') },
-      { selector: '.benefit__columns', action: () => animateColumns('.benefit__columns', '.benefit__column') },
       { selector: '.primary__columns', action: () => animateColumns('.primary__columns', '.primary__column') },
-      { selector: '.services__columns', action: () => animateColumns('.services__columns', '.services__column') },
-      { selector: '.competence__columns', action: () => animateColumns('.competence__columns', '.competence__column') },
       { selector: '.invite__body', action: ()=>animateInviteSection('.invite__body', '.invite__column', '.invite__video') },
-      { selector: '.invite__body', action: ()=>animateInviteSection('.choose__body', '.choose__column', '.choose__image') },
-      { selector: '.situation__body', action: ()=>animateSituation('.situation__body') },
-      { selector: '.guarantee__body', action: ()=>animateSituation('.guarantee__body') },
-      { selector: '.appeal__body', action: ()=>animateAppeal('.appeal__body') },
-      { selector: '.banner__body', action: ()=>animateAppeal('.banner__body') },
-      { selector: '.team__title', action: animateTeam },
       { selector: '.review__title', action: animateReviewTitle },
       { selector: '.review__title', action: ()=>animateReviewTitle('.review__title') },
-      { selector: '.review__columns', action: () => animateColumns('.team__columns', '.team__column') },
       { selector: '.review__columns', action: () => animateColumns('.review__columns', '.review__column') },
       { selector: '.additionally__columns', action: ()=> animateHelpBody('.additionally__columns') },
-      { selector: '.partners__title', action: ()=>animatePartnersTitle('.partners__title') },
       { selector: '.additionally__title', action: ()=>animatePartnersTitle('.additionally__title') },
       { selector: '.help__body', action:()=> animateHelpBody('.help__body') },
-      { selector: '.news__title', action: animateNewsTitle },
-      { selector: '.news__columns', action: () => animateColumns('.news__columns', '.news__column') },
       { selector: '.actual__body', action:()=> animateHelpBody('.actual__body') }
     ];
   

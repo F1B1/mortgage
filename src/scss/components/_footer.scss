@@ -1,10 +1,12 @@
 .footer {
     padding-bottom: 0;  
+    margin-top: 75px;
     @include tablet{
         padding: 0px 0px 64px 0px;
+        margin-top: 32px;
     }
     &__wrapper{
-        padding-top: #{fluid(64px, 150px, 320px, 1920px)};
+        padding-top: #{fluid(64px, 150px, 375px, 1920px)};
         padding-bottom: 64px;
     }
 
@@ -18,11 +20,14 @@
     }
 
     &__logo {
-        margin: 0px 0px 48px 0px;
+        
     }
 
     &__column {
         margin: 0px 0px 32px 0px;
+        &.footer__logo{
+            margin: 0px 0px 48px 0px;
+        }
         @include tablet{
             flex: 0 1 50%;
             &.or-3{
@@ -42,7 +47,7 @@
     }
 
     &__sub-title {
-        font-size: #{fluid(24px, 32px, 320px, 1920px)};
+        font-size: #{fluid(24px, 32px, 375px, 1920px)};
         font-weight: 600; 
         margin: 0px 0px 32px 0px;
         @include small-tablet{
@@ -59,6 +64,7 @@
 
     &__link {
         transition: all 0.3s ease 0s;
+        color: rgba($color: #000000, $alpha: 1.0);
         &:hover{
             color: var(--red);
         }
@@ -79,7 +85,7 @@
     }
 
     &__text {
-        font-size: #{fluid(14px, 16px, 320px, 1920px)};
+        font-size: #{fluid(14px, 16px, 375px, 1920px)};
         color: var(--dark-60);
         margin: 0px 0px 4px 0px;
     }
@@ -118,7 +124,7 @@
     }
 
     &__terms{
-        font-size: #{fluid(14px, 16px, 320px, 1920px)};
+        font-size: #{fluid(14px, 16px, 375px, 1920px)};
         color: var(--dark-40);
         transition: all 0.3s ease 0s;
         &:hover{
@@ -128,13 +134,13 @@
 
     &__block{
         gap: 24px;
-        @include mobile{
+        @include tablet{
             width: 100%;
         }
     }
 
     &__rights{
-        font-size: #{fluid(14px, 16px, 320px, 1920px)};
+        font-size: #{fluid(14px, 16px, 375px, 1920px)};
         color: var(--dark-40);
     }
 

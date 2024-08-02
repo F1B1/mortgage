@@ -4,7 +4,7 @@
     }
 
     &__title {
-        margin-bottom: #{fluid(32px, 64px, 320px, 1920px)};
+        margin-bottom: #{fluid(32px, 64px, 375px, 1920px)};
     }
 
     &__columns {
@@ -25,14 +25,14 @@
         display: flex;
         flex-direction: column;
         min-height: 100%;
-        height: #{fluid(340px, 456px, 320px, 1920px)};
+        height: #{fluid(340px, 456px, 375px, 1920px)};
     }
 
     &__number {
         flex: 1 1 auto;
         color: var(--red);
         font-weight: 600;
-        font-size: #{fluid(36px, 56px, 320px, 1920px)};
+        font-size: #{fluid(36px, 56px, 375px, 1920px)};
     }
 
     &__text {

@@ -42,11 +42,12 @@ export const validateForms = (selector, rules, checkboxes = [], afterSend) => {
 
   if (checkboxes.length) {
     for (let item of checkboxes) {
-      validation
-        .addRequiredGroup(
-          `${item.selector}`,
-          `${item.errorMessage}`
-        )
+      validation.addField(item.selector, [
+        {
+          rule: 'required',
+          errorMessage: item.errorMessage,
+        },
+      ]);
     }
   }
 

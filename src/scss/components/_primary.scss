@@ -1,5 +1,5 @@
 .primary {
-    padding-top:#{fluid(40px,120px, 320px, 1920px)} ;
+    padding-top:#{fluid(40px,120px, 375px, 1920px)} ;
     &__wrapper{
         padding-top: 96px;
         padding-bottom: 64px;
@@ -29,7 +29,7 @@
 
     &__sub-title {
         max-width: 610px;
-        margin-bottom: #{fluid(24px,64px, 320px, 1920px)};
+        margin-bottom: #{fluid(24px,64px, 375px, 1920px)};
     }
 
     &__makes {
@@ -59,7 +59,7 @@
     &__button {
         max-width: 361px;
         font-weight: 500;
-        font-size: #{fluid(18px,22px, 320px, 1920px)};
+        font-size: #{fluid(18px,22px, 375px, 1920px)};
         min-height: 69px;
         @include small-tablet{
             min-height: 63px;
@@ -70,6 +70,12 @@
         z-index: 1;
         right: 0;
         bottom: -70px;
+        img{
+            width: 100%;
+        }
+        @include small-desktop{
+            max-height: 940px;
+        }
         @include small-tablet{
             position: relative;
             top: 0;
@@ -80,13 +86,19 @@
         bottom: -70px;
         right: -50px;
         @include small-tablet{
-            top: 450px;
+            top: 400px;
             right: -20px;
         }
     }
     &__bg-primary-2{
         @include big-desktop{
             bottom: -150px;
+        }
+        @include small-tablet{
+            top: 35px;
+            img{
+                transform: scale(1.1);
+            }
         }
     }
     &__bg-primary-3{
@@ -108,15 +120,18 @@
         position: relative;
         z-index: 1;
         grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-        gap: #{fluid(9px, 16px, 320px, 1920px)};
+        gap: #{fluid(9px, 16px, 375px, 1920px)};
         @include small-tablet{
             grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
             margin-top: -150px;
+            &-2{
+                margin-top: -60px;
+            }
         }
     }
 
     &__column {
-        height: #{fluid(256px,329px, 320px, 1920px)};
+        height: #{fluid(256px,329px, 375px, 1920px)};
         background-color: var(--white);
         border-radius: 22px;
         &:hover{
@@ -135,7 +150,7 @@
 
     &__number {
         color: var(--red-light);
-        font-size: #{fluid(24px,36px, 320px, 1920px)};
+        font-size: #{fluid(24px,36px, 375px, 1920px)};
         font-weight: 700;
         flex: 1 1 auto;
         cursor: pointer;
@@ -143,7 +158,9 @@
     }
 
     &__text {
-        font-weight: 500;
         max-width: 313px;
+        @include small-tablet{
+            font-weight: 500;
+        }
     }
 }

@@ -7,7 +7,7 @@
         display: flex;
         justify-content: space-between;
         align-items:center;
-        margin: 0px 0px #{fluid(32px, 64px, 320px, 1920px)} 0px;
+        margin: 0px 0px #{fluid(32px, 64px, 375px, 1920px)} 0px;
         @include small-tablet{
            display: block;
         }
@@ -48,6 +48,7 @@
         border-radius: 22px;
         @include small-tablet{
             padding: 28px;
+            
         }
     }
 
@@ -58,7 +59,7 @@
     }
 
     &__salary {
-        font-size: #{fluid(18px, 22px, 320px, 1920px)};
+        font-size: #{fluid(18px, 22px, 375px, 1920px)};
         font-weight: 600;
         margin: 0px 0px 16px 0px;
     }

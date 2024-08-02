@@ -1,9 +1,13 @@
 .review {
-    padding: #{fluid(64px, 150px, 320px, 1920px)} 0;
+    padding: #{fluid(64px, 150px, 375px, 1920px)} 0;
     position: relative;
+    margin-top: 75px;
+    @include small-tablet{
+        margin-top: 32px;
+    }
     &__bg{
         position: absolute;
-        top: 60px;
+        top: #{fluid(0px, 60px, 1440px, 1920px)};
         right: 0;
         @include tablet{
             display: none;
@@ -16,7 +20,7 @@
     }
 
     &__title {
-        margin-bottom: #{fluid(32px, 68px, 320px, 1920px)};
+        margin-bottom: #{fluid(32px, 68px, 375px, 1920px)};
     }
 
     &__swiper {

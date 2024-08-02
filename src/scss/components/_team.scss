@@ -11,7 +11,7 @@
         display: flex;
         justify-content: space-between;
         align-items:center;
-        padding: 0px 0px #{fluid(32px, 48px, 320px, 1920px)} 0px;
+        padding: 0px 0px #{fluid(32px, 48px, 375px, 1920px)} 0px;
     }
 
     &__text {
@@ -40,13 +40,13 @@
     &__column {
         width: calc(25% - 16px);
         @include tablet{
-            width: calc(33.33333% - 16px);
+            width: calc(40% - 16px);
         }
         @include small-tablet{
-            width: calc(50% - 16px);
+            width: calc(50% - 8px);
         }
         @include mobile{
-            width: calc(100% - 16px);
+            width: 100%;
         }
     }
 
@@ -79,7 +79,7 @@
     }
 
     &__job {
-        font-size: #{fluid(14px, 16px, 320px, 1920px)};
+        font-size: #{fluid(14px, 16px, 375px, 1920px)};
         color: var(--dark-60);
         margin: 0px 0px 8px 0px;
     }

@@ -5,7 +5,7 @@
 
     &__title {
         max-width: 500px;
-        margin-bottom: #{fluid(32px, 64px, 320px, 1920px)};
+        margin-bottom: #{fluid(32px, 64px, 375px, 1920px)};
         span{
             color: var(--red);
         }
@@ -24,19 +24,28 @@
         position: relative;
         border-radius: 22px;
         overflow: hidden;
-        padding: #{fluid(16px, 32px, 320px, 1920px)};
+        padding: #{fluid(16px, 32px, 375px, 1920px)};
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s, box-shadow 0.3s;
         display: flex;
         flex-direction: column;
         height: 100%;
-        min-height: #{fluid(343px, 610px, 320px, 1920px)};
+        min-height: #{fluid(343px, 610px, 375px, 1920px)};
         position: relative;
         z-index: 1;
         transition: all 0.3s ease 0s;
+        cursor: pointer;
         &:hover{
             img{
                 transform: scale(1.1);
+            }
+            .services__button{
+                background-color: var(--dark);
+                color: var(--white);
+                svg{
+                    transform: rotate(-45deg);
+                    fill: var(--white);
+                }
             }
         }
     }
@@ -44,10 +53,13 @@
     &__sub-title {
         color: #fff;
         font-weight: 600;
-        font-size:#{fluid(26px, 32px, 320px, 1920px)} ;
+        font-size:#{fluid(20px, 32px, 375px, 1920px)} ;
         margin: 0px 0px 16px 0px;
         &-down{
             flex: 1 1 auto;
+        }
+        @include small-desktop{
+            font-weight: 700;
         }
     }
 

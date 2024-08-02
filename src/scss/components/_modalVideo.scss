@@ -1,7 +1,7 @@
 .video{
 	position: relative;
 	width: 100%;
-    max-height:#{fluid(400px, 800px, 320px, 1920px)} ;
+    max-height:#{fluid(400px, 800px, 375px, 1920px)} ;
     height: 100%;
 	iframe{
 		width: 100%;	
@@ -39,7 +39,7 @@
 	}
     &-close{
         color: var(--white);
-        font-size: #{fluid(32px, 46px, 320px, 1920px)};
+        font-size: #{fluid(32px, 46px, 375px, 1920px)};
         cursor: pointer;
     }
 }

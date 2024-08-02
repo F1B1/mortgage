@@ -1,12 +1,12 @@
 .partners {
-    padding-top: #{fluid(64px, 150px, 320px, 1920px)};
+    padding-top: #{fluid(64px, 150px, 375px, 1920px)};
 
     &__container {
     }
 
     &__title {
         max-width: 800px;
-        padding-bottom: #{fluid(48px, 96px, 320px, 1920px)};
+        padding-bottom: #{fluid(48px, 96px, 375px, 1920px)};
     }
 
     &__body {
@@ -20,7 +20,7 @@
         display: flex;
         width: fit-content;
         gap: 16px;
-        &:not(:last-child) {margin-bottom: #{fluid(32px, 80px, 320px, 1920px)}};
+        &:not(:last-child) {margin-bottom: #{fluid(32px, 80px, 375px, 1920px)}};
     }
 
     &__list-1 {
@@ -39,6 +39,13 @@
 
     &__list-2 {
         animation: partnersAnimeRight 40s linear infinite;
+    }
+}
+
+.partners-pt{
+    padding-top: 64px;
+    @include small-desktop{
+        padding-top: 32px;
     }
 }
 

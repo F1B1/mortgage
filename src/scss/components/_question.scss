@@ -4,7 +4,7 @@
     }
 
     &__title {
-        margin-bottom: #{fluid(32px, 64px, 320px, 1920px)};
+        margin-bottom: #{fluid(32px, 64px, 375px, 1920px)};
         max-width: 670px;
     }
 
@@ -33,6 +33,9 @@
             .question__caption{
                 color: var(--red);
             }
+        }
+        @include small-desktop{
+            padding: 0 24px;
         }
     }
 
@@ -83,7 +86,7 @@
     }
 
     &__caption {
-        font-size: #{fluid(22px, 32px, 320px, 1920px)};
+        font-size: #{fluid(22px, 32px, 375px, 1920px)};
         font-weight: 600;
         max-width: 752px;
         text-align: left;

@@ -27,7 +27,7 @@
       margin: 48px 0;
       padding: 48px;
       max-width: 780px;
-      min-height: #{fluid(430px, 700px, 320px, 1920px)};
+      min-height: #{fluid(430px, 700px, 375px, 1920px)};
       display: flex;
       flex-direction: column;
       @include small-tablet{
@@ -37,9 +37,13 @@
       }
 
       &__input{
-      display: flex;
-      flex-direction: column;
-      flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 auto;
+            @include small-tablet{
+                  flex:  unset;
+                  margin: 0px 0px 32px 0px;
+            }
       }
 
       &__title {

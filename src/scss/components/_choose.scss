@@ -4,7 +4,7 @@
     }
 
     &__title {
-        margin-bottom: #{fluid(32px, 64px, 320px, 1920px)};
+        margin-bottom: #{fluid(32px, 64px, 375px, 1920px)};
         max-width: 790px;
     }
 
@@ -19,7 +19,7 @@
         flex: 0 1 50%;
         background-color: var(--gray-light);
         &:not(:last-child) {margin-right: 16px;};
-        padding: #{fluid(16px, 48px, 320px, 1920px)};
+        padding: #{fluid(16px, 48px, 375px, 1920px)};
         border-radius: 22px;
         display: flex;
         flex-direction: column;
@@ -37,7 +37,7 @@
     &__wrapper {
         overflow: auto;
         scrollbar-width: none;
-        margin-bottom: #{fluid(24px, 32px, 320px, 1920px)};
+        margin-bottom: #{fluid(24px, 32px, 375px, 1920px)};
     }
 
     &__tabs {
@@ -59,7 +59,7 @@
     }
 
     &__sub-title {
-        font-size: #{fluid(24px, 32px, 320px, 1920px)};
+        font-size: #{fluid(24px, 32px, 375px, 1920px)};
         margin-bottom: 8px;
     }
 
@@ -68,7 +68,7 @@
     }
 
     &__block {
-        margin-bottom: #{fluid(24px, 32px, 320px, 1920px)};
+        margin-bottom: #{fluid(24px, 32px, 375px, 1920px)};
     }
 
     &__title-list {

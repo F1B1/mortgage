@@ -49,7 +49,7 @@
                 stroke: none;
             }
         }
-        @include small-tablet{
+        @include mobile{
             width: 48px;
             height: 48px;
             svg{
@@ -69,7 +69,7 @@
     }
 
     &__sub-title {
-        font-size: #{fluid(24px, 36px, 320px, 1920px)};
+        font-size: #{fluid(24px, 36px, 375px, 1920px)};
         padding: 0px 0px 32px 0px;
         &.pb-16{
             padding: 0px 0px 16px 0px;
@@ -129,7 +129,7 @@
         }
     }
     &__inner{
-        flex: 0 1 33.3333%;
+        flex: 0 1 calc(33.3333% - 8px);
         background-color: var(--gray-light);
         border-radius: 22px;
         min-height: 310px;
@@ -137,7 +137,7 @@
         flex-direction: column;
         justify-content: space-between;
         @include small-tablet{
-            flex: 0 1 47%;
+            flex: 0 1 calc(50% - 8px);
         }
         @include mobile{
             flex: 0 1 100%;
@@ -156,6 +156,8 @@
     }
     &__list{
         margin-bottom: 32px;
+        padding-left: 28px;
+        max-width: 670px;
         @include tablet{
             margin-bottom: 0;
         }
@@ -165,7 +167,7 @@
     }
 
     .social-whatsapp{
-        @include small-tablet{
+        @include mobile{
             svg{
                 width: 24px;
                 height: 24px;

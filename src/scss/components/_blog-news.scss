@@ -44,7 +44,7 @@
     }
 
     &__swiper {
-        margin: 0px 0px #{fluid(32px, 48px, 320px, 1920px)} 0px;
+        margin: 0px 0px #{fluid(32px, 48px, 375px, 1920px)} 0px;
     }
 
     &__column {
@@ -78,12 +78,12 @@
     }
 
     &__sub-title {
-        font-size: #{fluid(24px, 36px, 320px, 1920px)};
-        margin: 0px 0px #{fluid(24px, 32px, 320px, 1920px)} 0px;
+        font-size: #{fluid(24px, 36px, 375px, 1920px)};
+        margin: 0px 0px #{fluid(24px, 32px, 375px, 1920px)} 0px;
     }
 
     &__text {
-        &:not(:last-child) {margin-bottom: #{fluid(24px, 32px, 320px, 1920px)};};
+        &:not(:last-child) {margin-bottom: #{fluid(24px, 32px, 375px, 1920px)};};
     }
 
     &__comment {
@@ -102,6 +102,7 @@
 
     &__list {
         margin: 0 0 24px 0;
+        padding: 0px 0px 0px 32px;
         li{
             font-weight: 600;
             &:not(:last-child) {margin-bottom: 8px;};

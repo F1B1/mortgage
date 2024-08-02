@@ -1,24 +1,46 @@
 .primary-second {
 
+    @include small-tablet{
+        padding-top: 0;
+        .primary__wrapper{
+            border-radius: 0 0 22px 22px;
+            padding-top: 24px;
+        }
+    }
     &__title {
-        max-width: 930px;
-        font-size: #{fluid(40px, 72px, 320px, 1920px)};
+        max-width: 900px;
+        font-size: #{fluid(40px, 72px, 375px, 1920px)};
         font-weight: 600;
         &-break{
             word-break: break-word;
             hyphens: auto;
         }
+        &-small{
+            font-size: #{fluid(36px, 72px, 375px, 1920px)};
+        }
+        @include big-desktop{
+            max-width: 850px;
+        }
+        @include small-tablet{
+            font-weight: 700;
+        }
     }
 
     &__sub-title {
-        max-width: 700px;
-        font-size: #{fluid(20px, 32px, 320px, 1920px)};
+        max-width: 720px;
+        font-size: #{fluid(20px, 32px, 375px, 1920px)};
     }
 
     .primary__body{
         padding: 0px 0px 392px 0px;
         @include small-tablet{
             padding: 0px;
+        }
+    }
+
+    .primary__bg-primary{
+        &-3, &-2{
+            max-height: 100%;
         }
     }
 

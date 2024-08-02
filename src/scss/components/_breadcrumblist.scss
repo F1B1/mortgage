@@ -28,3 +28,11 @@
         display: block;
     }
 }
+
+.breadcrumblist-gray{
+    @include small-tablet{
+        background-color: var(--gray-light);
+        border-radius: 22px 22px 0 0;
+        margin-top: 45px;
+    }
+}

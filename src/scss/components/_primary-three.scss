@@ -3,32 +3,47 @@
     .primary__body{
         padding-bottom: 400px;
     }
+    
+
+    @include small-tablet{
+        padding-top: 0;
+        .primary__wrapper{
+            border-radius: 0 0 22px 22px;
+            padding-top: 24px;
+        }
+    }
 
     .primary__bg-primary{
         position: absolute;
         top: unset;
+        @include small-desktop{
+            max-height: 600px;
+        }
         @include small-tablet{
             right: 0;
             img{
-                height: 400px;
+                height: 100%;
+                min-height: 400px;
             }
         }
     }
-}
 
-.primary-three{
     @include small-desktop{
+
         .primary__body{
-            padding-bottom: 0;
+            padding: 0 16px;
         }
 
         .primary__bg-primary{
             position: relative;
             right: 0;
-            img{
-                height: 100%;
-            }
+        }
+
+        .primary__container{
+            padding: 0;
         }
     }
 }
+
+
 

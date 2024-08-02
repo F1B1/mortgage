@@ -44,17 +44,17 @@
 }
 
 .title {
-    font-size: #{fluid(40px, 96px, 320px, 1920px)};
+    font-size: #{fluid(40px, 96px, 375px, 1920px)};
     font-weight: 700;
     line-height: 1;
-    margin-bottom: #{fluid(16px,32px, 320px, 1920px)};
+    margin-bottom: #{fluid(16px,32px, 375px, 1920px)};
 }
 .title-section{
-    font-size: #{fluid(28px, 48px, 320px, 1920px)};
+    font-size: #{fluid(28px, 48px, 375px, 1920px)};
     font-weight: 600;
 }
 .sub-title {
-    font-size: #{fluid(20px, 36px, 320px, 1920px)};
+    font-size: #{fluid(20px, 36px, 375px, 1920px)};
     font-weight: 500; 
 }
 
@@ -79,15 +79,21 @@
                 width: 28px;
                 height: 28px;
             }
+            &:nth-child(2){
+                svg{
+                    width: 32px;
+                    height: 32px;
+                }
+            }
         }
     }
 }
 
 .social-whatsapp{
     svg{
-        @include small-tablet{
-            width: 24px !important;
-            height: 24px !important;
+        @include mobile{
+            width: 28px !important;
+            height: 28px !important;
         }
     }
 }
@@ -105,14 +111,14 @@
 
 
 .fz-24{
-    font-size: #{fluid(20px, 24px, 320px, 1920px)};
+    font-size: #{fluid(20px, 24px, 375px, 1920px)};
 }
 .fz-16{
-    font-size: #{fluid(14px, 16px, 320px, 1920px)};
+    font-size: #{fluid(14px, 16px, 375px, 1920px)};
 }
 
 .pd{
-    padding:  #{fluid(32px, 75px, 320px, 1920px)} 0;
+    padding:  #{fluid(32px, 75px, 375px, 1920px)} 0;
 }
 .pd-32{
     padding: 32px;
@@ -124,7 +130,7 @@
     padding: 0px 0px 32px 0px;
 }
 .mgt-24{
-    margin-top: #{fluid(12px, 24px, 320px, 1920px)};
+    margin-top: #{fluid(12px, 24px, 375px, 1920px)};
 }
 .mgb-80{
     margin-bottom: 80px;
@@ -133,7 +139,7 @@
     margin-bottom: 32px;
 }
 .mb-32a{
-    margin-bottom: #{fluid(16px, 32px, 320px, 1920px)};
+    margin-bottom: #{fluid(16px, 32px, 375px, 1920px)};
 }
 .mbg-75{
     margin-bottom: 75px;
@@ -142,7 +148,7 @@
     margin-top: 32px;
 }
 .pd-t{
-    padding-top: #{fluid(80px, 200px, 320px, 1920px)};
+    padding-top: #{fluid(80px, 200px, 375px, 1920px)};
 }
 
 .container-big{
@@ -194,6 +200,7 @@ svg{
         @include tablet{
             display: flex;
         }
+        
         .swiper-pagination-bullet-active{
             background-color: var(--red);
             width: 12px;

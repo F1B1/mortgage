@@ -8,7 +8,7 @@
     <div class="site-container visible">
         @include('partials/header.html')
         <main class="main">
-            <article class="breadcrumblist">
+            <article class="breadcrumblist breadcrumblist-gray">
                 <div class="breadcrumblist__container container">
                     <ol class="list-reset" itemscope itemtype="https://schema.org/BreadcrumbList">
                         <li itemprop="itemListElement" itemscope
@@ -33,7 +33,7 @@
                 <div class="primary__wrapper container-big">
                     <div class="primary__container container">
                         <div class="primary__body">
-                            <h2 class="primary-second__title title">Сопровождение сделок с недвижимостью</h2>
+                            <h2 class="primary-second__title primary-second__title-small title">Сопровождение сделок с недвижимостью</h2>
                             <p class="primary-second__sub-title sub-title">Поможем заключить выгодную безопасную сделку и сэкономить время</p>
                         </div>
                         <div class="primary__bg-primary primary__bg-primary-2">
@@ -42,7 +42,7 @@
                         <div class="primary__bg-city primary__bg-city-2">
                             <img src="img/city.webp" alt="photo">
                         </div>
-                        <div class="primary__columns">
+                        <div class="primary__columns primary__columns-2">
                             <div class="primary__column">
                                 <div class="primary__item">
                                     <h3 class="primary__number">10+ <br> лет</h3>
@@ -171,6 +171,7 @@
         </main>
         @include('partials/footer.html')
         @include('partials/modalVideos.html')
+        @include('partials/modal.html')
         <!-- @include('partials/modals.html')
         @include('partials/modal.html') -->
     </div>

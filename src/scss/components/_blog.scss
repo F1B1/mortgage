@@ -4,7 +4,7 @@
     }
 
     &__title {
-        margin-bottom: #{fluid(32px, 64px, 320px, 1920px)};
+        margin-bottom: #{fluid(32px, 64px, 375px, 1920px)};
     }
 
     &__columns {
@@ -20,7 +20,7 @@
     &__column {
         background-color: var(--gray-light);
         border-radius: 22px;
-        height: #{fluid(343px, 520px, 320px, 1920px)};
+        height: #{fluid(343px, 520px, 375px, 1920px)};
         display: flex;
         flex-direction: column;
         justify-content: space-between;

@@ -18,6 +18,9 @@
         min-height: 100%;
         margin: 0px 20px 0px 0px;
         max-width: 710px;
+        @include small-desktop{
+            margin: 0;
+        }
     }
 
     &__title {
@@ -37,7 +40,7 @@
     }
 
     &__title-list {
-        margin-bottom: #{fluid(16px, 24px, 320px, 1920px)};
+        margin-bottom: #{fluid(16px, 24px, 375px, 1920px)};
     }
 
     &__list {
@@ -77,7 +80,6 @@
     &__image {
         overflow: hidden;
         cursor: pointer;
-        border-radius: 22px;
         img{
             width: 100%;
             height: 100%;
@@ -91,6 +93,9 @@
         }
         @include tablet{
            margin-bottom: 16px;
+           img{
+            max-width: 650px;
+           }
         }
     }
 }

@@ -37,6 +37,7 @@
                         </div>
                         <div class="appeal__column">
                             <p class="pb-16 appeal__sub-title">Миссия и задача нашей компании и всей команды Сделать сложное — простым.</p>
+                            <p class="pb-32 appeal__text">У каждого из нас бывают непростые финансовые ситуации, связанные с недвижимостью или кредитованием и требующие максимально быстро их решения. Чаще всего в эти моменты мы погружаемся в круговорот сбора документов, написания и подачи заявлений, необходимости вникать в условия банков и пытаемся просчитать реальные условия получения финансирования. А иногда, уже после прохождения всех шагов — получаем отказ.</p>
                             <div class="appeal__wrapper">
                                 <div class="appeal__inner pd-24">
                                     <p class="appeal__number">10 лет</p>
@@ -115,24 +116,24 @@
                                 <p class="help__text">Я как и моя компания, всегда открыта к диалогу. Опишите ситуацию и стоящие перед вами задачи. Я детально изучу все данные, задам уточняющие вопросы и подскажу оптимальный путь решения на максимально выгодных для вас условиях.</p>
                             </div>
                             <div class="help__column">
-                                <form action="#" id="helpform2" class="help__form">
+                                <form action="#" id="helpform-company" class="help__form">
                                     <div class="help__inputs">
                                         <div class="help__input">
-                                            <label for="name">Имя <span>*</span></label>
-                                            <input name="name" id="name" type="text" placeholder="Ваше имя" class="input-help help__name" required>
+                                            <label for="name-company">Имя <span>*</span></label>
+                                            <input name="name-company" id="name-company" type="text" placeholder="Ваше имя" class="input-help help__name" required>
                                         </div>
                                         <div class="help__input">
-                                            <label for="phone">Номер телефона <span>*</span></label>
-                                            <input name="phone" id="phone" type="tel" placeholder="999 123 45 67" class="input-help help__phone" required>
+                                            <label for="phone-company">Номер телефона <span>*</span></label>
+                                            <input name="phone-company" id="phone-company" type="tel" placeholder="999 123 45 67" class="input-help help__phone" required>
                                         </div>
                                     </div>
                                     <div class="help__textarea">
-                                        <label for="comment">Комментарий <span>*</span></label>
-                                        <textarea name="comment" id="comment" placeholder="Опишите вашу ситуацию" class="help__comment input-help"></textarea>
+                                        <label for="comment-company">Комментарий <span>*</span></label>
+                                        <textarea name="comment-company" id="comment-company" placeholder="Опишите вашу ситуацию" class="help__comment input-help"></textarea>
                                     </div>
                                     <div class="help__check">
-                                        <label for="agreement">
-                                            <input type="checkbox" id="agreement" name="agreement" class="help__checkbox" required>Даю своё согласие на обработку персональных данных
+                                        <label for="agreement-company">
+                                            <input type="checkbox" id="agreement-company" name="agreement-company" class="help__checkbox" required>Даю своё согласие на обработку персональных данных
                                         </label>
                                     </div>
                                     <div class="help__confirm">
@@ -261,6 +262,7 @@
         </main>
         @include('partials/footer.html')
         @include('partials/modalVideos.html')
+        @include('partials/modal.html')
         <!-- @include('partials/modals.html')
         @include('partials/modal.html') -->
     </div>

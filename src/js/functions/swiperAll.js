@@ -12,7 +12,10 @@ export function swiperAll(){
           },
           pagination: {
             el: '.situation__pagination',
-            clickable: true
+            clickable: true,
+            renderBullet: function (index, className) {
+              return `<span class="${className}"></span>`;
+            }
           },
         spaceBetween: 16,
         breakpoints:{
@@ -21,6 +24,14 @@ export function swiperAll(){
           },
           767:{
             spaceBetween: 16  ,
+          }
+        },
+        on: {
+          init: function () {
+            updatePagination(this);
+          },
+          slideChange: function () {
+            updatePagination(this);
           }
         }
     })
@@ -34,18 +45,29 @@ export function swiperAll(){
         },
         pagination: {
           el: '.review__pagination',
-          clickable: true
+          clickable: true,
+          renderBullet: function (index, className) {
+            return `<span class="${className}"></span>`;
+          }
+      
         },
-      spaceBetween: 18,
-      breakpoints:{
-        320:{
-          spaceBetween: 8,
+        breakpoints:{
+          320:{
+            spaceBetween: 8,
+          },
+          767:{
+            spaceBetween: 18,
+          }
         },
-        767:{
-          spaceBetween: 18,
+        on: {
+          init: function () {
+            updatePagination(this);
+          },
+          slideChange: function () {
+            updatePagination(this);
+          }
         }
-      }
-    })
+    })    
 
     const news = new Swiper('.news__swiper', {
       modules:[Navigation, Pagination],
@@ -56,7 +78,10 @@ export function swiperAll(){
         },
         pagination: {
           el: '.news__pagination',
-          clickable: true
+          clickable: true,
+          renderBullet: function (index, className) {
+            return `<span class="${className}"></span>`;
+          }
         },
       spaceBetween: 16,
       breakpoints:{
@@ -66,8 +91,17 @@ export function swiperAll(){
         767:{
           spaceBetween: 16,
         }
+      },
+      on: {
+        init: function () {
+          updatePagination(this);
+        },
+        slideChange: function () {
+          updatePagination(this);
+        }
       }
     })
+
 
     const team = new Swiper('.team__swiper', {
       modules:[Navigation, Pagination],
@@ -78,15 +112,25 @@ export function swiperAll(){
         },
         pagination: {
           el: '.team__pagination',
-          clickable: true
+          clickable: true,
+          renderBullet: function (index, className) {
+            return `<span class="${className}"></span>`;
+          }
         },
-      spaceBetween: 16,
       breakpoints:{
         320:{
           spaceBetween: 8,
         },
         767:{
           spaceBetween: 16,
+        }
+      },
+      on: {
+        init: function () {
+          updatePagination(this);
+        },
+        slideChange: function () {
+          updatePagination(this);
         }
       }
     })
@@ -104,8 +148,27 @@ export function swiperAll(){
           spaceBetween: 8,
         },
         767:{
-          spaceBetween: 16  ,
+          spaceBetween: 16,
         }
       }
   })
+
+  function updatePagination(swiper) {
+    const totalBullets = swiper.pagination.bullets.length;
+    const maxVisible = 4; // Максимальное количество видимых кружочков
+    const activeIndex = swiper.activeIndex;
+  
+    swiper.pagination.bullets.forEach((bullet, index) => {
+      if (index >= activeIndex - Math.floor(maxVisible / 2) && index <= activeIndex + Math.floor(maxVisible / 2)) {
+        bullet.style.display = 'inline-block';
+      } else {
+        bullet.style.display = 'none';
+      }
+    });
+  }
+  
+  updatePagination(team);
+  updatePagination(situtation);
+  updatePagination(review);
+  updatePagination(news);
 }

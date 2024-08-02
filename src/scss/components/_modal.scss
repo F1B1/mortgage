@@ -1,0 +1,100 @@
+.modal {
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 25;
+    background-color: rgba($color: #000, $alpha: .8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s, visibility 0.4s;
+    &.show{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__inner {
+    }
+
+    &__close {
+    }
+
+    &__title {
+    }
+}
+.modal-privacy{
+    padding: 0 15px;
+    &.show{
+        .privacy__inner{
+            transform: scale(1);
+        }
+    }
+    .modal__title{
+        font-size: #{fluid(24px, 55px, 375px, 1600px)};
+    }
+    .modal__close{
+        top: 15px;
+        right: 15px;
+        position: absolute;
+        font-size: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        z-index: 2;
+        background: 0 0;
+        border: none;
+        cursor: pointer;
+        font-family: inherit;
+        padding: 0;
+        color: inherit;
+        transition: .3s;
+        &::after, &::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            border-radius: 20px;
+            background-color: var(--dark);
+        }
+        &::before{
+            transform: rotate(-45deg);
+        }
+        &::after{
+            transform: rotate(45deg);
+        }
+    }
+    h3{
+        padding: 1em 0;
+    }
+    p{
+        padding: 1em 0;
+    }
+    ol{
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+        margin: 0;
+    }
+}
+
+.privacy__inner {
+    padding: clamp(1.25rem, -1.789rem + 4.9vw, 2.5rem);
+    max-width: 1200px;
+    width: 100%;
+    height: 70vh;
+    overflow-y: auto;
+    background-color: var(--white);
+    border-radius: 16px;
+    position: relative;
+    z-index: 1;
+    transform: scale(.7);
+    transition: .3s;
+}

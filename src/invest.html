@@ -8,7 +8,7 @@
     <div class="site-container visible">
         @include('partials/header.html')
         <main class="main">
-            <article class="breadcrumblist">
+            <article class="breadcrumblist breadcrumblist-gray">
                 <div class="breadcrumblist__container container">
                     <ol class="list-reset" itemscope itemtype="https://schema.org/BreadcrumbList">
                         <li itemprop="itemListElement" itemscope
@@ -124,7 +124,7 @@
                         <div class="appeal__info">
                             <h2 class="appeal__title title-section sticky mgb-80">Видеообращение руководителя компании «Ипотека просто» Карины Минибаевой</h2>
                             <div class="appeal__socials">
-                                <a href="#" class="appeal__social social social-whatsapp">
+                                <a href="#" class="appeal__social social">
                                     <svg width="24" height="24">
                                         <use xlink:href="./img/sprite.svg#tg"></use>
                                     </svg>
@@ -160,7 +160,7 @@
                         <p class="appeal__sub-title">Компания «ИпотекаПросто» – ваш надёжный проводник в мире финансов и недвижимости.С 10-летним опытом, мы являемся официальными партнёрами банков, предлагая клиентам индивидуальный подход, экспертный анализ и успешные решения в сфере кредитования и инвестирования.</p>
                         <a href="#" class="appeal__button btn">Подробнее о компании</a>
                         <div class="appeal__socials">
-                            <a href="#" class="appeal__social social-whatsapp">
+                            <a href="#" class="appeal__social">
                                 <svg width="24" height="24">
                                     <use xlink:href="./img/sprite.svg#tg"></use>
                                 </svg>
@@ -179,6 +179,7 @@
         </main>
         @include('partials/footer.html')
         @include('partials/modalVideos.html')
+        @include('partials/modal.html')
         <!-- @include('partials/modals.html')
         @include('partials/modal.html') -->
     </div>

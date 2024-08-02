@@ -13,7 +13,7 @@
         span{
             color: var(--red);
             font-weight: 400;
-            font-size: #{fluid(24px, 32px, 320px, 1920px)};
+            font-size: #{fluid(24px, 32px, 375px, 1920px)};
             margin: 16px 0px 0px 0px;
             @include tablet{
                 font-weight: 600;

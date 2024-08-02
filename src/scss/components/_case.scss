@@ -5,7 +5,7 @@
         display: flex;
         justify-content:space-between;
         align-items: center;
-        margin-bottom: #{fluid(32px, 64px, 320px, 1920px)};
+        margin-bottom: #{fluid(32px, 64px, 375px, 1920px)};
         @include mobile{
             flex-direction: column;
             align-items: flex-start;

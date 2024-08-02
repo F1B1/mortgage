@@ -7,6 +7,7 @@
         display: flex;
         justify-content: space-between;
         align-items:center;
+        margin-bottom: #{fluid(32px, 68px, 375px, 1920px)};
     }
 
     &__navigation{
@@ -15,7 +16,7 @@
     }
 
     &__title {
-        margin-bottom: #{fluid(32px, 68px, 320px, 1920px)};
+        
     }
 
     &__button-prev {

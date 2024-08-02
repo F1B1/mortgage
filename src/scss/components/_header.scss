@@ -55,7 +55,8 @@
 
     &__menu {
         &-desktop{
-            @include tablet{
+            width: 100%;
+            @include small-tablet{
                 display: none;
             }
         }
@@ -132,7 +133,7 @@
     }
 
     &__logo {
-        max-width: #{fluid(130px, 220px, 320px, 1920px)};
+        max-width: #{fluid(130px, 220px, 375px, 1920px)};
         width: 100%;
         margin: 0px 24px 0px 0px;
     }
@@ -140,14 +141,18 @@
     &__list {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-around;
+        @include big-desktop{
+            justify-content: flex-start;
+        }
     }
 
     &__item {
-        margin-right: #{fluid(32px, 64px, 767px, 1920px)};
+        margin-right: 20px;
         position: relative;
         transition: all 0.3s ease 0s;
         cursor: pointer;
-        padding: 10px 0;
+        padding: 5px 0;
         svg{
             transition: all 0.3s ease 0s;
             transform: rotate(0);
@@ -160,6 +165,9 @@
         font-size: 16px;
         &:hover{
             color: var(--red);
+        }
+        @include big-desktop{
+            font-size: 14px;
         }
     }
 
@@ -188,8 +196,10 @@
             color: #fff;
         }
 
-        @include big-desktop{
-            max-width: 240px;
+       
+        @include tablet{
+            max-width: 200px;
+            font-size: 14px;
         }
         @include small-tablet{
             display: none;
@@ -239,7 +249,7 @@
         width: 100%;
         left: 0;
         top: -100%;
-        padding-top: 39px;
+        padding-top: 32px;
         background-color: var(--white);
         overflow: auto;
         transition: all var(--trans-three) 0s;
@@ -249,7 +259,7 @@
     }
 
     &__cities-mobile {
-        margin: 32px 0 ;
+        margin: 32px 0 24px 0 ;
     }
 
     &__city-list {
