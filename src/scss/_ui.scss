@@ -269,3 +269,11 @@ label{
     bottom: 0 !important;
     top: 0;
 }
+
+
+
+.skeleton-placeholder {
+    height: #{fluid(343px, 520px, 375px, 1920px)};
+    background-color: var(--gray-light);
+    border-radius: 22px;
+}

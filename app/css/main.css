@@ -665,6 +665,12 @@ label span {
   top: 0;
 }
 
+.skeleton-placeholder {
+  height: clamp(21.4375rem, 11.4563106796vw + 18.7524271845rem, 32.5rem);
+  background-color: var(--gray-light);
+  border-radius: 22px;
+}
+
 .breadcrumblist {
   padding: 150px 0px 0px 0px;
 }
@@ -1976,6 +1982,9 @@ label span {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin: 0 -8px;
   margin-bottom: 16px;
 }
@@ -2056,6 +2065,26 @@ label span {
 }
 .case .situation__point {
   max-width: 100%;
+}
+.case .skeleton-placeholder {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 calc(33.3333% - 8px);
+  flex: 0 1 calc(33.3333% - 8px);
+  height: 500px;
+}
+@media (max-width: 1024px) {
+  .case .skeleton-placeholder {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 50%;
+    flex: 0 1 50%;
+  }
+}
+@media (max-width: 768px) {
+  .case .skeleton-placeholder {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+  }
 }
 
 .choose {

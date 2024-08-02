@@ -31,6 +31,7 @@
     &__columns{
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
         margin: 0 -8px;
         margin-bottom: 16px;
     }
@@ -98,6 +99,17 @@
 
     .situation__point{
         max-width: 100%;
+    }
+
+    .skeleton-placeholder{
+        flex: 0 1 calc(33.3333% - 8px);
+        height: 500px;
+        @include tablet{
+            flex: 0 1 50%;
+        }
+        @include small-tablet{
+            flex: 0 1 100%;
+        }
     }
 
 }
