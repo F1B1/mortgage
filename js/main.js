@@ -15533,8 +15533,21 @@ function paginationWidget(_ref) {
     prevBtn,
     isPage1 = false
   } = _ref;
+  const contentDiv = document.getElementById(contentId);
+  function showSkeletons() {
+    contentDiv.innerHTML = '';
+    for (let i = 0; i < itemsPerPageDesktop; i++) {
+      const skeleton = document.createElement('div');
+      skeleton.className = 'skeleton-placeholder';
+      contentDiv.appendChild(skeleton);
+    }
+  }
+  function hideSkeletons() {
+    const skeletons = document.querySelectorAll('.skeleton-placeholder');
+    skeletons.forEach(skeleton => skeleton.remove());
+  }
+  showSkeletons();
   fetch(jsonFile).then(response => response.json()).then(content => {
-    const contentDiv = document.getElementById(contentId);
     const pageNumbersDiv = document.getElementById(pageNumber);
     const showMoreButton = document.getElementById(showMore);
     let currentPage = 1;
@@ -15584,6 +15597,7 @@ function paginationWidget(_ref) {
       const start = (page - 1) * itemsPerPage;
       let end = start + itemsPerPage;
       const pageContent = content.slice(start, end);
+      hideSkeletons();
       pageContent.forEach(item => {
         const itemDiv = createCard(item);
         contentDiv.appendChild(itemDiv);
