@@ -1,5 +1,5 @@
 export function loadMap(){
-    var mapContainers = document.querySelectorAll('.contact__map-container');
+    let mapContainers = document.querySelectorAll(".contact__map-container");
 
     function loadMap(mapContainer) {
         var map = mapContainer.querySelector('.contact__map');
@@ -7,23 +7,26 @@ export function loadMap(){
         iframe.src = map.dataset.src;
         iframe.width = '100%';
         iframe.height = '100%';
-        iframe.frameborder = '0';
-        iframe.allowfullscreen = '';
+        iframe.frameBorder = '0';
+        iframe.allowFullscreen = '';
         map.appendChild(iframe);
     }
 
-    function handleScroll() {
+    function handleLoad() {
         mapContainers.forEach(function(mapContainer) {
-            var rect = mapContainer.getBoundingClientRect();
-            var windowHeight = window.innerHeight || document.documentElement.clientHeight;
-            if (rect.top < windowHeight && !mapContainer.dataset.loaded) {
+            if (!mapContainer.dataset.loaded) {
                 loadMap(mapContainer);
                 mapContainer.dataset.loaded = true;
             }
         });
     }
 
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener('resize', handleScroll);
-    handleScroll();
+    window.onload = handleLoad;
+
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(handleLoad);
+    } else {
+        window.setTimeout(handleLoad, 1);
+    }
 }
+

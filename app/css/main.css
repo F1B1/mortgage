@@ -2357,12 +2357,10 @@ label span {
 
 .footer {
   padding-bottom: 0;
-  margin-top: 75px;
 }
 @media (max-width: 1024px) {
   .footer {
     padding: 0px 0px 64px 0px;
-    margin-top: 32px;
   }
 }
 .footer__wrapper {

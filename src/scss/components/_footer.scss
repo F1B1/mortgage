@@ -1,9 +1,7 @@
 .footer {
     padding-bottom: 0;  
-    margin-top: 75px;
     @include tablet{
         padding: 0px 0px 64px 0px;
-        margin-top: 32px;
     }
     &__wrapper{
         padding-top: #{fluid(64px, 150px, 375px, 1920px)};
