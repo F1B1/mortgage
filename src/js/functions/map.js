@@ -9,6 +9,7 @@ export function loadMap(){
         iframe.height = '100%';
         iframe.frameBorder = '0';
         iframe.allowFullscreen = '';
+        iframe.title = 'map';
         map.appendChild(iframe);
     }
 
