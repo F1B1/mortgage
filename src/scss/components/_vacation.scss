@@ -81,4 +81,10 @@
     &__link {
 
     }
+
+    .skeleton-placeholder{
+        flex: 0 1 calc(50% - 8px);
+        margin: 0px 0px 16px 0px;
+        
+    }
 }
