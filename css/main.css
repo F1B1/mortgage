@@ -4943,4 +4943,10 @@ label span {
   .vacation__text {
     -webkit-line-clamp: 4;
   }
+}
+.vacation .skeleton-placeholder {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 calc(50% - 8px);
+  flex: 0 1 calc(50% - 8px);
+  margin: 0px 0px 16px 0px;
 }/*# sourceMappingURL=main.css.map */
