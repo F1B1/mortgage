@@ -13,6 +13,7 @@ import { createCardPage4 } from './functions/paginationPage4.js';
 import { spoiler } from './functions/spoiler.js';
 import { question } from './functions/question.js';
 import { modal } from "./functions/modal.js";
+import { loadMap } from "./functions/map.js";
 
 import { 
   animatePrimary,
@@ -183,6 +184,7 @@ window.addEventListener('DOMContentLoaded',(e)=>{
         createCard: createCardPage4,
       }),
       ".question__btn": question,
+      ".contact__map": loadMap,
       ".footer__terms": ()=>modal('.privacy-btn', '.modal-privacy', '.modal__close'),
   };
 
