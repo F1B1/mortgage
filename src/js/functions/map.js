@@ -1,33 +1,53 @@
 export function loadMap(){
-    let mapContainers = document.querySelectorAll(".contact__map-container");
+    var mapContainers = document.querySelectorAll('.contact__map');
 
-    function loadMap(mapContainer) {
-        var map = mapContainer.querySelector('.contact__map');
+    function initializeYandexMap(mapContainer) {
         var iframe = document.createElement('iframe');
-        iframe.src = map.dataset.src;
+        iframe.src = mapContainer.dataset.src;
         iframe.width = '100%';
         iframe.height = '100%';
         iframe.frameBorder = '0';
         iframe.allowFullscreen = '';
         iframe.title = 'map';
-        map.appendChild(iframe);
+        mapContainer.innerHTML = ''; 
+        mapContainer.appendChild(iframe);
     }
 
-    function handleLoad() {
-        mapContainers.forEach(function(mapContainer) {
-            if (!mapContainer.dataset.loaded) {
-                loadMap(mapContainer);
-                mapContainer.dataset.loaded = true;
+    // Используем IntersectionObserver для ленивой загрузки
+    var observer = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                var mapContainer = entry.target;
+                initializeYandexMap(mapContainer);
+                observer.unobserve(mapContainer); // Останавливаем наблюдение за загруженной картой
             }
         });
+    });
+
+    mapContainers.forEach(function(mapContainer) {
+        observer.observe(mapContainer);
+    });
+
+    // Асинхронная загрузка скрипта Яндекс.Карт
+    function loadYandexMapScript(callback) {
+        var script = document.createElement('script');
+        script.defer = true;
+        script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=602846fc-cf70-4081-bf1e-5d000502903e';
+        script.onload = callback;
+        script.onerror = function() {
+            console.error("Не удалось загрузить скрипт Яндекс.Карт. Проверьте API ключ.");
+        };
+        document.head.appendChild(script);
     }
 
-    window.onload = handleLoad;
-
-    if ('requestIdleCallback' in window) {
-        requestIdleCallback(handleLoad);
-    } else {
-        window.setTimeout(handleLoad, 1);
-    }
+    loadYandexMapScript(function() {
+        mapContainers.forEach(function(mapContainer) {
+            // Инициализируем карту, если она видима сразу
+            var rect = mapContainer.getBoundingClientRect();
+            var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+            if (rect.top < windowHeight) {
+                initializeYandexMap(mapContainer);
+            }
+        });
+    });
 }
-
