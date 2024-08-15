@@ -36,9 +36,14 @@
       </div>
     </div>
     <div class="header__bottom">
-      <a href="#" class="header__logo">
-        <img src="img/logo.webp" alt="логотип ">
-      </a>
+      
+        <a href="#" class="header__logo">
+          <picture>
+            <source media="(max-width: 576px)" srcset="img/logo-small.png">
+            <img src="img/logo.png" alt="логотип">
+          </picture>
+        </a>
+     
       <div class="header__wrapper">
         <a href="tel:+78000000000" class="header__phone header__phone-mobile">8 800 000-00-00</a>
         <button type="button" class="menu__icon icon-menu btn-reset" aria-label="menu"><span></span></button>

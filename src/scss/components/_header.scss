@@ -133,9 +133,18 @@
     }
 
     &__logo {
-        max-width: #{fluid(130px, 220px, 375px, 1920px)};
+        max-width: 221px;
         width: 100%;
         margin: 0px 24px 0px 0px;
+        picture{
+            display: flex;
+        }
+        @include tablet{
+            max-width: 160px;
+        }
+        @include mobile{
+            width: unset;
+        }
     }
 
     &__list {

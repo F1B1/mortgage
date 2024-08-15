@@ -54,9 +54,14 @@
       </div>
     </div>
     <div class="header__bottom">
-      <a href="#" class="header__logo">
-        <img src="img/logo.webp" alt="логотип ">
-      </a>
+
+        <a href="#" class="header__logo">
+          <picture>
+            <source media="(max-width: 576px)" srcset="img/logo-small.png">
+            <img src="img/logo.png" alt="логотип">
+          </picture>
+        </a>
+
       <div class="header__wrapper">
         <a href="tel:+78000000000" class="header__phone header__phone-mobile">8 800 000-00-00</a>
         <button type="button" class="menu__icon icon-menu btn-reset" aria-label="menu"><span></span></button>
@@ -779,17 +784,15 @@
     </div>
   </div>
   <div class="footer__footer container container-big d-flex f-ac f-jsb">
-    <span class="footer__rights or-2">@ 2013 — 2023  ООО «Ипотека просто» | Все права защищены</span>
+    <div class="footer__rights or-2">@ 2013 — <span class="footer__current-year">2023</span>  ООО «Ипотека просто» | Все права защищены</div>
     <button type="button" class="footer__terms privacy-btn btn-reset or-1">Политика конфиденциальности</button>
-    <div class="footer__block d-flex f-ac f-jsb or-3">
-        <a href="https://business-up.org/" target="_blank" class="footer__business d-flex f-ac">
-          <img src="./img/business-up.webp" alt="Изображение" loading="lazy">
-          <div class="footer__line"></div>
-          <span>Разработка <br>
-            и продвижение с любовью</span>
-        </a>
-    </div>
-</div>
+    <a href="https://business-up.org/" target="_blank" class="footer__business d-flex f-ac or-3">
+      <img src="./img/business-up.webp" alt="Изображение" loading="lazy">
+      <div class="footer__line"></div>
+      <span>Разработка <br>
+        и продвижение с любовью</span>
+    </a>
+  </div>
 </footer>
 
         <div class="video-modal">

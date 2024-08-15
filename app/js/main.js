@@ -15015,6 +15015,25 @@ function burger() {
 
 /***/ }),
 
+/***/ "./src/js/functions/currentYear.js":
+/*!*****************************************!*\
+  !*** ./src/js/functions/currentYear.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   currentYear: () => (/* binding */ currentYear)
+/* harmony export */ });
+function currentYear(yearEl) {
+  const elementYear = document.querySelector(yearEl);
+  const year = new Date().getFullYear();
+  elementYear.innerHTML = year;
+}
+
+/***/ }),
+
 /***/ "./src/js/functions/gsap-anim.js":
 /*!***************************************!*\
   !*** ./src/js/functions/gsap-anim.js ***!
@@ -15847,6 +15866,7 @@ function swiperAll() {
   const situtation = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.situation__swiper', {
     modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
     slidesPerView: 'auto',
+    loop: true,
     speed: 500,
     navigation: {
       nextEl: '.situation__button-next',
@@ -15880,6 +15900,7 @@ function swiperAll() {
   const review = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.review__swiper', {
     modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
     slidesPerView: 'auto',
+    loop: true,
     navigation: {
       nextEl: '.review__button-next',
       prevEl: '.review__button-prev'
@@ -15911,6 +15932,7 @@ function swiperAll() {
   const news = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.news__swiper', {
     modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
     slidesPerView: 'auto',
+    loop: true,
     navigation: {
       nextEl: '.news__button-next',
       prevEl: '.news__button-prev'
@@ -15974,6 +15996,7 @@ function swiperAll() {
   const blogNews = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.blog-news__swiper', {
     modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
     slidesPerView: 'auto',
+    loop: true,
     pagination: {
       el: '.blog-news__pagination',
       clickable: true
@@ -15990,7 +16013,7 @@ function swiperAll() {
   });
   function updatePagination(swiper) {
     const totalBullets = swiper.pagination.bullets.length;
-    const maxVisible = 4; // Максимальное количество видимых кружочков
+    const maxVisible = 4;
     const activeIndex = swiper.activeIndex;
     swiper.pagination.bullets.forEach((bullet, index) => {
       if (index >= activeIndex - Math.floor(maxVisible / 2) && index <= activeIndex + Math.floor(maxVisible / 2)) {
@@ -26617,7 +26640,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _functions_question_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./functions/question.js */ "./src/js/functions/question.js");
 /* harmony import */ var _functions_modal_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./functions/modal.js */ "./src/js/functions/modal.js");
 /* harmony import */ var _functions_map_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./functions/map.js */ "./src/js/functions/map.js");
-/* harmony import */ var _functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./functions/gsap-anim.js */ "./src/js/functions/gsap-anim.js");
+/* harmony import */ var _functions_currentYear_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./functions/currentYear.js */ "./src/js/functions/currentYear.js");
+/* harmony import */ var _functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./functions/gsap-anim.js */ "./src/js/functions/gsap-anim.js");
+
 
 
 
@@ -26768,7 +26793,8 @@ window.addEventListener('DOMContentLoaded', e => {
     }),
     ".question__btn": _functions_question_js__WEBPACK_IMPORTED_MODULE_13__.question,
     ".contact__map": _functions_map_js__WEBPACK_IMPORTED_MODULE_15__.loadMap,
-    ".footer__terms": () => (0,_functions_modal_js__WEBPACK_IMPORTED_MODULE_14__.modal)('.privacy-btn', '.modal-privacy', '.modal__close')
+    ".footer__terms": () => (0,_functions_modal_js__WEBPACK_IMPORTED_MODULE_14__.modal)('.privacy-btn', '.modal-privacy', '.modal__close'),
+    ".footer__current-year": () => (0,_functions_currentYear_js__WEBPACK_IMPORTED_MODULE_16__.currentYear)('.footer__current-year')
   };
   Object.keys(functionsMap).forEach(selector => {
     if (document.querySelector(selector)) {
@@ -26779,49 +26805,49 @@ window.addEventListener('DOMContentLoaded', e => {
   if (laptopScreen.matches) {
     const animations = [{
       selector: '.header',
-      action: _functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_16__.animateHeader
+      action: _functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_17__.animateHeader
     }, {
       selector: '.primary',
-      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_16__.animatePrimary)('.primary__bg-primary', '.primary__title', '.primary__sub-title', '.primary__makes', '.primary__button')
+      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_17__.animatePrimary)('.primary__bg-primary', '.primary__title', '.primary__sub-title', '.primary__makes', '.primary__button')
     }, {
       selector: '.primary-second',
-      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_16__.animatePrimary)('.primary__bg-primary', '.primary-second__title', '.primary-second__sub-title')
+      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_17__.animatePrimary)('.primary__bg-primary', '.primary-second__title', '.primary-second__sub-title')
     }, {
       selector: '.primary-three',
-      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_16__.animatePrimary)('.primary__bg-primary', '.primary-second__title', '.primary-second__sub-title')
+      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_17__.animatePrimary)('.primary__bg-primary', '.primary-second__title', '.primary-second__sub-title')
     }, {
       selector: '.invite__body',
-      action: _functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_16__.animateInviteSection
+      action: _functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_17__.animateInviteSection
     }, {
       selector: '.actual-big__wrapper',
-      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_16__.animateHelpBody)('.actual-big__wrapper')
+      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_17__.animateHelpBody)('.actual-big__wrapper')
     }, {
       selector: '.primary__columns',
-      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_16__.animateColumns)('.primary__columns', '.primary__column')
+      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_17__.animateColumns)('.primary__columns', '.primary__column')
     }, {
       selector: '.invite__body',
-      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_16__.animateInviteSection)('.invite__body', '.invite__column', '.invite__video')
+      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_17__.animateInviteSection)('.invite__body', '.invite__column', '.invite__video')
     }, {
       selector: '.review__title',
-      action: _functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_16__.animateReviewTitle
+      action: _functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_17__.animateReviewTitle
     }, {
       selector: '.review__title',
-      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_16__.animateReviewTitle)('.review__title')
+      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_17__.animateReviewTitle)('.review__title')
     }, {
       selector: '.review__columns',
-      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_16__.animateColumns)('.review__columns', '.review__column')
+      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_17__.animateColumns)('.review__columns', '.review__column')
     }, {
       selector: '.additionally__columns',
-      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_16__.animateHelpBody)('.additionally__columns')
+      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_17__.animateHelpBody)('.additionally__columns')
     }, {
       selector: '.additionally__title',
-      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_16__.animatePartnersTitle)('.additionally__title')
+      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_17__.animatePartnersTitle)('.additionally__title')
     }, {
       selector: '.help__body',
-      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_16__.animateHelpBody)('.help__body')
+      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_17__.animateHelpBody)('.help__body')
     }, {
       selector: '.actual__body',
-      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_16__.animateHelpBody)('.actual__body')
+      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_17__.animateHelpBody)('.actual__body')
     }];
     animations.forEach(_ref => {
       let {

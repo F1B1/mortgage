@@ -14,6 +14,7 @@ import { spoiler } from './functions/spoiler.js';
 import { question } from './functions/question.js';
 import { modal } from "./functions/modal.js";
 import { loadMap } from "./functions/map.js";
+import { currentYear } from "./functions/currentYear.js";
 
 import { 
   animatePrimary,
@@ -186,6 +187,7 @@ window.addEventListener('DOMContentLoaded',(e)=>{
       ".question__btn": question,
       ".contact__map": loadMap,
       ".footer__terms": ()=>modal('.privacy-btn', '.modal-privacy', '.modal__close'),
+      ".footer__current-year": ()=>currentYear('.footer__current-year')
   };
 
   Object.keys(functionsMap).forEach(selector => {

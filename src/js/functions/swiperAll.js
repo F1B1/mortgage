@@ -5,6 +5,7 @@ export function swiperAll(){
     const situtation = new Swiper('.situation__swiper', {
         modules:[Navigation, Pagination],
         slidesPerView: 'auto',
+        loop: true,
         speed: 500,
         navigation: {
             nextEl: '.situation__button-next',
@@ -39,6 +40,7 @@ export function swiperAll(){
     const review = new Swiper('.review__swiper', {
       modules:[Navigation, Pagination],
       slidesPerView: 'auto',
+      loop: true,
       navigation: {
           nextEl: '.review__button-next',
           prevEl: '.review__button-prev',
@@ -72,6 +74,7 @@ export function swiperAll(){
     const news = new Swiper('.news__swiper', {
       modules:[Navigation, Pagination],
       slidesPerView: 'auto',
+      loop: true,
       navigation: {
           nextEl: '.news__button-next',
           prevEl: '.news__button-prev',
@@ -101,7 +104,6 @@ export function swiperAll(){
         }
       }
     })
-
 
     const team = new Swiper('.team__swiper', {
       modules:[Navigation, Pagination],
@@ -138,6 +140,7 @@ export function swiperAll(){
     const blogNews = new Swiper('.blog-news__swiper', {
       modules:[ Pagination],
       slidesPerView: 'auto',
+      loop: true,
         pagination: {
           el: '.blog-news__pagination',
           clickable: true
@@ -155,7 +158,7 @@ export function swiperAll(){
 
   function updatePagination(swiper) {
     const totalBullets = swiper.pagination.bullets.length;
-    const maxVisible = 4; // Максимальное количество видимых кружочков
+    const maxVisible = 4;
     const activeIndex = swiper.activeIndex;
   
     swiper.pagination.bullets.forEach((bullet, index) => {
