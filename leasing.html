@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>Ипотека Просто</title>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body" style="--scroll-width: 0px">
+    <h1 class="visually-hidden">Ипотека Просто</h1>
+    <div class="site-container visible">
+        <header class="header">
+  <div class="header__container container">
+    <div class="header__top ">
+      <div class="header__top-info d-flex f-ac">
+        <div class="header__cities">
+          <button class="header__city btn-reset d-flex f-c">
+            <svg width="20" height="20">
+              <use xlink:href="./img/sprite.svg#map"></use>
+            </svg>Москва</button>
+          <div class="header__city-list"></div>
+        </div>
+        <nav class="header__menu">
+          <ul class="header__list-info list-reset">
+            <li class="header__item-info"><a href="#" class="header__link-info">О компании</a></li>
+            <li class="header__item-info"><a href="#" class="header__link-info">Вакансии</a></li>
+            <li class="header__item-info"><a href="#" class="header__link-info">Сотрудничество</a></li>
+            <li class="header__item-info"><a href="#" class="header__link-info">Блог</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__contact d-flex f-ac">
+        <a href="tel:+78000000000" class="header__phone d-flex f-c">
+          <svg width="16" height="16">
+            <use xlink:href="./img/sprite.svg#phone" stroke="black"></use>
+          </svg>8 800 000-00-00</a>
+        <a href="#" class="header__social social">
+          <svg width="16" height="16">
+            <use xlink:href="./img/sprite.svg#tg"></use>
+          </svg>
+        </a>
+        <a href="#" class="header__social social social-whatsapp">
+          <svg width="20" height="20">
+            <use xlink:href="./img/sprite.svg#whatsapp"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="header__bottom">
+
+        <a href="#" class="header__logo">
+          <picture>
+            <source media="(max-width: 576px)" srcset="img/logo-small.png">
+            <img src="img/logo.png" alt="логотип">
+          </picture>
+        </a>
+
+      <div class="header__wrapper">
+        <a href="tel:+78000000000" class="header__phone header__phone-mobile">8 800 000-00-00</a>
+        <button type="button" class="menu__icon icon-menu btn-reset" aria-label="menu"><span></span></button>
+      </div>
+      <nav class="header__menu header__menu-desktop">
+        <ul class="header__list list-reset">
+          <li class="header__item drop-list">
+            <a href="#" class="header__link drop-link">Ипотека</a>
+            <svg width="8" height="8">
+              <use xlink:href="./img/sprite.svg#arrow"></use>
+            </svg>
+            <ul class="header__sub-menu list-reset">
+              <li class="header__sub-item"><a href="#" class="header__sub-link">Пункт 1</a></li>
+              <li class="header__sub-item"><a href="#" class="header__sub-link">Пункт 2</a></li>
+              <li class="header__sub-item"><a href="#" class="header__sub-link">Пункт 3</a></li>
+              <li class="header__sub-item"><a href="#" class="header__sub-link">Пункт 4</a></li>
+              <li class="header__sub-item"><a href="#" class="header__sub-link">Пункт 5</a></li>
+            </ul>
+          </li>
+          <li class="header__item"><a href="#" class="header__link">Подбор новостроек</a></li>
+          <li class="header__item"><a href="#" class="header__link">Рефинансирование</a></li>
+          <li class="header__item"><a href="#" class="header__link">Кредиты</a></li>
+          <li class="header__item"><a href="#" class="header__link">Инвестиции</a></li>
+          <li class="header__item"><a href="#" class="header__link">Кейсы и отзывы</a></li>
+          <li class="header__item"><a href="#" class="header__link">Контакты</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="header__button">Бесплатная консультация</a>
+    </div>
+    <div class="header__mobile">
+      <div class="header__cities header__cities-mobile">
+        <button class="header__city btn-reset d-flex f-c">
+          <svg width="20" height="20">
+            <use xlink:href="./img/sprite.svg#map"></use>
+          </svg>Москва</button>
+        <div class="header__city-list"></div>
+      </div>
+      <nav class="header__menu-mobile">
+        <ul class="header__list-mobile list-reset" id="main-menu">
+          <li class="header__item-mobile"><a href="#" class="header__link-mobile" data-target="menu-ipoteka">Ипотека
+            <svg width="16" height="24">
+            <use xlink:href="./img/sprite.svg#arrow"></use>
+          </svg></a></li>
+          <li class="header__item-mobile"><a href="#" class="header__link-mobile">Подбор новостроек</a></li>
+          <li class="header__item-mobile"><a href="#" class="header__link-mobile">Рефинансирование</a></li>
+          <li class="header__item-mobile"><a href="#" class="header__link-mobile">Кредиты</a></li>
+          <li class="header__item-mobile"><a href="#" class="header__link-mobile">Инвестиции</a></li>
+          <li class="header__item-mobile"><a href="#" class="header__link-mobile">Кейсы и отзывы</a></li>
+          <li class="header__item-mobile"><a href="#" class="header__link-mobile">Контакты</a></li>
+          <li class="header__item-mobile"><a href="#" class="header__link-mobile" data-target="menu-about">О компании
+            <svg width="16" height="24">
+            <use xlink:href="./img/sprite.svg#arrow"></use>
+          </svg></a></li>
+        </ul>
+
+        <ul class="submenu list-reset" id="menu-ipoteka">
+          <li class="submenu-item menu-back">
+            <svg width="16" height="24">
+              <use xlink:href="./img/sprite.svg#arrow"></use>
+            </svg>
+              <a href="#" class="menu-back-link" data-target="main-menu">Ипотека</a>
+          </li>
+          <li class="submenu-item"><a href="#" class="submenu-link">Помощь в одобрении ипотеки</a></li>
+          <li class="submenu-item"><a href="#" class="submenu-link">Сопровождение сделок</a></li>
+        </ul>
+
+        <ul class="submenu list-reset" id="menu-about">
+        <li class="submenu-item menu-back">
+          <svg width="16" height="24">
+            <use xlink:href="./img/sprite.svg#arrow"></use>
+          </svg>
+            <a href="#" class="menu-back-link" data-target="main-menu">О компании</a>
+        </li>
+        <li class="submenu-item"><a href="#" class="submenu-link">О компании</a></li>
+        <li class="submenu-item"><a href="#" class="submenu-link">Вакансии</a></li>
+        <li class="submenu-item"><a href="#" class="submenu-link">Сотрудничество</a></li>
+        <li class="submenu-item"><a href="#" class="submenu-link">Блог</a></li>
+        </ul>
+      </nav>
+      <div class="header__socials-mobile">
+        <a href="#" class="btn header__consultant-mobile">Бесплатная консультация</a>
+
+        <a href="#" class="header__social-mobile social">
+          <svg width="20" height="20">
+            <use xlink:href="./img/sprite.svg#tg "></use>
+          </svg>
+        </a>
+        <a href="#" class="header__social-mobile social social-whatsapp">
+          <svg width="24" height="24">
+            <use xlink:href="./img/sprite.svg#whatsapp"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+        <main class="main">
+            <article class="breadcrumblist breadcrumblist-gray">
+                <div class="breadcrumblist__container container">
+                    <ol class="list-reset" itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                          <a itemprop="item" href="./main.html">
+                          <span itemprop="name">Главная</span></a>
+                          <meta itemprop="position" content="1" />
+                        </li>
+                        <li>
+                            <span class="breadcrumblist__line"></span>
+                        </li>
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                          <a class="active" itemprop="item" href="#">
+                          <span itemprop="name">Кредитование бизнеса и лизинг</span></a>
+                          <meta itemprop="position" content="2" />
+                        </li>
+                    </ol>
+                </div>
+            </article>
+            <section class="primary-three primary-three-people pd">
+                <div class="primary__wrapper container-big">
+                    <div class="primary__container container">
+                        <div class="primary__body primary__body-key">
+                            <h2 class="primary-second__title title">Кредитование <br> бизнеса и лизинг</h2>
+                            <p class="primary-second__sub-title sub-title">Кредитуем строителей частных домов под 1% по государственной программе</p>
+                        </div>
+                        <div class="primary__bg-primary primary__bg-primary-4 primary__bg-build">
+                            <img src="img/bg8.webp" alt="photo">
+                        </div>
+                        <picture class="primary__bg-city primary__bg-city-2">
+                            <source media="(max-width: 767px)"  srcset="img/city.webp">
+                            <img src="img/city-small.webp" alt="photo">
+                        </picture>
+                    </div>
+                </div>
+            </section>
+            <section class="benefit benefit-leasing pd">
+                <div class="benefit__container container">
+                    <h2 class="benefit__title title-section mb-32">Кредитные решения, адаптированные под быстрые изменения рынка</h2>
+                    <div class="benefit__columns">
+                        <div class="benefit__column">
+                            <div class="benefit__item pd-32">
+                                <h3 class="benefit__sub-title">Подготовка документов</h3>
+                                <p class="benefit__text">Поможем в составлении бизнес-плана и подготовке необходимых документов.</p>
+                            </div>
+                        </div>
+                        <div class="benefit__column">
+                            <div class="benefit__item pd-32">
+                                <h3 class="benefit__sub-title">Проверенные партнеры</h3>
+                                <p class="benefit__text">Мы сотрудничаем с более чем 40 банками, чтобы предложить вам самые выгодные условия.</p>
+                            </div>
+                        </div>
+                        <div class="benefit__column">
+                            <div class="benefit__item pd-32">
+                                <h3 class="benefit__sub-title">Отсутствие скрытых комиссий</h3>
+                                <p class="benefit__text">Предоставляем полную и чёткую информацию о всех платежах и условиях кредитного договора.</p>
+                            </div>
+                        </div>
+                        <div class="benefit__column">
+                            <div class="benefit__item pd-32">
+                                <h3 class="benefit__sub-title">Быстрая оценка и одобрение</h3>
+                                <p class="benefit__text">Подберём для вас оптимальные кредитные или лизинговые предложения в течение 24 часов с момента обращения.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="benefit__button btn">Получить консультацию</a>
+                </div>
+            </section>
+            <section class="credits pd">
+                <div class="credits__container container">
+                    <h2 class="credits__title title-section">Гибкие условия кредитования для разных бизнес-моделей</h2>
+                    <p class="credits__text fz-24">На недвижимость, транспорт, модернизацию производства или пополнение оборотных средств</p>
+                    <div class="credits__columns">
+                        <div class="credits__column pd-32">
+                            <h3 class="credits__sub-title">Экспресс-кредит</h3>
+                            <p class="credits__sub-text">Быстрое кредитное решение на любые бизнес-цели</p>
+                            <div class="credits__block">
+                                <a href="#" class="credits__link arr-rt">Подать заявку
+                                    <svg width="20" height="20">
+                                        <use xlink:href="./img/sprite.svg#arrow-line"></use>
+                                    </svg>
+                                </a>
+                                <div class="credits__image">
+                                    <img src="img/credit01.webp" alt="image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="credits__column pd-32">
+                            <h3 class="credits__sub-title">Овердрафт</h3>
+                            <p class="credits__sub-text">Кредит для оплаты срочных платежей при недостатке средств на счёте</p>
+                            <div class="credits__block">
+                                <a href="#" class="credits__link arr-rt">Подать заявку
+                                    <svg width="20" height="20">
+                                        <use xlink:href="./img/sprite.svg#arrow-line"></use>
+                                    </svg>
+                                </a>
+                                <div class="credits__image">
+                                    <img src="img/credit02.webp" alt="image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="credits__column pd-32">
+                            <h3 class="credits__sub-title">Кредитная линия</h3>
+                            <p class="credits__sub-text">Возобновляемый лимит на использование средств</p>
+                            <div class="credits__block">
+                                <a href="#" class="credits__link arr-rt">Подать заявку
+                                    <svg width="20" height="20">
+                                        <use xlink:href="./img/sprite.svg#arrow-line"></use>
+                                    </svg>
+                                </a>
+                                <div class="credits__image">
+                                    <img src="img/credit03.webp" alt="image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="credits__column pd-32">
+                            <h3 class="credits__sub-title">Оборотный кредит</h3>
+                            <p class="credits__sub-text">Усильте платёжеспособность бизнеса при реализации производственного цикла</p>
+                            <div class="credits__block">
+                                <a href="#" class="credits__link arr-rt">Подать заявку
+                                    <svg width="20" height="20">
+                                        <use xlink:href="./img/sprite.svg#arrow-line"></use>
+                                    </svg>
+                                </a>
+                                <div class="credits__image">
+                                    <img src="img/credit04.webp" alt="image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="credits__column pd-32">
+                            <h3 class="credits__sub-title">Банковская <br> гарантия</h3>
+                            <p class="credits__sub-text">Обязательство банка оплатить долг при невыполнении заемщиком</p>
+                            <div class="credits__block">
+                                <a href="#" class="credits__link arr-rt">Подать заявку
+                                    <svg width="20" height="20">
+                                        <use xlink:href="./img/sprite.svg#arrow-line"></use>
+                                    </svg>
+                                </a>
+                                <div class="credits__image">
+                                    <img src="img/credit05.webp" alt="image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="credits__column pd-32">
+                            <h3 class="credits__sub-title">Финансирование капитальных затрат</h3>
+                            <p class="credits__sub-text">Приобретайте недвижимость, развивайте новые направления и расширяйте бизнес инвестируя в него</p>
+                            <div class="credits__block">
+                                <a href="#" class="credits__link arr-rt">Подать заявку
+                                    <svg width="20" height="20">
+                                        <use xlink:href="./img/sprite.svg#arrow-line"></use>
+                                    </svg>
+                                </a>
+                                <div class="credits__image">
+                                    <img src="img/credit06.webp" alt="image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="credits__column pd-32">
+                            <h3 class="credits__sub-title">Кредит с гос.поддержкой</h3>
+                            <p class="credits__sub-text">Заем с льготами от государства</p>
+                            <div class="credits__block">
+                                <a href="#" class="credits__link arr-rt">Подать заявку
+                                    <svg width="20" height="20">
+                                        <use xlink:href="./img/sprite.svg#arrow-line"></use>
+                                    </svg>
+                                </a>
+                                <div class="credits__image">
+                                    <img src="img/credit07.webp" alt="image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="credits__column pd-32">
+                            <h3 class="credits__sub-title">Кредит на открытие бизнеса</h3>
+                            <p class="credits__sub-text">Заем для запуска и развития нового дела</p>
+                            <div class="credits__block">
+                                <a href="#" class="credits__link arr-rt">Подать заявку
+                                    <svg width="20" height="20">
+                                        <use xlink:href="./img/sprite.svg#arrow-line"></use>
+                                    </svg>
+                                </a>
+                                <div class="credits__image">
+                                    <img src="img/credit08.webp" alt="image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="credits__button btn btn-black">Показать еще</button>
+                </div>
+            </section>
+            <section class="step pd">
+                <div class="step__container container">
+                    <h2 class="step__title title-section">Возьмем всю работу на себя</h2>
+                    <div class="step__columns">
+                        <div class="step__column">
+                            <div class="step__top">
+                                <div class="step__number">1</div>
+                                <div class="step__line"></div>
+                            </div>
+                            <p class="step__text">Проведём финансовое консультрование</p>
+                        </div>
+                        <div class="step__column">
+                            <div class="step__top">
+                                <div class="step__number">2</div>
+                                <div class="step__line"></div>
+                            </div>
+                            <p class="step__text">Изучим и выберем предложение с самой низкой ставкой</p>
+                        </div>
+                        <div class="step__column">
+                            <div class="step__top">
+                                <div class="step__number">3</div>
+                                <div class="step__line"></div>
+                            </div>
+                            <p class="step__text">Сформируем и подготовим пакет документов</p>
+                        </div>
+                        <div class="step__column">
+                            <div class="step__top">
+                                <div class="step__number">4</div>
+                                <div class="step__line"></div>
+                            </div>
+                            <p class="step__text">Подадим документы кредитору</p>
+                        </div>
+                        <div class="step__column">
+                            <div class="step__top">
+                                <div class="step__number">5</div>
+                                <div class="step__line"></div>
+                            </div>
+                            <p class="step__text">Вам осталось только получить деньги и оплатить наши услуги</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="help help-gray pd">
+                <div class="help__wrapper container-big">
+                    <div class="help__container container">
+                        <div class="help__body">
+                            <div class="help__block">
+                                <h2 class="help__title title-section">Подберём кредит под ваши задачи, для нас нет сложных случаев</h2>
+                                <p class="help__text">Мы детально изучим все данные, зададим уточняющие вопросы и подскажем оптимальный путь решения на максимально выгодных для вас условиях.</p>
+                            </div>
+                            <div class="help__column">
+                                <form action="#" id="helpform-company" class="help__form">
+                                    <div class="help__inputs">
+                                        <div class="help__input">
+                                            <label for="name-company">Имя <span>*</span></label>
+                                            <input name="name-company" id="name-company" type="text" placeholder="Ваше имя" class="input-help help__name" required>
+                                        </div>
+                                        <div class="help__input">
+                                            <label for="phone-company">Номер телефона <span>*</span></label>
+                                            <input name="phone-company" id="phone-company" type="tel" placeholder="999 123 45 67" class="input-help help__phone" required>
+                                        </div>
+                                    </div>
+                                    <div class="help__textarea">
+                                        <label for="comment-company">Комментарий <span>*</span></label>
+                                        <textarea name="comment-company" id="comment-company" placeholder="Опишите вашу ситуацию" class="help__comment input-help"></textarea>
+                                    </div>
+                                    <div class="help__check">
+                                        <label for="agreement-company">
+                                            <input type="checkbox" id="agreement-company" name="agreement-company" class="help__checkbox" required>Даю своё согласие на обработку персональных данных
+                                        </label>
+                                    </div>
+                                    <div class="help__confirm">
+                                        <button type="submit" class="help__button btn">Бесплатная консультация</button>
+                                        <div class="help__socials socials-big">
+                                            <a href="#" class="appeal__social social">
+                                                <svg width="24" height="24">
+                                                    <use xlink:href="./img/sprite.svg#tg"></use>
+                                                </svg>
+                                            </a>
+                                            <a href="#" class="appeal__social social">
+                                                <svg width="32" height="32">
+                                                    <use xlink:href="./img/sprite.svg#whatsapp"></use>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="appeal appeal-leasing pd">
+                <div class="appeal__container container">
+                    <div class="appeal__body">
+                        <div class="appeal__info">
+                            <h2 class="appeal__title title-section sticky mgb-80">Лизинг, который подстраивается под нужды вашего бизнеса</h2>
+                            <div class="appeal__socials">
+                                <a href="#" class="appeal__social social social-whatsapp">
+                                    <svg width="24" height="24">
+                                        <use xlink:href="./img/sprite.svg#tg"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="appeal__social social social-whatsapp">
+                                    <svg width="32" height="32">
+                                        <use xlink:href="./img/sprite.svg#whatsapp"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="appeal__column">
+                            <p class="appeal__sub-title">Инвестируйте в аренду с выкупом и сэкономьте до 30% на транспорте, технике, оборудовании и недвижимости.</p>
+                            <div class="appeal__wrapper">
+                                <div class="appeal__inner pd-24">
+                                    <p class="appeal__number">до 20%</p>
+                                    <p class="appeal__sub-text">Экономия на налоге на прибыль</p>
+                                </div>
+                                <div class="appeal__inner pd-24">
+                                    <p class="appeal__number">до 20%</p>
+                                    <p class="appeal__sub-text">Возврат <br> НДС</p>
+                                </div>
+                                <div class="appeal__inner pd-24">
+                                    <p class="appeal__number">от 550 тыс.₽</p>
+                                    <p class="appeal__sub-text">Составляет чистая выгода при покупке в лизинг</p>
+                                </div>
+                            </div>
+                            <div class="appeal__block">
+                                <p class="appeal__help fz-24">Что можно взять в лизинг</p>
+                                <ul class="appeal__list">
+                                    <li><span>Легковые автомобили для перевозки 8 человек или груза до 800 кг</span></li>
+                                    <li><span>Грузовики: самосвалы, тягачи, рефрижераторы, прицепы и полуприцепы</span></li>
+                                    <li><span>Коммерческий транспорт: микроавтобусы, фургоны, пикапы</span></li>
+                                    <li><span>Спецтехнику: экскаваторы, бульдозеры, катки, комбайны, тракторы</span></li>
+                                    <li><span>Оборудование: медицинское, энергетическое, строительное</span></li>
+                                    <li><span>Недвижимость</span></li>
+                                </ul>
+                            </div>
+                            <a href="#" class="appeal__button btn btn-black">Подать заявку на лизинг</a>
+                            <div class="appeal__socials appeal__socials-mobile">
+                                <a href="#" class="appeal__social social">
+                                    <svg width="24" height="24">
+                                        <use xlink:href="./img/sprite.svg#tg"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="appeal__social social social-whatsapp">
+                                    <svg width="32" height="32">
+                                        <use xlink:href="./img/sprite.svg#whatsapp"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section class="benefit pd">
+                <div class="benefit__container container">
+                    <h2 class="benefit__title title-section mb-32">Условия лизинга </h2>
+                    <div class="benefit__columns benefit__columns-small">
+                        <div class="benefit__column">
+                            <div class="benefit__item pd-32">
+                                <h3 class="benefit__sub-title">от 0%</h3>
+                                <p class="benefit__text">Минимальный аванс.</p>
+                            </div>
+                        </div>
+                        <div class="benefit__column">
+                            <div class="benefit__item pd-32">
+                                <h3 class="benefit__sub-title">1-7 лет</h3>
+                                <p class="benefit__text">Срок договора лизинга.</p>
+                            </div>
+                        </div>
+                        <div class="benefit__column">
+                            <div class="benefit__item pd-32">
+                                <h3 class="benefit__sub-title">0 месяцев</h3>
+                                <p class="benefit__text">Любой срок регистрации бизнеса.</p>
+                            </div>
+                        </div>
+                        <div class="benefit__column">
+                            <div class="benefit__item pd-32">
+                                <h3 class="benefit__sub-title">1 тыс.₽</h3>
+                                <p class="benefit__text">Минимальный выкупной платеж.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="benefit__button btn">Получить консультацию</a>
+                </div>
+            </section>
+            <section class="step pd">
+                <div class="step__container container">
+                    <h2 class="step__title title-section">Мы позаботимся о всех деталях</h2>
+                    <div class="step__columns">
+                        <div class="step__column">
+                            <div class="step__top">
+                                <div class="step__number">1</div>
+                                <div class="step__line"></div>
+                            </div>
+                            <p class="step__text">Найдём подходящую лизинговую компанию</p>
+                        </div>
+                        <div class="step__column">
+                            <div class="step__top">
+                                <div class="step__number">2</div>
+                                <div class="step__line"></div>
+                            </div>
+                            <p class="step__text">Переговорим по условиям лучшей ставки</p>
+                        </div>
+                        <div class="step__column">
+                            <div class="step__top">
+                                <div class="step__number">3</div>
+                                <div class="step__line"></div>
+                            </div>
+                            <p class="step__text">Оценим финансовые выгоды</p>
+                        </div>
+                        <div class="step__column">
+                            <div class="step__top">
+                                <div class="step__number">4</div>
+                                <div class="step__line"></div>
+                            </div>
+                            <p class="step__text">Сформируем <br> и подготовим пакет документов</p>
+                        </div>
+                        <div class="step__column">
+                            <div class="step__top">
+                                <div class="step__number">5</div>
+                                <div class="step__line"></div>
+                            </div>
+                            <p class="step__text">Вам осталось только получить деньги и оплатить наши услуги</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="help pd">
+                <div class="help__container container">
+                    <div class="help__body">
+                        <h2 class="help__title title-section">Подайте заявку <br> на лизинг онлайн</h2>
+                        <div class="help__column">
+                            <p class="help__sub-title mb-32a">Подберем для вас лучшие условия лизинга, избавив вас от лишних хлопот и неожиданных расходов</p>
+                            <p class="help__text">Проанализируем вашу ситуацию и предложим несколько вариантов решения. Подберём оптимальные условия лизинга</p>
+                            <form method="post" action="#" id="helpform1" class="help__form">
+                                <div class="help__inputs">
+                                    <div class="help__input">
+                                        <label for="name">Имя <span>*</span></label>
+                                        <input name="name" id="name" type="text" placeholder="Ваше имя" class="input-help help__name" required>
+                                    </div>
+                                    <div class="help__input">
+                                        <label for="phone">Номер телефона <span>*</span></label>
+                                        <input name="phone" id="phone" type="tel" placeholder="999 123 45 67" class="input-help help__phone" required>
+                                    </div>
+                                </div>
+                                <div class="help__textarea">
+                                    <label for="comment">Комментарий <span>*</span></label>
+                                    <textarea name="comment" id="comment" placeholder="Опишите вашу ситуацию" class="help__comment input-help"></textarea>
+                                </div>
+                                <div class="help__check">
+                                    <label for="agreement">
+                                        <input type="checkbox" id="agreement" name="agreement" class="help__checkbox" required>Даю своё согласие на обработку персональных данных
+                                    </label>
+                                </div>
+                                <div class="help__confirm">
+                                    <button type="submit" class="help__button btn btn-black">Бесплатная консультация</button>
+                                    <div class="help__socials">
+                                        <a href="#" class="appeal__social social">
+                                            <svg width="24" height="24">
+                                                <use xlink:href="./img/sprite.svg#tg"></use>
+                                            </svg>
+                                        </a>
+                                        <a href="#" class="appeal__social social social-whatsapp">
+                                            <svg width="32" height="32">
+                                                <use xlink:href="./img/sprite.svg#whatsapp"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="review pd container-big">
+    <div class="review__container container">
+        <h2 class="review__title title-section">1000+ довольных клиентов</h2>
+        <a href="#" class="review__link-mobile link-refer arr-rt">Смотреть все отзывы
+            <svg width="20" height="24">
+                <use xlink:href="./img/sprite.svg#arrow-line"></use>
+            </svg>
+        </a>
+        <div class="review__swiper swiper">
+            <div class="review__columns swiper-wrapper">
+                <div class="review__column swiper-slide">
+                    <div class="video__wrapper" data-src="https://www.youtube.com/embed/HOfdboHvshg?autoplay=1">
+    <span class="video__icon">
+        <svg width="32" height="32">
+            <use xlink:href="./img/sprite.svg#player"></use>
+        </svg>
+    </span>
+    <img src="img/review1.webp" alt="poster" class="video__poster">
+</div>
+                </div>
+                <div class="review__column swiper-slide">
+                    <div class="review__item pd-32">
+                        <div class="review__grade">
+                            <p class="review__name fz-24">Елена Семёнова</p>
+                            <div class="review__rating">
+                                <svg width="20" height="20">
+                                    <use xlink:href="./img/sprite.svg#Star"></use>
+                                </svg>
+                                <svg width="20" height="20">
+                                    <use xlink:href="./img/sprite.svg#Star"></use>
+                                </svg>
+                                <svg width="20" height="20">
+                                    <use xlink:href="./img/sprite.svg#Star"></use>
+                                </svg>
+                                <svg width="20" height="20">
+                                    <use xlink:href="./img/sprite.svg#Star"></use>
+                                </svg>
+                                <svg width="20" height="20">
+                                    <use xlink:href="./img/sprite.svg#Star"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="review__text">Спасибо огромное Карине и Анне! Обратились по поводу ипотеки, нам все доступно объяснили, что сначала необходимо снизить кредитную нагрузку и оформить рефинансирование, причём ещё <span class="review__more-text">была сложность в наличии у нас незакрытой кредитки, оперативно все решили, грамотно, чётко, всегда были на связи! Первый этап на пути к нашей мечте пройден! Теперь будем двигаться дальше!</span></div>
+                        <a href="#" class="review__button">Оригинал отзыва</a>
+                    </div>
+                </div>
+                <div class="review__column swiper-slide">
+                    <div class="video__wrapper" data-src="https://www.youtube.com/embed/7LdRiXy4mvg?autoplay=1">
+    <span class="video__icon">
+        <svg width="32" height="32">
+            <use xlink:href="./img/sprite.svg#player"></use>
+        </svg>
+    </span>
+    <img src="img/review2.webp" alt="poster" class="video__poster">
+</div>
+                </div>
+                <div class="review__column swiper-slide">
+                    <div class="video__wrapper" data-src="https://www.youtube.com/embed/HOfdboHvshg?autoplay=1">
+    <span class="video__icon">
+        <svg width="32" height="32">
+            <use xlink:href="./img/sprite.svg#player"></use>
+        </svg>
+    </span>
+    <img src="img/review1.webp" alt="poster" class="video__poster">
+</div>
+                </div>
+                <div class="review__column swiper-slide">
+                    <div class="review__item pd-32">
+                        <div class="review__grade">
+                            <p class="review__name fz-24">Елена Семёнова</p>
+                            <div class="review__rating">
+                                <svg width="20" height="20">
+                                    <use xlink:href="./img/sprite.svg#Star"></use>
+                                </svg>
+                                <svg width="20" height="20">
+                                    <use xlink:href="./img/sprite.svg#Star"></use>
+                                </svg>
+                                <svg width="20" height="20">
+                                    <use xlink:href="./img/sprite.svg#Star"></use>
+                                </svg>
+                                <svg width="20" height="20">
+                                    <use xlink:href="./img/sprite.svg#Star"></use>
+                                </svg>
+                                <svg width="20" height="20">
+                                    <use xlink:href="./img/sprite.svg#Star"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="review__text">Спасибо огромное Карине и Анне! Обратились по поводу ипотеки, нам все доступно объяснили, что сначала необходимо снизить кредитную нагрузку и оформить рефинансирование, причём ещё <span class="review__more-text">была сложность в наличии у нас незакрытой кредитки, оперативно все решили, грамотно, чётко, всегда были на связи! Первый этап на пути к нашей мечте пройден! Теперь будем двигаться дальше!</span></div>
+                        <a href="#" class="review__button">Оригинал отзыва</a>
+                    </div>
+                </div>
+                <div class="review__column swiper-slide">
+                    <div class="video__wrapper" data-src="https://www.youtube.com/embed/HOfdboHvshg?autoplay=1">
+    <span class="video__icon">
+        <svg width="32" height="32">
+            <use xlink:href="./img/sprite.svg#player"></use>
+        </svg>
+    </span>
+    <img src="img/review2.webp" alt="poster" class="video__poster">
+</div>
+                </div>
+            </div>
+            <div class="review__controls">
+                <div class="review__navigation">
+                    <div class="swiper-button review__button-prev swiper-button-prev">
+                        <svg width="20" height="24">
+                            <use xlink:href="./img/sprite.svg#arrow-line"></use>
+                        </svg>
+                    </div>
+                    <div class="review__pagination pagination swiper-pagination"></div>
+                    <div class="swiper-button review__button-next swiper-button-next">
+                        <svg width="20" height="24">
+                            <use xlink:href="./img/sprite.svg#arrow-line"></use>
+                        </svg>
+                    </div>
+                </div>
+                <a href="#" class="review__link link-refer arr-rt">Смотреть все отзывы
+                    <svg width="20" height="24">
+                        <use xlink:href="./img/sprite.svg#arrow-line"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="review__bg">
+        <img src="img/city-small.webp" alt="city">
+    </div>
+</section>
+            <section class="partners pd">
+    <div class="partners__container container">
+        <h2 class="partners__title title-section">Наши партнёры: банки и застройщики</h2>
+    </div>
+    <div class="partners__body">
+        <div class="partners__list partners__list-1">
+            <div class="partners__copy">
+                <div class="partners__item">
+                    <img src="img/partners1.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners2.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners3.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners4.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners5.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners1.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners2.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners3.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners4.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners5.webp" alt="partners">
+                </div>
+            </div>
+            <div class="partners__copy">
+                <div class="partners__item">
+                    <img src="img/partners1.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners2.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners3.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners4.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners5.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners1.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners2.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners3.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners4.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners5.webp" alt="partners">
+                </div>
+            </div>
+            <div class="partners__copy">
+                <div class="partners__item">
+                    <img src="img/partners1.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners2.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners3.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners4.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners5.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners1.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners2.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners3.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners4.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners5.webp" alt="partners">
+                </div>
+            </div>
+            <div class="partners__copy">
+                <div class="partners__item">
+                    <img src="img/partners1.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners2.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners3.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners4.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners5.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners1.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners2.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners3.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners4.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners5.webp" alt="partners">
+                </div>
+            </div>
+        </div>
+        <div class="partners__list partners__list-2">
+            <div class="partners__copy">
+                <div class="partners__item">
+                    <img src="img/partners1.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners2.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners3.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners4.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners5.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners1.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners2.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners3.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners4.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners5.webp" alt="partners">
+                </div>
+            </div>
+            <div class="partners__copy">
+                <div class="partners__item">
+                    <img src="img/partners1.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners2.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners3.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners4.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners5.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners1.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners2.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners3.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners4.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners5.webp" alt="partners">
+                </div>
+            </div>
+            <div class="partners__copy">
+                <div class="partners__item">
+                    <img src="img/partners1.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners2.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners3.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners4.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners5.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners1.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners2.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners3.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners4.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners5.webp" alt="partners">
+                </div>
+            </div>
+            <div class="partners__copy">
+                <div class="partners__item">
+                    <img src="img/partners1.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners2.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners3.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners4.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners5.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners1.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners2.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners3.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners4.webp" alt="partners">
+                </div>
+                <div class="partners__item">
+                    <img src="img/partners5.webp" alt="partners">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+            <section class="question pd">
+                <div class="question__container container">
+                    <h2 class="question__title title-section">Ответы на часто задаваемые вопросы</h2>
+                    <div class="question__columns">
+                        <div class="question__column">
+                            <button type="button" class="question__btn btn-reset">
+                                <span class="question__caption question__caption-red">Как я могу подать заявку на ипотеку?</span>
+                                <div class="question__indicator"></div>
+                            </button>
+                            <p class="question__text">Подать заявку можно на нашем сайте</p>
+                        </div>
+                        <div class="question__column">
+                            <button type="button" class="question__btn btn-reset">
+                                <span class="question__caption">Какой минимальный первоначальный взнос возможен по ипотеке?</span>
+                                <div class="question__indicator"></div>
+                            </button>
+                            <p class="question__text">Подать заявку можно на нашем сайте</p>
+                        </div>
+                        <div class="question__column">
+                            <button type="button" class="question__btn btn-reset">
+                                <span class="question__caption question__caption-red">А если у меня нет первоначального взноса для ипотеки?</span>
+                                <div class="question__indicator"></div>
+                            </button>
+                            <p class="question__text">Подать заявку можно на нашем сайте</p>
+                        </div>
+                        <div class="question__column">
+                            <button type="button" class="question__btn btn-reset">
+                                <span class="question__caption">Какие документы нужны для ипотеки?</span>
+                                <div class="question__indicator"></div>
+                            </button>
+                            <p class="question__text">Подать заявку можно на нашем сайте</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer pd">
+  <div class="footer__wrapper container-big">
+    <div class="footer__container container">
+      <div class="footer__body">
+        <a href="#" class="footer__column footer__logo">
+          <img src="img/logo.webp" alt="logo">
+        </a>
+        <div class="footer__column or-2">
+          <p class="footer__sub-title">Услуги</p>
+          <ul class="footer__list list-reset">
+            <li class="footer__item"><a href="#" class="footer__link">Помощь в одобрении ипотеки</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Сопровождение сделок</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Подбор новостроек</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Рефинансирование</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Кредиты бизнесу</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Инвестиции в недвижимость</a></li>
+          </ul>
+        </div>
+        <div class="footer__column or-3">
+          <p class="footer__sub-title">О компании</p>
+          <ul class="footer__list list-reset">
+            <li class="footer__item"><a href="#" class="footer__link">О нас</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Вакансии</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Блог</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Блог</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Кейсы и отзывы</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__column or-1">
+          <p class="footer__sub-title">Контакты</p>
+          <a href="tel:+78000000000" class="footer__number fz-24">8 800 000-00-00</a>
+          <p class="footer__time">Ежедневно с 09–00 до 21–00</p>
+          <p class="footer__text">Электронная почта</p>
+          <a href="mailto:info@domen.ru" class="footer__email fz-24">info@domen.ru</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__footer container container-big d-flex f-ac f-jsb">
+    <div class="footer__rights or-2">@ 2013 — <span class="footer__current-year">2023</span>  ООО «Ипотека просто» | Все права защищены</div>
+    <button type="button" class="footer__terms privacy-btn btn-reset or-1">Политика конфиденциальности</button>
+    <a href="https://business-up.org/" target="_blank" class="footer__business d-flex f-ac or-3">
+      <img src="./img/business-up.webp" alt="Изображение" loading="lazy">
+      <div class="footer__line"></div>
+      <span>Разработка <br>
+        и продвижение с любовью</span>
+    </a>
+  </div>
+</footer>
+
+        <div class="video-modal">
+    <div class="video-content">
+        <span data-close id="close-btn" class="video-close">×</span>
+        <div class="video"></div>
+    </div>
+</div>
+        <div id="privacy" class="modal modal-privacy">
+    <div class="modal__inner privacy__inner">
+       <button class="modal__close">
+       Закрыть модальное окно
+       </button>
+       <h2 class="modal__title">
+          Политика конфендициальности
+       </h2>
+       <div class="privacy__content">
+          <h3>1. ОПРЕДЕЛЕНИЕ ТЕРМИНОВ</h3>
+          <p><strong>Администрация сайта</strong> — Так называют представляющих интересы организации специалистов, в чьи обязанности входит управление сайтом, то есть организация и (или) обработка поступивших на него персональных данных. Для выполнения этих обязанностей они должны чётко представлять, для чего обрабатываются сведения, какие сведения должна быть обработаны, какие действия (операции) должны производиться с полученными сведениями.</p>
+          <p><strong>Персональные данные</strong> — сведения, имеющие прямое или косвенное отношение к определённому либо определяемому физическому лицу (также называемому субъектом персональных данных).</p>
+          <p><strong>Обработка персональных данных</strong> — любая операция (действие) либо совокупность таковых, которые Администрация производит с персональными данными. Их могут собирать, записывать, систематизировать, накапливать, хранить, уточнять (при необходимости обновлять или изменять), извлекать, использовать, передавать (распространять, предоставлять, открывать к ним доступ), обезличивать, блокировать, удалять и даже уничтожать. Данные операции (действия) могут выполняться как автоматически, так и вручную.</p>
+          <p><strong>Конфиденциальность персональных данных</strong> — обязательное требование, предъявляемое к Оператору или иному работающему с данными Пользователя должностному лицу, хранить полученные сведения в тайне, не посвящая в них посторонних, если предоставивший персональные данные Пользователь не изъявил своё согласие, а также отсутствует законное основание для разглашения.</p>
+          <p><strong>Пользователь сайта Интернет-магазина</strong> (далее — Пользователь) — человек, посетивший сайт Интернет-магазина, а также пользующийся его программами и продуктами.</p>
+          <p><strong>Cookies</strong> — короткий фрагмент данных, пересылаемый веб-браузером или веб-клиентом веб-серверу в HTTP-запросе, всякий раз, когда Пользователь пытается открыть страницу Интернет-магазина. Фрагмент хранится на компьютере Пользователя.</p>
+          <p><strong>IP-адрес</strong> — уникальный сетевой адрес узла в компьютерной сети, построенной по протоколу TCP/IP.</p>
+          <h3>2. ОБЩИЕ ПОЛОЖЕНИЯ</h3>
+          <p>Просмотр сайта, а также использование его программ и продуктов подразумевают автоматическое согласие с принятой там Политикой конфиденциальности, подразумевающей предоставление Пользователем персональных данных на обработку.</p>
+          <p>Если Пользователь не принимает существующую Политику конфиденциальности, Пользователь должен покинуть сайт.</p>
+          <p>Имеющаяся Политика конфиденциальности распространяется только на сайт. Если по ссылкам, размещённым на сайте, Пользователь зайдёт на ресурсы третьих лиц, Сайт за его действия ответственности не несёт.</p>
+          <p>Проверка достоверности персональных данных, которые решил сообщить принявший Политику конфиденциальности Пользователь, не входит в обязанности Администрации сайта.</p>
+          <h3>3. ПРЕДМЕТ ПОЛИТИКИ КОНФИДЕНЦИАЛЬНОСТИ</h3>
+          <p>Согласно проводимой в текущий период Политике конфиденциальности Администрация обязана не разглашать персональные данные, сообщаемые Пользователями, регистрирующимися на сайте или оформляющими заказ на покупку товара, а также обеспечивать этим данным абсолютную конфиденциальность.</p>
+          <p>I. Чтобы сообщить персональные данные, Пользователь заполняет расположенные на сайте электронные формы. Персональными данными Пользователя, которые подлежат обработке, являются:</p>
+          <ol>
+             <li>его фамилия, имя, отчество;</li>
+             <li>его контактный телефон;</li>
+             <li>его электронный адрес (e-mail);</li>
+          </ol>
+          <p>II. Защита данных, автоматически передаваемых при просмотре рекламных блоков и посещении страниц с установленными на них статистическими скриптами системы (пикселями) осуществляется сайтом. Вот перечень этих данных: IP-адрес; сведения из cookies; сведения о браузере (либо другой программе, через которую становится доступен показ рекламы); время посещения сайта; адрес страницы, на которой располагается рекламный блок; реферер (адрес предыдущей страницы).</p>
+          <p>III. Последствием отключения cookies может стать невозможность доступа к требующим авторизации частям сайта.</p>
+          <p>IV. Любые другие неоговорённые выше персональные сведения (о том, когда и какие покупки были сделаны, какой при этом использовался браузер, какая была установлена операционная система и пр.) надёжно хранятся и не распространяются. Исключение существующая Политика конфиденциальности предусматривает для случаев, описанных в п. п. 5.2 и 5.3.</p>
+          <h3>4. ЦЕЛИ СБОРА ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ ПОЛЬЗОВАТЕЛЯ</h3>
+          <ol>
+             <li>Идентифицировать Пользователя, который прошёл процедуру регистрации на сайте, чтобы оформить заказ и (или) приобрести товар или услугу данного сайта дистанционно.</li>
+             <li>Открыть Пользователю доступ к персонализированным ресурсам данного сайта.</li>
+             <li>Установить с Пользователем обратную связь, под которой подразумевается, в частности, рассылка запросов и уведомлений, касающихся использования сайта, обработка пользовательских запросов и заявок, оказание прочих услуг.</li>
+             <li>Определить местонахождение Пользователя, чтобы обеспечить безопасность платежей и предотвратить мошенничество.</li>
+             <li>Подтвердить, что данные, которые предоставил Пользователь, полны и достоверны.</li>
+             <li>Обрабатывать и получать платежи, подтверждать налог или налоговые льготы, оспаривать платёж, определять, целесообразно ли предоставить конкретному Пользователю кредитную линию.</li>
+             <li>Обеспечить Пользователю максимально быстрое решение проблем, встречающихся при использовании сайта, за счёт эффективной клиентской и технической поддержки.</li>
+             <li>Своевременно информировать Пользователя об обновлённой продукции, ознакомлять его с уникальными предложениями, новыми прайсами, новостями о деятельности сайта или его партнёров и прочими сведениями, если Пользователь изъявит на то своё согласие.</li>
+             <li>Рекламировать товары сайта, если Пользователь изъявит на то своё согласие.</li>
+             <li>Предоставить Пользователю доступ на сайты или сервисы сайта, помогая ему тем самым получать продукты, обновления и услуги.</li>
+          </ol>
+          <h3>5. СПОСОБЫ И СРОКИ ОБРАБОТКИ ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ</h3>
+          <ol>
+             <li>Срок обработки персональных данных Пользователя ничем не ограничен. Процедура обработки может проводиться любым предусмотренным законодательством способом. В частности, с помощью информационных систем персональных данных, которые могут вестись автоматически либо без средств автоматизации.</li>
+             <li>Обработанные Администрацией сайта персональные данные Пользователя могут передаваться третьим лицам, в число которых входят курьерские службы, организации почтовой связи, операторы электросвязи. Делается это для того, чтобы выполнить заказ Пользователя, оставленный им на сайте, и доставить товар по адресу. Согласие Пользователя на подобную передачу предусмотрено правилами политики сайта.</li>
+             <li>Также обработанные Администрацией сайта персональные данные могут передаваться уполномоченным органов государственной власти Российской Федерации, если это осуществляется на законных основаниях и в предусмотренном российским законодательством порядке.</li>
+             <li>Если персональные данные будут утрачены или разглашены, Пользователь уведомляется об этом Администрацией сайта.</li>
+             <li>Все действия Администрации сайта направлены на то, чтобы не допустить к персональным данным Пользователя третьих лиц (за исключением п. п. 5.2, 5.3). Последним эта информация не должна быть доступна даже случайно, дабы те не уничтожили её, не изменили и не блокировали, не копировали и не распространяли, а также не совершали прочие противозаконные действия. Для защиты пользовательских данных Администрация располагает комплексом организационных и технических мер.</li>
+             <li>Если персональные данные будут утрачены либо разглашены, Администрация сайта совместно с Пользователем готова принять все возможные меры, дабы предотвратить убытки и прочие негативные последствия, вызванные данной ситуацией.</li>
+          </ol>
+          <h3>6. Обязательства сторон</h3>
+          <p><strong>Обязательства Пользователя:</strong></p>
+          <ol>
+             <li>Сообщение соответствующих требованиям сайта сведений о себе.</li>
+             <li>Обновление и дополнение предоставляемых им сведений в случае изменения таковых.</li>
+          </ol>
+          <p><strong>Обязательства Администрации сайта:</strong></p>
+          <ol>
+             <li>Применение полученных сведений исключительно в целях, обозначенных в п. 4 существующей Политики конфиденциальности.</li>
+             <li>Обеспечение конфиденциальности поступивших от Пользователя сведений. Они не должны разглашаться, если Пользователь не даст на то письменное разрешение. Также Администрация не имеет права продавать, обменивать, публиковать либо разглашать прочими способами переданные Пользователем персональные данные, исключая п. п. 5.2 и 5.3 существующей Политики конфиденциальности.</li>
+             <li>Принятие мер предосторожности, дабы персональные данные Пользователя оставались строго конфиденциальными, точно также, как остаются конфиденциальными такого рода сведения в современном деловом обороте.</li>
+             <li>Блокировка персональных пользовательских данных с того момента, с которого Пользователь либо его законный представитель сделает соответствующий запрос. Право сделать запрос на блокировку также предоставляется органу, уполномоченному защищать права Пользователя, предоставившего Администрации сайта свои данные, на период проверки, в случае обнаружения недостоверности сообщённых персональных данных либо неправомерности действий.</li>
+          </ol>
+          <h3>7. ОТВЕТСТВЕННОСТЬ СТОРОН</h3>
+          <p>В случае неисполнения Администрацией сайта собственных обязательств и, как следствие, убытков Пользователя, понесённых из-за неправомерного использования предоставленной им информации, ответственность возлагается на неё. Об этом, в частности, утверждает российское законодательство. Исключение существующая в настоящее время Политика конфиденциальности делает для случаев, отражённых в п. п. 5.2, 5.3 и 7.2. I.</p>
+          <p>Но существует ряд случаев, когда Администрация сайта ответственности не несёт, если пользовательские данные утрачиваются или разглашаются. Это происходит тогда, когда они:</p>
+          <ol>
+             <li>Превратились в достояние общественности до того, как были утрачены или разглашены.</li>
+             <li>Были предоставлены третьими лицами до того, как их получила Администрация сайта.</li>
+             <li>Разглашались с согласия Пользователя.</li>
+          </ol>
+          <h3>8. РАЗРЕШЕНИЕ СПОРОВ</h3>
+          <p>Если Пользователь недоволен действиями Администрации сайта и намерен отстаивать свои права в суде, до того как обратиться с иском, он в обязательном порядке должен предъявить претензию (письменно предложить урегулировать конфликт добровольно).</p>
+          <p>I. Получившая претензию Администрация обязана в течение 30 календарных дней с даты её получения письменно уведомить Пользователя о её рассмотрении и принятых мерах.</p>
+          <p>II. Если обе стороны так и не смогли договориться, спор передаётся в судебный орган, где его должны рассмотреть согласно действующему российскому законодательству.</p>
+          <p>III. Регулирование отношений Пользователя и Администрации сайта в Политике конфиденциальности проводится согласно действующему российскому законодательству.</p>
+          <h3>9. ДОПОЛНИТЕЛЬНЫЕ УСЛОВИЯ</h3>
+          <p>Администрация сайта вправе менять существующую на текущий момент Политику конфиденциальности, не спрашивая согласия у Пользователя.</p>
+          <p>I. Вступление в силу новой Политики конфиденциальности начинается после того, как информация о ней будет выложена на сайт, если изменившаяся Политика не подразумевает иного варианта размещения.</p>
+          <p>II. Все предложения, пожелания, требования или вопросы по настоящей Политике конфиденциальности следует сообщать в раздел обратной связи, расположенный по адресу: <a href="https://business-up.org">https://business-up.org</a>. Или путем отправки электронного письма по адресу <a href="mailto:info@business-up.org">info@business-up.org</a>.</p>
+          <p>III. Прочитать о существующей Политике конфиденциальности можно, зайдя на страницу по адресу <a href="https://business-up.org">https://business-up.org</a>. Обновлено «1» июля 2017 год.</p>
+       </div>
+    </div>
+</div>
+
+    </div>
+
+</body>
+
+</html>
