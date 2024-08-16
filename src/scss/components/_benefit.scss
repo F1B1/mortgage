@@ -13,6 +13,11 @@
         margin-top: #{fluid(32px, 64px, 375px, 1920px)};
         margin-bottom: 32px;
         gap: 16px;
+        &-small{
+            .benefit__item{
+                min-height: #{fluid(202px, 456px, 375px, 1920px)};
+            }
+        }
         @include mobile{
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         }
@@ -66,9 +71,14 @@
             }
         }
         @media (hover: none){
-            background-color: var(--dark);
+            background-color: var(--red);
             color: var(--white); 
         }
     }
 }
 
+.benefit-leasing{
+    .benefit__title{
+        max-width: 980px;
+    }
+}

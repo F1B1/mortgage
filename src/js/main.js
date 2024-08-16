@@ -15,6 +15,7 @@ import { question } from './functions/question.js';
 import { modal } from "./functions/modal.js";
 import { loadMap } from "./functions/map.js";
 import { currentYear } from "./functions/currentYear.js";
+import { showButton } from "./functions/showbutton.js";
 
 import { 
   animatePrimary,
@@ -187,7 +188,8 @@ window.addEventListener('DOMContentLoaded',(e)=>{
       ".question__btn": question,
       ".contact__map": loadMap,
       ".footer__terms": ()=>modal('.privacy-btn', '.modal-privacy', '.modal__close'),
-      ".footer__current-year": ()=>currentYear('.footer__current-year')
+      ".footer__current-year": ()=>currentYear('.footer__current-year'),
+      ".credits__button":showButton
   };
 
   Object.keys(functionsMap).forEach(selector => {

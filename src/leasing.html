@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body" style="--scroll-width: 0px">
+    <h1 class="visually-hidden">Ипотека Просто</h1>
+    <div class="site-container visible">
+        @include('partials/header.html')
+        <main class="main">
+            <article class="breadcrumblist breadcrumblist-gray">
+                <div class="breadcrumblist__container container">
+                    <ol class="list-reset" itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                          <a itemprop="item" href="./main.html">
+                          <span itemprop="name">Главная</span></a>
+                          <meta itemprop="position" content="1" />
+                        </li>
+                        <li>
+                            <span class="breadcrumblist__line"></span>
+                        </li>
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                          <a class="active" itemprop="item" href="#">
+                          <span itemprop="name">Кредитование бизнеса и лизинг</span></a>
+                          <meta itemprop="position" content="2" />
+                        </li>
+                    </ol>
+                </div>
+            </article>
+            <section class="primary-three primary-three-people pd">
+                <div class="primary__wrapper container-big">
+                    <div class="primary__container container">
+                        <div class="primary__body primary__body-key">
+                            <h2 class="primary-second__title title">Кредитование <br> бизнеса и лизинг</h2>
+                            <p class="primary-second__sub-title sub-title">Кредитуем строителей частных домов под 1% по государственной программе</p>
+                        </div>
+                        <div class="primary__bg-primary primary__bg-primary-4 primary__bg-build">
+                            <img src="img/bg8.webp" alt="photo">
+                        </div>
+                        <picture class="primary__bg-city primary__bg-city-2">
+                            <source media="(max-width: 767px)"  srcset="img/city.webp">
+                            <img src="img/city-small.webp" alt="photo">
+                        </picture>
+                    </div>
+                </div>
+            </section>
+            <section class="benefit benefit-leasing pd">
+                <div class="benefit__container container">
+                    <h2 class="benefit__title title-section mb-32">Кредитные решения, адаптированные под быстрые изменения рынка</h2>
+                    <div class="benefit__columns">
+                        <div class="benefit__column">
+                            <div class="benefit__item pd-32">
+                                <h3 class="benefit__sub-title">Подготовка документов</h3>
+                                <p class="benefit__text">Поможем в составлении бизнес-плана и подготовке необходимых документов.</p>
+                            </div>
+                        </div>
+                        <div class="benefit__column">
+                            <div class="benefit__item pd-32">
+                                <h3 class="benefit__sub-title">Проверенные партнеры</h3>
+                                <p class="benefit__text">Мы сотрудничаем с более чем 40 банками, чтобы предложить вам самые выгодные условия.</p>
+                            </div>
+                        </div>
+                        <div class="benefit__column">
+                            <div class="benefit__item pd-32">
+                                <h3 class="benefit__sub-title">Отсутствие скрытых комиссий</h3>
+                                <p class="benefit__text">Предоставляем полную и чёткую информацию о всех платежах и условиях кредитного договора.</p>
+                            </div>
+                        </div>
+                        <div class="benefit__column">
+                            <div class="benefit__item pd-32">
+                                <h3 class="benefit__sub-title">Быстрая оценка и одобрение</h3>
+                                <p class="benefit__text">Подберём для вас оптимальные кредитные или лизинговые предложения в течение 24 часов с момента обращения.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="benefit__button btn">Получить консультацию</a>
+                </div>
+            </section>
+            <section class="credits pd">
+                <div class="credits__container container">
+                    <h2 class="credits__title title-section">Гибкие условия кредитования для разных бизнес-моделей</h2>
+                    <p class="credits__text fz-24">На недвижимость, транспорт, модернизацию производства или пополнение оборотных средств</p>
+                    <div class="credits__columns">
+                        <div class="credits__column pd-32">
+                            <h3 class="credits__sub-title">Экспресс-кредит</h3>
+                            <p class="credits__sub-text">Быстрое кредитное решение на любые бизнес-цели</p>
+                            <div class="credits__block">
+                                <a href="#" class="credits__link arr-rt">Подать заявку
+                                    <svg width="20" height="20">
+                                        <use xlink:href="./img/sprite.svg#arrow-line"></use>
+                                    </svg>
+                                </a>
+                                <div class="credits__image">
+                                    <img src="img/credit01.webp" alt="image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="credits__column pd-32">
+                            <h3 class="credits__sub-title">Овердрафт</h3>
+                            <p class="credits__sub-text">Кредит для оплаты срочных платежей при недостатке средств на счёте</p>
+                            <div class="credits__block">
+                                <a href="#" class="credits__link arr-rt">Подать заявку
+                                    <svg width="20" height="20">
+                                        <use xlink:href="./img/sprite.svg#arrow-line"></use>
+                                    </svg>
+                                </a>
+                                <div class="credits__image">
+                                    <img src="img/credit02.webp" alt="image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="credits__column pd-32">
+                            <h3 class="credits__sub-title">Кредитная линия</h3>
+                            <p class="credits__sub-text">Возобновляемый лимит на использование средств</p>
+                            <div class="credits__block">
+                                <a href="#" class="credits__link arr-rt">Подать заявку
+                                    <svg width="20" height="20">
+                                        <use xlink:href="./img/sprite.svg#arrow-line"></use>
+                                    </svg>
+                                </a>
+                                <div class="credits__image">
+                                    <img src="img/credit03.webp" alt="image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="credits__column pd-32">
+                            <h3 class="credits__sub-title">Оборотный кредит</h3>
+                            <p class="credits__sub-text">Усильте платёжеспособность бизнеса при реализации производственного цикла</p>
+                            <div class="credits__block">
+                                <a href="#" class="credits__link arr-rt">Подать заявку
+                                    <svg width="20" height="20">
+                                        <use xlink:href="./img/sprite.svg#arrow-line"></use>
+                                    </svg>
+                                </a>
+                                <div class="credits__image">
+                                    <img src="img/credit04.webp" alt="image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="credits__column pd-32">
+                            <h3 class="credits__sub-title">Банковская <br> гарантия</h3>
+                            <p class="credits__sub-text">Обязательство банка оплатить долг при невыполнении заемщиком</p>
+                            <div class="credits__block">
+                                <a href="#" class="credits__link arr-rt">Подать заявку
+                                    <svg width="20" height="20">
+                                        <use xlink:href="./img/sprite.svg#arrow-line"></use>
+                                    </svg>
+                                </a>
+                                <div class="credits__image">
+                                    <img src="img/credit05.webp" alt="image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="credits__column pd-32">
+                            <h3 class="credits__sub-title">Финансирование капитальных затрат</h3>
+                            <p class="credits__sub-text">Приобретайте недвижимость, развивайте новые направления и расширяйте бизнес инвестируя в него</p>
+                            <div class="credits__block">
+                                <a href="#" class="credits__link arr-rt">Подать заявку
+                                    <svg width="20" height="20">
+                                        <use xlink:href="./img/sprite.svg#arrow-line"></use>
+                                    </svg>
+                                </a>
+                                <div class="credits__image">
+                                    <img src="img/credit06.webp" alt="image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="credits__column pd-32">
+                            <h3 class="credits__sub-title">Кредит с гос.поддержкой</h3>
+                            <p class="credits__sub-text">Заем с льготами от государства</p>
+                            <div class="credits__block">
+                                <a href="#" class="credits__link arr-rt">Подать заявку
+                                    <svg width="20" height="20">
+                                        <use xlink:href="./img/sprite.svg#arrow-line"></use>
+                                    </svg>
+                                </a>
+                                <div class="credits__image">
+                                    <img src="img/credit07.webp" alt="image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="credits__column pd-32">
+                            <h3 class="credits__sub-title">Кредит на открытие бизнеса</h3>
+                            <p class="credits__sub-text">Заем для запуска и развития нового дела</p>
+                            <div class="credits__block">
+                                <a href="#" class="credits__link arr-rt">Подать заявку
+                                    <svg width="20" height="20">
+                                        <use xlink:href="./img/sprite.svg#arrow-line"></use>
+                                    </svg>
+                                </a>
+                                <div class="credits__image">
+                                    <img src="img/credit08.webp" alt="image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="credits__button btn btn-black">Показать еще</button>
+                </div>
+            </section>
+            <section class="step pd">
+                <div class="step__container container">
+                    <h2 class="step__title title-section">Возьмем всю работу на себя</h2>
+                    <div class="step__columns">
+                        <div class="step__column">
+                            <div class="step__top">
+                                <div class="step__number">1</div>
+                                <div class="step__line"></div>
+                            </div>
+                            <p class="step__text">Проведём финансовое консультрование</p>
+                        </div>
+                        <div class="step__column">
+                            <div class="step__top">
+                                <div class="step__number">2</div>
+                                <div class="step__line"></div>
+                            </div>
+                            <p class="step__text">Изучим и выберем предложение с самой низкой ставкой</p>
+                        </div>
+                        <div class="step__column">
+                            <div class="step__top">
+                                <div class="step__number">3</div>
+                                <div class="step__line"></div>
+                            </div>
+                            <p class="step__text">Сформируем и подготовим пакет документов</p>
+                        </div>
+                        <div class="step__column">
+                            <div class="step__top">
+                                <div class="step__number">4</div>
+                                <div class="step__line"></div>
+                            </div>
+                            <p class="step__text">Подадим документы кредитору</p>
+                        </div>
+                        <div class="step__column">
+                            <div class="step__top">
+                                <div class="step__number">5</div>
+                                <div class="step__line"></div>
+                            </div>
+                            <p class="step__text">Вам осталось только получить деньги и оплатить наши услуги</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="help help-gray pd">
+                <div class="help__wrapper container-big">
+                    <div class="help__container container">
+                        <div class="help__body">
+                            <div class="help__block">
+                                <h2 class="help__title title-section">Подберём кредит под ваши задачи, для нас нет сложных случаев</h2>
+                                <p class="help__text">Мы детально изучим все данные, зададим уточняющие вопросы и подскажем оптимальный путь решения на максимально выгодных для вас условиях.</p>
+                            </div>
+                            <div class="help__column">
+                                <form action="#" id="helpform-company" class="help__form">
+                                    <div class="help__inputs">
+                                        <div class="help__input">
+                                            <label for="name-company">Имя <span>*</span></label>
+                                            <input name="name-company" id="name-company" type="text" placeholder="Ваше имя" class="input-help help__name" required>
+                                        </div>
+                                        <div class="help__input">
+                                            <label for="phone-company">Номер телефона <span>*</span></label>
+                                            <input name="phone-company" id="phone-company" type="tel" placeholder="999 123 45 67" class="input-help help__phone" required>
+                                        </div>
+                                    </div>
+                                    <div class="help__textarea">
+                                        <label for="comment-company">Комментарий <span>*</span></label>
+                                        <textarea name="comment-company" id="comment-company" placeholder="Опишите вашу ситуацию" class="help__comment input-help"></textarea>
+                                    </div>
+                                    <div class="help__check">
+                                        <label for="agreement-company">
+                                            <input type="checkbox" id="agreement-company" name="agreement-company" class="help__checkbox" required>Даю своё согласие на обработку персональных данных
+                                        </label>
+                                    </div>
+                                    <div class="help__confirm">
+                                        <button type="submit" class="help__button btn">Бесплатная консультация</button>
+                                        <div class="help__socials socials-big">
+                                            <a href="#" class="appeal__social social">
+                                                <svg width="24" height="24">
+                                                    <use xlink:href="./img/sprite.svg#tg"></use>
+                                                </svg>
+                                            </a>
+                                            <a href="#" class="appeal__social social">
+                                                <svg width="32" height="32">
+                                                    <use xlink:href="./img/sprite.svg#whatsapp"></use>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="appeal appeal-leasing pd">
+                <div class="appeal__container container">
+                    <div class="appeal__body">
+                        <div class="appeal__info">
+                            <h2 class="appeal__title title-section sticky mgb-80">Лизинг, который подстраивается под нужды вашего бизнеса</h2>
+                            <div class="appeal__socials">
+                                <a href="#" class="appeal__social social social-whatsapp">
+                                    <svg width="24" height="24">
+                                        <use xlink:href="./img/sprite.svg#tg"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="appeal__social social social-whatsapp">
+                                    <svg width="32" height="32">
+                                        <use xlink:href="./img/sprite.svg#whatsapp"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="appeal__column">
+                            <p class="appeal__sub-title">Инвестируйте в аренду с выкупом и сэкономьте до 30% на транспорте, технике, оборудовании и недвижимости.</p>
+                            <div class="appeal__wrapper">
+                                <div class="appeal__inner pd-24">
+                                    <p class="appeal__number">до 20%</p>
+                                    <p class="appeal__sub-text">Экономия на налоге на прибыль</p>
+                                </div>
+                                <div class="appeal__inner pd-24">
+                                    <p class="appeal__number">до 20%</p>
+                                    <p class="appeal__sub-text">Возврат <br> НДС</p>
+                                </div>
+                                <div class="appeal__inner pd-24">
+                                    <p class="appeal__number">от 550 тыс.₽</p>
+                                    <p class="appeal__sub-text">Составляет чистая выгода при покупке в лизинг</p>
+                                </div>
+                            </div>
+                            <div class="appeal__block">
+                                <p class="appeal__help fz-24">Что можно взять в лизинг</p>
+                                <ul class="appeal__list">
+                                    <li><span>Легковые автомобили для перевозки 8 человек или груза до 800 кг</span></li>
+                                    <li><span>Грузовики: самосвалы, тягачи, рефрижераторы, прицепы и полуприцепы</span></li>
+                                    <li><span>Коммерческий транспорт: микроавтобусы, фургоны, пикапы</span></li>
+                                    <li><span>Спецтехнику: экскаваторы, бульдозеры, катки, комбайны, тракторы</span></li>
+                                    <li><span>Оборудование: медицинское, энергетическое, строительное</span></li>
+                                    <li><span>Недвижимость</span></li>
+                                </ul>
+                            </div>
+                            <a href="#" class="appeal__button btn btn-black">Подать заявку на лизинг</a>
+                            <div class="appeal__socials appeal__socials-mobile">
+                                <a href="#" class="appeal__social social">
+                                    <svg width="24" height="24">
+                                        <use xlink:href="./img/sprite.svg#tg"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="appeal__social social social-whatsapp">
+                                    <svg width="32" height="32">
+                                        <use xlink:href="./img/sprite.svg#whatsapp"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section class="benefit pd">
+                <div class="benefit__container container">
+                    <h2 class="benefit__title title-section mb-32">Условия лизинга </h2>
+                    <div class="benefit__columns benefit__columns-small">
+                        <div class="benefit__column">
+                            <div class="benefit__item pd-32">
+                                <h3 class="benefit__sub-title">от 0%</h3>
+                                <p class="benefit__text">Минимальный аванс.</p>
+                            </div>
+                        </div>
+                        <div class="benefit__column">
+                            <div class="benefit__item pd-32">
+                                <h3 class="benefit__sub-title">1-7 лет</h3>
+                                <p class="benefit__text">Срок договора лизинга.</p>
+                            </div>
+                        </div>
+                        <div class="benefit__column">
+                            <div class="benefit__item pd-32">
+                                <h3 class="benefit__sub-title">0 месяцев</h3>
+                                <p class="benefit__text">Любой срок регистрации бизнеса.</p>
+                            </div>
+                        </div>
+                        <div class="benefit__column">
+                            <div class="benefit__item pd-32">
+                                <h3 class="benefit__sub-title">1 тыс.₽</h3>
+                                <p class="benefit__text">Минимальный выкупной платеж.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="benefit__button btn">Получить консультацию</a>
+                </div>
+            </section>
+            <section class="step pd">
+                <div class="step__container container">
+                    <h2 class="step__title title-section">Мы позаботимся о всех деталях</h2>
+                    <div class="step__columns">
+                        <div class="step__column">
+                            <div class="step__top">
+                                <div class="step__number">1</div>
+                                <div class="step__line"></div>
+                            </div>
+                            <p class="step__text">Найдём подходящую лизинговую компанию</p>
+                        </div>
+                        <div class="step__column">
+                            <div class="step__top">
+                                <div class="step__number">2</div>
+                                <div class="step__line"></div>
+                            </div>
+                            <p class="step__text">Переговорим по условиям лучшей ставки</p>
+                        </div>
+                        <div class="step__column">
+                            <div class="step__top">
+                                <div class="step__number">3</div>
+                                <div class="step__line"></div>
+                            </div>
+                            <p class="step__text">Оценим финансовые выгоды</p>
+                        </div>
+                        <div class="step__column">
+                            <div class="step__top">
+                                <div class="step__number">4</div>
+                                <div class="step__line"></div>
+                            </div>
+                            <p class="step__text">Сформируем <br> и подготовим пакет документов</p>
+                        </div>
+                        <div class="step__column">
+                            <div class="step__top">
+                                <div class="step__number">5</div>
+                                <div class="step__line"></div>
+                            </div>
+                            <p class="step__text">Вам осталось только получить деньги и оплатить наши услуги</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="help pd">
+                <div class="help__container container">
+                    <div class="help__body">
+                        <h2 class="help__title title-section">Подайте заявку <br> на лизинг онлайн</h2>
+                        <div class="help__column">
+                            <p class="help__sub-title mb-32a">Подберем для вас лучшие условия лизинга, избавив вас от лишних хлопот и неожиданных расходов</p>
+                            <p class="help__text">Проанализируем вашу ситуацию и предложим несколько вариантов решения. Подберём оптимальные условия лизинга</p>
+                            <form method="post" action="#" id="helpform1" class="help__form">
+                                <div class="help__inputs">
+                                    <div class="help__input">
+                                        <label for="name">Имя <span>*</span></label>
+                                        <input name="name" id="name" type="text" placeholder="Ваше имя" class="input-help help__name" required>
+                                    </div>
+                                    <div class="help__input">
+                                        <label for="phone">Номер телефона <span>*</span></label>
+                                        <input name="phone" id="phone" type="tel" placeholder="999 123 45 67" class="input-help help__phone" required>
+                                    </div>
+                                </div>
+                                <div class="help__textarea">
+                                    <label for="comment">Комментарий <span>*</span></label>
+                                    <textarea name="comment" id="comment" placeholder="Опишите вашу ситуацию" class="help__comment input-help"></textarea>
+                                </div>
+                                <div class="help__check">
+                                    <label for="agreement">
+                                        <input type="checkbox" id="agreement" name="agreement" class="help__checkbox" required>Даю своё согласие на обработку персональных данных
+                                    </label>
+                                </div>
+                                <div class="help__confirm">
+                                    <button type="submit" class="help__button btn btn-black">Бесплатная консультация</button>
+                                    <div class="help__socials">
+                                        <a href="#" class="appeal__social social">
+                                            <svg width="24" height="24">
+                                                <use xlink:href="./img/sprite.svg#tg"></use>
+                                            </svg>
+                                        </a>
+                                        <a href="#" class="appeal__social social social-whatsapp">
+                                            <svg width="32" height="32">
+                                                <use xlink:href="./img/sprite.svg#whatsapp"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            @include('partials/review.html')
+            @include('partials/partners.html')
+            <section class="question pd">
+                <div class="question__container container">
+                    <h2 class="question__title title-section">Ответы на часто задаваемые вопросы</h2>
+                    <div class="question__columns">
+                        <div class="question__column">
+                            <button type="button" class="question__btn btn-reset">
+                                <span class="question__caption question__caption-red">Как я могу подать заявку на ипотеку?</span>
+                                <div class="question__indicator"></div>
+                            </button>
+                            <p class="question__text">Подать заявку можно на нашем сайте</p>
+                        </div>
+                        <div class="question__column">
+                            <button type="button" class="question__btn btn-reset">
+                                <span class="question__caption">Какой минимальный первоначальный взнос возможен по ипотеке?</span>
+                                <div class="question__indicator"></div>
+                            </button>
+                            <p class="question__text">Подать заявку можно на нашем сайте</p>
+                        </div>
+                        <div class="question__column">
+                            <button type="button" class="question__btn btn-reset">
+                                <span class="question__caption question__caption-red">А если у меня нет первоначального взноса для ипотеки?</span>
+                                <div class="question__indicator"></div>
+                            </button>
+                            <p class="question__text">Подать заявку можно на нашем сайте</p>
+                        </div>
+                        <div class="question__column">
+                            <button type="button" class="question__btn btn-reset">
+                                <span class="question__caption">Какие документы нужны для ипотеки?</span>
+                                <div class="question__indicator"></div>
+                            </button>
+                            <p class="question__text">Подать заявку можно на нашем сайте</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @include('partials/footer.html')
+        @include('partials/modalVideos.html')
+        @include('partials/modal.html')
+        <!-- @include('partials/modals.html')
+        @include('partials/modal.html') -->
+    </div>
+
+    <!-- @include('partials/scripts.html') -->
+</body>
+
+</html>

@@ -20,8 +20,11 @@
     }
 
     &__title {
-
-  
+        margin-right: 20px;
+        @include tablet{
+            margin-right: 0;
+            margin-bottom: 32px;
+        }
     }
 
     &__socials {
@@ -93,9 +96,6 @@
 
     &__mobile{
         display: none;
-        .appeal__title{
-            margin: 0px 0px 32px 0px;
-        }
         .video__wrapper{
             margin: 0px 0px 32px 0px;
             @include small-tablet{
@@ -171,6 +171,58 @@
             svg{
                 width: 24px;
                 height: 24px;
+            }
+        }
+    }
+}
+
+.appeal-leasing{
+    .appeal__column{
+        flex: 0 1 52%;
+    }
+    .appeal__title{
+        @include small-tablet{
+            margin-bottom: 16px;
+        }
+    }
+    .appeal__number{
+        font-size: 32px;
+        color: var(--red);
+        text-transform: uppercase;
+    }
+    .appeal__help{
+        font-weight: 400;
+    }
+    .appeal__list{
+        li{
+            color: var(--red);
+            span{
+                color: var(--dark);
+            }
+        }
+    }
+    .appeal__button{
+        margin: 64px 0 0 0;
+        @include small-tablet{
+            margin-top: 24px;
+        }
+    }
+    .appeal__body{
+        @include tablet{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .appeal__socials{
+        &-mobile{
+            display: none;
+            position: relative;
+        }
+        @include tablet{
+            display: none;
+            &-mobile{
+                margin-top: 16px;
+                display: flex;
             }
         }
     }
