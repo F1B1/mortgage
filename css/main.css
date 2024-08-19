@@ -774,6 +774,7 @@ label span {
   width: 100%;
   height: 100%;
   z-index: 25;
+  padding: 0 15px;
   background-color: rgba(0, 0, 0, 0.8);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -794,18 +795,18 @@ label span {
   opacity: 1;
   visibility: visible;
 }
-.modal-privacy {
-  padding: 0 15px;
+.modal__inner {
+  padding: clamp(1.25rem, -1.789rem + 4.9vw, 2.5rem);
+  max-width: 1200px;
+  width: 100%;
+  height: 70vh;
+  overflow-y: auto;
+  background-color: var(--white);
+  border-radius: 16px;
+  position: relative;
+  z-index: 1;
 }
-.modal-privacy.show .privacy__inner {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-.modal-privacy .modal__title {
-  font-size: clamp(1.5rem, 2.5306122449vw + 0.9068877551rem, 3.4375rem);
-}
-.modal-privacy .modal__close {
+.modal__close {
   top: 15px;
   right: 15px;
   position: absolute;
@@ -831,7 +832,7 @@ label span {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.modal-privacy .modal__close::after, .modal-privacy .modal__close::before {
+.modal__close::after, .modal__close::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -839,15 +840,23 @@ label span {
   border-radius: 20px;
   background-color: var(--dark);
 }
-.modal-privacy .modal__close::before {
+.modal__close::before {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-.modal-privacy .modal__close::after {
+.modal__close::after {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+.modal-privacy.show .privacy__inner {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.modal-privacy .modal__title {
+  font-size: clamp(1.5rem, 2.5306122449vw + 0.9068877551rem, 3.4375rem);
 }
 .modal-privacy h3 {
   padding: 1em 0;
@@ -866,22 +875,43 @@ label span {
   row-gap: 15px;
   margin: 0;
 }
-
-.privacy__inner {
-  padding: clamp(1.25rem, -1.789rem + 4.9vw, 2.5rem);
-  max-width: 1200px;
-  width: 100%;
-  height: 70vh;
-  overflow-y: auto;
-  background-color: var(--white);
-  border-radius: 16px;
-  position: relative;
-  z-index: 1;
+.modal-privacy .privacy__inner {
   -webkit-transform: scale(0.7);
   -ms-transform: scale(0.7);
   transform: scale(0.7);
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+.modal-form__inner {
+  max-width: 760px;
+}
+.modal-form .modal__title {
+  font-weight: 400;
+  font-size: clamp(1.5rem, 0.9795918367vw + 1.2704081633rem, 2.25rem);
+  text-align: center;
+  margin-bottom: 32px;
+}
+.modal-form .help__inputs {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.modal-form .help__button {
+  width: 100%;
+}
+.modal-form .help__select {
+  margin-bottom: 16px;
+}
+.modal-form .help__select-text {
+  margin-bottom: 8px;
+}
+.modal-form .help__select-wrapper {
+  position: relative;
+}
+.modal-form .custom-select-trigger {
+  color: var(--dark-60);
 }
 
 .video {
@@ -1003,6 +1033,74 @@ label span {
 .video__icon:hover svg {
   fill: var(--white);
 }
+.custom-select {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  width: 100%;
+}
+
+.custom-select-trigger {
+  min-height: 52px;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  padding: 0px 0px 0px 16px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid var(--dark-10);
+}
+
+.custom-options {
+  display: none;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.custom-select.open .custom-options {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  border-radius: 8px;
+  border: 1px solid var(--dark-10);
+  background-color: var(--white);
+  margin-top: 8px;
+}
+
+.custom-option {
+  padding: 10px;
+  padding-left: 16px;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  font-size: 16px;
+  border-bottom: 1px solid var(--dark-10);
+}
+
+.custom-option:hover {
+  background: #e4e4e4;
+}
+
+.select__arrow {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 18.5px;
+}
+
 @media (max-width: 1024px) {
   .actual__wrapper {
     background-color: unset;
