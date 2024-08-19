@@ -1,0 +1,46 @@
+<div id="modalForm" class="modal modal-form">
+    <div class="modal__inner modal-form__inner">
+       <button class="modal__close">Закрыть модальное окно</button>
+       <h2 class="modal__title"> Заполните данные и мы свяжемся с вами и предложим несколько вариантов решения вашей ситуации  </h2>
+       <div class="modal-form__content">
+        <form action="#" id="modal-form" class="help__form">
+            <div class="help__inputs">
+                <div class="help__input">
+                    <label for="name-modal">Имя <span>*</span></label>
+                    <input name="name-modal" id="name-modal" type="text" placeholder="Ваше имя" class="input-help help__name" required>
+                </div>
+                <div class="help__input">
+                    <label for="phone-modal">Номер телефона <span>*</span></label>
+                    <input name="phone-modal" id="phone-modal" type="tel" placeholder="999 123 45 67" class="input-help help__phone" required>
+                </div>
+            </div>
+            <div class="help__select custom-select">
+                <label for="select-modal" class="help__select-text">Интересующая услуга</label>
+                <div class="help__select-wrapper">
+                    <div class="custom-select-trigger">Выберите услугу</div>
+                    <svg class="select__arrow" width="16" height="16">
+                        <use xlink:href="./img/sprite.svg#arrow"></use>
+                    </svg>
+                    <div class="custom-options">
+                        <div class="custom-option" data-city="service1">Услуга 1</div>
+                        <div class="custom-option" data-city="service2">Услуга 2</div>
+                        <div class="custom-option" data-city="service3">Услуга 3</div>
+                        <div class="custom-option" data-city="service4">Услуга 4</div>
+                        <div class="custom-option" data-city="service5">Услуга 5</div>
+                        <div class="custom-option" data-city="service6">Услуга 6</div>
+                    </div>
+                </div>
+                <input type="hidden" name="select-modal" id="hidden-select">
+            </div>
+            <div class="help__check">
+                <label for="agreement-modal">
+                    <input type="checkbox" id="agreement-modal" name="agreement-modal" class="help__checkbox" required>Даю своё согласие на обработку персональных данных
+                </label>
+            </div>
+            <div class="help__confirm">
+                <button type="submit" class="help__button btn">Бесплатная консультация</button>
+            </div>
+        </form>
+       </div>
+    </div>
+</div>

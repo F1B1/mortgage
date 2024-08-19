@@ -16,6 +16,7 @@ import { modal } from "./functions/modal.js";
 import { loadMap } from "./functions/map.js";
 import { currentYear } from "./functions/currentYear.js";
 import { showButton } from "./functions/showbutton.js";
+import { selectCustom } from "./functions/custom-select.js";
 
 import { 
   animatePrimary,
@@ -114,6 +115,40 @@ window.addEventListener('DOMContentLoaded',(e)=>{
       ], () => {
           console.log('Форма успешно отправлена');
       }),
+      "#modal-form": () => validateForms('#modal-form', [
+        {
+          ruleSelector: '#name-modal',
+          rules: [
+            {
+              rule: 'required',
+              errorMessage: 'Введите ваше имя!',
+            },
+            {
+              rule: 'minLength',
+              value: 3,
+              errorMessage: 'Имя должно содержать минимум 3 символа!',
+            },
+          ],
+        },
+        {
+          ruleSelector: '#phone-modal',
+          rules: [
+            {
+              rule: 'required',
+              errorMessage: 'Введите ваш номер телефона!',
+            },
+          ],
+          tel: true,
+          telError: 'Введите корректный номер телефона!',
+        }
+      ], [
+        {
+          selector: '#agreement-modal',
+          errorMessage: 'Необходимо согласие на обработку данных!',
+        },
+      ], () => {
+          console.log('Форма успешно отправлена');
+      }),
       ".case__body":()=>switchTab('[data-content]','.case__tab'),
       ".contact__body":()=>switchTab('[data-content]','.contact__button'),
       ".vacation__body":()=>switchTab('[data-content]','.vacation__button'),
@@ -188,8 +223,10 @@ window.addEventListener('DOMContentLoaded',(e)=>{
       ".question__btn": question,
       ".contact__map": loadMap,
       ".footer__terms": ()=>modal('.privacy-btn', '.modal-privacy', '.modal__close'),
+      ".modal-button": ()=>modal('.modal-button', '.modal-form', '.modal__close'),
       ".footer__current-year": ()=>currentYear('.footer__current-year'),
-      ".credits__button":showButton
+      ".credits__button":showButton,
+      ".help__select":selectCustom,
   };
 
   Object.keys(functionsMap).forEach(selector => {

@@ -1,9 +1,11 @@
 import JustValidate from 'just-validate';
 import Inputmask from "../../../node_modules/inputmask/dist/inputmask.es6.js";
+import { resetCustomSelect } from './restCustom.js';
 
 export const validateForms = (selector, rules, checkboxes = [], afterSend) => {
   const form = document?.querySelector(selector);
   const telSelector = form?.querySelector('input[type="tel"]');
+
 
   if (!form) {
     console.error('Нет такого селектора!');
@@ -69,6 +71,11 @@ export const validateForms = (selector, rules, checkboxes = [], afterSend) => {
 
     xhr.open('POST', 'mail.php', true);
     xhr.send(formData);
+
+    document.querySelectorAll('.modal').forEach(modal => {
+      modal.classList.remove('show');
+    });
+    resetCustomSelect()
 
     ev.target.reset();
   })

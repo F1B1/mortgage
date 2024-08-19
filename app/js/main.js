@@ -15034,6 +15034,51 @@ function currentYear(yearEl) {
 
 /***/ }),
 
+/***/ "./src/js/functions/custom-select.js":
+/*!*******************************************!*\
+  !*** ./src/js/functions/custom-select.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   selectCustom: () => (/* binding */ selectCustom)
+/* harmony export */ });
+function selectCustom() {
+  const customSelectTrigger = document.querySelector(".custom-select-trigger");
+  const customOptions = document.querySelector(".custom-options");
+  const customSelect = document.querySelector(".custom-select");
+  const hiddenSelectInput = document.querySelector("#hidden-select");
+  const label = document.querySelector('label[for="select-modal"]');
+  customSelectTrigger.addEventListener("click", function () {
+    customSelectTrigger.classList.toggle("open");
+    customOptions.classList.toggle("open");
+    customSelect.classList.toggle("open");
+  });
+  document.querySelectorAll(".custom-option").forEach(function (option) {
+    option.addEventListener("click", function () {
+      customSelectTrigger.textContent = this.textContent;
+      hiddenSelectInput.value = customSelectTrigger.textContent;
+      customOptions.classList.remove("open");
+      customSelectTrigger.classList.remove("open");
+      customSelect.classList.remove("open");
+    });
+  });
+  document.addEventListener("click", function (e) {
+    if (!customSelectTrigger.contains(e.target) && !customOptions.contains(e.target) && !label.contains(e.target)) {
+      customOptions.classList.remove("open");
+      customSelectTrigger.classList.remove("open");
+      customSelect.classList.remove("open");
+    }
+  });
+  label.addEventListener("click", function () {
+    customSelectTrigger.click();
+  });
+}
+
+/***/ }),
+
 /***/ "./src/js/functions/gsap-anim.js":
 /*!***************************************!*\
   !*** ./src/js/functions/gsap-anim.js ***!
@@ -15787,6 +15832,26 @@ function question() {
 
 /***/ }),
 
+/***/ "./src/js/functions/restCustom.js":
+/*!****************************************!*\
+  !*** ./src/js/functions/restCustom.js ***!
+  \****************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   resetCustomSelect: () => (/* binding */ resetCustomSelect)
+/* harmony export */ });
+function resetCustomSelect() {
+  const customSelectTrigger = document.querySelector(".custom-select-trigger");
+  const hiddenSelectInput = document.querySelector("#hidden-select");
+  customSelectTrigger.textContent = "Выберите услугу";
+  hiddenSelectInput.value = "";
+}
+
+/***/ }),
+
 /***/ "./src/js/functions/scroll.js":
 /*!************************************!*\
   !*** ./src/js/functions/scroll.js ***!
@@ -16109,6 +16174,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var just_validate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! just-validate */ "./node_modules/just-validate/dist/just-validate.es.js");
 /* harmony import */ var _node_modules_inputmask_dist_inputmask_es6_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/inputmask/dist/inputmask.es6.js */ "./node_modules/inputmask/dist/inputmask.es6.js");
+/* harmony import */ var _restCustom_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./restCustom.js */ "./src/js/functions/restCustom.js");
+
 
 
 const validateForms = function (selector, rules) {
@@ -16167,6 +16234,10 @@ const validateForms = function (selector, rules) {
     };
     xhr.open('POST', 'mail.php', true);
     xhr.send(formData);
+    document.querySelectorAll('.modal').forEach(modal => {
+      modal.classList.remove('show');
+    });
+    (0,_restCustom_js__WEBPACK_IMPORTED_MODULE_2__.resetCustomSelect)();
     ev.target.reset();
   });
 };
@@ -26680,7 +26751,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _functions_map_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./functions/map.js */ "./src/js/functions/map.js");
 /* harmony import */ var _functions_currentYear_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./functions/currentYear.js */ "./src/js/functions/currentYear.js");
 /* harmony import */ var _functions_showbutton_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./functions/showbutton.js */ "./src/js/functions/showbutton.js");
-/* harmony import */ var _functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./functions/gsap-anim.js */ "./src/js/functions/gsap-anim.js");
+/* harmony import */ var _functions_custom_select_js__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./functions/custom-select.js */ "./src/js/functions/custom-select.js");
+/* harmony import */ var _functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./functions/gsap-anim.js */ "./src/js/functions/gsap-anim.js");
+
 
 
 
@@ -26760,6 +26833,30 @@ window.addEventListener('DOMContentLoaded', e => {
     }], () => {
       console.log('Форма успешно отправлена');
     }),
+    "#modal-form": () => (0,_functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_5__.validateForms)('#modal-form', [{
+      ruleSelector: '#name-modal',
+      rules: [{
+        rule: 'required',
+        errorMessage: 'Введите ваше имя!'
+      }, {
+        rule: 'minLength',
+        value: 3,
+        errorMessage: 'Имя должно содержать минимум 3 символа!'
+      }]
+    }, {
+      ruleSelector: '#phone-modal',
+      rules: [{
+        rule: 'required',
+        errorMessage: 'Введите ваш номер телефона!'
+      }],
+      tel: true,
+      telError: 'Введите корректный номер телефона!'
+    }], [{
+      selector: '#agreement-modal',
+      errorMessage: 'Необходимо согласие на обработку данных!'
+    }], () => {
+      console.log('Форма успешно отправлена');
+    }),
     ".case__body": () => (0,_functions_switchTab_js__WEBPACK_IMPORTED_MODULE_7__.switchTab)('[data-content]', '.case__tab'),
     ".contact__body": () => (0,_functions_switchTab_js__WEBPACK_IMPORTED_MODULE_7__.switchTab)('[data-content]', '.contact__button'),
     ".vacation__body": () => (0,_functions_switchTab_js__WEBPACK_IMPORTED_MODULE_7__.switchTab)('[data-content]', '.vacation__button'),
@@ -26834,8 +26931,10 @@ window.addEventListener('DOMContentLoaded', e => {
     ".question__btn": _functions_question_js__WEBPACK_IMPORTED_MODULE_13__.question,
     ".contact__map": _functions_map_js__WEBPACK_IMPORTED_MODULE_15__.loadMap,
     ".footer__terms": () => (0,_functions_modal_js__WEBPACK_IMPORTED_MODULE_14__.modal)('.privacy-btn', '.modal-privacy', '.modal__close'),
+    ".modal-button": () => (0,_functions_modal_js__WEBPACK_IMPORTED_MODULE_14__.modal)('.modal-button', '.modal-form', '.modal__close'),
     ".footer__current-year": () => (0,_functions_currentYear_js__WEBPACK_IMPORTED_MODULE_16__.currentYear)('.footer__current-year'),
-    ".credits__button": _functions_showbutton_js__WEBPACK_IMPORTED_MODULE_17__.showButton
+    ".credits__button": _functions_showbutton_js__WEBPACK_IMPORTED_MODULE_17__.showButton,
+    ".help__select": _functions_custom_select_js__WEBPACK_IMPORTED_MODULE_18__.selectCustom
   };
   Object.keys(functionsMap).forEach(selector => {
     if (document.querySelector(selector)) {
@@ -26846,49 +26945,49 @@ window.addEventListener('DOMContentLoaded', e => {
   if (laptopScreen.matches) {
     const animations = [{
       selector: '.header',
-      action: _functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_18__.animateHeader
+      action: _functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_19__.animateHeader
     }, {
       selector: '.primary',
-      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_18__.animatePrimary)('.primary__bg-primary', '.primary__title', '.primary__sub-title', '.primary__makes', '.primary__button')
+      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_19__.animatePrimary)('.primary__bg-primary', '.primary__title', '.primary__sub-title', '.primary__makes', '.primary__button')
     }, {
       selector: '.primary-second',
-      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_18__.animatePrimary)('.primary__bg-primary', '.primary-second__title', '.primary-second__sub-title')
+      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_19__.animatePrimary)('.primary__bg-primary', '.primary-second__title', '.primary-second__sub-title')
     }, {
       selector: '.primary-three',
-      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_18__.animatePrimary)('.primary__bg-primary', '.primary-second__title', '.primary-second__sub-title')
+      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_19__.animatePrimary)('.primary__bg-primary', '.primary-second__title', '.primary-second__sub-title')
     }, {
       selector: '.invite__body',
-      action: _functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_18__.animateInviteSection
+      action: _functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_19__.animateInviteSection
     }, {
       selector: '.actual-big__wrapper',
-      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_18__.animateHelpBody)('.actual-big__wrapper')
+      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_19__.animateHelpBody)('.actual-big__wrapper')
     }, {
       selector: '.primary__columns',
-      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_18__.animateColumns)('.primary__columns', '.primary__column')
+      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_19__.animateColumns)('.primary__columns', '.primary__column')
     }, {
       selector: '.invite__body',
-      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_18__.animateInviteSection)('.invite__body', '.invite__column', '.invite__video')
+      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_19__.animateInviteSection)('.invite__body', '.invite__column', '.invite__video')
     }, {
       selector: '.review__title',
-      action: _functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_18__.animateReviewTitle
+      action: _functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_19__.animateReviewTitle
     }, {
       selector: '.review__title',
-      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_18__.animateReviewTitle)('.review__title')
+      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_19__.animateReviewTitle)('.review__title')
     }, {
       selector: '.review__columns',
-      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_18__.animateColumns)('.review__columns', '.review__column')
+      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_19__.animateColumns)('.review__columns', '.review__column')
     }, {
       selector: '.additionally__columns',
-      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_18__.animateHelpBody)('.additionally__columns')
+      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_19__.animateHelpBody)('.additionally__columns')
     }, {
       selector: '.additionally__title',
-      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_18__.animatePartnersTitle)('.additionally__title')
+      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_19__.animatePartnersTitle)('.additionally__title')
     }, {
       selector: '.help__body',
-      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_18__.animateHelpBody)('.help__body')
+      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_19__.animateHelpBody)('.help__body')
     }, {
       selector: '.actual__body',
-      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_18__.animateHelpBody)('.actual__body')
+      action: () => (0,_functions_gsap_anim_js__WEBPACK_IMPORTED_MODULE_19__.animateHelpBody)('.actual__body')
     }];
     animations.forEach(_ref => {
       let {

@@ -6,6 +6,7 @@
     width: 100%;
     height: 100%;
     z-index: 25;
+    padding: 0 15px;
     background-color: rgba($color: #000, $alpha: .8);
     display: flex;
     align-items: center;
@@ -20,25 +21,18 @@
     }
 
     &__inner {
+        padding: clamp(1.25rem, -1.789rem + 4.9vw, 2.5rem);
+        max-width: 1200px;
+        width: 100%;
+        height: 70vh;
+        overflow-y: auto;
+        background-color: var(--white);
+        border-radius: 16px;
+        position: relative;
+        z-index: 1;
     }
 
     &__close {
-    }
-
-    &__title {
-    }
-}
-.modal-privacy{
-    padding: 0 15px;
-    &.show{
-        .privacy__inner{
-            transform: scale(1);
-        }
-    }
-    .modal__title{
-        font-size: #{fluid(24px, 55px, 375px, 1600px)};
-    }
-    .modal__close{
         top: 15px;
         right: 15px;
         position: absolute;
@@ -71,6 +65,19 @@
             transform: rotate(45deg);
         }
     }
+
+    &__title {
+    }
+}
+.modal-privacy{
+    &.show{
+        .privacy__inner{
+            transform: scale(1);
+        }
+    }
+    .modal__title{
+        font-size: #{fluid(24px, 55px, 375px, 1600px)};
+    }
     h3{
         padding: 1em 0;
     }
@@ -83,18 +90,42 @@
         row-gap: 15px;
         margin: 0;
     }
+
+    .privacy__inner {
+        transform: scale(.7);
+        transition: .3s;
+    }
 }
 
-.privacy__inner {
-    padding: clamp(1.25rem, -1.789rem + 4.9vw, 2.5rem);
-    max-width: 1200px;
-    width: 100%;
-    height: 70vh;
-    overflow-y: auto;
-    background-color: var(--white);
-    border-radius: 16px;
-    position: relative;
-    z-index: 1;
-    transform: scale(.7);
-    transition: .3s;
+.modal-form{
+    &__inner{
+        max-width: 760px;
+    }
+
+    .modal__title{
+        font-weight: 400;
+        font-size: #{fluid(24px, 36px, 375px, 1600px)};
+        text-align: center; 
+        margin-bottom: 32px;
+    }
+
+    .help__inputs{
+        flex-direction: column;
+    }
+    .help__button{
+        width: 100%;
+    }
+    .help__select{
+        margin-bottom: 16px;
+    }
+    .help__select-text{
+        margin-bottom: 8px;
+    }
+    .help__select-wrapper{
+        position: relative;
+    }
+
+    .custom-select-trigger{
+        color: var(--dark-60);
+    }
 }
